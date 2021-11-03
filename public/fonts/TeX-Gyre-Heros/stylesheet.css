@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'texgyreheroscn__regular';
+  src: url('texgyreheroscn-regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'texgyreheroscn__bold';
+  src: url('texgyreheroscn-bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'texgyreheroscn__italic';
+  src: url('texgyreheroscn-italic.otf');
+  font-weight: normal;
+  font-style: normal;
+}

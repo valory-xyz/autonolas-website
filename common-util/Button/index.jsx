@@ -1,14 +1,18 @@
 import React from 'react';
-// import PropTypes from 'prop-types'
+import { Button } from 'antd';
+import PropTypes from 'prop-types';
 
-function Button() {
-  return (
-    <div>
-      Button
-    </div>
-  );
-}
+const CustomButton = ({ title, ...rest }) => (
+  <Button {...rest}>
+    {title}
+  </Button>
+);
 
-// Button.propTypes = {}
+CustomButton.propTypes = {
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]).isRequired,
+};
 
-export default Button;
+export default CustomButton;

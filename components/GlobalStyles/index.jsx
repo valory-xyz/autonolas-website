@@ -16,10 +16,15 @@ const GlobalStyle = createGlobalStyle`
     background: ${COLOR.WHITE};
     overscroll-behavior: none;
     margin: 0;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: triakis__fontbold, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 `;
 
 export default GlobalStyle;
+
+/**
+ * Refer public/fonts/{font_name}/stylesheet.css for different font-family
+ * eg. font-family: texgyreheroscn__italic;
+ */

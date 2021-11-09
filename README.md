@@ -13,7 +13,7 @@ This project is currently in development. Feel free to create a branch and send 
 
 ## Installation and Setup Instructions
 
-Clone down this repository. You will need `node` and `yarn` installed globally on your machine.  
+Clone down this repository. You will need `node` version ">=14" and `yarn` version ">=1" installed globally on your machine.  
 
 Installation:
 

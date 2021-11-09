@@ -1,10 +1,7 @@
 import styled, { keyframes } from 'styled-components';
-import { COLOR } from 'util/theme';
 
 export const Container = styled.div`
   padding: 10rem 5rem;
-  color: ${COLOR.LIGHT_GREY};
-  background-color: ${COLOR.ORANGE};
 `;
 
 export const Parent = styled.h1``;

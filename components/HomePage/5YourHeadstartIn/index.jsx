@@ -1,0 +1,45 @@
+import React from 'react';
+import Button from 'common-util/Button';
+import Header from 'common-util/Header';
+import { SectionFive } from '../styles';
+
+const LIST = [
+  {
+    desc: 'Leverage your Python skills into decentralized app development. More languages to follow.',
+    imageUrl: '/images/your-head-start/python-icon.png',
+  },
+  {
+    desc: 'Enjoy the flexibility and recognition of open source',
+    imageUrl: '/images/your-head-start/git-icon.png',
+  },
+  {
+    desc: 'Financial upside of entrepreneurship with radically simpler path to traction',
+    imageUrl: '/images/your-head-start/nft-icon.png',
+  },
+];
+
+const YourHeadStartIn = () => (
+  <SectionFive className="section section-5 border-boxes">
+    <div className="description-l-2">BUILT FOR DEVELOPERS</div>
+
+    <Header className="header" title="Your headstart in crypto development" />
+
+    <div className="row">
+      {LIST.map(({ imageUrl, desc }, index) => {
+        const getId = () => `your-head-start-in-${index}`;
+        return (
+          <div className="column" key={getId()}>
+            <div className="content">
+              <img src={imageUrl} alt={`Your hear start - ${index}`} />
+              <div className="text">{desc}</div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <Button type="invert" title="Dive into docs" className="btn-center" />
+  </SectionFive>
+);
+
+export default YourHeadStartIn;

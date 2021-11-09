@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${COLOR.WHITE};
     overscroll-behavior: none;
     margin: 0;
-    font-family: triakis__fontbold, sans-serif;
+    font-family: texgyreheros__regular, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

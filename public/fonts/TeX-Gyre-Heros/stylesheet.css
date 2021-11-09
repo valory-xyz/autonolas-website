@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'texgyreheros__regular';
+  src: url('texgyreheros-regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'texgyreheroscn__regular';
   src: url('texgyreheroscn-regular.otf');
   font-weight: normal;

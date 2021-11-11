@@ -3,7 +3,7 @@ import Header from 'common-util/Header';
 import { SectionTwo } from '../styles';
 
 const WhyAutonolas = () => (
-  <SectionTwo className="section section-2">
+  <SectionTwo className="section section-2" id="why-autonolas">
     <Header className="header" title="Why Autonolas" />
     <div className="row row-1">
       <div className="column column-1">

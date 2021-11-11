@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { COLOR, FONT_SIZE } from 'util/theme';
+import { handleJoinDiscord } from 'common-util/functions';
 
 export const BannerContainer = styled.div`
   position: absolute;
@@ -14,9 +15,10 @@ export const BannerContainer = styled.div`
   .banner-icon {
     position: absolute;
     left: 12px;
+    height: 36px;
+    width: 108px;
+    top: 8px;
     background-image: url("/images/discord-band.png");
-    height: 24px;
-    width: 72px;
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -28,27 +30,21 @@ export const BannerContainer = styled.div`
   }
 `;
 
-const Banner = () => {
-  const onBannerClick = () => {
-    window.open('https://www.google.com');
-  };
+const Banner = () => (
+  <BannerContainer className="">
+    <span className="banner-icon" />
 
-  return (
-    <BannerContainer className="">
-      <span className="banner-icon" />
-
-      <span
-        className="banner-text"
-        onKeyPress={onBannerClick}
-        role="button"
-        tabIndex="0"
-        onClick={onBannerClick}
-      >
-        JOIN OLAS TRIBE ON DISCORD
-        <i>&#8599;</i>
-      </span>
-    </BannerContainer>
-  );
-};
+    <span
+      className="banner-text"
+      role="button"
+      tabIndex="0"
+      onKeyPress={handleJoinDiscord}
+      onClick={handleJoinDiscord}
+    >
+      JOIN OLAS TRIBE ON DISCORD
+      <i>&#8599;</i>
+    </span>
+  </BannerContainer>
+);
 
 export default Banner;

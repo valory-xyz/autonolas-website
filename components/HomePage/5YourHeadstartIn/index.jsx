@@ -6,11 +6,11 @@ import { SectionFive } from '../styles';
 const LIST = [
   {
     desc: 'Leverage your Python skills into decentralized app development. More languages to follow.',
-    imageUrl: '/images/your-head-start/python-icon.png',
+    imageUrl: '/images/common/python.png',
   },
   {
     desc: 'Enjoy the flexibility and recognition of open source',
-    imageUrl: '/images/your-head-start/git-icon.png',
+    imageUrl: '/images/common/github-large.svg',
   },
   {
     desc: 'Financial upside of entrepreneurship with radically simpler path to traction',

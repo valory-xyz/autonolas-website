@@ -33,7 +33,7 @@ export const REQUIREMENTS = [
 ];
 
 const AcceleratedLearning = () => (
-  <SectionSix className="section section-6 border-boxes">
+  <SectionSix className="section section-6 border-boxes" id="developers">
     <div className="dev-academy-logo">
       <img
         src="/images/accelerated-learning/agent-dev-academy.png"

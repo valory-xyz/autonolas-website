@@ -5,13 +5,17 @@ import { COLOR, FONT_SIZE } from 'util/theme';
 
 export const Btn = styled.button`
   outline: none;
-  /* padding: 12px 16px; */
   height: 48px;
-
   width: 280px;
   font-size: ${FONT_SIZE[18]};
   text-transform: uppercase;
   font-family: triakis__fontbold, sans-serif;
+  transition: all 0.3s;
+  line-height: normal;
+
+  &:hover {
+    cursor: pointer;
+  }
   ${({ type }) => {
     switch (type) {
       case 'invert':
@@ -19,12 +23,21 @@ export const Btn = styled.button`
           border : 1px solid transparent;
           background-color: ${COLOR.GREEN_2};
           color: ${COLOR.BLACK};
+          &:hover {
+            border : 1px solid ${COLOR.BLACK};
+            background-color: ${COLOR.BLACK};
+            color: ${COLOR.GREEN_2};
+          }
         `;
       case 'outline':
         return `
           border : 1px solid ${COLOR.BLACK};
           background-color: transparent;
           color: ${COLOR.BLACK};
+          &:hover {
+            background-color: ${COLOR.BLACK};
+            color: ${COLOR.GREEN_2};
+          }
         `;
       case 'primary':
       default:
@@ -32,6 +45,11 @@ export const Btn = styled.button`
           border : 1px solid ${COLOR.BLACK};
           background-color: ${COLOR.BLACK};
           color: ${COLOR.GREEN_2};
+          &:hover {
+            border : 1px solid ${COLOR.GREEN_2};
+            background-color: ${COLOR.GREEN_2};
+            color: ${COLOR.BLACK};
+          }
         `;
     }
   }}

@@ -3,7 +3,7 @@ import Header from 'common-util/Header';
 import { SectionThree } from '../styles';
 
 const WhatIsAutonolas = () => (
-  <SectionThree className="section section-3">
+  <SectionThree className="section section-3" id="what-is-autonolas">
     <Header className="header" title="What is Autonolas?" />
 
     <div className="content">

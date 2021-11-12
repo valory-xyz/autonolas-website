@@ -5,7 +5,7 @@ import { FONT_SIZE } from 'util/theme';
 
 const Desc = styled.div`
   font-size: 24px;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
 `;
 
 const Description = ({ title, type, ...rest }) => {

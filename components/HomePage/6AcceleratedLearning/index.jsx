@@ -57,7 +57,7 @@ const AcceleratedLearning = () => (
                 className="bg-image"
                 style={{ backgroundImage: `url(${imageUrl})` }}
               />
-              <div className="text">{desc}</div>
+              <div className="text description-l-4">{desc}</div>
             </div>
           </div>
         );
@@ -67,7 +67,7 @@ const AcceleratedLearning = () => (
     <div className="row row-2">
       <div className="column column-1">
         <div className="title">Program details</div>
-        <div className="text">
+        <div className="text description-l-4">
           {PROGRAM_DETAILS.map((program, index) => {
             const getId = () => `program-details-${index}`;
             return <div key={getId()}>{program}</div>;
@@ -77,7 +77,7 @@ const AcceleratedLearning = () => (
 
       <div className="column column-2">
         <div className="title">Requirements</div>
-        <div className="text">
+        <div className="text description-l-4">
           {REQUIREMENTS.map((requirement, index) => {
             const getId = () => `requirement-${index}`;
             return <div key={getId()}>{requirement}</div>;

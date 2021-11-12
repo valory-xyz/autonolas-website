@@ -41,7 +41,7 @@ const WhatAreWeBuilding = () => (
           <div className={`column column-${index + 1}`} key={getId()}>
             <div className="content">
               <div className="title">{title}</div>
-              <div className="text">{desc}</div>
+              <div className="text description-l-4">{desc}</div>
             </div>
           </div>
         );

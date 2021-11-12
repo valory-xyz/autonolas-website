@@ -31,7 +31,7 @@ const YourHeadStartIn = () => (
           <div className="column" key={getId()}>
             <div className="content">
               <img src={imageUrl} alt={`Your hear start - ${index}`} />
-              <div className="text">{desc}</div>
+              <div className="text description-l-4">{desc}</div>
             </div>
           </div>
         );

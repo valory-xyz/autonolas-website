@@ -5,7 +5,7 @@ import { COLOR, FONT_SIZE } from 'util/theme';
 
 export const Btn = styled.button`
   outline: none;
-  height: 48px;
+  height: 56px;
   width: 280px;
   font-size: ${FONT_SIZE[24]};
   text-transform: uppercase;

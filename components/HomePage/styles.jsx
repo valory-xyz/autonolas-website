@@ -55,7 +55,8 @@ export const Container = styled.div`
           display: flex;
           flex-direction: column;
           align-items: center;
-          max-width: 55%;
+          /* max-width: 55%; */
+          max-width: 60%;
           margin: 0 auto;
           img {
             width: 160px;
@@ -75,7 +76,10 @@ export const Container = styled.div`
     font-size: 30px;
   }
   .description-l-2 {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .description-l-4 {
+    font-size: 18px;
   }
   .bold {
     font-weight: bold;
@@ -133,7 +137,6 @@ export const SectionTwo = styled.div`
       align-items: flex-start;
       .column {
         flex: 1;
-        /* border: 1px solid red; */
         &.column-1 {
           .content {
             max-width: 72%;
@@ -223,15 +226,15 @@ export const SectionThree = styled.div`
     }
     .text {
       position: absolute;
-      width: 250px;
+      width: 320px;
     }
     .text-1 {
-      top: 50%;
+      top: 52%;
       left: 0;
       text-align: left;
     }
     .text-2 {
-      top: 15%;
+      top: 0%;
       right: 0;
       text-align: right;
     }
@@ -245,12 +248,12 @@ export const SectionFour = styled.div`
   background-size: 100% 100%;
 
   .header {
-    max-width: 424px;
-    margin-bottom: 140px !important;
+    max-width: 586px;
+    margin-bottom: 166px !important;
   }
   .bg-image {
     position: absolute;
-    top: 210px;
+    top: 280px;
     left: 50%;
     height: 275px;
     width: 500px;
@@ -262,16 +265,17 @@ export const SectionFour = styled.div`
   }
   .row {
     .column {
-      padding: 180px 0 40px 0 !important;
+      padding: 180px 0 48px 0 !important;
       .content {
         /* align-items: flex-start !important; */
         .title {
           text-transform: uppercase;
-          font-size: 20px;
-          max-width: 280px;
+          font-size: 24px;
+          max-width: 330px;
         }
         .text {
           margin-top: 12px !important;
+          line-height: normal;
         }
       }
       &.column-1,
@@ -282,7 +286,7 @@ export const SectionFour = styled.div`
       }
       &.column-2 {
         .content {
-          max-width: 300px;
+          max-width: 330px;
           .title {
             text-align: center;
           }
@@ -298,13 +302,13 @@ export const SectionFour = styled.div`
 export const SectionFive = styled.div`
   background-color: ${COLOR.GREY_1};
   .header {
-    max-width: 700px;
+    max-width: 980px;
   }
   .btn {
     margin-top: 40px;
   }
   .text {
-    max-width: 220px;
+    max-width: 280px;
   }
 `;
 
@@ -319,7 +323,7 @@ export const SectionSix = styled.div`
     width: 140px;
   }
   .header {
-    max-width: 800px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -342,7 +346,7 @@ export const SectionSix = styled.div`
     }
     .column {
       .text {
-        max-width: 186px;
+        max-width: 246px;
       }
     }
   }

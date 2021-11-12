@@ -104,27 +104,19 @@ export const SectionOne = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* background: linear-gradient(
-    120deg,
-    rgba(149, 242, 183, 1) 0%,
-    rgba(0, 255, 36, 1) 40%,
-    rgba(138, 209, 114, 1) 68%,
-    rgba(136, 182, 118, 1) 77%,
-    rgba(219, 219, 219, 1) 100%
-  ); */
-  background-image: url("/images/header-background-frame.png");
+  background-image: url("/images/birth-place/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
   .header {
     text-align: center;
-    max-width: 700px;
-    transform: scale(1.25);
+    max-width: 1100px;
+    font-size: 120px;
     margin: 0;
   }
   .description {
     text-align: center;
-    max-width: 550px;
+    max-width: 700px;
     margin: 4rem 0;
   }
 `;
@@ -144,29 +136,32 @@ export const SectionTwo = styled.div`
         /* border: 1px solid red; */
         &.column-1 {
           .content {
-            max-width: 70%;
+            max-width: 72%;
             img {
-              width: 55%;
+              width: 65%;
             }
           }
         }
         &.column-2 {
           .content {
-            max-width: 65%;
+            max-width: 71.75%;
             img {
-              width: 90%;
+              width: 86%;
             }
           }
         }
         &.column-3 {
           .content {
-            max-width: 70%;
+            max-width: 78%;
             img {
               width: 100%;
             }
-            li {
-              list-style-type: circle;
-              margin-bottom: 1em;
+            ul {
+              margin-top: 12px;
+              li {
+                list-style-type: circle;
+                margin-bottom: 1em;
+              }
             }
           }
         }
@@ -203,6 +198,7 @@ export const SectionTwo = styled.div`
     }
     .text {
       margin-top: 30px;
+      font-size: 18px;
     }
   }
 `;
@@ -249,7 +245,7 @@ export const SectionFour = styled.div`
   background-size: 100% 100%;
 
   .header {
-    max-width: 420px;
+    max-width: 424px;
     margin-bottom: 140px !important;
   }
   .bg-image {
@@ -645,7 +641,7 @@ export const SectionTen = styled.div`
   }
   .row-3 {
     padding-top: 56px;
-      border-top: 1px solid ${COLOR.GREEN_2};
+    border-top: 1px solid ${COLOR.GREEN_2};
     .investors-banner {
       display: flex;
       align-items: center;

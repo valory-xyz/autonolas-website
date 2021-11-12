@@ -7,7 +7,7 @@ export const Btn = styled.button`
   outline: none;
   height: 48px;
   width: 280px;
-  font-size: ${FONT_SIZE[18]};
+  font-size: ${FONT_SIZE[24]};
   text-transform: uppercase;
   font-family: triakis__fontbold, sans-serif;
   transition: all 0.3s;

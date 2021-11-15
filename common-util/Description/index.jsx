@@ -20,7 +20,7 @@ const Description = ({ title, type, ...rest }) => {
 
     default:
       return (
-        <Desc style={{ fontSize: FONT_SIZE[24] }} {...others}>
+        <Desc style={{ fontSize: FONT_SIZE[28] }} {...others}>
           {title}
         </Desc>
       );

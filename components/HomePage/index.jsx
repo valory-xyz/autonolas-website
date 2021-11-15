@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './0Common/Banner';
+// import Navigation from './1BirthPlace/Navigation';
 import BirthPlace from './1BirthPlace';
 import WhyAutonolas from './2WhyAutonolas';
 import WhatIsAutonolas from './3WhatIsAutonolas';
@@ -16,8 +17,9 @@ import { GlobalStyle, Container } from './styles';
 
 const HomePage = () => (
   <>
+    <Banner />
     <Container data-testid="home-page">
-      <Banner />
+      {/* <Navigation /> */}
       <BirthPlace />
       <WhyAutonolas />
       <WhatIsAutonolas />

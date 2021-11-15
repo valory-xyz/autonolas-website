@@ -10,15 +10,15 @@ export const BannerContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${COLOR.GREEN_1};
-  font-size: ${FONT_SIZE[16]};
-  padding: 14px;
+  font-size: ${FONT_SIZE[18]};
+  padding: 16px;
   .banner-icon {
     position: absolute;
     left: 12px;
-    height: 36px;
-    width: 108px;
-    top: 8px;
-    background-image: url("/images/discord-band.png");
+    height: 40px;
+    width: 120px;
+    top: 10px;
+    background-image: url("/images/birth-place/discord-band.png");
     background-repeat: no-repeat;
     background-size: contain;
   }

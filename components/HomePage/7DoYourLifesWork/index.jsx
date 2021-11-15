@@ -22,7 +22,7 @@ const DoYourLifesWork = () => (
 
     <Header className="header" title="Do your life’s work" />
 
-    <div className="description-l-3">
+    <div className="description-l-2">
       We’re pulling in and enabling one of the most talented and passionate
       communities on the internet.
     </div>
@@ -37,7 +37,7 @@ const DoYourLifesWork = () => (
         const getId = () => `your-head-start-in-${index}`;
         return (
           <div key={getId()} className={`column column-${index + 1}`}>
-            <p className="content">{desc}</p>
+            <p className="content description-l-2">{desc}</p>
           </div>
         );
       })}
@@ -53,7 +53,7 @@ const DoYourLifesWork = () => (
       <div className="column column-1">
         <div className="content">
           <div className="description-l-2 bold">PREFER TO DIVE RIGHT IN?</div>
-          <div className="time">
+          <div className="time description-l-2">
             <p>Calls run every Friday </p>
             <p>
               at&nbsp;
@@ -68,7 +68,7 @@ const DoYourLifesWork = () => (
       </div>
 
       <div className="column column-3">
-        <div className="content description-l-5">
+        <div className="content">
           <p>What happens at a Welcoming Call?</p>
           <p>
             We orient you around the project and community, answer any questions

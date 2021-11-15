@@ -24,7 +24,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>Autonolas Website</title>
+          <title>Architecting Autonomy</title>
         </Head>
         <Layout>
           <Component {...pageProps} />

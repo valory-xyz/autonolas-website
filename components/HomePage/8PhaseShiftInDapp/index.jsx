@@ -9,7 +9,7 @@ const PhaseShiftInDapp = () => (
 
     <Header className="header" title="A phase shift in Dapp capacity and UX" />
 
-    <div className="row-1">
+    <div className="row-1 description-l-4">
       With us, smart contract apps ‘own’ their off-chain components. These
       components do things like make decisions, source data and make things
       happen in the real-world, on other chains and web2.
@@ -30,7 +30,7 @@ const PhaseShiftInDapp = () => (
 
     <div className="row-3">
       <div className="column column-1">
-        <div className="content">
+        <div className="content description-l-4">
           What does that mean though? Apps on our platform can do fundamentally
           new things, and do existing things at much higher levels of
           efficiency. For the end user, this passes on new opportunities,
@@ -40,7 +40,7 @@ const PhaseShiftInDapp = () => (
 
       <div className="column column-2">
         <div className="content">
-          <div>Want to learn more?</div>
+          <div className="description-l-4">Want to learn more?</div>
           <Button
             type="primary"
             title="Snoop in #product-and-apps"
@@ -50,7 +50,7 @@ const PhaseShiftInDapp = () => (
 
       <div className="column column-3">
         <div className="content">
-          <div>DeFi private alpha scheduled for Q2 ‘21</div>
+          <div className="description-l-4">DeFi private alpha scheduled for Q2 ‘21</div>
           <Button type="primary" title="apply as an early tester" />
         </div>
       </div>

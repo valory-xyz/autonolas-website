@@ -5,9 +5,9 @@ import { COLOR, FONT_SIZE } from 'util/theme';
 
 export const Btn = styled.button`
   outline: none;
-  height: 56px;
-  width: 280px;
-  font-size: ${FONT_SIZE[24]};
+  height: 64px;
+  width: 340px;
+  font-size: ${FONT_SIZE[26]};
   text-transform: uppercase;
   font-family: triakis__fontbold, sans-serif;
   transition: all 0.3s;
@@ -69,7 +69,7 @@ const CustomButton = ({
 
 CustomButton.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  type: PropTypes.oneOf(['primary', 'outline']),
+  type: PropTypes.oneOf(['primary', 'outline', 'invert']),
   className: PropTypes.string,
 };
 

@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { COLOR } from 'util/theme';
+import { COLOR, BREAK_POINT } from 'util/theme';
 
 const widths = {
   maxSectionWidth: '1500px',
@@ -25,13 +25,6 @@ export const Container = styled.div`
       /* max-width: ${widths.maxSectionWidth}; */
       /* margin: 0 auto; */
     }
-  }
-
-  .section-1 {
-  }
-  .section-2 {
-  }
-  .section-3 {
   }
 
   /* common */
@@ -76,7 +69,7 @@ export const Container = styled.div`
     font-size: 30px;
   }
   .description-l-2 {
-    font-size: 24px;
+    font-size: 26px;
   }
   .description-l-4 {
     font-size: 18px;
@@ -115,21 +108,28 @@ export const SectionOne = styled.div`
   .header {
     text-align: center;
     max-width: 1100px;
-    font-size: 120px;
+    font-size: 124px;
+    line-height: 0.85;
     margin: 0;
+    margin-top: 120px;
+    margin-bottom: 0 !important;
   }
   .description {
     text-align: center;
-    max-width: 700px;
-    margin: 4rem 0;
+    max-width: 800px;
+    margin: 3rem 0;
+  }
+
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    /* padding: 8px 8px 24px 8px; */
   }
 `;
 
 export const SectionTwo = styled.div`
-  background-image: url("/images/why-autonolas/background.png");
+  background-image: url("/images/why-autonolas/background.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   .header {
-    /* margin-bottom: 50px; */
   }
   .row {
     &.row-1 {
@@ -207,7 +207,7 @@ export const SectionTwo = styled.div`
 `;
 
 export const SectionThree = styled.div`
-  background-image: url("/images/what-is-autonolas/background.png");
+  background-image: url("/images/what-is-autonolas/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .header {
@@ -215,12 +215,6 @@ export const SectionThree = styled.div`
   }
   .content {
     position: relative;
-    /* max-height: 560px;
-    min-height: 560px;
-    background-image: url("/images/what-is-autonolas/logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center; */
     img {
       width: 100%;
     }
@@ -243,7 +237,7 @@ export const SectionThree = styled.div`
 
 export const SectionFour = styled.div`
   position: relative;
-  background-image: url("/images/what-are-we-building/background.png");
+  background-image: url("/images/what-are-we-building/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -267,10 +261,10 @@ export const SectionFour = styled.div`
     .column {
       padding: 180px 0 48px 0 !important;
       .content {
+        max-width: 64% !important;
         /* align-items: flex-start !important; */
         .title {
           text-transform: uppercase;
-          font-size: 24px;
           max-width: 330px;
         }
         .text {
@@ -300,7 +294,12 @@ export const SectionFour = styled.div`
 `;
 
 export const SectionFive = styled.div`
-  background-color: ${COLOR.GREY_1};
+  background-image: url("/images/your-head-start/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  .description-l-2 {
+    margin: 40px 0 20px 0;
+  }
   .header {
     max-width: 980px;
   }
@@ -309,11 +308,12 @@ export const SectionFive = styled.div`
   }
   .text {
     max-width: 280px;
+    line-height: normal;
   }
 `;
 
 export const SectionSix = styled.div`
-  background-image: url("/images/accelerated-learning/background.png");
+  background-image: url("/images/accelerated-learning/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -338,6 +338,9 @@ export const SectionSix = styled.div`
     background-position: center;
     background-repeat: no-repeat;
   }
+  .content .text {
+    line-height: normal;
+  }
   .row-1 {
     .column-1 {
       .bg-image {
@@ -361,6 +364,7 @@ export const SectionSix = styled.div`
       .text {
         > div {
           text-transform: uppercase;
+          line-height: normal;
           margin-bottom: 12px;
         }
       }
@@ -391,7 +395,7 @@ export const SectionSix = styled.div`
 `;
 
 export const SectionSeven = styled.div`
-  background-image: url("/images/do-your-lifes-work/background.png");
+  background-image: url("/images/do-your-lifes-work/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .header {
@@ -399,10 +403,10 @@ export const SectionSeven = styled.div`
   }
   /* move to top */
 
-  .description-l-3 {
-    width: 350px;
+  .description-l-2 {
+    width: 482px;
     margin-bottom: 32px;
-    font-size: 18px;
+    line-height: normal;
   }
   .description-l-5 {
     font-size: 14px;
@@ -417,12 +421,12 @@ export const SectionSeven = styled.div`
       flex: 1;
       padding: 40px 0;
       .content {
-        max-width: 220px;
+        max-width: 330px;
         margin: 0 auto;
         text-align: center;
         font-family: triakis__fontbold, sans-serif;
-        font-size: 21px;
         text-transform: uppercase;
+        line-height: normal;
       }
       &.column-2 {
         border-left: 1px solid ${COLOR.GREEN_2};
@@ -431,7 +435,7 @@ export const SectionSeven = styled.div`
     }
   }
   .btn {
-    margin: 40px auto;
+    margin: 60px auto;
   }
   .row-2 {
     display: flex;
@@ -455,7 +459,9 @@ export const SectionSeven = styled.div`
       &.column-3 {
         text-align: right;
         .content {
-          width: 280px;
+          width: 320px;
+          font-size: 16px;
+          line-height: normal;
           float: right;
           p {
             margin: 0;
@@ -467,27 +473,28 @@ export const SectionSeven = styled.div`
 `;
 
 export const SectionEight = styled.div`
-  background-image: url("/images/dapp/background.png");
+  background-image: url("/images/dapp/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .header {
-    max-width: 700px;
+    max-width: 1000px;
   }
   .row-1 {
-    max-width: 400px;
-    margin-bottom: 50px;
+    max-width: 450px;
+    margin-bottom: -60px;
   }
   .row-2 {
     .content {
       position: relative;
       .text {
         position: absolute;
-        top: 50%;
+        top: 64%;
         transform: translate(0px, -50%);
         font-weight: bold;
-        max-width: 500px;
+        max-width: 630px;
         font-family: triakis__fontheavy, sans-serif;
-        font-size: 39px;
+        font-size: 52px;
+        line-height: 1.2;
       }
     }
   }
@@ -500,6 +507,9 @@ export const SectionEight = styled.div`
       flex: 1;
       /* border: 1px solid red; */
     }
+    .column-1 {
+      min-width: 450px;
+    }
     .column-2,
     .column-3 {
       padding-left: 64px;
@@ -511,7 +521,7 @@ export const SectionEight = styled.div`
 `;
 
 export const SectionNine = styled.div`
-  background-image: url("/images/lore/background.png");
+  background-image: url("/images/lore/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .header {
@@ -519,7 +529,7 @@ export const SectionNine = styled.div`
   }
   .row-2 {
     position: relative;
-    font-family: "triakis__fontbold";
+    font-family: "triakis__fontmedium";
     font-size: 28px;
     .text-container {
       position: absolute;
@@ -590,14 +600,15 @@ export const SectionTen = styled.div`
     line-height: normal;
   }
   .name {
-    font-family: "triakis__fontmedium";
+    font-family: "triakis__fontbold";
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 26px;
   }
   .what-they-do {
     display: table-cell;
     vertical-align: middle;
     list-style: none;
+    font-size: 18px;
     padding: 0;
     li {
       line-height: 1.2;
@@ -613,7 +624,7 @@ export const SectionTen = styled.div`
     }
     .what-they-do {
       max-width: 320px;
-      height: 108px;
+      height: 140px;
     }
   }
   .row-2.founding-team {
@@ -621,20 +632,26 @@ export const SectionTen = styled.div`
     padding: 56px 0;
     overflow-x: auto;
     .found-team-desc {
+      font-family: "triakis__font_lightregular";
+      text-transform: uppercase;
+      font-size: 26px;
       margin-right: 48px;
       p {
         margin: 0;
-        width: 300px;
+        width: 360px;
       }
     }
     .each-member {
       flex: none;
-      width: 300px;
+      width: 380px;
       .member-image {
-        height: 280px;
+        height: 400px;
         width: calc(100% - 60px);
         background-color: ${COLOR.BLACK};
         margin-bottom: 24px;
+      }
+      .name {
+        font-family: "triakis__font_lightregular";
       }
       .what-they-do {
         li {
@@ -677,9 +694,9 @@ export const SectionEleven = styled.div`
         margin-bottom: 40px;
         .footer-header {
           margin-bottom: 56px;
-          max-width: 500px;
+          max-width: 550px;
           font-family: "triakis__font_lightregular";
-          font-size: 112px;
+          font-size: 128px;
           line-height: normal;
         }
         .be-part-and-contribute {
@@ -697,12 +714,13 @@ export const SectionEleven = styled.div`
         }
       }
       &.column-2 {
-        padding: 64px;
+        padding: 64px 0px 64px 96px;
+        border-left: 1px solid ${COLOR.BLACK};
       }
       .footer-anchors {
         display: flex;
         justify-content: space-between;
-        &.footer-anchor-2 {
+        .footer-anchor-2 {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -719,6 +737,7 @@ export const SectionEleven = styled.div`
       }
       .ant-anchor-link-title {
         text-transform: uppercase;
+        font-size: 12px;
         &:hover {
           color: inherit !important;
           text-decoration: underline;

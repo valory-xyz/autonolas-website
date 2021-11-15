@@ -8,12 +8,25 @@ import { SectionEleven } from '../styles';
 const { Link } = Anchor;
 
 const bePartList = [
-  { type: 'twitter', url: 'https://twitter.com/valoryag' },
-  { type: 'discord', url: 'https://discord.com/invite/z2PT65jKqQ' },
+  {
+    id: 'join-ola-tribe-twitter',
+    type: 'twitter',
+    url: 'https://twitter.com/valoryag',
+  },
+  {
+    id: 'join-ola-tribe-discord',
+    type: 'discord',
+    url: 'https://discord.com/invite/z2PT65jKqQ',
+  },
 ];
 
 const constributeList = [
-  { type: 'github', url: 'https://github.com/valory-xyz', iconSize: 'small' },
+  {
+    id: 'join-ola-tribe-github',
+    type: 'github',
+    url: 'https://github.com/valory-xyz',
+    iconSize: 'small',
+  },
 ];
 
 const JoinTheOlasTribe = () => (
@@ -21,7 +34,11 @@ const JoinTheOlasTribe = () => (
     <Row>
       <Col xs={24} md={12} className="column column-1">
         <div className="footer-header">Join the Olas Tribe</div>
-        <Button type="primary" title="Join Discord" onClick={handleJoinDiscord} />
+        <Button
+          type="primary"
+          title="Join Discord"
+          onClick={handleJoinDiscord}
+        />
         <div className="be-part-and-contribute">
           <div className="be-part">
             <div className="text">Be part of the story.</div>

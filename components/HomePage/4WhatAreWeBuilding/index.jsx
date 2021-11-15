@@ -40,7 +40,7 @@ const WhatAreWeBuilding = () => (
         return (
           <div className={`column column-${index + 1}`} key={getId()}>
             <div className="content">
-              <div className="title">{title}</div>
+              <div className="title description-l-2">{title}</div>
               <div className="text description-l-4">{desc}</div>
             </div>
           </div>

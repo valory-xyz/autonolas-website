@@ -13,7 +13,7 @@ const founders = [
       'published.',
     ],
     socials: [
-      { type: 'linkedin', url: '' },
+      { type: 'linkedin', url: 'https://uk.linkedin.com/in/dgcrypto' },
       { type: 'twitter', url: '' },
     ],
   },
@@ -27,7 +27,7 @@ const founders = [
       'Game Theory University of Cambridge.',
     ],
     socials: [
-      { type: 'linkedin', url: '' },
+      { type: 'linkedin', url: 'https://uk.linkedin.com/in/davidminarsch' },
       { type: 'twitter', url: 'https://twitter.com/david_enim' },
     ],
   },
@@ -151,6 +151,7 @@ export const getSocials = socials => (
           className={social.type}
           target="_blank"
           rel="noopener noreferrer"
+          key={`social-${social.type}`}
         >
           <img src={src} alt="" />
         </a>

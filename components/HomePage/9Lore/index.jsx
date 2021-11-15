@@ -45,12 +45,12 @@ const PhaseShiftInDapp = () => (
     </div>
 
     <div className="row-3">
-      <div className="column column-1">
+      <div className="column column-1 description-l-4">
         <div>Want to help follow the story?</div>
         <Button type="outline" title="follow the story in #lore" />
       </div>
 
-      <div className="column column-2">
+      <div className="column column-2 description-l-4">
         <div>Want to help develop the story?</div>
         <Button type="outline" title="join #world-builders" />
       </div>

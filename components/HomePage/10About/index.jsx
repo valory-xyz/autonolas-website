@@ -185,19 +185,21 @@ const About = () => (
         <p>Overflowing with talent</p>
       </div>
 
-      {foundingTeam.map(({ name, desc, socials }, index) => {
-        const getId = i => `founding-team-${i}`;
-        return (
-          <div key={getId(index)} className="each-member">
-            <div className="member-image" />
-            <div className="name">{name}</div>
-            <ul className="what-they-do">
-              <li>{desc}</li>
-            </ul>
-            {getSocials(socials)}
-          </div>
-        );
-      })}
+      <div className="founding-team-members">
+        {foundingTeam.map(({ name, desc, socials }, index) => {
+          const getId = () => `founding-team-${index}`;
+          return (
+            <div key={getId()} className="each-member">
+              <div className="member-image" />
+              <div className="name">{name}</div>
+              <ul className="what-they-do">
+                <li>{desc}</li>
+              </ul>
+              {getSocials(socials)}
+            </div>
+          );
+        })}
+      </div>
     </div>
 
     <div className="row-3 investors">

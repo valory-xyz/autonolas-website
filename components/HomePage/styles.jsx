@@ -1,9 +1,9 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { COLOR, BREAK_POINT } from 'util/theme';
 
-const widths = {
-  maxSectionWidth: '1500px',
-};
+// const widths = {
+//   maxSectionWidth: '1500px',
+// };
 
 /**
  * margin for button top 32px
@@ -14,16 +14,11 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  max-width: ${widths.maxSectionWidth};
   margin: 0 auto;
   .section {
     padding: 40px 50px;
     .header {
       margin-bottom: 50px;
-    }
-    > * {
-      /* max-width: ${widths.maxSectionWidth}; */
-      /* margin: 0 auto; */
     }
   }
 
@@ -48,7 +43,6 @@ export const Container = styled.div`
           display: flex;
           flex-direction: column;
           align-items: center;
-          /* max-width: 55%; */
           max-width: 60%;
           margin: 0 auto;
           img {
@@ -69,10 +63,16 @@ export const Container = styled.div`
     font-size: 30px;
   }
   .description-l-2 {
+    font-size: 28px;
+  }
+  .description-l-3 {
     font-size: 26px;
   }
   .description-l-4 {
     font-size: 18px;
+  }
+  .description-l-5 {
+    font-size: 14px;
   }
   .bold {
     font-weight: bold;
@@ -93,6 +93,44 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .section {
+      padding: 20px 10px;
+      .header {
+        margin-bottom: 20px;
+      }
+    }
+    .description-l-2 {
+      font-size: 20px;
+    }
+    .description-l-3 {
+      font-size: 20px;
+    }
+    .description-l-4 {
+      font-size: 16px;
+    }
+    .border-boxes {
+      .row {
+        flex-direction: column;
+        .column {
+          padding: 32px 0;
+          .content {
+            max-width: none !important;
+            img {
+              width: 100px;
+            }
+            .text {
+              margin-top: 24px;
+            }
+          }
+          &:nth-child(2) {
+            border-color: transparent ${COLOR.BLACK};
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const SectionOne = styled.div`
@@ -106,22 +144,35 @@ export const SectionOne = styled.div`
   background-size: 100% 100%;
 
   .header {
-    text-align: center;
     max-width: 1100px;
-    font-size: 124px;
-    line-height: 0.85;
     margin: 0;
     margin-top: 120px;
     margin-bottom: 0 !important;
+    text-align: center;
+    line-height: 0.85;
+    font-size: 124px;
   }
-  .description {
+  .description-l-2 {
     text-align: center;
     max-width: 800px;
     margin: 3rem 0;
   }
 
   @media only screen and (max-width: ${BREAK_POINT.md}) {
-    /* padding: 8px 8px 24px 8px; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url("/images/birth-place/background-mobile.jpg");
+    .header {
+      margin-right: 60px;
+      margin-top: 86px;
+      text-align: left;
+      font-size: 54px;
+    }
+    .description-l-2 {
+      max-width: 280px;
+      margin-top: 6rem;
+      text-align: left;
+    }
   }
 `;
 
@@ -204,6 +255,62 @@ export const SectionTwo = styled.div`
       font-size: 18px;
     }
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .row {
+      flex-wrap: wrap;
+      .text {
+        font-size: 14px;
+      }
+      &.row-1 {
+        .column {
+          &.column-1,
+          &.column-2 {
+            flex: 0 50%;
+            .content {
+              max-width: 100%;
+            }
+          }
+          &.column-1 {
+            .content {
+              margin-right: 8px;
+            }
+          }
+          &.column-2 {
+            .content {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              .text {
+                text-align: right;
+              }
+            }
+          }
+          &.column-3 {
+            flex: 0 100%;
+            margin: 32px 0;
+            .content {
+              display: flex;
+              max-width: 100%;
+              img {
+                width: 150px;
+                margin-right: 20px;
+              }
+              .text {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+      &.row-2 {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        .column-3 {
+          display: none;
+        }
+      }
+    }
+  }
 `;
 
 export const SectionThree = styled.div`
@@ -233,6 +340,31 @@ export const SectionThree = styled.div`
       text-align: right;
     }
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .header {
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      img {
+        order: 2;
+        margin: 16px 0;
+      }
+      .text {
+        position: relative;
+        font-size: 14px;
+      }
+      .text-1 {
+        order: 1;
+        max-width: 280px;
+      }
+      .text-2 {
+        order: 3;
+        align-self: flex-end;
+        max-width: 240px;
+      }
+    }
+  }
 `;
 
 export const SectionFour = styled.div`
@@ -240,7 +372,6 @@ export const SectionFour = styled.div`
   background-image: url("/images/what-are-we-building/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
   .header {
     max-width: 586px;
     margin-bottom: 166px !important;
@@ -291,13 +422,42 @@ export const SectionFour = styled.div`
   .btn {
     margin-top: 40px;
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .header {
+      margin-bottom: 54px !important;
+    }
+    .bg-image {
+      top: 120px;
+      width: 92%;
+    }
+    .row {
+      .column {
+        padding: 24px 16px !important;
+        &.column-1 {
+          min-height: 340px;
+          display: flex;
+          .content {
+            justify-content: flex-end;
+          }
+        }
+        &.column-2 {
+          .content {
+            max-width: none;
+            .title {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const SectionFive = styled.div`
   background-image: url("/images/your-head-start/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  .description-l-2 {
+  .description-l-3 {
     margin: 40px 0 20px 0;
   }
   .header {
@@ -310,13 +470,17 @@ export const SectionFive = styled.div`
     max-width: 280px;
     line-height: normal;
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .description-l-3 {
+      margin: 0 0 10px 0;
+    }
+  }
 `;
 
 export const SectionSix = styled.div`
   background-image: url("/images/accelerated-learning/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
   .dev-academy-logo img {
     display: flex;
     margin: 0 auto 32px auto;
@@ -392,6 +556,35 @@ export const SectionSix = styled.div`
       }
     }
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .header {
+      line-height: 0.85;
+    }
+    &.border-boxes .row-2 .column {
+      &.column-1 {
+        border-right-color: transparent !important;
+        border-bottom-color: ${COLOR.BLACK} !important;
+      }
+      &.column-2,
+      &.column-3 {
+        border-color: transparent !important;
+      }
+      &.column-2 {
+        .title,
+        .text {
+          padding: 0;
+        }
+      }
+      &.column-3 {
+        .bg-image {
+          display: none;
+        }
+      }
+    }
+    .btn {
+      margin-top: -16px;
+    }
+  }
 `;
 
 export const SectionSeven = styled.div`
@@ -401,18 +594,17 @@ export const SectionSeven = styled.div`
   .header {
     margin-bottom: 12px !important;
   }
-  /* move to top */
-
-  .description-l-2 {
+  .section-7-desc {
+    font-size: 26px;
     width: 482px;
     margin-bottom: 32px;
     line-height: normal;
   }
-  .description-l-5 {
-    font-size: 14px;
-  }
   img {
     width: 100%;
+  }
+  .btn {
+    margin: 60px auto;
   }
   .row-1 {
     display: flex;
@@ -433,9 +625,6 @@ export const SectionSeven = styled.div`
         border-right: 1px solid ${COLOR.GREEN_2};
       }
     }
-  }
-  .btn {
-    margin: 60px auto;
   }
   .row-2 {
     display: flex;
@@ -466,6 +655,52 @@ export const SectionSeven = styled.div`
           p {
             margin: 0;
           }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .section-7-desc {
+      width: auto;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: normal;
+    }
+    img {
+      display: none;
+    }
+    .btn {
+      margin: 16px auto;
+    }
+    .row-1 {
+      padding: 24px 0 0 0;
+      flex-direction: column;
+      .column {
+        padding: 24px 0;
+        border-top: 1px solid ${COLOR.GREEN_1};
+        .content {
+          text-align: left;
+          margin: 0;
+        }
+        &.column-2 {
+          border-left-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+    }
+    .row-2 {
+      align-items: flex-start;
+      flex-direction: column;
+      padding-top: 20px;
+      border-color: transparent;
+      .column {
+        &.column-2 {
+          width: 100%;
+          order: 2;
+        }
+        &.column-3 {
+          margin: 16px 0;
+          text-align: left;
         }
       }
     }
@@ -518,6 +753,45 @@ export const SectionEight = styled.div`
       }
     }
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .row-1 {
+      margin-bottom: 0;
+    }
+    .row-2 {
+      .content {
+        display: flex;
+        flex-direction: column;
+        img {
+          padding: 48px 24px;
+        }
+        .text {
+          position: relative;
+          top: 0;
+          font-size: 26px;
+          transform: none;
+        }
+      }
+    }
+    .row-3 {
+      flex-direction: column;
+      .column {
+        &.column-1 {
+          min-width: auto;
+        }
+        &.column-2,
+        &.column-3 {
+          padding: 0;
+          width: 100%;
+          .content {
+            margin-top: 32px;
+            .btn {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const SectionNine = styled.div`
@@ -544,6 +818,8 @@ export const SectionNine = styled.div`
       .text {
         text-align: center;
         line-height: 1.2;
+      }
+      .text-column {
       }
     }
     .text-container-1 {
@@ -590,6 +866,51 @@ export const SectionNine = styled.div`
       text-align: right;
     }
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/lore/background-mobile.jpg");
+    .row-2 {
+      font-size: 20px;
+      .text-container {
+        .text-row {
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+      .text-container-1 {
+        height: 620px;
+        top: 17.25%;
+        .text-row {
+          .text {
+            max-width: 280px;
+          }
+        }
+      }
+      .text-container-2 {
+        bottom: -5%;
+        .column-1 {
+          margin: 0;
+        }
+        .text-row {
+          .text {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+    .row-3 {
+      flex-direction: column;
+      .column {
+        width: 100%;
+        text-align: left;
+        .btn {
+          margin-top: 8px;
+        }
+        &.column-1 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 `;
 
 export const SectionTen = styled.div`
@@ -614,7 +935,6 @@ export const SectionTen = styled.div`
       line-height: 1.2;
     }
   }
-
   .row-1.founders {
     display: flex;
     padding-bottom: 56px;
@@ -641,21 +961,24 @@ export const SectionTen = styled.div`
         width: 360px;
       }
     }
-    .each-member {
-      flex: none;
-      width: 380px;
-      .member-image {
-        height: 400px;
-        width: calc(100% - 60px);
-        background-color: ${COLOR.BLACK};
-        margin-bottom: 24px;
-      }
-      .name {
-        font-family: "triakis__font_lightregular";
-      }
-      .what-they-do {
-        li {
-          margin: 2px 0 16px 0;
+    .founding-team-members {
+      display: flex;
+      .each-member {
+        flex: none;
+        width: 380px;
+        .member-image {
+          height: 400px;
+          width: calc(100% - 60px);
+          background-color: ${COLOR.BLACK};
+          margin-bottom: 24px;
+        }
+        .name {
+          font-family: "triakis__font_lightregular";
+        }
+        .what-they-do {
+          li {
+            margin: 2px 0 16px 0;
+          }
         }
       }
     }
@@ -674,6 +997,47 @@ export const SectionTen = styled.div`
         }
         &:nth-child(2) {
           max-width: 640px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .row-1.founders {
+      flex-direction: column;
+      .founder {
+        margin-bottom: 48px;
+        .name {
+          font-family: "triakis__font_lightregular";
+        }
+      }
+    }
+    .row-2.founding-team {
+      flex-direction: column;
+      overflow-x: hidden;
+      .founding-team-members {
+        overflow-x: auto;
+        margin-top: 20px;
+        .each-member {
+          width: 280px;
+          .member-image {
+            height: 320px;
+          }
+        }
+      }
+      .found-team-desc {
+        line-height: normal;
+      }
+    }
+    .row-3 {
+      .investors-banner {
+        img {
+          &:nth-child(1),
+          &:nth-child(3) {
+            width: 60px;
+          }
+          &:nth-child(2) {
+            max-width: 160px;
+          }
         }
       }
     }
@@ -733,7 +1097,7 @@ export const SectionEleven = styled.div`
         display: none;
       }
       .ant-anchor-link {
-        padding: 8px 0 8px 0px;
+        padding: 8px 0 8px 0;
       }
       .ant-anchor-link-title {
         text-transform: uppercase;
@@ -752,6 +1116,42 @@ export const SectionEleven = styled.div`
         font-family: "triakis__fontmedium";
         text-transform: uppercase;
         font-size: 18px;
+      }
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .ant-row .ant-col {
+      &.column-1 {
+        .footer-header {
+          display: none;
+        }
+        .be-part-and-contribute {
+          margin-top: 0;
+          .socials a img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .btn {
+          display: none;
+        }
+      }
+      &.column-2 {
+        padding: 32px 0px 42px 0px;
+        border-top: 1px solid ${COLOR.BLACK};
+        border-left-color: transparent;
+        .footer-anchors {
+          flex-direction: column;
+          .footer-anchor-2 {
+            margin-top: 16px;
+          }
+        }
+        .ant-anchor-link {
+          padding: 12px 0 12px 0;
+        }
+        .copyright {
+          display: none;
+        }
       }
     }
   }

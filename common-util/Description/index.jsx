@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { FONT_SIZE } from 'util/theme';
+import { FONT_SIZE, BREAK_POINT } from 'util/theme';
 
 const Desc = styled.div`
   font-size: 24px;
-  /* letter-spacing: -1px; */
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    font-size: 20px;
+  }
 `;
 
 const Description = ({ title, type, ...rest }) => {

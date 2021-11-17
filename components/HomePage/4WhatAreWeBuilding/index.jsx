@@ -16,16 +16,6 @@ const LIST = [
     title: 'on-chain protocol',
     desc: 'For coordinating and securing the individual apps.',
   },
-  /*
-  {
-    title: 'ABCD',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto?
-  },
-  {
-    title: 'ABCD',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt',
-  },
-  */
 ];
 
 const WhatAreWeBuilding = () => (
@@ -40,7 +30,7 @@ const WhatAreWeBuilding = () => (
         return (
           <div className={`column column-${index + 1}`} key={getId()}>
             <div className="content">
-              <div className="title description-l-2">{title}</div>
+              <div className="title description-l-3">{title}</div>
               <div className="text description-l-4">{desc}</div>
             </div>
           </div>

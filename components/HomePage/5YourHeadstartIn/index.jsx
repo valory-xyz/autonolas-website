@@ -20,7 +20,7 @@ const LIST = [
 
 const YourHeadStartIn = () => (
   <SectionFive className="section section-5 border-boxes">
-    <div className="description-l-2">BUILT FOR DEVELOPERS</div>
+    <div className="description-l-3">BUILT FOR DEVELOPERS</div>
 
     <Header className="header" title="Your headstart in crypto development" />
 

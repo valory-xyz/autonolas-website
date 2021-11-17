@@ -8,11 +8,11 @@ const WhatIsAutonolas = () => (
 
     <div className="content">
       <img src="/images/what-is-autonolas/logo.png" alt="What is Autonolas logo" />
-      <div className="text text-1 description-l-2">
+      <div className="text text-1 description-l-3">
         Autonolas is a platform for extending the cryptonative capabilities of
         smart contract applications into the off-chain space.
       </div>
-      <div className="text text-2 description-l-2">
+      <div className="text text-2 description-l-3">
         We explore open possibilities of crypto apps with our generalized
         middleware platform.
       </div>

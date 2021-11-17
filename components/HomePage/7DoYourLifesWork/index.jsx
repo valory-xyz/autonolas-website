@@ -18,11 +18,11 @@ const LIST = [
 
 const DoYourLifesWork = () => (
   <SectionSeven className="section section-7" id="community">
-    <div className="description-l-2">COMMUNITY - OLAS TRIBE</div>
+    <div className="description-l-3">COMMUNITY - OLAS TRIBE</div>
 
     <Header className="header" title="Do your life’s work" />
 
-    <div className="description-l-2">
+    <div className="section-7-desc">
       We’re pulling in and enabling one of the most talented and passionate
       communities on the internet.
     </div>
@@ -37,7 +37,7 @@ const DoYourLifesWork = () => (
         const getId = () => `your-head-start-in-${index}`;
         return (
           <div key={getId()} className={`column column-${index + 1}`}>
-            <p className="content description-l-2">{desc}</p>
+            <p className="content description-l-3">{desc}</p>
           </div>
         );
       })}
@@ -52,8 +52,8 @@ const DoYourLifesWork = () => (
     <div className="row-2">
       <div className="column column-1">
         <div className="content">
-          <div className="description-l-2 bold">PREFER TO DIVE RIGHT IN?</div>
-          <div className="time description-l-2">
+          <div className="description-l-3 bold">PREFER TO DIVE RIGHT IN?</div>
+          <div className="time description-l-3">
             <p>Calls run every Friday </p>
             <p>
               at&nbsp;

@@ -1,25 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
-import Description from 'common-util/Description';
 import { handleJoinDiscord } from 'common-util/functions';
-import Navigation from './Navigation';
+// import Navigation from './Navigation';
+import dynamic from 'next/dynamic';
 import { SectionOne } from '../styles';
 
-const SectionOneBirthPlace = () => {
-  // eslint-disable-next-line no-unused-vars
-  const onNavigationClick = () => {
-    window.console.log('hey!');
-  };
+const Navigation = dynamic(() => import('./Navigation'), { ssr: false });
 
-  return (
-    <SectionOne className="section section-1" id="birth-place">
-      <Navigation />
-      <Header className="header" title="The Birthplace of Economic Autonomy" />
-      <Description title="Autonolas enables developers to build self-owning self-operating, 100% trustless decentralized applications." />
-      <Button type="primary" title="Join Discord" onClick={handleJoinDiscord} />
-    </SectionOne>
-  );
+const SectionOneBirthPlace = ({
+  isNavigationOpen,
+  setNavigationToggle,
+}) => (
+  <SectionOne className="section section-1" id="birth-place">
+    <Navigation isNavigationOpen={isNavigationOpen} setNavigationToggle={setNavigationToggle} />
+    <Header className="header" title="The Birthplace of Economic Autonomy" />
+    <div className="description-l-2">Autonolas enables developers to build self-owning self-operating, 100% trustless decentralized applications.</div>
+
+    <Button type="primary" title="Join Discord" onClick={handleJoinDiscord} />
+  </SectionOne>
+);
+
+SectionOneBirthPlace.propTypes = {
+  isNavigationOpen: PropTypes.bool.isRequired,
+  setNavigationToggle: PropTypes.func.isRequired,
 };
 
 export default SectionOneBirthPlace;

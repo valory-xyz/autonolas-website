@@ -12,6 +12,7 @@ export const FONT_SIZE = {
   28: '28px',
   26: '26px',
   24: '24px',
+  22: '22px',
   20: '20px',
   18: '18px',
   16: '16px',

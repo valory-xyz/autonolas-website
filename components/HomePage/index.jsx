@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Banner from './0Common/Banner';
 // import Navigation from './1BirthPlace/Navigation';
 import BirthPlace from './1BirthPlace';
@@ -15,25 +15,44 @@ import JoinTheOlasTribe from './11JoinTheOlasTribe';
 
 import { GlobalStyle, Container } from './styles';
 
-const HomePage = () => (
-  <>
-    <Banner />
-    <Container data-testid="home-page">
-      {/* <Navigation /> */}
-      <BirthPlace />
-      <WhyAutonolas />
-      <WhatIsAutonolas />
-      <WhatAreWeBuilding />
-      <YourHeadstartIn />
-      <AcceleratedLearning />
-      <DoYourLifesWork />
-      <PhaseShiftInDapp />
-      <Lore />
-      <About />
-      <JoinTheOlasTribe />
-    </Container>
-    <GlobalStyle />
-  </>
-);
+const HomePage = () => {
+  const [isNavigationOpen, setNavigationToggle] = useState(false);
+
+  return (
+    <>
+      <Banner
+        isNavigationOpen={isNavigationOpen}
+        setNavigationToggle={setNavigationToggle}
+      />
+      <Container data-testid="home-page">
+        <BirthPlace
+          isNavigationOpen={isNavigationOpen}
+          setNavigationToggle={setNavigationToggle}
+        />
+
+        <WhyAutonolas />
+
+        <WhatIsAutonolas />
+
+        <WhatAreWeBuilding />
+
+        <YourHeadstartIn />
+
+        <AcceleratedLearning />
+
+        <DoYourLifesWork />
+
+        <PhaseShiftInDapp />
+
+        <Lore />
+
+        <About />
+
+        <JoinTheOlasTribe />
+      </Container>
+      <GlobalStyle />
+    </>
+  );
+};
 
 export default HomePage;

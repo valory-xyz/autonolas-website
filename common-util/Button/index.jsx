@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { COLOR, FONT_SIZE } from 'util/theme';
+import { COLOR, FONT_SIZE, BREAK_POINT } from 'util/theme';
 
 export const Btn = styled.button`
   outline: none;
@@ -12,10 +12,15 @@ export const Btn = styled.button`
   font-family: triakis__fontbold, sans-serif;
   transition: all 0.3s;
   line-height: normal;
-
   &:hover {
     cursor: pointer;
   }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    width: 100%;
+    height: 52px;
+    font-size: ${FONT_SIZE[22]};
+  }
+
   ${({ type }) => {
     switch (type) {
       case 'invert':

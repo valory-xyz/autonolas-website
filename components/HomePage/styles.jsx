@@ -11,10 +11,12 @@ const widths = {
  */
 
 export const GlobalStyle = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     overflow: ${({ isNavigationOpen }) => (isNavigationOpen ? 'hidden' : 'auto')};
   }
-
 `;
 
 export const Container = styled.div`

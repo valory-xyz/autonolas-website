@@ -1,16 +1,14 @@
 import React from 'react';
 import Header from 'common-util/Header';
-import { SectionTen } from '../styles';
+import { SectionTen } from './styles';
 
 const founders = [
   {
     id: 'founder-1',
     name: 'David Galindo',
+    intro: 'CRYPTOGRAPHY & RESEARCH',
     desc: [
-      'Cryptography & research',
-      'Ex-Professor of Cybersecurity,',
-      'University of Birmingham. Extensively',
-      'published.',
+      'Ex-Professor of Cybersecurity, University of Birmingham. Extensively published',
     ],
     socials: [
       { type: 'linkedin', url: 'https://uk.linkedin.com/in/dgcrypto' },
@@ -20,11 +18,9 @@ const founders = [
   {
     id: 'founder-2',
     name: 'David Minarsch',
+    intro: 'ENGINEERING & MULTI-AGENT SYSTEMS',
     desc: [
-      'Engineering & Multi-agent systems',
-      'Creator of first multi-agent systems',
-      'framework for crypto. PhD Applied',
-      'Game Theory University of Cambridge.',
+      'Creator of first multi-agent systems framework for crypto. PhD Applied Game Theory, University of Cambridge.',
     ],
     socials: [
       { type: 'linkedin', url: 'https://uk.linkedin.com/in/davidminarsch' },
@@ -34,11 +30,9 @@ const founders = [
   {
     id: 'founder-3',
     name: 'Oaksprout the Tan',
+    intro: 'GROWTH',
     desc: [
-      'Growth',
-      'Established DeFi community contributor',
-      'and investor. Prev 10+ years in web2',
-      'product development.',
+      'Established DeFi community contributor and investor. Prev 10+ years in web2 product development.',
     ],
     socials: [
       { type: 'linkedin', url: '' },
@@ -165,10 +159,12 @@ const About = () => (
     <Header className="header" title="About" />
     <div className="row row-1 founders">
       {founders.map(({
-        name, desc, socials, id,
+        name, desc, socials, id, intro,
       }) => (
         <div key={id} className="founder">
+          <div className="member-image" />
           <div className="name">{name}</div>
+          <div className="description-l-4">{intro}</div>
           <ul className="what-they-do">
             {desc.map(e => (
               <li key={e}>{e}</li>
@@ -180,9 +176,9 @@ const About = () => (
     </div>
 
     <div className="row-2 founding-team">
-      <div className="found-team-desc name">
-        <p>Founding Team</p>
-        <p>Overflowing with talent</p>
+      <div className="found-team-desc">
+        <p>Founding team,</p>
+        <p>overflowing with talent</p>
       </div>
 
       <div className="founding-team-members">
@@ -199,18 +195,6 @@ const About = () => (
             </div>
           );
         })}
-      </div>
-    </div>
-
-    <div className="row-3 investors">
-      <div className="found-team-desc name">
-        <p>Selected Investors</p>
-      </div>
-
-      <div className="investors-banner">
-        <img src="/images/about/image-1.png" alt="About - Investor - 1" />
-        <img src="/images/about/image-2.png" alt="About - Investor - 2" />
-        <img src="/images/about/image-3.png" alt="About - Investor - 3" />
       </div>
     </div>
   </SectionTen>

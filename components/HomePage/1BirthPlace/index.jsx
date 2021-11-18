@@ -16,7 +16,7 @@ const SectionOneBirthPlace = ({
   <SectionOne className="section section-1" id="birth-place" isNavigationOpen={isNavigationOpen}>
     <Navigation isNavigationOpen={isNavigationOpen} setNavigationToggle={setNavigationToggle} />
     <Header className="header" title="The Birthplace of Economic Autonomy" />
-    <div className="description-l-2">Autonolas enables developers to build self-owning self-operating, 100% trustless decentralized applications.</div>
+    <div className="description-l-2">Autonolas enables developers to build self-owning, self-operating, 100% trustless decentralized applications.</div>
 
     <Button type="primary" title="Join Discord" onClick={handleJoinDiscord} />
   </SectionOne>

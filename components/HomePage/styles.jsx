@@ -148,7 +148,6 @@ export const SectionOne = styled.div`
   background-image: url("/images/birth-place/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
   .header {
     max-width: 1100px;
     margin: 0;
@@ -163,7 +162,6 @@ export const SectionOne = styled.div`
     max-width: 800px;
     margin: 3rem 0;
   }
-
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     align-items: flex-start;
     justify-content: flex-start;
@@ -917,137 +915,6 @@ export const SectionNine = styled.div`
         }
         &.column-1 {
           margin-bottom: 20px;
-        }
-      }
-    }
-  }
-`;
-
-export const SectionTen = styled.div`
-  background-image: url("/images/about/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  .header {
-    line-height: normal;
-  }
-  .name {
-    font-family: "triakis__fontbold";
-    text-transform: uppercase;
-    font-size: 26px;
-  }
-  .what-they-do {
-    display: table-cell;
-    vertical-align: middle;
-    list-style: none;
-    font-size: 18px;
-    padding: 0;
-    li {
-      line-height: 1.2;
-    }
-  }
-  .row-1.founders {
-    display: flex;
-    padding-bottom: 56px;
-    border-bottom: 1px solid ${COLOR.GREEN_2};
-    .founder {
-      flex: 1;
-    }
-    .what-they-do {
-      max-width: 320px;
-      height: 140px;
-    }
-  }
-  .row-2.founding-team {
-    display: flex;
-    padding: 56px 0;
-    overflow-x: auto;
-    .found-team-desc {
-      font-family: "triakis__font_lightregular";
-      text-transform: uppercase;
-      font-size: 26px;
-      margin-right: 48px;
-      p {
-        margin: 0;
-        width: 360px;
-      }
-    }
-    .founding-team-members {
-      display: flex;
-      .each-member {
-        flex: none;
-        width: 380px;
-        .member-image {
-          height: 400px;
-          width: calc(100% - 60px);
-          background-color: ${COLOR.BLACK};
-          margin-bottom: 24px;
-        }
-        .name {
-          font-family: "triakis__font_lightregular";
-        }
-        .what-they-do {
-          li {
-            margin: 2px 0 16px 0;
-          }
-        }
-      }
-    }
-  }
-  .row-3 {
-    padding-top: 56px;
-    border-top: 1px solid ${COLOR.GREEN_2};
-    .investors-banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      img {
-        &:nth-child(1),
-        &:nth-child(3) {
-          width: 240px;
-        }
-        &:nth-child(2) {
-          max-width: 640px;
-        }
-      }
-    }
-  }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
-    .row-1.founders {
-      flex-direction: column;
-      .founder {
-        margin-bottom: 48px;
-        .name {
-          font-family: "triakis__font_lightregular";
-        }
-      }
-    }
-    .row-2.founding-team {
-      flex-direction: column;
-      overflow-x: hidden;
-      .founding-team-members {
-        overflow-x: auto;
-        margin-top: 20px;
-        .each-member {
-          width: 280px;
-          .member-image {
-            height: 320px;
-          }
-        }
-      }
-      .found-team-desc {
-        line-height: normal;
-      }
-    }
-    .row-3 {
-      .investors-banner {
-        img {
-          &:nth-child(1),
-          &:nth-child(3) {
-            width: 60px;
-          }
-          &:nth-child(2) {
-            max-width: 160px;
-          }
         }
       }
     }

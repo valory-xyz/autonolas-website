@@ -22,14 +22,14 @@ const PhaseShiftInDapp = () => {
             <div className="text-row">
               <div className="text-column column-1">
                 <p className="text">
-                  HUMANS AND MEKS HAVE BEEN ENSLAVED FOR CENTURIES BY THE UNIFISTS
+                  Humans and Meks have been enslaved for centuries by the Unifists
                 </p>
               </div>
 
               <div className="text-column  column-2">
                 <p className="text">
-                  THIS HAS LED ALTER ORBIS TO RUN DANGEROUSLY LOW ON OLA, THE
-                  WORLD’S ENERGY RESOURCE
+                  This has led Alter Orbis to run dangerously low on Ola, the
+                  world’s energy resource
                 </p>
               </div>
             </div>
@@ -39,8 +39,8 @@ const PhaseShiftInDapp = () => {
             <div className="text-row">
               <div className="text-column column-1">
                 <p className="text">
-                  ONLY AN ELITE FORCE WITHIN OLAS TRIBE CAN RESTORE BALANCE TO OLA
-                  FLOWS BEFORE IT’S TOO LATE...
+                  Only an elite force within Olas Tribe can restore balance to Ola
+                  flows before it’s too late...
                 </p>
               </div>
             </div>
@@ -49,11 +49,6 @@ const PhaseShiftInDapp = () => {
       </div>
 
       <div className="row-3">
-        <div className="column column-1 description-l-4">
-          <div>Want to help follow the story?</div>
-          <Button type="outline" title="follow the story in #lore" />
-        </div>
-
         <div className="column column-2 description-l-4">
           <div>Want to help develop the story?</div>
           <Button type="outline" title="join #world-builders" />

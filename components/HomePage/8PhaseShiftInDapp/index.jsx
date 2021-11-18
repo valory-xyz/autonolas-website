@@ -26,9 +26,6 @@ const PhaseShiftInDapp = () => {
             alt="DAPP logo"
             className="full-width"
           />
-          <div className="text">
-            “ANYTHING YOU CAN DO... AN AUTONOLAS MEK CAN DO 1000X BETTER”
-          </div>
         </div>
       </div>
 

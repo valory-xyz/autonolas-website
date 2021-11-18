@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { handleJoinDiscord } from 'common-util/functions';
-import { SectionSeven } from '../styles';
+import { SectionSeven } from './styles';
 
 const LIST = [
   {
@@ -37,7 +37,7 @@ const DoYourLifesWork = () => (
         const getId = () => `your-head-start-in-${index}`;
         return (
           <div key={getId()} className={`column column-${index + 1}`}>
-            <p className="content description-l-3">{desc}</p>
+            <p className="content description-l-4">{desc}</p>
           </div>
         );
       })}
@@ -68,7 +68,7 @@ const DoYourLifesWork = () => (
       </div>
 
       <div className="column column-3">
-        <div className="content">
+        <div className="content description-l-4">
           <p>What happens at a Welcoming Call?</p>
           <p>
             We orient you around the project and community, answer any questions

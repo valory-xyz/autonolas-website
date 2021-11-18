@@ -42,7 +42,7 @@ const NAVIGATION_SOCIALS = [
   },
 ];
 
-const getNavigationsMenu = (menuList, suffix = '') => menuList.map(eachNav => {
+const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
   const mapKey = `navigation-id-${eachNav.id}-${suffix}`;
   const isIcon = eachNav.type === 'icon';
   const title = isIcon ? (
@@ -58,6 +58,10 @@ const getNavigationsMenu = (menuList, suffix = '') => menuList.map(eachNav => {
         className="nav-link"
         target={isIcon ? '_blank' : '_self'}
         rel="noopener noreferrer"
+        onClick={() => {
+          callback(false);
+          return true;
+        }}
       >
         {title}
       </a>
@@ -95,6 +99,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
                       ...NAV_1,
                       ...[...NAV_2].filter(({ type }) => type !== 'icon'),
                     ],
+                    setNavigationToggle,
                     'mobile',
                   )
                   : null}
@@ -108,21 +113,17 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
         ) : (
           <ul className="nav-menu">
             <>
-              {getNavigationsMenu(NAV_1)}
+              {getNavigationsMenu(NAV_1, setNavigationToggle)}
               <li className="nav-item  nav-item-logo">
                 <a
                   href="#birth-place"
                   className="nav-link"
-                  onClick={() => {
-                    setNavigationToggle(false);
-                    return true;
-                  }}
                 >
                   {logoImage}
                 </a>
               </li>
               <li />
-              {getNavigationsMenu(NAV_2)}
+              {getNavigationsMenu(NAV_2, setNavigationToggle)}
             </>
           </ul>
         )}

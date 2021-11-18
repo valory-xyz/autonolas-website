@@ -50,7 +50,7 @@ const HomePage = () => {
 
         <JoinTheOlasTribe />
       </Container>
-      <GlobalStyle />
+      <GlobalStyle isNavigationOpen={isNavigationOpen} />
     </>
   );
 };

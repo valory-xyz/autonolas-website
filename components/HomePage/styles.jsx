@@ -1,16 +1,20 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { COLOR, BREAK_POINT } from 'util/theme';
 
-// const widths = {
-//   maxSectionWidth: '1500px',
-// };
+const widths = {
+  maxSectionWidth: '1500px',
+  mobileSectionPadding: '20px 10px',
+};
 
 /**
  * margin for button top 32px
  */
 
 export const GlobalStyle = createGlobalStyle`
-  body {}
+  body {
+    overflow: ${({ isNavigationOpen }) => (isNavigationOpen ? 'hidden' : 'auto')};
+  }
+
 `;
 
 export const Container = styled.div`
@@ -96,7 +100,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     .section {
-      padding: 20px 10px;
+      padding: ${widths.mobileSectionPadding};
       .header {
         margin-bottom: 20px;
       }
@@ -162,6 +166,10 @@ export const SectionOne = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     background-image: url("/images/birth-place/background-mobile.jpg");
+    padding: ${({ isNavigationOpen }) => `${
+    isNavigationOpen ? '20px 0px' : widths.mobileSectionPadding
+  }!important`};
+
     .header {
       margin-right: 60px;
       margin-top: 86px;
@@ -877,8 +885,8 @@ export const SectionNine = styled.div`
         }
       }
       .text-container-1 {
-        height: 620px;
-        top: 17.25%;
+        height: 680px;
+        top: 17.5%;
         .text-row {
           .text {
             max-width: 280px;
@@ -886,7 +894,7 @@ export const SectionNine = styled.div`
         }
       }
       .text-container-2 {
-        bottom: -5%;
+        bottom: -3.5%;
         .column-1 {
           margin: 0;
         }

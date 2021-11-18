@@ -8,7 +8,7 @@ const founders = [
     name: 'David Galindo',
     intro: 'CRYPTOGRAPHY & RESEARCH',
     desc: [
-      'Ex-Professor of Cybersecurity, University of Birmingham. Extensively published',
+      'Ex-Professor of Cybersecurity, University of Birmingham. Extensively published.',
     ],
     socials: [
       { type: 'linkedin', url: 'https://uk.linkedin.com/in/dgcrypto' },

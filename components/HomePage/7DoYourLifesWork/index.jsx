@@ -52,8 +52,8 @@ const DoYourLifesWork = () => (
     <div className="row-2">
       <div className="column column-1">
         <div className="content">
-          <div className="description-l-3 bold">PREFER TO DIVE RIGHT IN?</div>
-          <div className="time description-l-3">
+          <div className="description-l-4 bold">PREFER TO DIVE RIGHT IN?</div>
+          <div className="time description-l-4">
             <p>Calls run every Friday </p>
             <p>
               at&nbsp;

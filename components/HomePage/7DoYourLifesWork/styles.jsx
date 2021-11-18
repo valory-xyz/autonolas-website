@@ -47,6 +47,7 @@ export const SectionSeven = styled.div`
       flex: 1;
       &.column-1 .time {
         margin-top: 8px;
+        line-height: normal;
         p {
           margin: 0;
         }

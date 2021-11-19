@@ -9,7 +9,7 @@ export const SectionTen = styled.div`
     line-height: normal;
   }
   .member-image {
-    height: 400px;
+    height: 480px;
     width: calc(100% - 60px);
     background-color: ${COLOR.BLACK};
     margin-bottom: 32px;

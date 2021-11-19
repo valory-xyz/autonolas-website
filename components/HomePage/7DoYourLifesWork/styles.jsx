@@ -88,7 +88,7 @@ export const SectionSeven = styled.div`
       padding: 24px 0 0 0;
       flex-direction: column;
       .column {
-        padding: 24px 0;
+        padding: 32px 0;
         border-top: 1px solid ${COLOR.GREEN_1};
         .content {
           text-align: left;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from 'common-util/Header';
-import { SectionTwo } from '../styles';
+import { SectionTwo } from './styles';
 
 const WhyAutonolas = () => (
   <SectionTwo className="section section-2" id="why-autonolas">

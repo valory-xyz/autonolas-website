@@ -11,7 +11,6 @@ export const SectionTen = styled.div`
   .member-image {
     height: 480px;
     width: calc(100% - 60px);
-    background-color: ${COLOR.BLACK};
     margin-bottom: 32px;
   }
   .name {
@@ -98,6 +97,10 @@ export const SectionTen = styled.div`
 
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     background-image: url("/images/about/background-mobile.jpg");
+    .member-image {
+      width: 200px !important;
+      height: 300px;
+    }
     .row-1.founders {
       flex-direction: column;
       padding-bottom: 0;
@@ -105,10 +108,6 @@ export const SectionTen = styled.div`
         margin-bottom: 48px;
         .name {
           font-family: "triakis__font_lightregular";
-        }
-        .member-image {
-          width: 220px;
-          height: 320px;
         }
       }
     }
@@ -121,9 +120,6 @@ export const SectionTen = styled.div`
         margin-top: 20px;
         .each-member {
           width: 280px;
-          .member-image {
-            height: 320px;
-          }
         }
       }
       .found-team-desc {

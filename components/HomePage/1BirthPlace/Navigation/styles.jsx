@@ -5,7 +5,6 @@ export const Container = styled.header`
   /* position: sticky; */
   /* top: 0; */
   /* width: calc(100% + 60px); */
-
   position: absolute;
   top: 64px;
   width: calc(100% - 32px);
@@ -13,7 +12,6 @@ export const Container = styled.header`
   &.hide-navbar {
     display: none;
   }
-
   .navbar {
     position: relative;
     display: flex;
@@ -58,14 +56,14 @@ export const Container = styled.header`
   }
 
   @media only screen and (max-width: ${BREAK_POINT.md}) {
-    position: relative;
+    position: fixed;
     width: 100%;
     max-width: 100%;
-    top: 38px;
+    top: 58px;
     .navbar {
       padding: 0;
       padding-bottom: 32px;
-      height: calc(100vh - 60px);
+      height: calc(100vh - 56px);
       background-image: url("/images/birth-place/background.jpg");
       &.mobile {
         flex-direction: column;

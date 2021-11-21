@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col, Anchor } from 'antd';
 import Button from 'common-util/Button';
-import { handleJoinDiscord } from 'common-util/functions';
-import { getSocials } from '../10About';
+import { handleJoinDiscord, getSocials } from 'common-util/functions';
 import { SectionEleven } from '../styles';
 
 const { Link } = Anchor;

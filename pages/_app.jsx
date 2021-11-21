@@ -24,7 +24,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>Architecting Autonomy</title>
+          <title>The Birthplace of Economic Activity | Autonolas</title>
         </Head>
         <Layout>
           <Component {...pageProps} />

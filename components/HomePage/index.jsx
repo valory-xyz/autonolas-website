@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Banner from './0Common/Banner';
-// import Navigation from './1BirthPlace/Navigation';
 import BirthPlace from './1BirthPlace';
 import WhyAutonolas from './2WhyAutonolas';
 import WhatIsAutonolas from './3WhatIsAutonolas';
@@ -15,20 +15,22 @@ import JoinTheOlasTribe from './11JoinTheOlasTribe';
 
 import { GlobalStyle, Container } from './styles';
 
+const Navigation = dynamic(() => import('./0Common/Navigation'), {
+  ssr: false,
+});
+
 const HomePage = () => {
   const [isNavigationOpen, setNavigationToggle] = useState(false);
 
   return (
     <>
-      <Banner
+      <Banner />
+      <Navigation
         isNavigationOpen={isNavigationOpen}
         setNavigationToggle={setNavigationToggle}
       />
       <Container data-testid="home-page">
-        <BirthPlace
-          isNavigationOpen={isNavigationOpen}
-          setNavigationToggle={setNavigationToggle}
-        />
+        <BirthPlace isNavigationOpen={isNavigationOpen} />
 
         <WhyAutonolas />
 

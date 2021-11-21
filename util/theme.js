@@ -26,3 +26,12 @@ export const BREAK_POINT = {
   xl: '1200px',
   xxl: '1600px',
 };
+
+export const TRANSITION = {
+  all: 'all 0.3s',
+};
+
+export const SIZES = {
+  bannerHeight: '60px',
+  navigationBarHeight: '84px',
+};

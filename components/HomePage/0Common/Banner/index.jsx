@@ -1,13 +1,9 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { handleJoinDiscord } from 'common-util/functions';
 import { COLOR, FONT_SIZE, BREAK_POINT } from 'util/theme';
 import { useCheckMobileScreen } from 'common-util/hooks';
 
 export const BannerContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -29,14 +25,11 @@ export const BannerContainer = styled.div`
   .banner-text {
     cursor: pointer;
     i {
-      margin-left: 4px;
+      font-style: normal;
+      &.navigation-icon {
+        margin-left: 16px;
+      }
     }
-  }
-  .banner-mobile-menu {
-    display: none;
-    margin-right: 20px;
-    font-size: 22px;
-    font-family: "triakis__font_lightregular";
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     width: 100%;
@@ -48,22 +41,28 @@ export const BannerContainer = styled.div`
       height: 34px;
     }
     .banner-text {
-      width: 160px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
       margin-left: 60px;
       font-size: 14px;
       line-height: normal;
-    }
-    .banner-mobile-menu {
-      display: block;
+      .text {
+        width: 160px;
+      }
+      .navigation-icon {
+        font-size: 24px;
+      }
     }
   }
 `;
 
-const Banner = ({ isNavigationOpen, setNavigationToggle }) => {
+const Banner = () => {
   const isMobile = useCheckMobileScreen();
 
   return (
-    <BannerContainer isMobile={isMobile}>
+    <BannerContainer isMobile={isMobile} id="banner">
       <span className="banner-icon" />
 
       <span
@@ -73,32 +72,11 @@ const Banner = ({ isNavigationOpen, setNavigationToggle }) => {
         onKeyPress={handleJoinDiscord}
         onClick={handleJoinDiscord}
       >
-        JOIN OLAS TRIBE ON DISCORD
-        <i>&#8599;</i>
+        <i className="text">JOIN OLAS TRIBE ON DISCORD</i>
+        <i className="navigation-icon">&#8599;</i>
       </span>
-
-      {isMobile && (
-        <span
-          className="banner-mobile-menu"
-          role="button"
-          tabIndex={0}
-          onClick={() => setNavigationToggle(!isNavigationOpen)}
-          onKeyDown={() => setNavigationToggle(!isNavigationOpen)}
-        >
-          {isNavigationOpen ? 'CLOSE' : 'MENU'}
-        </span>
-      )}
     </BannerContainer>
   );
 };
-
-Banner.propTypes = {
-  isNavigationOpen: PropTypes.bool.isRequired,
-  setNavigationToggle: PropTypes.func.isRequired,
-};
-
-// Description.defaultProps = {
-//   type: null,
-// };
 
 export default Banner;

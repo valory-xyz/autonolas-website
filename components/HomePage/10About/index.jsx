@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from 'common-util/Header';
+import { getSocials } from 'common-util/functions';
 import { SectionTen } from './styles';
 
 const founders = [
@@ -132,7 +133,7 @@ const foundingTeam = [
       },
       { type: 'twitter', url: 'https://twitter.com/thomasmaybrier' },
     ],
-    imageUrl: '/images/about/team/community-and-ecosystem-no-image.png',
+    imageUrl: '/images/about/team/thomas.png',
   },
   {
     id: 'team-9',
@@ -145,29 +146,6 @@ const foundingTeam = [
     imageUrl: '/images/about/team/engineering-no-image.png',
   },
 ];
-
-export const getSocials = socials => (
-  <div className="socials">
-    {socials.map(social => {
-      if (!social.url) return null;
-      const src = `/images/common/${social.type}${
-        social.iconSize ? `-${social.iconSize}` : ''
-      }.svg`;
-
-      return (
-        <a
-          href={social.url}
-          className={social.type}
-          target="_blank"
-          rel="noopener noreferrer"
-          key={`social-${social.type}`}
-        >
-          <img src={src} alt="" />
-        </a>
-      );
-    })}
-  </div>
-);
 
 const About = () => {
   const sortedTeamList = foundingTeam.sort((a, b) => (a.name < b.name ? -1 : 1));

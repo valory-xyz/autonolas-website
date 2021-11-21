@@ -1,24 +1,46 @@
 import styled from 'styled-components';
-import { COLOR, BREAK_POINT } from 'util/theme';
+import { COLOR, BREAK_POINT, TRANSITION } from 'util/theme';
+
+export const MobileNavigationContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .nav-logo {
+    img {
+      width: 90px;
+    }
+  }
+`;
+
+export const Hamburger = styled.div`
+  position: absolute;
+  right: 16px;
+  top: 26px;
+  display: flex;
+  flex-direction: column;
+  span {
+    width: 60px;
+    height: 8px;
+    background-color: ${COLOR.BLACK};
+    display: inline-block;
+    transition: ${TRANSITION.all};
+    border-radius: 4px;
+    &:nth-child(1) {
+      margin-bottom: 8px;
+    }
+  }
+`;
 
 export const Container = styled.header`
-  /* position: sticky; */
-  /* top: 0; */
-  /* width: calc(100% + 60px); */
-  position: absolute;
-  top: 64px;
-  width: calc(100% - 32px);
-  max-width: 1500px;
-  &.hide-navbar {
-    display: none;
-  }
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: ${TRANSITION.all};
   .navbar {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
-    /* position: fixed; */
-    /* width: 100%; */
+    padding: 10px 1.5rem;
   }
   .nav-menu {
     width: 100%;
@@ -42,7 +64,7 @@ export const Container = styled.header`
         display: flex;
         justify-content: center;
         img {
-          width: 48px;
+          width: 104px;
         }
       }
     }
@@ -54,17 +76,26 @@ export const Container = styled.header`
   a {
     text-decoration: none;
   }
+  .is-open-for-mobile {
+    ${Hamburger} {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(10px, 12px);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 
   @media only screen and (max-width: ${BREAK_POINT.md}) {
-    position: fixed;
-    width: 100%;
-    max-width: 100%;
-    top: 58px;
+    z-index: 2;
     .navbar {
-      padding: 0;
-      padding-bottom: 32px;
-      height: calc(100vh - 56px);
-      background-image: url("/images/birth-place/background.jpg");
+      &.is-open-for-mobile {
+        background-image: url("/images/birth-place/background.jpg");
+        height: calc(100vh - ${({ navHeight }) => `${navHeight}px`});
+      }
       &.mobile {
         flex-direction: column;
         .nav-menu {
@@ -104,17 +135,7 @@ export const Container = styled.header`
             }
           }
         }
-        .mobile-nav-item-logo {
-          position: absolute;
-          right: 16px;
-          top: 16px;
-          img {
-            width: 72px;
-          }
-        }
       }
     }
   }
 `;
-
-export const Div = null;

@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { COLOR, BREAK_POINT } from 'util/theme';
+import { COLOR, BREAK_POINT, SIZES } from 'util/theme';
 
 const widths = {
   maxSectionWidth: '1500px',
@@ -20,6 +20,8 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
+  position: relative;
+  top: -84px;
   margin: 0 auto;
   .section {
     padding: 40px 50px;
@@ -99,8 +101,8 @@ export const Container = styled.div`
       }
     }
   }
-
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    top: -75px;
     .section {
       padding: ${widths.mobileSectionPadding};
       .header {
@@ -144,7 +146,7 @@ export const SectionOne = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - ${SIZES.bannerHeight});
   background-image: url("/images/birth-place/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -166,9 +168,7 @@ export const SectionOne = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     background-image: url("/images/birth-place/background-mobile.jpg");
-    padding: ${({ isNavigationOpen }) => `${
-    isNavigationOpen ? '20px 0px' : widths.mobileSectionPadding
-  }!important`};
+    padding: ${({ isNavigationOpen: e }) => `${e ? '20px 0px' : widths.mobileSectionPadding}!important`};
 
     .header {
       margin-right: 60px;
@@ -180,6 +180,13 @@ export const SectionOne = styled.div`
       max-width: 280px;
       margin-top: 6rem;
       text-align: left;
+    }
+    .btn {
+      position: absolute;
+      width: 80%;
+      bottom: 64px;
+      left: 50%;
+      transform: translate(-50%, 0px);
     }
   }
 `;

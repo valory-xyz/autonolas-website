@@ -16,17 +16,20 @@ const Description = ({ title, type, ...rest }) => {
     ...rest,
   };
 
-  switch (type) {
-    case 1:
-      return <Desc style={{ fontSize: FONT_SIZE[24] }}>{title}</Desc>;
+  const getStyle = () => {
+    switch (type) {
+      case 1:
+        return { fontSize: FONT_SIZE[24] };
+      default:
+        return { fontSize: FONT_SIZE[24] };
+    }
+  };
 
-    default:
-      return (
-        <Desc style={{ fontSize: FONT_SIZE[28] }} {...others}>
-          {title}
-        </Desc>
-      );
-  }
+  return (
+    <Desc style={getStyle()} {...others}>
+      {title}
+    </Desc>
+  );
 };
 
 Description.propTypes = {

@@ -5,8 +5,6 @@ export const SectionTwo = styled.div`
   background-image: url("/images/why-autonolas/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  .header {
-  }
   .row {
     &.row-1 {
       display: flex;
@@ -51,7 +49,6 @@ export const SectionTwo = styled.div`
       align-items: flex-start;
       .column {
         flex: 1;
-        /* border: 1px solid red; */
       }
       .column-1 img {
         width: 90%;

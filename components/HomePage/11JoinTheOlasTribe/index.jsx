@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Anchor } from 'antd';
 import Button from 'common-util/Button';
 import { handleJoinDiscord, getSocials } from 'common-util/functions';
-import { SectionEleven } from '../styles';
+import { SectionEleven } from './styles';
 
 const { Link } = Anchor;
 

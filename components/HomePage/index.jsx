@@ -24,12 +24,14 @@ const HomePage = () => {
 
   return (
     <>
-      <Banner />
-      <Navigation
-        isNavigationOpen={isNavigationOpen}
-        setNavigationToggle={setNavigationToggle}
-      />
+
       <Container data-testid="home-page">
+        <Banner />
+
+        <Navigation
+          isNavigationOpen={isNavigationOpen}
+          setNavigationToggle={setNavigationToggle}
+        />
         <BirthPlace isNavigationOpen={isNavigationOpen} />
 
         <WhyAutonolas />

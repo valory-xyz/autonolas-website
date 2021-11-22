@@ -47,12 +47,12 @@ export const SectionTen = styled.div`
   .row-2.founding-team {
     display: flex;
     padding: 56px 0;
-    margin-right: -50px;
+    margin: 0 -50px;
     overflow-x: auto;
     .found-team-desc {
       font-family: "triakis__font_lightregular";
       font-size: 26px;
-      margin-right: 48px;
+      margin: 0 50px;
       p {
         margin: 0;
         width: 360px;
@@ -119,7 +119,10 @@ export const SectionTen = styled.div`
         overflow-x: auto;
         margin-top: 20px;
         .each-member {
-          width: 280px;
+          width: 240px;
+          &:nth-child(1) {
+            margin-left: 50px;
+          }
         }
       }
       .found-team-desc {

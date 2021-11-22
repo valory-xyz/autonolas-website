@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   position: relative;
+  top: -84px;
   margin: 0 auto;
   .section {
     padding: 40px 50px;
@@ -101,6 +102,7 @@ export const Container = styled.div`
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    top: -75px;
     .section {
       padding: ${widths.mobileSectionPadding};
       .header {
@@ -141,7 +143,6 @@ export const Container = styled.div`
 
 export const SectionOne = styled.div`
   position: relative;
-  top: -84px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,7 +166,6 @@ export const SectionOne = styled.div`
     margin: 3rem 0;
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
-    top: -75px;
     align-items: flex-start;
     justify-content: flex-start;
     background-image: url("/images/birth-place/background-mobile.jpg");
@@ -330,6 +330,9 @@ export const SectionFour = styled.div`
         }
       }
     }
+    .btn {
+      margin-bottom: 32px;
+    }
   }
 `;
 
@@ -353,6 +356,10 @@ export const SectionFive = styled.div`
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     .description-l-3 {
       margin: 0 0 10px 0;
+    }
+    .text {
+      max-width: 260px;
+      text-align: center;
     }
   }
 `;
@@ -439,24 +446,31 @@ export const SectionSix = styled.div`
     .header {
       line-height: 0.85;
     }
-    &.border-boxes .row-2 .column {
-      &.column-1 {
-        border-right-color: transparent !important;
-        border-bottom-color: ${COLOR.BLACK} !important;
-      }
-      &.column-2,
-      &.column-3 {
-        border-color: transparent !important;
-      }
-      &.column-2 {
-        .title,
+    &.border-boxes {
+      .row-1 {
         .text {
-          padding: 0;
+          text-align: center;
         }
       }
-      &.column-3 {
-        .bg-image {
-          display: none;
+      .row-2 .column {
+        &.column-1 {
+          border-right-color: transparent !important;
+          border-bottom-color: ${COLOR.BLACK} !important;
+        }
+        &.column-2,
+        &.column-3 {
+          border-color: transparent !important;
+        }
+        &.column-2 {
+          .title,
+          .text {
+            padding: 0;
+          }
+        }
+        &.column-3 {
+          .bg-image {
+            display: none;
+          }
         }
       }
     }

@@ -14,7 +14,7 @@ export const MobileNavigationContainer = styled.div`
 
 export const Hamburger = styled.div`
   position: absolute;
-  right: 16px;
+  right: 32px;
   top: 26px;
   display: flex;
   flex-direction: column;

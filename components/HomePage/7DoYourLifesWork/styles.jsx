@@ -111,7 +111,7 @@ export const SectionSeven = styled.div`
           order: 2;
         }
         &.column-3 {
-          margin: 16px 0;
+          margin: 30px 0 16px 0;
           text-align: left;
         }
       }

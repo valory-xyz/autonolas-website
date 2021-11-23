@@ -76,7 +76,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 80) {
+      if (window.scrollY >= 60) {
         setColorchange(false);
       } else {
         setColorchange(true);
@@ -108,7 +108,10 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
 
   return (
     <Container
-      style={{ backgroundColor: isTransparent ? 'transparent' : COLOR.WHITE }}
+      style={{
+        backgroundColor: isTransparent ? 'transparent' : COLOR.WHITE,
+        top: isTransparent ? '64px' : '0px',
+      }}
       navHeight={isNavigationOpen && isTransparent ? 56 : 0}
     >
       <nav className={`navbar ${navbarClassName()}`}>

@@ -3,7 +3,6 @@ import { COLOR, BREAK_POINT } from 'util/theme';
 
 export const SectionTen = styled.div`
   background-image: url("/images/about/background.jpg");
-  background-repeat: no-repeat;
   background-size: 100% 100%;
   .header {
     line-height: normal;

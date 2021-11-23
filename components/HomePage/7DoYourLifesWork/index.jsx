@@ -68,7 +68,7 @@ const DoYourLifesWork = () => (
           type="outline"
           title="Sign up for the call"
           onClick={() => window.open(
-            'https://calendar.google.com/event?action=TEMPLATE&tmeid=MDIxYTE1cG1yc2c2bXQ2YXJpMmdsazBjcDFfMjAyMTExMjZUMTMzMDAwWiB0aG9tYXMubWF5YnJpZXJAdmFsb3J5Lnh5eg&tmsrc=thomas.maybrier%40valory.xyz&scp=ALL',
+            'https://calendar.google.com/event?action=TEMPLATE&tmeid=NDdkY2R2M29qdjZmM20xNjMwdWhtbnFyN2JfMjAyMTExMjZUMTMzMDAwWiBjXzBqMDFqbDFkcDcwcDljNWJnajQ3a2pubm80QGc&tmsrc=c_0j01jl1dp70p9c5bgj47kjnno4%40group.calendar.google.com&scp=ALL',
           )}
         />
       </div>

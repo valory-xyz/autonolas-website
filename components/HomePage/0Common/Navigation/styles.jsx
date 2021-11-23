@@ -32,7 +32,8 @@ export const Hamburger = styled.div`
 `;
 
 export const Container = styled.header`
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
   transition: ${TRANSITION.all};

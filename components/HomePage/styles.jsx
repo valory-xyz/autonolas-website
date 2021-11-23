@@ -21,7 +21,6 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   position: relative;
-  top: -84px;
   margin: 0 auto;
   .section {
     padding: 40px 50px;
@@ -102,7 +101,6 @@ export const Container = styled.div`
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
-    top: -75px;
     .section {
       padding: ${widths.mobileSectionPadding};
       .header {

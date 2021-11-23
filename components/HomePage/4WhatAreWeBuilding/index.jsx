@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
-import { SectionFour } from '../styles';
+import { SectionFour } from './styles';
 
 const LIST = [
   {
@@ -38,7 +38,16 @@ const WhatAreWeBuilding = () => (
       })}
     </div>
 
-    <Button type="outline" title="Get Educated" className="btn-center" />
+    <Button
+      type="disabled"
+      className="btn-center"
+      title={(
+        <>
+          <span>Get Educated</span>
+          <span>(Coming Soon)</span>
+        </>
+      )}
+    />
   </SectionFour>
 );
 

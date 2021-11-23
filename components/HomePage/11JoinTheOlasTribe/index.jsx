@@ -10,7 +10,7 @@ const bePartList = [
   {
     id: 'join-ola-tribe-twitter',
     type: 'twitter',
-    url: 'https://twitter.com/valoryag',
+    url: 'https://twitter.com/autonolas',
   },
   {
     id: 'join-ola-tribe-discord',

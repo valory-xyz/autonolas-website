@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { useCheckMobileScreen } from 'common-util/hooks';
-import { SectionNine } from '../styles';
+import { SectionNine } from './styles';
 
 const PhaseShiftInDapp = () => {
   const isMobile = useCheckMobileScreen();
@@ -22,7 +22,8 @@ const PhaseShiftInDapp = () => {
             <div className="text-row">
               <div className="text-column column-1">
                 <p className="text">
-                  Humans and Meks have been enslaved for centuries by the Unifists
+                  Humans and Meks have been enslaved for centuries by the
+                  Unifists
                 </p>
               </div>
 
@@ -39,8 +40,8 @@ const PhaseShiftInDapp = () => {
             <div className="text-row">
               <div className="text-column column-1">
                 <p className="text">
-                  Only an elite force within Olas Tribe can restore balance to Ola
-                  flows before it’s too late...
+                  Only an elite force within Olas Tribe can restore balance to
+                  Ola flows before it’s too late...
                 </p>
               </div>
             </div>
@@ -51,7 +52,11 @@ const PhaseShiftInDapp = () => {
       <div className="row-3">
         <div className="column column-2 description-l-4">
           <div>Want to help develop the story?</div>
-          <Button type="outline" title="join #world-builders" />
+          <Button
+            type="outline"
+            title="Join #world-builders"
+            onClick={() => window.open('https://discord.gg/VWGVs5kGkX')}
+          />
         </div>
       </div>
     </SectionNine>

@@ -1,19 +1,19 @@
 import React from 'react';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
-import { SectionSix } from '../styles';
+import { SectionSix } from './styles';
 
 const LIST = [
   {
-    desc: 'Get guided training from crypto/agent engineering experts',
+    desc: 'Get guided training from crypto/agent engineering experts.',
     imageUrl: '/images/accelerated-learning/image-1.png',
   },
   {
-    desc: 'Become a founding member of the developer community',
+    desc: 'Become a founding member of the developer community.',
     imageUrl: '/images/accelerated-learning/image-2.png',
   },
   {
-    desc: 'Get compounding benefits from building critical early network components',
+    desc: 'Get compounding benefits from building critical early network components.',
     imageUrl: '/images/accelerated-learning/image-3.png',
   },
 ];
@@ -87,7 +87,13 @@ const AcceleratedLearning = () => (
 
       <div className="column column-3">
         <div className="bg-image title-logo" />
-        <Button title="Apply for Jan '22 Cohort" className="btn-center" />
+        <Button
+          title="Apply for Jan '22 Cohort"
+          className="btn-center"
+          onClick={() => window.open(
+            'https://xyz.us5.list-manage.com/subscribe?u=b0e788d1c8b599737210d65cb&id=ace2f55dfa',
+          )}
+        />
       </div>
     </div>
   </SectionSix>

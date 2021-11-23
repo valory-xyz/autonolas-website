@@ -5,13 +5,14 @@ export const SectionSeven = styled.div`
   background-image: url("/images/do-your-lifes-work/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding-top: 74px;
   .header {
     margin-bottom: 12px !important;
   }
   .section-7-desc {
     font-size: 26px;
     width: 482px;
-    margin-bottom: 32px;
+    padding: 24px 0 74px 0;
     line-height: normal;
   }
   img {
@@ -75,7 +76,7 @@ export const SectionSeven = styled.div`
     background-image: url("/images/do-your-lifes-work/background-mobile.jpg");
     .section-7-desc {
       width: auto;
-      margin-bottom: 16px;
+      padding-bottom: 16px;
       font-size: 16px;
       line-height: normal;
     }

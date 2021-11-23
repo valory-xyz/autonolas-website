@@ -43,7 +43,7 @@ const DoYourLifesWork = () => (
       })}
     </div>
     <Button
-      type="outline"
+      type="primary"
       title="Join Discord"
       className="btn-center"
       onClick={handleJoinDiscord}
@@ -64,7 +64,13 @@ const DoYourLifesWork = () => (
       </div>
 
       <div className="column column-2">
-        <Button type="primary" title="sign up for the call" />
+        <Button
+          type="outline"
+          title="Sign up for the call"
+          onClick={() => window.open(
+            'https://calendar.google.com/event?action=TEMPLATE&tmeid=MDIxYTE1cG1yc2c2bXQ2YXJpMmdsazBjcDFfMjAyMTExMjZUMTMzMDAwWiB0aG9tYXMubWF5YnJpZXJAdmFsb3J5Lnh5eg&tmsrc=thomas.maybrier%40valory.xyz&scp=ALL',
+          )}
+        />
       </div>
 
       <div className="column column-3">

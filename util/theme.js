@@ -1,7 +1,7 @@
 export const COLOR = {
   GREEN_1: '#00FC82',
   GREEN_2: '#00F422',
-  GREY_1: ' #E1E1E1',
+  GREY_1: '#C4C4C4',
   WHITE: '#FFFFFF',
   BLACK: '#000000',
 };

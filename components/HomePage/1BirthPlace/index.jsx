@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import { handleJoinDiscord } from 'common-util/functions';
-import { SectionOne } from '../styles';
+import { SectionOne } from './styles';
 
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
   <SectionOne

@@ -23,6 +23,15 @@ export const Btn = styled.button`
 
   ${({ type }) => {
     switch (type) {
+      case 'disabled':
+        return `
+          border : 1px solid ${COLOR.GREY_1};
+          background-color: ${COLOR.GREY_1};
+          color: ${COLOR.BLACK};
+          &:hover {
+            cursor: not-allowed;
+          }
+        `;
       case 'invert':
         return `
           border : 1px solid transparent;
@@ -74,7 +83,7 @@ const CustomButton = ({
 
 CustomButton.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  type: PropTypes.oneOf(['primary', 'outline', 'invert']),
+  type: PropTypes.oneOf(['disabled', 'primary', 'outline', 'invert']),
   className: PropTypes.string,
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
-import { SectionFive } from '../styles';
+import { SectionFive } from './styles';
 
 const LIST = [
   {
@@ -9,11 +9,11 @@ const LIST = [
     imageUrl: '/images/common/python.png',
   },
   {
-    desc: 'Enjoy the flexibility and recognition of open source',
+    desc: 'Enjoy the flexibility and recognition of open source.',
     imageUrl: '/images/common/github-large.svg',
   },
   {
-    desc: 'Financial upside of entrepreneurship with radically simpler path to traction',
+    desc: 'Financial upside of entrepreneurship with radically simpler path to traction.',
     imageUrl: '/images/your-head-start/nft-icon.png',
   },
 ];
@@ -38,7 +38,16 @@ const YourHeadStartIn = () => (
       })}
     </div>
 
-    <Button type="invert" title="Dive into docs" className="btn-center" />
+    <Button
+      type="disabled"
+      className="btn-center"
+      title={(
+        <>
+          <span>Dive into docs</span>
+          <span>(Coming Soon)</span>
+        </>
+      )}
+    />
   </SectionFive>
 );
 

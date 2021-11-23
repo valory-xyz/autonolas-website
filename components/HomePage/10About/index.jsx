@@ -15,7 +15,7 @@ const founders = [
       { type: 'linkedin', url: 'https://uk.linkedin.com/in/dgcrypto' },
       { type: 'twitter', url: '' },
     ],
-    imageUrl: '/images/about/team/david-g.png',
+    imageUrl: '/images/about/team/david-g.jpg',
   },
   {
     id: 'founder-2',
@@ -28,7 +28,7 @@ const founders = [
       { type: 'linkedin', url: 'https://uk.linkedin.com/in/davidminarsch' },
       { type: 'twitter', url: 'https://twitter.com/david_enim' },
     ],
-    imageUrl: '/images/about/team/david-m.png',
+    imageUrl: '/images/about/team/david-m.jpg',
   },
   {
     id: 'founder-3',
@@ -41,20 +41,20 @@ const founders = [
       { type: 'linkedin', url: '' },
       { type: 'twitter', url: 'https://twitter.com/tannedoaksprout' },
     ],
-    imageUrl: '/images/about/team/oak.png',
+    imageUrl: '/images/about/team/oak.jpg',
   },
 ];
 
 const foundingTeam = [
   {
     id: 'team-1',
-    name: 'Gemma Welsh',
+    name: 'Gemma',
     desc: 'Founder Associate',
     socials: [
       { type: 'linkedin', url: 'https://www.linkedin.com/in/gemma-welsh/' },
       { type: 'twitter', url: 'https://twitter.com/contentwillvary' },
     ],
-    imageUrl: '/images/about/team/gemma.png',
+    imageUrl: '/images/about/team/gemma.jpg',
   },
   {
     id: 'team-2',
@@ -64,7 +64,7 @@ const foundingTeam = [
       { type: 'linkedin', url: 'https://www.linkedin.com/in/dvilela/' },
       { type: 'twitter', url: 'https://twitter.com/dvilelaf' },
     ],
-    imageUrl: '/images/about/team/david-v.png',
+    imageUrl: '/images/about/team/david-v.jpg',
   },
   {
     id: 'team-3',
@@ -74,7 +74,7 @@ const foundingTeam = [
       { type: 'linkedin', url: 'https://www.linkedin.com/in/angrybayblade/' },
       { type: 'twitter', url: 'https://twitter.com/angrybayblade' },
     ],
-    imageUrl: '/images/about/team/engineering-no-image.png',
+    imageUrl: '/images/about/team/viraj.jpg',
   },
   {
     id: 'team-4',
@@ -84,7 +84,7 @@ const foundingTeam = [
       { type: 'linkedin', url: 'https://www.linkedin.com/in/adamantios/' },
       { type: 'twitter', url: '' },
     ],
-    imageUrl: '/images/about/team/adamantios.png',
+    imageUrl: '/images/about/team/adamantios.jpg',
   },
   {
     id: 'team-5',
@@ -94,7 +94,7 @@ const foundingTeam = [
       { type: 'linkedin', url: '' },
       { type: 'twitter', url: 'https://twitter.com/bradrian_0x' },
     ],
-    imageUrl: '/images/about/team/adriano.png',
+    imageUrl: '/images/about/team/adriano.jpg',
   },
   {
     id: 'team-6',
@@ -107,7 +107,7 @@ const foundingTeam = [
       },
       { type: 'twitter', url: '' },
     ],
-    imageUrl: '/images/about/team/research-no-image.png',
+    imageUrl: '/images/about/team/mariapia.jpg',
   },
   {
     id: 'team-7',
@@ -120,10 +120,10 @@ const foundingTeam = [
       },
       { type: 'twitter', url: '' },
     ],
-    imageUrl: '/images/about/team/camelia.png',
+    imageUrl: '/images/about/team/camelia.jpg',
   },
   {
-    id: 'team-7',
+    id: 'team-8',
     name: 'Thomas Maybrier',
     desc: 'Community Manager',
     socials: [
@@ -133,17 +133,25 @@ const foundingTeam = [
       },
       { type: 'twitter', url: 'https://twitter.com/thomasmaybrier' },
     ],
-    imageUrl: '/images/about/team/thomas.png',
+    imageUrl: '/images/about/team/thomas.jpg',
   },
   {
     id: 'team-9',
+    name: 'AL',
+    desc: 'Senior Crypto Engineer',
+    socials: [
+      // { type: 'twitter', url: 'https://twitter.com/AL' },
+    ],
+    imageUrl: '/images/about/team/andrey-(AL).jpg',
+  },
+  {
+    id: 'team-10',
     name: 'Mohan',
     desc: 'FrontEnd Engineer',
     socials: [
-      // { type: 'linkedin', url: 'https://www.linkedin.com/in/mohandast52/' },
       { type: 'twitter', url: 'https://twitter.com/Mohan_das_' },
     ],
-    imageUrl: '/images/about/team/engineering-no-image.png',
+    imageUrl: '/images/about/team/mohan.jpg',
   },
 ];
 

@@ -66,7 +66,7 @@ const PhaseShiftInDapp = () => {
         <div className="column column-3">
           <div className="content">
             <div className="description-l-4">
-              DeFi private alpha scheduled for Q2 ‘21
+              DeFi private alpha scheduled for Q1 ‘22
             </div>
             <Button type="primary" title="apply as an early tester" />
           </div>

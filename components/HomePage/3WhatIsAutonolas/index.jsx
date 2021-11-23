@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'common-util/Header';
 import { useCheckMobileScreen } from 'common-util/hooks';
-import { SectionThree } from '../styles';
+import { SectionThree } from './styles';
 
 const WhatIsAutonolas = () => {
   const isMobile = useCheckMobileScreen();

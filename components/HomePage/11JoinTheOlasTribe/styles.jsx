@@ -77,6 +77,7 @@ export const SectionEleven = styled.div`
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/footer/background-mobile.jpg");
     .ant-row .ant-col {
       &.column-1 {
         .footer-header {

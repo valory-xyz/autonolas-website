@@ -72,6 +72,7 @@ export const SectionSeven = styled.div`
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/do-your-lifes-work/background-mobile.jpg");
     .section-7-desc {
       width: auto;
       margin-bottom: 16px;

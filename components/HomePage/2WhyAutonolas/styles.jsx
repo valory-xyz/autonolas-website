@@ -78,6 +78,7 @@ export const SectionTwo = styled.div`
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/why-autonolas/background-mobile.jpg");
     .row {
       flex-wrap: wrap;
       .text {

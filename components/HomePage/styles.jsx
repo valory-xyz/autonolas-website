@@ -154,7 +154,7 @@ export const SectionOne = styled.div`
   .header {
     max-width: 1100px;
     margin: 0;
-    margin-top: 120px;
+    margin-top: 96px;
     margin-bottom: 0 !important;
     text-align: center;
     line-height: 0.85;
@@ -164,6 +164,7 @@ export const SectionOne = styled.div`
     text-align: center;
     max-width: 800px;
     margin: 3rem 0;
+    line-height: 1.4;
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     align-items: flex-start;
@@ -188,61 +189,6 @@ export const SectionOne = styled.div`
       bottom: 64px;
       left: 50%;
       transform: translate(-50%, 0px);
-    }
-  }
-`;
-
-export const SectionThree = styled.div`
-  background-image: url("/images/what-is-autonolas/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  .header {
-    max-width: 420px;
-  }
-  .content {
-    position: relative;
-    img {
-      width: 100%;
-    }
-    .text {
-      position: absolute;
-      width: 320px;
-    }
-    .text-1 {
-      top: 52%;
-      left: 0;
-      text-align: left;
-    }
-    .text-2 {
-      top: 0%;
-      right: 0;
-      text-align: right;
-    }
-  }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
-    .header {
-    }
-    .content {
-      display: flex;
-      flex-direction: column;
-      img {
-        order: 2;
-        width: 77.5%;
-        margin: 32px auto;
-      }
-      .text {
-        position: relative;
-        font-size: 14px;
-      }
-      .text-1 {
-        order: 1;
-        max-width: 280px;
-      }
-      .text-2 {
-        order: 3;
-        align-self: flex-end;
-        max-width: 240px;
-      }
     }
   }
 `;
@@ -303,6 +249,7 @@ export const SectionFour = styled.div`
     margin-top: 40px;
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/what-are-we-building/background-mobile.jpg");
     .header {
       margin-bottom: 54px !important;
     }
@@ -354,6 +301,7 @@ export const SectionFive = styled.div`
     line-height: normal;
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/your-head-start/background-mobile.jpg");
     .description-l-3 {
       margin: 0 0 10px 0;
     }
@@ -443,6 +391,7 @@ export const SectionSix = styled.div`
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/accelerated-learning/background-mobile.jpg");
     .header {
       line-height: 0.85;
     }
@@ -517,6 +466,7 @@ export const SectionEight = styled.div`
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    background-image: url("/images/dapp/background-mobile.jpg");
     .row-1 {
       margin-bottom: 0;
     }

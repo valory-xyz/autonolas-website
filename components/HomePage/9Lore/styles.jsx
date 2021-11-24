@@ -3,8 +3,6 @@ import { BREAK_POINT } from 'util/theme';
 
 export const SectionNine = styled.div`
   background-image: url("/images/lore/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .header {
     margin-bottom: 8px !important;
   }
@@ -45,7 +43,7 @@ export const SectionNine = styled.div`
       }
     }
     .text-container-2 {
-      bottom: 10%;
+      bottom: 7.5%;
       .text-row {
         align-items: center;
       }
@@ -65,6 +63,13 @@ export const SectionNine = styled.div`
     text-align: center;
     .btn {
       margin-top: 16px;
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    .row-2 {
+      .text-container-2  {
+        bottom: 0%;
+      }
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {

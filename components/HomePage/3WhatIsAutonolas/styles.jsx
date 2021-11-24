@@ -3,8 +3,6 @@ import { BREAK_POINT } from 'util/theme';
 
 export const SectionThree = styled.div`
   background-image: url("/images/what-is-autonolas/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .header {
     max-width: 420px;
   }
@@ -26,6 +24,13 @@ export const SectionThree = styled.div`
       top: 0%;
       right: 0;
       text-align: right;
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    .content {
+      .text {
+        width: 260px;
+      }
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {

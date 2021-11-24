@@ -1,6 +1,30 @@
 import styled from 'styled-components';
 import { COLOR, BREAK_POINT, TRANSITION } from 'util/theme';
 
+export const DesktopNavBar = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .nav-item-logo {
+    min-width: 260px;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 104px;
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    .nav-item-logo {
+      min-width: 180px;
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.md}) {
+    .nav-item-logo {
+      min-width: auto;
+    }
+  }
+`;
+
 export const MobileNavigationContainer = styled.div`
   display: flex;
   align-items: center;
@@ -15,7 +39,7 @@ export const MobileNavigationContainer = styled.div`
 export const Hamburger = styled.div`
   position: absolute;
   right: 32px;
-  top: 26px;
+  top: 24px;
   display: flex;
   flex-direction: column;
   span {
@@ -41,7 +65,7 @@ export const Container = styled.header`
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 10px 1.5rem;
+    padding: 10px 16px;
   }
   .nav-menu {
     width: 100%;
@@ -60,16 +84,9 @@ export const Container = styled.header`
           text-decoration: underline;
         }
       }
-      &.nav-item-logo {
-        min-width: 140px;
-        display: flex;
-        justify-content: center;
-        img {
-          width: 104px;
-        }
-      }
     }
   }
+
   /* common */
   li {
     list-style: none;
@@ -93,6 +110,7 @@ export const Container = styled.header`
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     z-index: 2;
     .navbar {
+      padding: 8px 16px;
       &.is-open-for-mobile {
         background-image: url("/images/birth-place/background.jpg");
         height: calc(100vh - ${({ navHeight }) => `${navHeight}px`});

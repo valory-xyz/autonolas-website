@@ -3,8 +3,6 @@ import { COLOR, BREAK_POINT } from 'util/theme';
 
 export const SectionEleven = styled.div`
   background-image: url("/images/footer/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   .ant-row {
@@ -14,7 +12,7 @@ export const SectionEleven = styled.div`
         margin-top: 40px;
         margin-bottom: 40px;
         .footer-header {
-          margin-bottom: 56px;
+          margin-bottom: 64px;
           max-width: 550px;
           font-family: "triakis__font_lightregular";
           font-size: 128px;
@@ -22,7 +20,7 @@ export const SectionEleven = styled.div`
         }
         .be-part-and-contribute {
           display: flex;
-          margin-top: 56px;
+          margin-top: 70px;
           .be-part {
             flex: 1;
           }
@@ -35,12 +33,18 @@ export const SectionEleven = styled.div`
         }
       }
       &.column-2 {
-        padding: 64px 0px 64px 96px;
+        padding: 64px 0px 24px 64px;
         border-left: 1px solid ${COLOR.BLACK};
       }
       .footer-anchors {
         display: flex;
         justify-content: space-between;
+        height: 100%;
+        .footer-anchor-1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
         .footer-anchor-2 {
           display: flex;
           flex-direction: column;
@@ -54,11 +58,11 @@ export const SectionEleven = styled.div`
         display: none;
       }
       .ant-anchor-link {
-        padding: 8px 0 8px 0;
+        padding: 12px 0 8px 0;
       }
       .ant-anchor-link-title {
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 18px;
         &:hover {
           color: inherit !important;
           text-decoration: underline;
@@ -108,7 +112,6 @@ export const SectionEleven = styled.div`
           padding: 12px 0 12px 0;
         }
         .copyright {
-          display: none;
         }
       }
     }

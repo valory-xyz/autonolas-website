@@ -3,8 +3,6 @@ import { BREAK_POINT } from 'util/theme';
 
 export const SectionEight = styled.div`
   background-image: url("/images/dapp/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .header {
     max-width: 1000px;
   }
@@ -19,9 +17,7 @@ export const SectionEight = styled.div`
         padding: 48px 16px;
       }
       > div {
-        &:nth-child(2) {
-          margin-bottom: 24px;
-        }
+        margin-bottom: 24px;
       }
     }
   }

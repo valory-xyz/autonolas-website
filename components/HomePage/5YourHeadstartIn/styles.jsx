@@ -3,8 +3,6 @@ import { BREAK_POINT } from 'util/theme';
 
 export const SectionFive = styled.div`
   background-image: url("/images/your-head-start/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .description-l-3 {
     margin: 40px 0 20px 0;
   }

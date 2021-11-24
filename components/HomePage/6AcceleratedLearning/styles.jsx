@@ -3,8 +3,6 @@ import { BREAK_POINT, COLOR } from 'util/theme';
 
 export const SectionSix = styled.div`
   background-image: url("/images/accelerated-learning/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .dev-academy-logo img {
     display: flex;
     margin: 0 auto 32px auto;

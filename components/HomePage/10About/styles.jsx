@@ -3,7 +3,6 @@ import { COLOR, BREAK_POINT } from 'util/theme';
 
 export const SectionTen = styled.div`
   background-image: url("/images/about/background.jpg");
-  background-size: 100% 100%;
   .header {
     line-height: normal;
   }
@@ -93,12 +92,27 @@ export const SectionTen = styled.div`
       }
     }
   }
-
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    .row-1.founders {
+      .founder {
+        max-width: 280px;
+        .member-image {
+          width: 280px;
+          height: 420px;
+        }
+      }
+    }
+    .row-2.founding-team {
+      .found-team-desc {
+        max-width: 270px;
+      }
+    }
+  }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     background-image: url("/images/about/background-mobile.jpg");
     .member-image {
       width: 200px !important;
-      height: 300px;
+      height: 300px !important;
     }
     .row-1.founders {
       flex-direction: column;

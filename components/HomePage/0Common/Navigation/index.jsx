@@ -1,51 +1,18 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useCheckMobileScreen } from 'common-util/hooks';
 import { COLOR } from 'util/theme';
+import { useCheckMobileScreen } from 'common-util/hooks';
 import { getSocials } from 'common-util/functions';
-import { Hamburger, MobileNavigationContainer, Container } from './styles';
+import { AutonolasLogo } from 'common-util/svg';
+import { NAV_1, NAV_2, NAVIGATION_SOCIALS } from './constants';
+import {
+  DesktopNavBar, Hamburger, MobileNavigationContainer, Container,
+} from './styles';
 
-const NAV_1 = [
-  { name: 'Why?', id: 'why-autonolas' },
-  { name: 'What?', id: 'what-is-autonolas' },
-  { name: 'Developers', id: 'developers' },
-  { name: 'Community', id: 'community' },
-];
-
-const NAV_2 = [
-  { name: 'Product', id: 'product' },
-  { name: 'Lore', id: 'lore' },
-  { name: 'About', id: 'about' },
-  {
-    name: '',
-    id: 'twitter-redirect',
-    type: 'icon',
-    iconName: 'twitter',
-    url: 'https://twitter.com/autonolas',
-  },
-];
-
-const NAVIGATION_SOCIALS = [
-  {
-    id: 'ola-tribe-twitter',
-    type: 'twitter',
-    url: 'https://twitter.com/valoryag',
-  },
-  {
-    id: 'ola-tribe-discord',
-    type: 'discord',
-    url: 'https://discord.com/invite/z2PT65jKqQ',
-  },
-  {
-    id: 'ola-tribe-github',
-    type: 'github',
-    url: 'https://github.com/valory-xyz',
-    iconSize: 'small',
-  },
-];
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
   const mapKey = `navigation-id-${eachNav.id}-${suffix}`;
+  const isRedirect = !!eachNav.url;
   const isIcon = eachNav.type === 'icon';
   const title = isIcon ? (
     <img src={`/images/common/${eachNav.iconName}.svg`} alt="" />
@@ -56,9 +23,9 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
   return (
     <li className="nav-item" key={mapKey}>
       <a
-        href={isIcon ? eachNav.url : `#${eachNav.id}`}
+        href={isRedirect ? eachNav.url : `#${eachNav.id}`}
         className="nav-link"
-        target={isIcon ? '_blank' : '_self'}
+        target={isRedirect ? '_blank' : '_self'}
         rel="noopener noreferrer"
         onClick={() => {
           callback(false);
@@ -91,8 +58,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
 
   /* temporary variables */
   const isMobile = useCheckMobileScreen();
-  const logoImage = <img src="/images/header/logo.png" alt="autonolas-logo" />;
-
   const navbarClassName = () => {
     let name = 'navbar';
     if (isMobile) {
@@ -136,7 +101,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
             ) : (
               <MobileNavigationContainer>
                 <a href="#banner" className="nav-logo">
-                  {logoImage}
+                  <AutonolasLogo width={124} height={54} />
                 </a>
               </MobileNavigationContainer>
             )}
@@ -152,16 +117,19 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
             </Hamburger>
           </>
         ) : (
-          <ul className="nav-menu">
-            {getNavigationsMenu(NAV_1, setNavigationToggle)}
-            <li className="nav-item  nav-item-logo">
+          <DesktopNavBar>
+            <ul className="nav-menu">
+              {getNavigationsMenu(NAV_1, setNavigationToggle)}
+            </ul>
+            <div className="nav-item-logo">
               <a href="#banner" className="nav-link">
-                {logoImage}
+                <AutonolasLogo width={124} height={60} />
               </a>
-            </li>
-            <li />
-            {getNavigationsMenu(NAV_2, setNavigationToggle)}
-          </ul>
+            </div>
+            <ul className="nav-menu">
+              {getNavigationsMenu(NAV_2, setNavigationToggle)}
+            </ul>
+          </DesktopNavBar>
         )}
       </nav>
     </Container>

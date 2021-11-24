@@ -23,7 +23,8 @@ export const Container = styled.div`
   position: relative;
   margin: 0 auto;
   .section {
-    padding: 40px 50px;
+    padding: 60px 50px;
+    background-size: 100% 100%;
     .header {
       margin-bottom: 50px;
     }
@@ -98,6 +99,11 @@ export const Container = styled.div`
       &.twitter {
         margin-top: 2px;
       }
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    .description-l-3 {
+      font-size: 22px;
     }
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {

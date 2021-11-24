@@ -8,6 +8,9 @@ const H2 = styled.h2`
   font-size: 108px;
   line-height: normal;
   font-family: triakis__fontheavy, sans-serif;
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    font-size: 104px;
+  }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     font-size: 54px;
   }

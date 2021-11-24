@@ -52,6 +52,7 @@ const HomePage = () => {
 
         <JoinTheOlasTribe />
       </Container>
+
       <GlobalStyle isNavigationOpen={isNavigationOpen} />
     </>
   );

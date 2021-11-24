@@ -3,8 +3,6 @@ import { COLOR, BREAK_POINT } from 'util/theme';
 
 export const SectionSeven = styled.div`
   background-image: url("/images/do-your-lifes-work/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   padding-top: 74px;
   .header {
     margin-bottom: 12px !important;
@@ -67,6 +65,17 @@ export const SectionSeven = styled.div`
           float: right;
           p {
             margin: 0;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    .row-2 {
+      .column {
+        &.column-3 {
+          .content {
+            width: auto;
           }
         }
       }

@@ -10,8 +10,6 @@ export const SectionOne = styled.div`
   justify-content: center;
   height: calc(100vh - ${SIZES.bannerHeight});
   background-image: url("/images/birth-place/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .header {
     max-width: 1100px;
     margin: 0;
@@ -27,12 +25,16 @@ export const SectionOne = styled.div`
     margin: 3rem 0;
     line-height: 1.4;
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    .header {
+      font-size: 104px;
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.sm}) {
     align-items: flex-start;
     justify-content: flex-start;
     background-image: url("/images/birth-place/background-mobile.jpg");
     padding: ${({ isNavigationOpen: e }) => `${e ? '20px 0px' : widths.mobileSectionPadding}!important`};
-
     .header {
       margin-right: 60px;
       margin-top: 86px;

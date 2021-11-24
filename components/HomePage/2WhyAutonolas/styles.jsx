@@ -3,8 +3,6 @@ import { BREAK_POINT } from 'util/theme';
 
 export const SectionTwo = styled.div`
   background-image: url("/images/why-autonolas/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .row {
     &.row-1 {
       display: flex;

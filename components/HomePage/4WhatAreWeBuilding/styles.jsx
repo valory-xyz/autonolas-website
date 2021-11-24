@@ -5,8 +5,6 @@ import { BREAK_POINT, COLOR } from 'util/theme';
 export const SectionFour = styled.div`
   position: relative;
   background-image: url("/images/what-are-we-building/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   .header {
     max-width: 586px;
     margin-bottom: 166px !important;

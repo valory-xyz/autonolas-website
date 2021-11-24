@@ -23,7 +23,7 @@ export const useCheckMobileScreen = () => {
   }, [width]);
 
 
-  return (width <= 768 && width > 0);
+  return (width <= 576 && width > 0);
 };
 
 export const EX = null;

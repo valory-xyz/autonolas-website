@@ -15,6 +15,10 @@ export const Btn = styled.button`
   &:hover {
     cursor: pointer;
   }
+  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+    width: auto;
+    padding: 0 48px;
+  }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     width: 100%;
     height: 52px;

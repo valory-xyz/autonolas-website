@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import { SectionSix } from './styles';
@@ -35,9 +36,11 @@ export const REQUIREMENTS = [
 const AcceleratedLearning = () => (
   <SectionSix className="section section-6 border-boxes" id="developers">
     <div className="dev-academy-logo">
-      <img
+      <Image
         src="/images/accelerated-learning/agent-dev-academy.png"
         alt="Accelerated learning logo"
+        width={140}
+        height={190}
       />
     </div>
 

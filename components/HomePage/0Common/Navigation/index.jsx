@@ -1,21 +1,29 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import { COLOR } from 'util/theme';
 import { useCheckMobileScreen } from 'common-util/hooks';
 import { getSocials } from 'common-util/functions';
 import { AutonolasLogo } from 'common-util/svg';
 import { NAV_1, NAV_2, NAVIGATION_SOCIALS } from './constants';
 import {
-  DesktopNavBar, Hamburger, MobileNavigationContainer, Container,
+  DesktopNavBar,
+  Hamburger,
+  MobileNavigationContainer,
+  Container,
 } from './styles';
-
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
   const mapKey = `navigation-id-${eachNav.id}-${suffix}`;
   const isRedirect = !!eachNav.url;
   const isIcon = eachNav.type === 'icon';
   const title = isIcon ? (
-    <img src={`/images/common/${eachNav.iconName}.svg`} alt="" />
+    <Image
+      src={`/images/common/${eachNav.iconName}.svg`}
+      alt={`${eachNav.iconName} Icon`}
+      width={24}
+      height={24}
+    />
   ) : (
     eachNav.name
   );
@@ -100,13 +108,14 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
               </>
             ) : (
               <MobileNavigationContainer>
-                <a href="#banner" className="nav-logo">
+                <a href="#banner" className="nav-logo" aria-label="Autonolas logo">
                   <AutonolasLogo width={124} height={54} />
                 </a>
               </MobileNavigationContainer>
             )}
 
             <Hamburger
+              aria-label="Navbar menu"
               role="button"
               tabIndex={0}
               onClick={() => setNavigationToggle(!isNavigationOpen)}
@@ -122,7 +131,11 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
               {getNavigationsMenu(NAV_1, setNavigationToggle)}
             </ul>
             <div className="nav-item-logo">
-              <a href="#banner" className="nav-link">
+              <a
+                href="#banner"
+                className="nav-link"
+                aria-label="Autonolas Logo"
+              >
                 <AutonolasLogo width={124} height={60} />
               </a>
             </div>

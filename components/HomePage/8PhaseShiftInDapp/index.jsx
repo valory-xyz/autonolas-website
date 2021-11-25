@@ -32,6 +32,7 @@ const PhaseShiftInDapp = () => {
                 src="/images/dapp/meme.jpg"
                 alt="DAPP meme"
                 className="full-width"
+                loading="lazy"
               />
             )}
             <div className="description-l-4">
@@ -52,6 +53,7 @@ const PhaseShiftInDapp = () => {
                 src="/images/dapp/meme-border.png"
                 alt="DAPP meme"
                 className="full-width"
+                loading="lazy"
               />
             </div>
           </Col>
@@ -75,7 +77,11 @@ const PhaseShiftInDapp = () => {
             <div className="description-l-4">
               DeFi private alpha scheduled for Q1 ‘22
             </div>
-            <Button type="primary" title="apply as an early tester" />
+            <Button
+              type="primary"
+              title="apply as an early tester"
+              onClick={() => window.open('http://eepurl.com/hOfsr5')}
+            />
           </div>
         </div>
       </div>

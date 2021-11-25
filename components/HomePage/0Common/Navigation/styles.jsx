@@ -151,10 +151,6 @@ export const Container = styled.header`
           border-top: 1px solid ${COLOR.BLACK};
           a {
             margin: 0 !important;
-            img {
-              width: 42px;
-              height: 42px;
-            }
           }
         }
       }

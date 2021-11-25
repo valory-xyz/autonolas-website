@@ -8,7 +8,12 @@ const WhyAutonolas = () => (
     <div className="row row-1">
       <div className="column column-1">
         <div className="content">
-          <img src="/images/why-autonolas/image-1.png" alt="Why Autonolas 1" />
+          <img
+            src="/images/why-autonolas/image-1.png"
+            alt="Why Autonolas 1"
+            loading="lazy"
+          />
+
           <div className="text">
             Crypto promised the world autonomous applications which deliver
             fundamental services without human input. Mega factories in the sky.
@@ -18,7 +23,12 @@ const WhyAutonolas = () => (
 
       <div className="column column-2">
         <div className="content">
-          <img src="/images/why-autonolas/image-2.png" alt="Why Autonolas 2" />
+          <img
+            src="/images/why-autonolas/image-2.png"
+            alt="Why Autonolas 2"
+            loading="lazy"
+
+          />
           <div className="text">
             But instead, industrial age processes with dapps which have heavy
             human (DAO) and trustful (bot) elements to keep them running.
@@ -28,7 +38,12 @@ const WhyAutonolas = () => (
 
       <div className="column column-3">
         <div className="content">
-          <img src="/images/why-autonolas/image-3.png" alt="Why Autonolas 3" />
+          <img
+            src="/images/why-autonolas/image-3.png"
+            alt="Why Autonolas 3"
+            loading="lazy"
+
+          />
           <div className="text">
             Why? Smart contracts are limited – they can’t do things which are:
             <ul>
@@ -44,13 +59,23 @@ const WhyAutonolas = () => (
     <div className="row row-2">
       <div className="column column-1">
         <div className="content">
-          <img src="/images/why-autonolas/image-4.png" alt="Why Autonolas 4" />
+          <img
+            src="/images/why-autonolas/image-4.png"
+            alt="Why Autonolas 4"
+            loading="lazy"
+
+          />
         </div>
       </div>
 
       <div className="column column-2">
         <div className="content">
-          <img src="/images/why-autonolas/image-5.png" alt="Why Autonolas 5" />
+          <img
+            src="/images/why-autonolas/image-5.png"
+            alt="Why Autonolas 5"
+            loading="lazy"
+
+          />
           <div className="text">
             This unlocks a path to smart contracts applications which are entirely
             self-owned and self-operating. Economic machines which live and thrive
@@ -61,7 +86,12 @@ const WhyAutonolas = () => (
 
       <div className="column column-3">
         <div className="content">
-          <img src="/images/why-autonolas/image-6.png" alt="Why Autonolas 6" />
+          <img
+            src="/images/why-autonolas/image-6.png"
+            alt="Why Autonolas 6"
+            loading="lazy"
+
+          />
         </div>
       </div>
     </div>

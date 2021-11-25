@@ -30,6 +30,7 @@ const DoYourLifesWork = () => (
     <img
       src="/images/do-your-lifes-work/line.png"
       alt="Do your life’s work line"
+      loading="lazy"
     />
 
     <div className="row row-1">

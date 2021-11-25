@@ -30,7 +30,13 @@ const YourHeadStartIn = () => (
         return (
           <div className="column" key={getId()}>
             <div className="content">
-              <img src={imageUrl} alt={`Your hear start - ${index}`} />
+              <img
+                src={imageUrl}
+                alt={`Your hear start - ${index + 1}`}
+                loading="lazy"
+                // width={160}
+                // height={160}
+              />
               <div className="text description-l-4">{desc}</div>
             </div>
           </div>

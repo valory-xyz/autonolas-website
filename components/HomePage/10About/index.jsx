@@ -15,7 +15,7 @@ const About = () => {
           name, desc, socials, id, intro, imageUrl,
         }) => (
           <div key={id} className="founder">
-            <img className="member-image" src={imageUrl} alt={`${name}`} />
+            <img className="member-image" src={imageUrl} alt={`${name}`} loading="lazy" />
             <div className="name">{name}</div>
             <div className="description-l-4">{intro}</div>
             <ul className="what-they-do">
@@ -41,7 +41,7 @@ const About = () => {
             const getId = () => `founding-team-${index}`;
             return (
               <div key={getId()} className="each-member">
-                <img className="member-image" src={imageUrl} alt={`${name}`} />
+                <img className="member-image" src={imageUrl} alt={`${name}`} loading="lazy" />
                 <div className="name">{name}</div>
                 <ul className="what-they-do">
                   <li>{desc}</li>

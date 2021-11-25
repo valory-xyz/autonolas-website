@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { COLOR, BREAK_POINT } from 'util/theme';
-// , SIZES
 
 export const BorderBoxes = styled.div`
   .row {

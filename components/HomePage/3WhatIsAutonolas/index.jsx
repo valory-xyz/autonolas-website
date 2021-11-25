@@ -14,6 +14,7 @@ const WhatIsAutonolas = () => {
         <img
           src={`/images/what-is-autonolas/logo${isMobile ? '-mobile' : ''}.png`}
           alt="What is Autonolas logo"
+          loading="lazy"
         />
         <div className="text text-1 description-l-3">
           Autonolas is a platform for extending the cryptonative capabilities of

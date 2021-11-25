@@ -85,6 +85,7 @@ const JoinTheOlasTribe = () => {
                   href="https://autonolas.medium.com/"
                   title="Blog"
                   target="_blank"
+                  rel="noopener noreferrer"
                 />
               </Anchor>
               {!isMobile && <Copyright device="desktop" />}

@@ -59,3 +59,24 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+// TODO for improve performance
+/**
+ * 1. Image elements do not have explicit width and height
+ * 2. Add sitemap.xml
+ * 3. update robots.txt
+ * 4. need correct resolution images => section 5
+ *
+ *
+
+import Image from 'next/image';
+<Image
+  src="/images/why-autonolas/image-1.png"
+  alt="Why Autonolas 1"
+  width={210}
+  height={290}
+  layout="responsive"
+/>
+
+//
+ */

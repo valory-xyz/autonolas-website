@@ -17,6 +17,7 @@ const PhaseShiftInDapp = () => {
             src={`/images/lore/logo${isMobile ? '-mobile' : ''}.png`}
             alt="Lore logo"
             className="full-width"
+            loading="lazy"
           />
           <div className="text-container text-container-1">
             <div className="text-row">

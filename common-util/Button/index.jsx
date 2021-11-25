@@ -24,20 +24,6 @@ export const Btn = styled.button`
     0% 85.7%,
     0% 0%
   );
-  /* &:before {
-    content: "";
-    clip-path: polygon(
-      20.6% 0%,
-      23.2% 13.6%,
-      78.7% 14.3%,
-      80.8% 0%,
-      96.5% 0%,
-      118% 100%,
-      3.1% 100%,
-      0% 85.7%,
-      0% 0%
-    );
-  } */
   &:hover {
     cursor: pointer;
   }
@@ -49,7 +35,6 @@ export const Btn = styled.button`
   @media only screen and (max-width: ${BREAK_POINT.md}) {
     padding-top: 12px;
     width: 100%;
-    /* height: 52px; */
     font-size: ${FONT_SIZE[22]};
   }
 

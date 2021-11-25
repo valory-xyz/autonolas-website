@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export const handleJoinDiscord = () => {
   window.open('https://discord.com/invite/z2PT65jKqQ');
 };
@@ -17,8 +19,18 @@ export const getSocials = socials => (
           target="_blank"
           rel="noopener noreferrer"
           key={`social-${social.type}`}
+          aria-label={`social-${social.type}`}
         >
-          <img src={src} alt="" />
+          {social.size ? (
+            <Image
+              src={src}
+              alt=""
+              width={social.size.width}
+              height={social.size.height}
+            />
+          ) : (
+            <img src={src} alt="" />
+          )}
         </a>
       );
     })}

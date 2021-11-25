@@ -7,7 +7,7 @@ module.exports = withAntdLess({
   lessLoaderOptions: {
     javascriptEnabled: true,
   },
-
+  productionBrowserSourceMaps: true,
   webpack(config) {
     return config;
   },

@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
 import * as Progress from 'util/progress';
-import Layout from 'components/Layout';
 import GlobalStyle from 'components/GlobalStyles';
 import initStore from '../store';
 import './styles.less';
@@ -25,10 +24,9 @@ class MyApp extends App {
       <>
         <Head>
           <title>The Birthplace of Economic Autonomy | Autonolas</title>
+          <meta name="description" content="The Birthplace of Economic Autonomy" />
         </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
         <GlobalStyle />
       </>
     );

@@ -3,10 +3,10 @@ import { BREAK_POINT, COLOR } from 'util/theme';
 
 export const SectionSix = styled.div`
   background-image: url("/images/accelerated-learning/background.jpg");
-  .dev-academy-logo img {
+  .dev-academy-logo {
     display: flex;
     margin: 0 auto 32px auto;
-    width: 140px;
+    justify-content: center;
   }
   .header {
     max-width: 1000px;

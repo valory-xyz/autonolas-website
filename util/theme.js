@@ -19,6 +19,7 @@ export const FONT_SIZE = {
 };
 
 export const BREAK_POINT = {
+  xxs: '375px',
   xs: '480px',
   sm: '576px',
   md: '768px',

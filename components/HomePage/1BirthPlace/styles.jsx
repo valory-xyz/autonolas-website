@@ -49,9 +49,22 @@ export const SectionOne = styled.div`
     .btn {
       position: absolute;
       width: 80%;
-      bottom: 64px;
+      bottom: 96px;
       left: 50%;
       transform: translate(-50%, 0px);
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.xxs}) {
+    height: auto;
+    .description-l-2 {
+      max-width: 280px;
+      margin-top: 3rem;
+      text-align: left;
+    }
+    .btn {
+      position: relative;
+      bottom: 16px;
+      width: 80%;
     }
   }
 `;

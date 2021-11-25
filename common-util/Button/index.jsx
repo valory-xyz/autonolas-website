@@ -12,16 +12,44 @@ export const Btn = styled.button`
   font-family: triakis__fontbold, sans-serif;
   transition: all 0.3s;
   line-height: normal;
+  padding-top: 10px;
+  clip-path: polygon(
+    20.6% 0%,
+    23.2% 13.6%,
+    78.7% 14.3%,
+    80.8% 0%,
+    96.5% 0%,
+    118% 100%,
+    3.1% 100%,
+    0% 85.7%,
+    0% 0%
+  );
+  /* &:before {
+    content: "";
+    clip-path: polygon(
+      20.6% 0%,
+      23.2% 13.6%,
+      78.7% 14.3%,
+      80.8% 0%,
+      96.5% 0%,
+      118% 100%,
+      3.1% 100%,
+      0% 85.7%,
+      0% 0%
+    );
+  } */
   &:hover {
     cursor: pointer;
   }
   @media only screen and (max-width: ${BREAK_POINT.xl}) {
     width: auto;
-    padding: 0 48px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
   @media only screen and (max-width: ${BREAK_POINT.md}) {
+    padding-top: 12px;
     width: 100%;
-    height: 52px;
+    /* height: 52px; */
     font-size: ${FONT_SIZE[22]};
   }
 
@@ -49,6 +77,7 @@ export const Btn = styled.button`
         `;
       case 'outline':
         return `
+          clip-path: none;
           border : 1px solid ${COLOR.BLACK};
           background-color: transparent;
           color: ${COLOR.BLACK};

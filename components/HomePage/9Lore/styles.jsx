@@ -67,7 +67,7 @@ export const SectionNine = styled.div`
   }
   @media only screen and (max-width: ${BREAK_POINT.xl}) {
     .row-2 {
-      .text-container-2  {
+      .text-container-2 {
         bottom: 0%;
       }
     }
@@ -114,6 +114,23 @@ export const SectionNine = styled.div`
         &.column-1 {
           margin-bottom: 20px;
         }
+      }
+    }
+  }
+  @media only screen and (max-width: ${BREAK_POINT.xxs}) {
+    .row-2 {
+      .text-container-1 .text-row .column-1 {
+        flex: 1;
+      }
+      .text-container-2 .text-row .text {
+        margin-bottom: 0%;
+      }
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .row-2 {
+      .text-container-1 .text-row .column-1 {
+        flex: 0.7;
       }
     }
   }

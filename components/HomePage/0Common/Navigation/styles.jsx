@@ -53,6 +53,9 @@ export const Hamburger = styled.div`
       margin-bottom: 8px;
     }
   }
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Container = styled.header`

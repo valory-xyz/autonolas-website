@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { COLOR, FONT_SIZE, BREAK_POINT } from 'util/theme';
+import { COLOR, FONT_SIZE, MEDIA_QUERY } from 'util/theme';
 
 export const Btn = styled.button`
   outline: none;
@@ -27,12 +27,14 @@ export const Btn = styled.button`
   &:hover {
     cursor: pointer;
   }
-  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+
+  ${MEDIA_QUERY.laptop} {
     width: auto;
     padding-left: 48px;
     padding-right: 48px;
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     padding-top: 12px;
     width: 100%;
     font-size: ${FONT_SIZE[22]};

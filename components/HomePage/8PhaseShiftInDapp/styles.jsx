@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAK_POINT } from 'util/theme';
+import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionEight = styled.div`
   background-image: url("/images/dapp/background.jpg");
@@ -21,42 +21,43 @@ export const SectionEight = styled.div`
       }
     }
   }
-  .row-3 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 64px;
-    margin-bottom: 16px;
-    .column {
-      .btn {
-        margin-top: 16px;
-      }
+
+  ${MEDIA_QUERY.tablet} {
+    background-image: url("/images/dapp/background-mobile.jpg");
+  }
+`;
+
+export const RowThree = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  .column {
+    .btn {
+      margin-top: 16px;
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
-    background-image: url("/images/dapp/background-mobile.jpg");
-    .row-3 {
-      flex-direction: column;
-      margin-top: 32px;
-      .column {
+
+  ${MEDIA_QUERY.tablet} {
+    flex-direction: column;
+    margin-top: 32px;
+    .column {
+      width: 100%;
+      &.column-1 {
+        min-width: auto;
+      }
+      &.column-2,
+      &.column-3 {
+        padding: 0;
         width: 100%;
-        &.column-1 {
-          min-width: auto;
-        }
-        &.column-2,
-        &.column-3 {
-          padding: 0;
-          width: 100%;
-          .content {
-            margin-top: 32px;
-            .btn {
-              margin-top: 8px;
-            }
+        .content {
+          margin-top: 32px;
+          .btn {
+            margin-top: 8px;
           }
         }
       }
     }
   }
 `;
-
-export const EG = styled.div``;

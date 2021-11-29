@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR, BREAK_POINT, TRANSITION } from 'util/theme';
+import { COLOR, TRANSITION, MEDIA_QUERY } from 'util/theme';
 
 export const DesktopNavBar = styled.div`
   display: flex;
@@ -13,12 +13,14 @@ export const DesktopNavBar = styled.div`
       width: 104px;
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+
+  ${MEDIA_QUERY.laptop} {
     .nav-item-logo {
       min-width: 180px;
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     .nav-item-logo {
       min-width: auto;
     }
@@ -58,6 +60,26 @@ export const Hamburger = styled.div`
   }
 `;
 
+export const NavMenu = styled.ul`
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-item {
+    .nav-link {
+      font-size: 14px;
+      color: ${COLOR.BLACK};
+      text-transform: uppercase;
+      &:hover {
+        color: ${COLOR.BLACK};
+        text-decoration: underline;
+      }
+    }
+  }
+`;
+
 export const Container = styled.header`
   position: fixed;
   width: 100%;
@@ -69,25 +91,6 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
     padding: 10px 16px;
-  }
-  .nav-menu {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .nav-item {
-      .nav-link {
-        font-size: 14px;
-        color: ${COLOR.BLACK};
-        text-transform: uppercase;
-        &:hover {
-          color: ${COLOR.BLACK};
-          text-decoration: underline;
-        }
-      }
-    }
   }
 
   /* common */
@@ -110,7 +113,7 @@ export const Container = styled.header`
     }
   }
 
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+  ${MEDIA_QUERY.tablet} {
     z-index: 2;
     .navbar {
       padding: 8px 16px;
@@ -120,7 +123,7 @@ export const Container = styled.header`
       }
       &.mobile {
         flex-direction: column;
-        .nav-menu {
+        ${NavMenu} {
           position: relative;
           left: -100%;
           left: 0;

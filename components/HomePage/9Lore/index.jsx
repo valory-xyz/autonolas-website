@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+// import Description from 'common-util/Description';
 import { useCheckMobileScreen } from 'common-util/hooks';
-import { SectionNine } from './styles';
+import { SectionNine, RowTwo, RowThree } from './styles';
 
 const PhaseShiftInDapp = () => {
   const isMobile = useCheckMobileScreen();
@@ -11,7 +12,7 @@ const PhaseShiftInDapp = () => {
     <SectionNine className="section section-9" id="lore">
       <Header className="header" title="Lore" />
 
-      <div className="row-2">
+      <RowTwo>
         <div className="content">
           <img
             src={`/images/lore/logo${isMobile ? '-mobile' : ''}.png`}
@@ -48,9 +49,9 @@ const PhaseShiftInDapp = () => {
             </div>
           </div>
         </div>
-      </div>
+      </RowTwo>
 
-      <div className="row-3">
+      <RowThree>
         <div className="column column-2 description-l-4">
           <div>Want to help develop the story?</div>
           <Button
@@ -59,7 +60,7 @@ const PhaseShiftInDapp = () => {
             onClick={() => window.open('https://discord.gg/VWGVs5kGkX')}
           />
         </div>
-      </div>
+      </RowThree>
     </SectionNine>
   );
 };

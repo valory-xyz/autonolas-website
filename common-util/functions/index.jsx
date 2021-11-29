@@ -29,7 +29,9 @@ export const getSocials = socials => (
               height={social.size.height}
             />
           ) : (
-            <img src={src} alt="" />
+            <>
+              <img src={src} alt="" />
+            </>
           )}
         </a>
       );

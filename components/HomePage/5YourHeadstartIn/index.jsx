@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+import Description from 'common-util/Description';
 import { SectionFive } from './styles';
 
 const LIST = [
@@ -37,7 +38,7 @@ const YourHeadStartIn = () => (
                 // width={160}
                 // height={160}
               />
-              <div className="text description-l-4">{desc}</div>
+              <Description className="text" type={4} title={desc} />
             </div>
           </div>
         );

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR, BREAK_POINT } from 'util/theme';
+import { COLOR, MEDIA_QUERY } from 'util/theme';
 
 export const BorderBoxes = styled.div`
   .row {
@@ -29,7 +29,8 @@ export const BorderBoxes = styled.div`
       }
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     .row {
       flex-direction: column;
       .column {

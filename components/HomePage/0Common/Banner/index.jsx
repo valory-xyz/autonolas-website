@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { handleJoinDiscord } from 'common-util/functions';
-import { COLOR, FONT_SIZE, BREAK_POINT } from 'util/theme';
+import { COLOR, FONT_SIZE, MEDIA_QUERY } from 'util/theme';
 import { useCheckMobileScreen } from 'common-util/hooks';
 
 export const BannerContainer = styled.div`
@@ -31,7 +31,8 @@ export const BannerContainer = styled.div`
       }
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     width: 100%;
     padding: 12px;
     justify-content: space-between;

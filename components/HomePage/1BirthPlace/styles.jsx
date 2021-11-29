@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAK_POINT, SIZES } from 'util/theme';
+import { MEDIA_QUERY, SIZES } from 'util/theme';
 import { widths } from '../styles';
 
 export const SectionOne = styled.div`
@@ -19,18 +19,20 @@ export const SectionOne = styled.div`
     line-height: 0.85;
     font-size: 124px;
   }
-  .description-l-2 {
+  .description {
     text-align: center;
     max-width: 800px;
     margin: 3rem 0;
     line-height: 1.4;
   }
-  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+
+  ${MEDIA_QUERY.laptop} {
     .header {
       font-size: 104px;
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.sm}) {
+
+  ${MEDIA_QUERY.mobileL} {
     align-items: flex-start;
     justify-content: flex-start;
     background-image: url("/images/birth-place/background-mobile.jpg");
@@ -41,7 +43,7 @@ export const SectionOne = styled.div`
       text-align: left;
       font-size: 54px;
     }
-    .description-l-2 {
+    .description {
       max-width: 280px;
       margin-top: 6rem;
       text-align: left;
@@ -54,9 +56,10 @@ export const SectionOne = styled.div`
       transform: translate(-50%, 0px);
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.xxs}) {
+
+  ${MEDIA_QUERY.mobileS} {
     height: auto;
-    .description-l-2 {
+    .description {
       max-width: 280px;
       margin-top: 3rem;
       text-align: left;

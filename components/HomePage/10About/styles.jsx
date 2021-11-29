@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR, BREAK_POINT } from 'util/theme';
+import { COLOR, MEDIA_QUERY } from 'util/theme';
 
 export const SectionTen = styled.div`
   background-image: url("/images/about/background.jpg");
@@ -57,42 +57,9 @@ export const SectionTen = styled.div`
         line-height: 1.1;
       }
     }
-    .founding-team-members {
-      display: flex;
-      .each-member {
-        flex: none;
-        width: 380px;
+  }
 
-        .name {
-          font-family: "triakis__font_lightregular";
-        }
-        .what-they-do {
-          li {
-            margin: 2px 0 16px 0;
-          }
-        }
-      }
-    }
-  }
-  .row-3 {
-    padding-top: 56px;
-    border-top: 1px solid ${COLOR.GREEN_2};
-    .investors-banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      img {
-        &:nth-child(1),
-        &:nth-child(3) {
-          width: 240px;
-        }
-        &:nth-child(2) {
-          max-width: 640px;
-        }
-      }
-    }
-  }
-  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+  ${MEDIA_QUERY.laptop} {
     .row-1.founders {
       .founder {
         max-width: 280px;
@@ -108,7 +75,8 @@ export const SectionTen = styled.div`
       }
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     background-image: url("/images/about/background-mobile.jpg");
     .member-image {
       width: 200px !important;
@@ -128,34 +96,36 @@ export const SectionTen = styled.div`
       flex-direction: column;
       margin-right: -10px;
       overflow-x: hidden;
-      .founding-team-members {
-        overflow-x: auto;
-        margin-top: 20px;
-        .each-member {
-          width: 240px;
-          &:nth-child(1) {
-            margin-left: 50px;
-          }
-        }
-      }
       .found-team-desc {
         line-height: normal;
-      }
-    }
-    .row-3 {
-      .investors-banner {
-        img {
-          &:nth-child(1),
-          &:nth-child(3) {
-            width: 60px;
-          }
-          &:nth-child(2) {
-            max-width: 160px;
-          }
-        }
       }
     }
   }
 `;
 
-export const ABC = styled.div``;
+export const FoundingTeamMembers = styled.div`
+  display: flex;
+  .each-member {
+    flex: none;
+    width: 380px;
+    .name {
+      font-family: "triakis__font_lightregular";
+    }
+    .what-they-do {
+      li {
+        margin: 2px 0 16px 0;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.tablet} {
+    overflow-x: auto;
+    margin-top: 20px;
+    .each-member {
+      width: 240px;
+      &:nth-child(1) {
+        margin-left: 50px;
+      }
+    }
+  }
+`;

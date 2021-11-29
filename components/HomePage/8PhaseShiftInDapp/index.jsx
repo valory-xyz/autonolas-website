@@ -2,8 +2,9 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+import Description from 'common-util/Description';
 import { useCheckMobileScreen } from 'common-util/hooks';
-import { SectionEight } from './styles';
+import { SectionEight, RowThree } from './styles';
 
 const PhaseShiftInDapp = () => {
   const isMobile = useCheckMobileScreen();
@@ -22,11 +23,12 @@ const PhaseShiftInDapp = () => {
       <Row>
         <Col xs={24} md={10} className="column column-1">
           <div className="content">
-            <div className="description-l-4">
-              With us, smart contract apps ‘own’ their off-chain components.
+            <Description
+              type={4}
+              title="With us, smart contract apps ‘own’ their off-chain components.
               These components do things like make decisions, source data and
-              make things happen in the real-world, on other chains and web2.
-            </div>
+              make things happen in the real-world, on other chains and web2."
+            />
             {isMobile && (
               <img
                 src="/images/dapp/meme.jpg"
@@ -35,13 +37,14 @@ const PhaseShiftInDapp = () => {
                 loading="lazy"
               />
             )}
-            <div className="description-l-4">
-              What does that mean though? Apps on our platform can do
+            <Description
+              type={4}
+              title="What does that mean though? Apps on our platform can do
               fundamentally new things, and do existing things at much higher
               levels of efficiency. For the end user, this passes on new
               opportunities, functionality and above all, radically simpler user
-              experiences.
-            </div>
+              experiences."
+            />
           </div>
         </Col>
 
@@ -60,10 +63,10 @@ const PhaseShiftInDapp = () => {
         )}
       </Row>
 
-      <div className="row-3">
+      <RowThree>
         <div className="column column-1">
           <div className="content">
-            <div className="description-l-4">Want to learn more?</div>
+            <Description type={4} title="Want to learn more?" />
             <Button
               type="primary"
               title="Join #product-and-apps"
@@ -74,9 +77,7 @@ const PhaseShiftInDapp = () => {
 
         <div className="column column-2">
           <div className="content">
-            <div className="description-l-4">
-              DeFi private alpha scheduled for Q1 ‘22
-            </div>
+            <Description type={4} title="DeFi private alpha scheduled for Q1 ‘22" />
             <Button
               type="primary"
               title="apply as an early tester"
@@ -84,7 +85,7 @@ const PhaseShiftInDapp = () => {
             />
           </div>
         </div>
-      </div>
+      </RowThree>
     </SectionEight>
   );
 };

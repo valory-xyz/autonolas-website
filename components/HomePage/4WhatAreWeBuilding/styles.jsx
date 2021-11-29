@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { BREAK_POINT, COLOR } from 'util/theme';
-
+import { MEDIA_QUERY, COLOR } from 'util/theme';
 
 export const SectionFour = styled.div`
   position: relative;
@@ -62,7 +61,8 @@ export const SectionFour = styled.div`
   &.border-boxes .row .column {
     border-color: ${COLOR.WHITE};
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     background-image: url("/images/what-are-we-building/background-mobile.jpg");
     .header {
       margin-bottom: 54px !important;
@@ -101,6 +101,5 @@ export const SectionFour = styled.div`
     }
   }
 `;
-
 
 export const EG = styled.div``;

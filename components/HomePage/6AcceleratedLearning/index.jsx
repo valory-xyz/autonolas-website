@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
+import Description from 'common-util/Description';
 import { SectionSix } from './styles';
 
 const LIST = [
@@ -60,7 +61,7 @@ const AcceleratedLearning = () => (
                 className="bg-image"
                 style={{ backgroundImage: `url(${imageUrl})` }}
               />
-              <div className="text description-l-4">{desc}</div>
+              <Description className="text" type={4} title={desc} />
             </div>
           </div>
         );

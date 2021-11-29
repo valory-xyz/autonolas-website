@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from 'common-util/Header';
+import Description from 'common-util/Description';
 import { getSocials } from 'common-util/functions';
 import { FOUNDERS, FOUNDING_TEAM } from './constants';
-import { SectionTen } from './styles';
+import { SectionTen, FoundingTeamMembers } from './styles';
 
 const About = () => {
   const sortedTeamList = FOUNDING_TEAM.sort((a, b) => (a.name < b.name ? -1 : 1));
@@ -17,7 +18,7 @@ const About = () => {
           <div key={id} className="founder">
             <img className="member-image" src={imageUrl} alt={`${name}`} loading="lazy" />
             <div className="name">{name}</div>
-            <div className="description-l-4">{intro}</div>
+            <Description type={4} title={intro} />
             <ul className="what-they-do">
               {desc.map(e => (
                 <li key={e}>{e}</li>
@@ -34,7 +35,7 @@ const About = () => {
           <p>overflowing with talent</p>
         </div>
 
-        <div className="founding-team-members">
+        <FoundingTeamMembers>
           {sortedTeamList.map(({
             name, desc, socials, imageUrl,
           }, index) => {
@@ -50,7 +51,7 @@ const About = () => {
               </div>
             );
           })}
-        </div>
+        </FoundingTeamMembers>
       </div>
     </SectionTen>
   );

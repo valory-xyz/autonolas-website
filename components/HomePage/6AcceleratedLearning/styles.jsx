@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAK_POINT, COLOR } from 'util/theme';
+import { MEDIA_QUERY, COLOR } from 'util/theme';
 
 export const SectionSix = styled.div`
   background-image: url("/images/accelerated-learning/background.jpg");
@@ -77,7 +77,8 @@ export const SectionSix = styled.div`
       }
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     background-image: url("/images/accelerated-learning/background-mobile.jpg");
     .header {
       line-height: 0.85;

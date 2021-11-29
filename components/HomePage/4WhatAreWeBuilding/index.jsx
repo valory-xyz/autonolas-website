@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+import Description from 'common-util/Description';
 import { SectionFour } from './styles';
 
 const LIST = [
@@ -30,8 +31,8 @@ const WhatAreWeBuilding = () => (
         return (
           <div className={`column column-${index + 1}`} key={getId()}>
             <div className="content">
-              <div className="title description-l-3">{title}</div>
-              <div className="text description-l-4">{desc}</div>
+              <Description className="title" type={3} title={title} />
+              <Description className="text" type={4} title={desc} />
             </div>
           </div>
         );

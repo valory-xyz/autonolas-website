@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { COLOR, BREAK_POINT } from 'util/theme';
+import { COLOR, MEDIA_QUERY } from 'util/theme';
 
 export const widths = {
   maxSectionWidth: '1500px',
@@ -29,7 +29,6 @@ export const Container = styled.div`
       margin-bottom: 50px;
     }
   }
-
   /* common */
   .btn-center {
     position: relative;
@@ -70,9 +69,6 @@ export const Container = styled.div`
   .description-l-1 {
     font-size: 30px;
   }
-  .description-l-2 {
-    font-size: 28px;
-  }
   .description-l-3 {
     font-size: 26px;
   }
@@ -101,20 +97,19 @@ export const Container = styled.div`
       }
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.xl}) {
+
+  ${MEDIA_QUERY.laptop} {
     .description-l-3 {
       font-size: 22px;
     }
   }
-  @media only screen and (max-width: ${BREAK_POINT.md}) {
+
+  ${MEDIA_QUERY.tablet} {
     .section {
       padding: ${widths.mobileSectionPadding};
       .header {
         margin-bottom: 20px;
       }
-    }
-    .description-l-2 {
-      font-size: 20px;
     }
     .description-l-3 {
       font-size: 20px;

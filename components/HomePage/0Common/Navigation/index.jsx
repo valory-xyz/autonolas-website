@@ -10,6 +10,7 @@ import {
   DesktopNavBar,
   Hamburger,
   MobileNavigationContainer,
+  NavMenu,
   Container,
 } from './styles';
 
@@ -46,7 +47,7 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
   );
 });
 
-const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
+const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   const [isTransparent, setColorchange] = useState(true);
 
   useEffect(() => {
@@ -65,6 +66,10 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
   }, []);
 
   /* temporary variables */
+  const mobileMenu = [
+    ...NAV_1,
+    ...[...NAV_2].filter(({ type }) => type !== 'icon'),
+  ];
   const isMobile = useCheckMobileScreen();
   const navbarClassName = () => {
     let name = 'navbar';
@@ -92,23 +97,19 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
           <>
             {isNavigationOpen ? (
               <>
-                <ul className="nav-menu">
+                <NavMenu>
                   {isNavigationOpen
-                    ? getNavigationsMenu(
-                      [
-                        ...NAV_1,
-                        ...[...NAV_2].filter(({ type }) => type !== 'icon'),
-                      ],
-                      setNavigationToggle,
-                      'mobile',
-                    )
-                    : null}
-                </ul>
+                    && getNavigationsMenu(mobileMenu, navToggle, 'mobile')}
+                </NavMenu>
                 {getSocials(NAVIGATION_SOCIALS)}
               </>
             ) : (
               <MobileNavigationContainer>
-                <a href="#banner" className="nav-logo" aria-label="Autonolas logo">
+                <a
+                  href="#banner"
+                  className="nav-logo"
+                  aria-label="Autonolas logo"
+                >
                   <AutonolasLogo width={124} height={54} />
                 </a>
               </MobileNavigationContainer>
@@ -118,8 +119,8 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
               aria-label="Navbar menu"
               role="button"
               tabIndex={0}
-              onClick={() => setNavigationToggle(!isNavigationOpen)}
-              onKeyDown={() => setNavigationToggle(!isNavigationOpen)}
+              onClick={() => navToggle(!isNavigationOpen)}
+              onKeyDown={() => navToggle(!isNavigationOpen)}
             >
               <span />
               <span />
@@ -127,9 +128,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
           </>
         ) : (
           <DesktopNavBar>
-            <ul className="nav-menu">
-              {getNavigationsMenu(NAV_1, setNavigationToggle)}
-            </ul>
+            <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
             <div className="nav-item-logo">
               <a
                 href="#banner"
@@ -139,9 +138,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle }) => {
                 <AutonolasLogo width={124} height={60} />
               </a>
             </div>
-            <ul className="nav-menu">
-              {getNavigationsMenu(NAV_2, setNavigationToggle)}
-            </ul>
+            <NavMenu>{getNavigationsMenu(NAV_2, navToggle)}</NavMenu>
           </DesktopNavBar>
         )}
       </nav>

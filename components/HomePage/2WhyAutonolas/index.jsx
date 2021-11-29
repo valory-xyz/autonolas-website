@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from 'common-util/Header';
-import { SectionTwo } from './styles';
+import { SectionTwo, RowOne, RowTwo } from './styles';
 
 const WhyAutonolas = () => (
   <SectionTwo className="section section-2" id="why-autonolas">
     <Header className="header" title="Why Autonolas?" />
-    <div className="row row-1">
+
+    <RowOne className="row">
       <div className="column column-1">
         <div className="content">
           <img
@@ -54,9 +55,9 @@ const WhyAutonolas = () => (
           </div>
         </div>
       </div>
-    </div>
+    </RowOne>
 
-    <div className="row row-2">
+    <RowTwo className="row">
       <div className="column column-1">
         <div className="content">
           <img
@@ -94,7 +95,7 @@ const WhyAutonolas = () => (
           />
         </div>
       </div>
-    </div>
+    </RowTwo>
   </SectionTwo>
 );
 

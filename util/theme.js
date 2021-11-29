@@ -9,6 +9,7 @@ export const COLOR = {
 export const BOX_SHADOW = {};
 
 export const FONT_SIZE = {
+  30: '30px',
   28: '28px',
   26: '26px',
   24: '24px',
@@ -37,24 +38,12 @@ export const SIZES = {
   navigationBarHeight: '84px',
 };
 
-// TODO: remove below
-const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px',
-};
-
-export const DEVICE = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-  desktop: `(min-width: ${size.desktop})`,
-  desktopL: `(min-width: ${size.desktop})`,
+export const MEDIA_QUERY = {
+  mobileS: `@media only screen and (max-width: ${BREAK_POINT.xxs})`,
+  mobileM: `@media only screen and (max-width: ${BREAK_POINT.xs})`,
+  mobileL: `@media only screen and (max-width: ${BREAK_POINT.sm})`,
+  tablet: `@media only screen and (max-width: ${BREAK_POINT.md})`,
+  tabletL: `@media only screen and (max-width: ${BREAK_POINT.lg})`,
+  laptop: `@media only screen and (max-width: ${BREAK_POINT.xl})`,
+  desktop: `@media only screen and (max-width: ${BREAK_POINT.xxl})`,
 };

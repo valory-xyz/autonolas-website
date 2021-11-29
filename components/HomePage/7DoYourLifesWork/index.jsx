@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+// import Description from 'common-util/Description';
 import { handleJoinDiscord } from 'common-util/functions';
-import { SectionSeven } from './styles';
+import { SectionSeven, RowOne, RowTwo } from './styles';
 
 const LIST = [
   {
@@ -33,7 +34,7 @@ const DoYourLifesWork = () => (
       loading="lazy"
     />
 
-    <div className="row row-1">
+    <RowOne>
       {LIST.map(({ desc }, index) => {
         const getId = () => `your-head-start-in-${index}`;
         return (
@@ -42,7 +43,7 @@ const DoYourLifesWork = () => (
           </div>
         );
       })}
-    </div>
+    </RowOne>
     <Button
       type="primary"
       title="Join Discord"
@@ -50,7 +51,7 @@ const DoYourLifesWork = () => (
       onClick={handleJoinDiscord}
     />
 
-    <div className="row-2">
+    <RowTwo>
       <div className="column column-1">
         <div className="content">
           <div className="description-l-4 bold">PREFER TO DIVE RIGHT IN?</div>
@@ -84,7 +85,7 @@ const DoYourLifesWork = () => (
           <p>Only good vibes.</p>
         </div>
       </div>
-    </div>
+    </RowTwo>
   </SectionSeven>
 );
 

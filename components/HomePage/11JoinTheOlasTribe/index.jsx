@@ -60,11 +60,11 @@ const JoinTheOlasTribe = () => {
           <div className="be-part-and-contribute">
             <div className="be-part">
               <div className="text">Be part of the story.</div>
-              {getSocials(bePartList)}
+              {getSocials(bePartList, 'svg')}
             </div>
             <div className="contribute">
               <div className="text">Want to contribute?</div>
-              {getSocials(constributeList)}
+              {getSocials(constributeList, 'svg')}
             </div>
           </div>
         </Col>

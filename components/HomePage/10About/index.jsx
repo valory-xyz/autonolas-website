@@ -24,7 +24,7 @@ const About = () => {
                 <li key={e}>{e}</li>
               ))}
             </ul>
-            {getSocials(socials)}
+            {getSocials(socials, 'svg')}
           </div>
         ))}
       </div>
@@ -47,7 +47,7 @@ const About = () => {
                 <ul className="what-they-do">
                   <li>{desc}</li>
                 </ul>
-                {getSocials(socials)}
+                {getSocials(socials, 'svg')}
               </div>
             );
           })}

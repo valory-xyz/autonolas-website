@@ -125,7 +125,7 @@ export const FOUNDING_TEAM = [
     socials: [
       {
         type: 'linkedin',
-        url: 'https://www.linkedin.com/in/tommaybrier/',
+        url: 'https://www.linkedin.com/in/maybrier/',
       },
       { type: 'twitter', url: 'https://twitter.com/thomasmaybrier' },
     ],

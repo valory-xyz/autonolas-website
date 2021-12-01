@@ -25,7 +25,7 @@ export const PROGRAM_DETAILS = [
   'Cohorts run approximately once a month',
   'Combination of guided lessons, 1:1 mentorship, exercises and project work',
   'Small groups (<10 people)',
-  'Financially subsidised participation',
+  'Financially subsidized participation',
 ];
 
 export const REQUIREMENTS = [

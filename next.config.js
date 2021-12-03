@@ -7,6 +7,7 @@ module.exports = withAntdLess({
   lessLoaderOptions: {
     javascriptEnabled: true,
   },
+  // lessVarsFilePath: '../pages/styles.less',
   productionBrowserSourceMaps: true,
   webpack(config) {
     return config;

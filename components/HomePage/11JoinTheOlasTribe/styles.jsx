@@ -29,6 +29,12 @@ export const SectionEleven = styled.div`
           }
           .text {
             margin-bottom: 12px;
+            a {
+              color: ${COLOR.BLACK};
+            }
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }

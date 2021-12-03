@@ -59,11 +59,27 @@ const JoinTheOlasTribe = () => {
           />
           <div className="be-part-and-contribute">
             <div className="be-part">
-              <div className="text">Be part of the story.</div>
+              <div className="text">
+                <a
+                  href="https://discord.com/invite/z2PT65jKqQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Be part of the story.
+                </a>
+              </div>
               {getSocials(bePartList, 'svg')}
             </div>
             <div className="contribute">
-              <div className="text">Want to contribute?</div>
+              <div className="text">
+                <a
+                  href="https://github.com/valory-xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Want to contribute?
+                </a>
+              </div>
               {getSocials(constributeList, 'svg')}
             </div>
           </div>

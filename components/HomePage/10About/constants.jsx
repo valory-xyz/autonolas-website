@@ -149,4 +149,26 @@ export const FOUNDING_TEAM = [
     ],
     imageUrl: '/images/about/team/mohan.jpg',
   },
+  {
+    id: 'team-11',
+    name: 'Alex Kuperman',
+    desc: 'Solidity Engineer',
+    socials: [
+      {
+        type: 'linkedin',
+        url: 'https://www.linkedin.com/in/kupermind',
+      },
+      { type: 'twitter', url: 'https://twitter.com/kupermind' },
+    ],
+    imageUrl: '/images/about/team/alex-k.jpg',
+  },
+  {
+    id: 'team-12',
+    name: 'José Moreira',
+    desc: 'Senior Crypto Engineer',
+    socials: [
+      { type: 'linkedin', url: 'https://www.linkedin.com/in/jose-moreira-2459966b/' },
+    ],
+    imageUrl: '/images/about/team/jose.jpg',
+  },
 ];

@@ -46,14 +46,9 @@ const YourHeadStartIn = () => (
     </div>
 
     <Button
-      type="disabled"
+      title="Dive into docs"
       className="btn-center"
-      title={(
-        <>
-          <span>Dive into docs</span>
-          <span>(Coming Soon)</span>
-        </>
-      )}
+      onClick={() => window.open('https://valory-xyz.github.io/open-aea/')}
     />
   </SectionFive>
 );

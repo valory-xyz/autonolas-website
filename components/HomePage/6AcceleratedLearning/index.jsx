@@ -92,7 +92,7 @@ const AcceleratedLearning = () => (
       <div className="column column-3">
         <div className="bg-image title-logo" />
         <Button
-          title="Apply for Jan '22 Cohort"
+          title="Apply for Feb '22 Cohort"
           className="btn-center"
           onClick={() => window.open(
             'https://xyz.us5.list-manage.com/subscribe?u=b0e788d1c8b599737210d65cb&id=ace2f55dfa',

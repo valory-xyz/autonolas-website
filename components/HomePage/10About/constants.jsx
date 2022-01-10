@@ -172,21 +172,12 @@ export const FOUNDING_TEAM = [
     imageUrl: '/images/about/team/jose.jpg',
   },
   {
-    id: 'team-12',
-    name: 'José Moreira',
-    desc: 'Senior Crypto Engineer',
-    socials: [
-      { type: 'linkedin', url: 'https://www.linkedin.com/in/jose-moreira-2459966b/' },
-    ],
-    imageUrl: '/images/about/team/jose.jpg',
-  },
-  {
     id: 'team-13',
     name: 'Michiel Karrenbelt',
-    desc: 'XXX',
+    desc: 'Python Engineer',
     socials: [
       { type: 'linkedin', url: 'https://www.linkedin.com/in/michiel-karrenbelt/' },
     ],
-    imageUrl: '/images/about/team/jose.jpg',
+    imageUrl: '/images/about/team/michiel.jpg',
   },
 ];

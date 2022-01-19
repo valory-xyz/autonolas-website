@@ -73,7 +73,7 @@ const Banner = () => {
         onKeyPress={handleJoinDiscord}
         onClick={handleJoinDiscord}
       >
-        <i className="text">JOIN OLAS TRIBE ON DISCORD</i>
+        <i className="text">JOIN US ON DISCORD</i>
         <i className="navigation-icon">&#8599;</i>
       </span>
     </BannerContainer>

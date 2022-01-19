@@ -51,7 +51,7 @@ const JoinTheOlasTribe = () => {
     <SectionEleven className="section section-11">
       <Row>
         <Col xs={24} md={12} className="column column-1">
-          <div className="footer-header">Join the Olas Tribe</div>
+          <div className="footer-header">Join the Autonolas Community</div>
           <Button
             type="primary"
             title="Join Discord"

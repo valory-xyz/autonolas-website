@@ -96,7 +96,7 @@ export const RowTwo = styled.div`
     &.column-3 {
       text-align: right;
       .content {
-        width: 360px;
+        width: 410px;
         line-height: normal;
         float: right;
         p {

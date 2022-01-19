@@ -19,7 +19,7 @@ const LIST = [
 
 const DoYourLifesWork = () => (
   <SectionSeven className="section section-7" id="community">
-    <div className="description-l-3">COMMUNITY - OLAS TRIBE</div>
+    <div className="description-l-3">THE AUTONOLAS COMMUNITY</div>
 
     <Header className="header" title="Do your life’s work" />
 
@@ -56,10 +56,10 @@ const DoYourLifesWork = () => (
         <div className="content">
           <div className="description-l-4 bold">PREFER TO DIVE RIGHT IN?</div>
           <div className="time description-l-4">
-            <p>Calls run every Friday </p>
+            <p>Community Office Hours are every Friday</p>
             <p>
               at&nbsp;
-              <span>1:30pm UTC</span>
+              <span>14:00 UTC</span>
             </p>
           </div>
         </div>
@@ -68,19 +68,20 @@ const DoYourLifesWork = () => (
       <div className="column column-2">
         <Button
           type="outline"
-          title="Join The Call"
+          title="Join Voice Channel"
           onClick={() => window.open('https://discord.gg/rHkmAXm8YV')}
         />
       </div>
 
       <div className="column column-3">
         <div className="content description-l-4">
-          <p>What happens at a Welcoming Call?</p>
+          <p>What happens during Community Office Hours?</p>
           <p>
-            We orient you around the project and community, answer any questions
-            you have and look for ways to get you involved!
+            Anything! This is an open-ended opportunity to connect with us.
+            It&apos;s a great way to get an intro to the project and community,
+            ask questions and find out how you can get involved.
           </p>
-          <p>Only good vibes.</p>
+          <p>Good vibes only.</p>
         </div>
       </div>
     </RowTwo>

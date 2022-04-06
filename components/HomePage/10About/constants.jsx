@@ -45,9 +45,9 @@ export const FOUNDING_TEAM = [
   {
     id: 'team-1',
     name: 'Gemma',
-    desc: 'Founder Associate',
+    desc: 'Operations Coordinator & Founder Associate',
     socials: [
-      { type: 'linkedin', url: 'https://www.linkedin.com/in/gemma-welsh/' },
+      { type: 'linkedin', url: 'https://www.linkedin.com/in/gemma-cwv/' },
       { type: 'twitter', url: 'https://twitter.com/contentwillvary' },
     ],
     imageUrl: '/images/about/team/gemma.jpg',
@@ -179,5 +179,14 @@ export const FOUNDING_TEAM = [
       { type: 'linkedin', url: 'https://www.linkedin.com/in/michiel-karrenbelt/' },
     ],
     imageUrl: '/images/about/team/michiel.jpg',
+  },
+  {
+    id: 'team-14',
+    name: '8baller',
+    desc: 'Ecosystem Manager – Dev Relations',
+    socials: [
+      { type: 'twitter', url: 'https://twitter.com/8baller11' },
+    ],
+    imageUrl: '/images/about/team/8baller.jpg',
   },
 ];

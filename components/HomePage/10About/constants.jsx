@@ -183,7 +183,7 @@ export const FOUNDING_TEAM = [
   {
     id: 'team-14',
     name: '8baller',
-    desc: 'Devops & Ecosystem Manager',
+    desc: 'Ecosystem Manager – Dev Relations',
     socials: [
       { type: 'twitter', url: 'https://twitter.com/8baller11' },
     ],

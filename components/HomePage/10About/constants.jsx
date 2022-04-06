@@ -187,6 +187,6 @@ export const FOUNDING_TEAM = [
     socials: [
       { type: 'twitter', url: 'https://twitter.com/8baller11' },
     ],
-    imageUrl: '/images/about/team/8baller.jpg',
+    imageUrl: '/images/about/team/8baller_tom.jpg',
   },
 ];

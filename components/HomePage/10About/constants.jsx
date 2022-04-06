@@ -180,4 +180,13 @@ export const FOUNDING_TEAM = [
     ],
     imageUrl: '/images/about/team/michiel.jpg',
   },
+  {
+    id: 'team-14',
+    name: '8baller',
+    desc: 'Ecosystem Program Consultant',
+    socials: [
+      { type: 'twitter', url: 'https://twitter.com/8baller11' },
+    ],
+    imageUrl: '/images/about/team/8baller.jpg',
+  },
 ];

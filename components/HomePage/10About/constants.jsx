@@ -45,9 +45,9 @@ export const FOUNDING_TEAM = [
   {
     id: 'team-1',
     name: 'Gemma',
-    desc: 'Founder Associate',
+    desc: 'Operations Coordinator & Founder Associate',
     socials: [
-      { type: 'linkedin', url: 'https://www.linkedin.com/in/gemma-welsh/' },
+      { type: 'linkedin', url: 'https://www.linkedin.com/in/gemma-cwv/' },
       { type: 'twitter', url: 'https://twitter.com/contentwillvary' },
     ],
     imageUrl: '/images/about/team/gemma.jpg',

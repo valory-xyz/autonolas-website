@@ -23,7 +23,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>The Birthplace of Economic Autonomy | Autonolas</title>
+          <title>Autonolas | Let’s Put the ‘A’ Back in DAO</title>
           <meta
             name="description"
             content="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."

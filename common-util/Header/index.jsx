@@ -21,7 +21,7 @@ const H2 = styled.h2`
 const Header = ({ title, ...rest }) => <H2 {...rest}>{title}</H2>;
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
 };
 
 export default Header;

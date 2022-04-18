@@ -12,7 +12,15 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
     id="birth-place"
     isNavigationOpen={isNavigationOpen}
   >
-    <Header className="header" title="Let's Put the 'A' Back in DAOs" />
+    <Header
+      className="header"
+      title={(
+        <>
+          <div>Let&apos;s Put the &apos;A&apos;</div>
+          <div>Back in DAOs</div>
+        </>
+      )}
+    />
     <Description
       type={2}
       title="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."

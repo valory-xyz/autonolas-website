@@ -57,14 +57,14 @@ export const SectionOne = styled.div`
     }
     .description {
       max-width: 280px;
-      margin-top: 6rem;
+      margin-top: 3rem;
       text-align: left;
     }
     .action-btns {
       flex-direction: column;
       position: absolute;
       width: 80%;
-      bottom: 96px;
+      bottom: 40px;
       left: 50%;
       transform: translate(-50%, 0px);
       .btn {
@@ -78,6 +78,9 @@ export const SectionOne = styled.div`
 
   ${MEDIA_QUERY.mobileS} {
     height: auto;
+    .header {
+      margin-right: 20px;
+    }
     .description {
       max-width: 280px;
       margin-top: 3rem;

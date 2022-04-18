@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
-import { handleJoinDiscord } from 'common-util/functions';
 import { SectionOne } from './styles';
 
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
@@ -12,13 +12,22 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
     id="birth-place"
     isNavigationOpen={isNavigationOpen}
   >
-    <Header className="header" title="The Birthplace of Economic Autonomy" />
+    <Header className="header" title="Let's Put the 'A' Back in DAOs" />
     <Description
       type={2}
-      title="Autonolas enables developers to build self-owning, self-operating, 100%
-      trustless decentralized applications."
+      title="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."
     />
-    <Button type="primary" title="Join Discord" onClick={handleJoinDiscord} />
+
+    <div className="action-btns">
+      <Button
+        type="primary"
+        title="Discuss Your Project"
+        onClick={() => window.open('mailto:bd@valory.xyz')}
+      />
+      <Link href="#developers">
+        <Button type="outline" title="Join Dev Academy" />
+      </Link>
+    </div>
   </SectionOne>
 );
 

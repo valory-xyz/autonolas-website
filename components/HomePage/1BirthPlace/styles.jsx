@@ -25,6 +25,18 @@ export const SectionOne = styled.div`
     margin: 3rem 0;
     line-height: 1.4;
   }
+  .action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    button {
+      margin: 0 0.5rem;
+    }
+    button[type="outline"] {
+      padding-top: 6px;
+    }
+  }
 
   ${MEDIA_QUERY.laptop} {
     .header {
@@ -45,26 +57,36 @@ export const SectionOne = styled.div`
     }
     .description {
       max-width: 280px;
-      margin-top: 6rem;
+      margin-top: 3rem;
       text-align: left;
     }
-    .btn {
+    .action-btns {
+      flex-direction: column;
       position: absolute;
       width: 80%;
-      bottom: 96px;
+      bottom: 40px;
       left: 50%;
       transform: translate(-50%, 0px);
+      .btn {
+        width: 100%;
+        &:nth-child(1) {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 
   ${MEDIA_QUERY.mobileS} {
     height: auto;
+    .header {
+      margin-right: 20px;
+    }
     .description {
       max-width: 280px;
       margin-top: 3rem;
       text-align: left;
     }
-    .btn {
+    .action-btns {
       position: relative;
       bottom: 16px;
       width: 80%;

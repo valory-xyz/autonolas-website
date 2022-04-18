@@ -26,7 +26,7 @@ class MyApp extends App {
           <title>The Birthplace of Economic Autonomy | Autonolas</title>
           <meta
             name="description"
-            content="Making your off-chain stack as crypto-native as your on-chain stack. Dev-first platform for building the next generation of crypto protocols."
+            content="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."
           />
         </Head>
         <Component {...pageProps} />

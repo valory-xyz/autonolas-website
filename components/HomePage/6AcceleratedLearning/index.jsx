@@ -33,6 +33,17 @@ export const REQUIREMENTS = [
   'Bonus: AI/ML experience',
 ];
 
+const getCohortDate = () => {
+  const now = new Date();
+  const current = now.getMonth() === 11
+    ? new Date(now.getFullYear() + 1, 0, 1)
+    : new Date(now.getFullYear(), now.getMonth() + 1, 1);
+
+  const month = current.toLocaleString('en-us', { month: 'short' }); // returns short month (eg. Dec)
+  const year = current.toLocaleString('en-us', { year: '2-digit' }); // returns last 2 digit in year (eg. 22)
+  return `${month} '${year}`;
+};
+
 const AcceleratedLearning = () => (
   <SectionSix className="section section-6 border-boxes" id="developers">
     <div className="dev-academy-logo">
@@ -91,7 +102,7 @@ const AcceleratedLearning = () => (
       <div className="column column-3">
         <div className="bg-image title-logo" />
         <Button
-          title="Apply for Feb '22 Cohort"
+          title={`Apply for ${getCohortDate()} Cohort`}
           className="btn-center"
           onClick={() => window.open(
             'https://xyz.us5.list-manage.com/subscribe?u=b0e788d1c8b599737210d65cb&id=ace2f55dfa',

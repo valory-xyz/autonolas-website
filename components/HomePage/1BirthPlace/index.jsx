@@ -17,7 +17,7 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
       title={(
         <>
           <div>Let&apos;s Put the &apos;A&apos;</div>
-          <div>Back in DAOs</div>
+          <div>Back in DAO</div>
         </>
       )}
     />

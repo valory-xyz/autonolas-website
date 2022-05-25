@@ -5,6 +5,7 @@ export const SectionTen = styled.div`
   background-image: url("/images/about/background.jpg");
   .header {
     line-height: normal;
+    margin-bottom: 0px !important;
   }
   .member-image {
     height: 480px;
@@ -100,6 +101,14 @@ export const SectionTen = styled.div`
         line-height: normal;
       }
     }
+  }
+`;
+
+export const AboutSubSection = styled.div`
+  max-width: 64ch;
+  margin-bottom: 2rem;
+  .bold-title {
+    font-weight: bold;
   }
 `;
 

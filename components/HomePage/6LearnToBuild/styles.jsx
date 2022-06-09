@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 
-export const LearnToBuildContainer = styled.div`
+export const SectionSix = styled.div`
   background-image: url("/images/accelerated-learning/background.jpg");
   .dev-academy-logo {
     display: flex;
@@ -25,6 +25,7 @@ export const LearnToBuildContainer = styled.div`
     line-height: normal;
   }
   .row-1 {
+    text-align: center;
   }
   .row-2 {
     display: flex;

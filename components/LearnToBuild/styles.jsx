@@ -41,12 +41,11 @@ export const VideoTable = styled.table`
   th,
   td {
     padding: 0.3rem 0.5rem;
-    /* padding: 0.5rem; */
   }
   td {
     &:nth-child(2) {
       text-decoration: underline;
-      text-underline-offset: 4px;
+      text-underline-offset: 2px;
     }
   }
 `;

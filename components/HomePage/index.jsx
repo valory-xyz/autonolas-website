@@ -6,7 +6,6 @@ import WhyAutonolas from './2WhyAutonolas';
 import WhatIsAutonolas from './3WhatIsAutonolas';
 import WhatAreWeBuilding from './4WhatAreWeBuilding';
 import YourHeadstartIn from './5YourHeadstartIn';
-import AcceleratedLearning from './6AcceleratedLearning';
 import LearnToBuild from './6LearnToBuild';
 import DoYourLifesWork from './7DoYourLifesWork';
 import PhaseShiftInDapp from './8PhaseShiftInDapp';
@@ -40,8 +39,6 @@ const HomePage = () => {
         <WhatAreWeBuilding />
 
         <YourHeadstartIn />
-
-        <AcceleratedLearning />
 
         <LearnToBuild />
 

@@ -93,7 +93,6 @@ const JoinTheOlasTribe = () => {
                 <Link href="#why-autonolas" title="Why Autonolas" />
                 <Link href="#what-is-autonolas" title="What is Autonolas" />
                 <Link href="#developers" title="Developers" />
-                <Link href="#learn-to-build" title="Lear to build" />
                 <Link href="#community" title="Community" />
                 <Link href="#product" title="Product" />
                 <Link href="#lore" title="Lore" />

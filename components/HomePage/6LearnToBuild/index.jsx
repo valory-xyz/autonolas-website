@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
-import { LearnToBuildContainer } from './styles';
+import { SectionSix } from './styles';
 
 const AcceleratedLearning = () => (
-  <LearnToBuildContainer
-    className="section section-6 border-boxes"
-    id="learn-to-build"
+  <SectionSix
+    className="section section-6"
+    id="developers"
   >
     <div className="dev-academy-logo">
       <Image
@@ -35,7 +35,7 @@ const AcceleratedLearning = () => (
         </a>
       </Link>
     </div>
-  </LearnToBuildContainer>
+  </SectionSix>
 );
 
 export default AcceleratedLearning;

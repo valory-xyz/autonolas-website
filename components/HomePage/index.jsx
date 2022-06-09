@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
-import Banner from './0Common/Banner';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import BirthPlace from './1BirthPlace';
 import WhyAutonolas from './2WhyAutonolas';
 import WhatIsAutonolas from './3WhatIsAutonolas';
@@ -13,70 +13,43 @@ import Lore from './9Lore';
 import About from './10About';
 import JoinTheOlasTribe from './11JoinTheOlasTribe';
 
-import { GlobalStyle, Container } from './styles';
+import { Container } from './styles';
 
-const Navigation = dynamic(() => import('./0Common/Navigation'), {
-  ssr: false,
-});
+const HomePage = ({ isNavigationOpen }) => (
+  <Container data-testid="home-page">
+    <BirthPlace isNavigationOpen={isNavigationOpen} />
 
-const HomePage = () => {
-  const [isNavigationOpen, setNavigationToggle] = useState(false);
+    <WhyAutonolas />
 
-  return (
-    <>
-      <Banner />
-      <Navigation
-        isNavigationOpen={isNavigationOpen}
-        setNavigationToggle={setNavigationToggle}
-      />
-      <Container data-testid="home-page">
-        <BirthPlace isNavigationOpen={isNavigationOpen} />
+    <WhatIsAutonolas />
 
-        <WhyAutonolas />
+    <WhatAreWeBuilding />
 
-        <WhatIsAutonolas />
+    <YourHeadstartIn />
 
-        <WhatAreWeBuilding />
+    <LearnToBuild />
 
-        <YourHeadstartIn />
+    <DoYourLifesWork />
 
-        <LearnToBuild />
+    <PhaseShiftInDapp />
 
-        <DoYourLifesWork />
+    <Lore />
 
-        <PhaseShiftInDapp />
+    <About />
 
-        <Lore />
+    <JoinTheOlasTribe />
+  </Container>
+);
 
-        <About />
-
-        <JoinTheOlasTribe />
-      </Container>
-
-      <GlobalStyle isNavigationOpen={isNavigationOpen} />
-    </>
-  );
+HomePage.propTypes = {
+  isNavigationOpen: PropTypes.bool.isRequired,
 };
 
-export default HomePage;
+const mapStateToProps = state => {
+  const { isNavigationOpen } = state.navigation;
+  return { isNavigationOpen };
+};
 
-// TODO for improve performance
-/**
- * 1. Image elements do not have explicit width and height
- * 2. Add sitemap.xml
- * 3. update robots.txt
- * 4. need correct resolution images => section 5
- *
- *
+const mapDispatchToProps = {};
 
-import Image from 'next/image';
-<Image
-  src="/images/why-autonolas/image-1.png"
-  alt="Why Autonolas 1"
-  width={210}
-  height={290}
-  layout="responsive"
-/>
-
-//
- */
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

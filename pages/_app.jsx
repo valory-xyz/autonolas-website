@@ -1,10 +1,9 @@
 import App from 'next/app';
-import Router from 'next/router';
 import Head from 'next/head';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
-import * as Progress from 'util/progress';
 import GlobalStyle from 'components/GlobalStyles';
+import Layout from 'components/Layout';
 import initStore from '../store';
 import './styles.less';
 
@@ -14,7 +13,7 @@ class MyApp extends App {
       ? await Component.getInitialProps(ctx)
       : {};
 
-    return { pageProps };
+    return { pageProps, store: ctx.store.getState() };
   }
 
   render() {
@@ -29,7 +28,9 @@ class MyApp extends App {
             content="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."
           />
         </Head>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
         <GlobalStyle />
       </>
     );
@@ -44,14 +45,6 @@ MyApp.propTypes = {
 /* MyApp.defaultProps = {
   resetOnModalCloseFn: () => {},
 }; */
-
-Router.onRouteChangeStart = () => {
-  Progress.start();
-};
-
-Router.onRouteChangeComplete = () => {
-  Progress.stop();
-};
 
 const wrapper = createWrapper(initStore);
 export default wrapper.withRedux(MyApp);

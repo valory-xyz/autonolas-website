@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
 
 export const widths = {
@@ -9,15 +9,6 @@ export const widths = {
 /**
  * margin for button top 32px
  */
-
-export const GlobalStyle = createGlobalStyle`
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    overflow: ${({ isNavigationOpen }) => (isNavigationOpen ? 'hidden' : 'auto')};
-  }
-`;
 
 export const Container = styled.div`
   position: relative;

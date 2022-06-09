@@ -2,9 +2,9 @@ import {
   combineReducers, createStore, applyMiddleware, compose,
 } from 'redux';
 import thunk from 'redux-thunk';
-import exampleStore from './example-store';
+import navigation from './navigation';
 
-const rootReducer = combineReducers({ exampleStore });
+const rootReducer = combineReducers({ navigation });
 
 const enhancers = [];
 const middleware = [thunk];
@@ -20,4 +20,5 @@ const composedEnhancers = composeWithDevTools(
   ...enhancers,
 );
 
-export default () => createStore(rootReducer, composedEnhancers);
+const store = () => createStore(rootReducer, composedEnhancers);
+export default store;

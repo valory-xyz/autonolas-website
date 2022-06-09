@@ -1,18 +1,14 @@
 import styled from 'styled-components';
-import { MEDIA_QUERY } from 'util/theme';
+import { COLOR, MEDIA_QUERY } from 'util/theme';
 
 export const SectionSix = styled.div`
-  background-image: url("/images/accelerated-learning/background.jpg");
-  .dev-academy-logo {
-    display: flex;
-    margin: 0 auto 32px auto;
-    justify-content: center;
-  }
+  background: linear-gradient(180deg, ${COLOR.WHITE} 0%, ${COLOR.GREEN_2} 100%);
   .header {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-bottom: 0rem !important;
   }
   .bg-image {
     height: 125px;
@@ -28,19 +24,24 @@ export const SectionSix = styled.div`
     text-align: center;
   }
   .row-2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    a {
-      font-size: 24px;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      color: inherit;
+    margin-top: 3rem;
+    .start-learning {
+      display: flex;
+      justify-content: center;
+      a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        font-size: 28px;
+        font-family: triakis__fontbold, sans-serif;
+      }
     }
   }
 
   ${MEDIA_QUERY.tablet} {
-    background-image: url("/images/accelerated-learning/background-mobile.jpg");
     .header {
       line-height: 0.85;
     }
@@ -50,10 +51,12 @@ export const SectionSix = styled.div`
           text-align: center;
         }
       }
-      .row-2 .column {
-      }
     }
   }
 `;
 
-export const EG = styled.div``;
+export const DevAcademyLogo = styled.div`
+  display: flex;
+  margin: 0 auto 32px auto;
+  justify-content: center;
+`;

@@ -4,12 +4,19 @@ const initialState = {
   isNavigationOpen: false,
 };
 
+const isBoolean = e => e === true || e === false;
+
 const navigationReducer = (state = initialState, action) => {
   const { data } = action;
 
   switch (action.type) {
     case syncTypes.SET_NAVIGATION: {
-      return { ...state, isNavigationOpen: !state.isNavigationOpen };
+      return {
+        ...state,
+        isNavigationOpen: isBoolean(data.isOpen)
+          ? data.isOpen
+          : !state.isNavigationOpen,
+      };
     }
 
     case syncTypes.SET_STORE_STATE: {

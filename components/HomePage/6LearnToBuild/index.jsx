@@ -27,10 +27,10 @@ const AcceleratedLearning = () => (
 
     <div className="row row-2">
       <div className="start-learning">
-        <Link href="/learn-to-build-autonomous-services">
+        <Link href="/academy">
           <a
             rel="noopener noreferrer"
-            href="/learn-to-build-autonomous-services"
+            href="/academy"
           >
             <Image
               src="/images/accelerated-learning/play-video.svg"

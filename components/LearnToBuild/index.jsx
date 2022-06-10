@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import Description from 'common-util/Description';
 import Button from 'common-util/Button';
 import { useCheckMobileScreen } from 'common-util/hooks';
+import LIST from './constants';
 import {
   Container,
   H3,
@@ -12,56 +13,8 @@ import {
   DoThisTask,
 } from './styles';
 
-// TODO: length of video needs to be fixed
-
-const LIST = [
-  {
-    id: 'module-0',
-    name: 'Module 0',
-    doThisTask: null,
-    subList: [
-      { no: 1, title: 'Background and Motivation', length: '5:32' },
-      { no: 2, title: 'Prerequisites', length: '10:12' },
-      { no: 3, title: 'Service Example', length: '11:32' },
-    ],
-  },
-  {
-    id: 'module-1',
-    name: 'Module 1',
-    doThisTask: ' ', // TODO: add do this task
-    subList: [
-      { no: 1, title: 'Intro to Agent-Based Development', length: '5:32' },
-      { no: 2, title: 'AEA Components – Part 1', length: '10:12' },
-      { no: 3, title: 'AEA Components – Part 2', length: '11:32' },
-      { no: 4, title: 'Recap', length: '11:32' },
-    ],
-  },
-  {
-    id: 'module-2',
-    name: 'Module 2',
-    doThisTask: ' ', // TODO: add do this task
-    subList: [
-      { no: 1, title: 'Intro to Multi-Agent Systems', length: '5:32' },
-      { no: 2, title: 'Finite State Machines (FSMs)', length: '10:12' },
-      { no: 3, title: 'Intro to Tendermint', length: '11:32' },
-      { no: 4, title: 'FSM Apps', length: '11:32' },
-      { no: 5, title: 'A Service in Detail', length: '11:32' },
-      {
-        no: 6,
-        title: 'Composing Functionality to  Create Complex Services',
-        length: '11:32',
-      },
-      { no: 7, title: 'FSM Apps', length: '11:32' },
-    ],
-  },
-];
-
 const LearnToBuild = () => {
   const isMobile = useCheckMobileScreen();
-
-  const handleApply = () => {
-    console.log('apply');
-  };
 
   return (
     <Container>
@@ -92,10 +45,16 @@ const LearnToBuild = () => {
                 </tr>
               </thead>
               <tbody>
-                {subList.map(({ no, title, length }) => (
-                  <tr>
+                {subList.map(({
+                  no, title, link, length,
+                }) => (
+                  <tr key={`${id}-${no}`}>
                     <td>{no}</td>
-                    <td>{title}</td>
+                    <td>
+                      <a href={link} target="_blank" rel="noopener noreferrer">
+                        {title}
+                      </a>
+                    </td>
                     <td>{length}</td>
                   </tr>
                 ))}
@@ -105,14 +64,9 @@ const LearnToBuild = () => {
             {doThisTask ? (
               <DoThisTask>
                 Do&nbsp;
-                <Link href="/learn-to-build-autonomous-services">
-                  <a
-                    rel="noopener noreferrer"
-                    href="/learn-to-build-autonomous-services"
-                  >
-                    this task
-                  </a>
-                </Link>
+                <a rel="noopener noreferrer" href={doThisTask} target="_blank">
+                  this task
+                </a>
                 &nbsp;when you&apos;ve finished Module&nbsp;
                 {index}
                 &nbsp;videos
@@ -146,10 +100,9 @@ const LearnToBuild = () => {
 
             <div className="card-right">
               <Button
-                // type="disabled"
                 className="btn-center"
                 title="Apply for Builder Track"
-                onClick={handleApply}
+                onClick={() => window.open('http://eepurl.com/hOfsr5')}
               />
             </div>
           </ModulesFinished>

@@ -89,7 +89,7 @@ const JoinTheOlasTribe = () => {
           <div className="footer-anchors">
             <div className="footer-anchor-1">
               {/* TODO: import NAV_2 from navigation */}
-              <Anchor affix={false} offsetTop={32}>
+              <Anchor affix={false} offsetTop={isMobile ? 0 : 32}>
                 <Link href="#why-autonolas" title="Why Autonolas" />
                 <Link href="#what-is-autonolas" title="What is Autonolas" />
                 <Link href="#developers" title="Developers" />

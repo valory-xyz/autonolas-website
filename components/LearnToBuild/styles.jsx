@@ -35,6 +35,13 @@ export const Container = styled.div`
       }
     }
   }
+  a {
+    text-underline-offset: 3px;
+    color: ${COLOR.BLACK};
+    &:active {
+      /* color: ${COLOR.GREY_1}; */
+    }
+  }
 
   ${MEDIA_QUERY.tablet} {
     .description {
@@ -99,10 +106,7 @@ export const VideoTable = styled.table`
 
 export const DoThisTask = styled.div`
   margin-bottom: 2rem;
-  a {
-    text-underline-offset: 3px;
-    color: ${COLOR.BLACK};
-  }
+
 `;
 
 export const ModulesFinished = styled.div`

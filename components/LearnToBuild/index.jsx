@@ -52,7 +52,11 @@ const LearnToBuild = () => {
                   <tr key={`${id}-${no}`}>
                     <td>{no}</td>
                     <td>
-                      <a href={videoLink} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={videoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {title}
                       </a>
                     </td>
@@ -88,6 +92,15 @@ const LearnToBuild = () => {
         ))}
 
         <div className="row-2">
+          <p className="project-challenge">
+            Do&nbsp;
+            <a rel="noopener noreferrer" href="/" target="_blank">
+              this project
+            </a>
+            &nbsp;to challenge yourself and get access to the Builder Track
+          </p>
+
+          <Hr />
           <ModulesFinished>
             <div className="card-left">
               <div className="logo">

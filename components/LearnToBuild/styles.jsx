@@ -35,6 +35,11 @@ export const Container = styled.div`
       }
     }
   }
+  .row-2 {
+    .project-challenge {
+      margin-bottom: 2rem;
+    }
+  }
   a {
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -107,7 +112,7 @@ export const DoThisTask = styled.div`
 export const ModulesFinished = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2.5rem 3rem 1rem;
+  padding: 3rem 2.5rem 3rem 1rem;
   .card-left {
     display: flex;
     .content {

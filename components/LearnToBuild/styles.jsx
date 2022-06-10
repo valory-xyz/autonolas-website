@@ -36,6 +36,7 @@ export const Container = styled.div`
     }
   }
   a {
+    text-decoration: underline;
     text-underline-offset: 3px;
     color: ${COLOR.BLACK};
     &:active {
@@ -84,29 +85,23 @@ export const VideoTable = styled.table`
     &:nth-child(2) {
       width: 520px;
     }
+    &:nth-child(3) {
+      width: 100px;
+    }
   }
   th,
   td {
     padding: 0.4rem 0.5rem;
-    &:nth-child(3) {
-      width: 60px;
-      text-align: right;
-    }
   }
   td {
     &:nth-child(1) {
       font-weight: bolder;
-    }
-    &:nth-child(2) {
-      text-decoration: underline;
-      text-underline-offset: 3px;
     }
   }
 `;
 
 export const DoThisTask = styled.div`
   margin-bottom: 2rem;
-
 `;
 
 export const ModulesFinished = styled.div`

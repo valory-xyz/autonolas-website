@@ -42,20 +42,30 @@ const LearnToBuild = () => {
                   <th> </th>
                   <th>Title</th>
                   <th>Length</th>
+                  <th> </th>
                 </tr>
               </thead>
               <tbody>
                 {subList.map(({
-                  no, title, link, length,
+                  no, title, videoLink, length, slideLink,
                 }) => (
                   <tr key={`${id}-${no}`}>
                     <td>{no}</td>
                     <td>
-                      <a href={link} target="_blank" rel="noopener noreferrer">
+                      <a href={videoLink} target="_blank" rel="noopener noreferrer">
                         {title}
                       </a>
                     </td>
                     <td>{length}</td>
+                    <td>
+                      <a
+                        href={slideLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Slides
+                      </a>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -102,7 +112,7 @@ const LearnToBuild = () => {
               <Button
                 className="btn-center"
                 title="Apply for Builder Track"
-                onClick={() => window.open('http://eepurl.com/hOfsr5')}
+                onClick={() => window.open('http://eepurl.com/hLajPb')}
               />
             </div>
           </ModulesFinished>

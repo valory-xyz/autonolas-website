@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { setNavigationToggle as setNavigationToggleFn } from 'store/navigation/actions';
-import Banner from '../HomePage/0Common/Banner';
+import Banner from './Banner';
 import { LayoutGlobalStyle } from './styles';
 
-const Navigation = dynamic(() => import('../HomePage/0Common/Navigation'), {
+const Navigation = dynamic(() => import('./Navigation'), {
   ssr: false,
 });
 

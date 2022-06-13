@@ -18,13 +18,13 @@ const LIST = [
         title: 'Prerequisites',
         videoLink:
           'https://drive.google.com/file/d/17tJMOaUrmrskHm1Y6IDqIIyh5rsJUAZC/view',
-        length: '10:12',
+        length: '01:37',
         slideLink:
           'https://docs.google.com/presentation/d/1I-MEolhUhtIeZ4jcwk_RUEctmAE6OCLk1Kz9Qlz11Vc',
       },
       {
         no: 3,
-        title: 'Service Example',
+        title: 'Example of a Service',
         videoLink:
           'https://drive.google.com/file/d/148_SqE2EFGF9301KEufrjOhURdjIt2cF/view',
         length: '12:34',
@@ -58,12 +58,12 @@ const LIST = [
         title: 'AEA Components – Part 2',
         videoLink: 'https://drive.google.com/file/d/1Z-_yCiPuoQ9OKqaq8SdxOiWt_qZE5JwR/view',
         length: '09:19',
-        slideLink: 'https://docs.google.com/presentation/d/1Vuys4fGHZsex8gKd2DV3ZjYZPs6syhrq_ppaO3Ra2Bc',
+        slideLink: 'https://docs.google.com/presentation/d/1wzCWdKv03t9tuzp1qdA9zEzCUO-R2U7aTX_fGqqGd6w',
       },
 
       {
         no: 4,
-        title: 'Recap',
+        title: 'Wrap up',
         videoLink:
           'https://drive.google.com/file/d/1NK_QgaE73KXw1UeyA-FBXZfevzniHJ_o/view',
         length: '01:32',
@@ -94,7 +94,7 @@ const LIST = [
       },
       {
         no: 3,
-        title: 'Introduction to Tendermint (the Consensus Gadget)',
+        title: 'Introduction to Tendermint - the Consensus Gadget',
         videoLink:
           'https://drive.google.com/file/d/14J-M5FlZCD1E-E0sp_QZ58n25vHNnDjM/view',
         length: '08:35',
@@ -106,15 +106,15 @@ const LIST = [
         videoLink:
           'https://drive.google.com/file/d/1wbloGB2BAxGvw7xptpxur5AakzcZ9P5_/view',
         length: '14:39',
-        slideLink: 'https://docs.google.com/presentation/d/1kF2j1hzLE7JhgtOtRBtAVlY7DIDs8eDy53xt3oueDMM',
+        slideLink: 'https://docs.google.com/presentation/d/1oRfRQhA-TAquBH2lWDhCQT5I2eHoNIOnd5cE5ngONrE',
       },
       {
         no: 5,
         title: 'A Simple FSM App',
         videoLink:
-          'https://drive.google.com/file/d/1wbloGB2BAxGvw7xptpxur5AakzcZ9P5_/view',
+          'https://drive.google.com/file/d/1-NI294ajV1An-mv_aq0HC98NCxbvp8pd/view',
         length: '14:44',
-        slideLink: 'https://docs.google.com/presentation/d/1kF2j1hzLE7JhgtOtRBtAVlY7DIDs8eDy53xt3oueDMM',
+        slideLink: 'https://docs.google.com/presentation/d/1zGKhtDhtuj_7mAinbxvx97M5nx9Dj5k_apNiGJNKhT0',
       },
       {
         no: 6,
@@ -126,7 +126,7 @@ const LIST = [
       },
       {
         no: 7,
-        title: 'Recap',
+        title: 'Wrap up',
         videoLink:
           'https://drive.google.com/file/d/1SOAKRG7ttpXDeHu-7XsBUdo5JXFX6Kqp/view',
         length: '01:28',

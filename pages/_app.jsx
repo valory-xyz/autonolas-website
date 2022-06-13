@@ -28,7 +28,8 @@ class MyApp extends App {
             name="description"
             content="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."
           />
-
+        </Head>
+        <Layout>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script
             strategy="afterInteractive"
@@ -48,8 +49,6 @@ class MyApp extends App {
               `,
             }}
           />
-        </Head>
-        <Layout>
           <Component {...pageProps} />
         </Layout>
         <GlobalStyle />

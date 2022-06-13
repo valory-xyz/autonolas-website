@@ -11,12 +11,9 @@ import DoYourLifesWork from './7DoYourLifesWork';
 import PhaseShiftInDapp from './8PhaseShiftInDapp';
 import Lore from './9Lore';
 import About from './10About';
-import JoinTheOlasTribe from './11JoinTheOlasTribe';
-
-import { Container } from './styles';
 
 const HomePage = ({ isNavigationOpen }) => (
-  <Container data-testid="home-page">
+  <>
     <BirthPlace isNavigationOpen={isNavigationOpen} />
 
     <WhyAutonolas />
@@ -36,9 +33,7 @@ const HomePage = ({ isNavigationOpen }) => (
     <Lore />
 
     <About />
-
-    <JoinTheOlasTribe />
-  </Container>
+  </>
 );
 
 HomePage.propTypes = {

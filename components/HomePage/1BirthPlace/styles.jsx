@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY, SIZES } from 'util/theme';
-import { widths } from '../styles';
+import { widths } from '../../Layout/styles';
 
 export const SectionOne = styled.div`
   position: relative;

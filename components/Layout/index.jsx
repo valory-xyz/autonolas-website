@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { setNavigationToggle as setNavigationToggleFn } from 'store/navigation/actions';
+import JoinTheOlasTribe from '../HomePage/11JoinTheOlasTribe';
 import Banner from './Banner';
-import { LayoutGlobalStyle } from './styles';
+import { LayoutGlobalStyle, Container } from './styles';
 
 const Navigation = dynamic(() => import('./Navigation'), {
   ssr: false,
@@ -15,7 +16,7 @@ const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
   const { pathname } = router;
 
   return (
-    <>
+    <Container data-testid="home-page">
       {pathname === '/' && <Banner />}
       <Navigation
         isNavigationOpen={isNavigationOpen}
@@ -23,7 +24,8 @@ const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
       />
       <>{children}</>
       <LayoutGlobalStyle isNavigationOpen={isNavigationOpen} />
-    </>
+      <JoinTheOlasTribe />
+    </Container>
   );
 };
 

@@ -135,7 +135,7 @@ export const ModulesFinished = styled.div`
 
   ${MEDIA_QUERY.tablet} {
     flex-direction: column;
-    padding: 0 0 2rem 0;
+    padding: 2rem 0 2rem 0;
     .card-left {
       .content {
         max-width: initial;

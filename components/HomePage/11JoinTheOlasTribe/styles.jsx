@@ -86,6 +86,17 @@ export const SectionEleven = styled.div`
       }
     }
   }
+  
+  ${MEDIA_QUERY.laptop} {
+    .ant-row .ant-col {
+      &.column-1 {
+        .footer-header {
+          font-size: 90px;
+        }
+      }
+    }
+  }
+
   ${MEDIA_QUERY.tablet} {
     background-image: url("/images/footer/background-mobile.jpg");
     .ant-row .ant-col {

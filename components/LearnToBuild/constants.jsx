@@ -1,7 +1,7 @@
 const LIST = [
   {
     id: 'module-0',
-    name: 'Module 0',
+    name: 'Module 0: Introduction',
     doThisTask: null,
     subList: [
       {
@@ -34,7 +34,7 @@ const LIST = [
   },
   {
     id: 'module-1',
-    name: 'Module 1',
+    name: 'Module 1: Autonomous Economic Agents',
     doThisTask: 'https://www.autonolas.network/', // TODO: add do this task
     subList: [
       {
@@ -56,8 +56,8 @@ const LIST = [
       {
         no: 3,
         title: 'AEA Components – Part 2',
-        videoLink: '', // TODO
-        length: '11:32',
+        videoLink: 'https://drive.google.com/file/d/1Z-_yCiPuoQ9OKqaq8SdxOiWt_qZE5JwR/view',
+        length: '09:19',
         slideLink: 'https://docs.google.com/presentation/d/1Vuys4fGHZsex8gKd2DV3ZjYZPs6syhrq_ppaO3Ra2Bc',
       },
 
@@ -73,7 +73,7 @@ const LIST = [
   },
   {
     id: 'module-2',
-    name: 'Module 2',
+    name: 'Module 2: Agent Services',
     doThisTask: 'https://www.autonolas.network/', // TODO: add do this task
     subList: [
       {
@@ -118,7 +118,7 @@ const LIST = [
       },
       {
         no: 6,
-        title: 'Composing of FSM Apps',
+        title: 'Composition of FSM Apps',
         videoLink:
           'https://drive.google.com/file/d/1kOEf09PysRXkJrPJbTKgostJvjxj8ORK/view',
         length: '16:03',

@@ -1,5 +1,6 @@
 import App from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
 import GlobalStyle from 'components/GlobalStyles';
@@ -26,6 +27,26 @@ class MyApp extends App {
           <meta
             name="description"
             content="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."
+          />
+
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
+          />
+          <Script
+            id="gtag-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
           />
         </Head>
         <Layout>

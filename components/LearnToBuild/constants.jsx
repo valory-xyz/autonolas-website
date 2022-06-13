@@ -8,7 +8,7 @@ const LIST = [
         no: 1,
         title: 'Introduction and Motivation',
         videoLink:
-          'https://drive.google.com/file/d/1akqhyF9jzlQAHKDc8-sXsR5Z2o3oZu6P/view',
+          'https://drive.google.com/file/d/18XU6ERhap6yst4bYSOiI6t05sUsK_Gjf/view',
         length: '10:45',
         slideLink:
           'https://docs.google.com/presentation/d/1jYqNVbjxHpzZNVRKOJGrV1Njo33n8wv4AfAazIAJPJI',

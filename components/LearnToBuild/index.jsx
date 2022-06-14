@@ -135,7 +135,7 @@ const LearnToBuild = () => {
               <Button
                 className="btn-center"
                 title="Apply for Builder Track"
-                onClick={() => window.open('http://eepurl.com/hLajPb')}
+                onClick={() => window.open('https://forms.gle/5EWJumPddrviQrqp8')}
               />
             </div>
           </ModulesFinished>

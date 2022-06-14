@@ -82,7 +82,7 @@ const LearnToBuild = () => {
                   rel="noopener noreferrer"
                   href={doThisTask}
                   target="_blank"
-                  download="Agent-Academy-Assessment.pdf"
+                  download
                 >
                   this task
                 </a>
@@ -101,9 +101,9 @@ const LearnToBuild = () => {
             Do&nbsp;
             <a
               rel="noopener noreferrer"
-              href="/"
+              href="https://docs.google.com/document/d/1XqgBhjKOX_DhMSvyz0h4Gd6ywCiOt9wCdzr8bhxoO1Q/export?format=pdf"
               target="_blank"
-              download="Agent-Academy-Challenge.pdf"
+              download
             >
               this project
             </a>

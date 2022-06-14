@@ -35,7 +35,7 @@ const LIST = [
   {
     id: 'module-1',
     name: 'Module 1: Autonomous Economic Agents',
-    doThisTask: 'https://docs.google.com/document/d/1SnQ6XYDHlJgcHmi2biowVdIXjpZeDsJuYcFvmgm1u6I/export?format=pdf', // TODO: add do this task
+    doThisTask: 'https://docs.google.com/document/d/13wazFQtyld88smrNUPDmxgP2ZhSrvdpg4FulG8eWlpk/export?format=pdf',
     subList: [
       {
         no: 1,
@@ -74,7 +74,7 @@ const LIST = [
   {
     id: 'module-2',
     name: 'Module 2: Agent Services',
-    doThisTask: 'https://docs.google.com/document/d/1SnQ6XYDHlJgcHmi2biowVdIXjpZeDsJuYcFvmgm1u6I/export?format=pdf', // TODO: add do this task
+    doThisTask: 'https://docs.google.com/document/d/15SQyAYYUdjsqop7HT9rtOjU1RA9ae_v6tWaFVFHcrlA/export?format=pdf',
     subList: [
       {
         no: 1,

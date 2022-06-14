@@ -78,7 +78,12 @@ const LearnToBuild = () => {
             {doThisTask ? (
               <DoThisTask>
                 Do&nbsp;
-                <a rel="noopener noreferrer" href={doThisTask} target="_blank">
+                <a
+                  rel="noopener noreferrer"
+                  href={doThisTask}
+                  target="_blank"
+                  download="Agent-Academy-Assessment.pdf"
+                >
                   this task
                 </a>
                 &nbsp;when you&apos;ve finished Module&nbsp;
@@ -94,7 +99,12 @@ const LearnToBuild = () => {
         <div className="row-2">
           <p className="project-challenge">
             Do&nbsp;
-            <a rel="noopener noreferrer" href="/" target="_blank">
+            <a
+              rel="noopener noreferrer"
+              href="/"
+              target="_blank"
+              download="Agent-Academy-Challenge.pdf"
+            >
               this project
             </a>
             &nbsp;to challenge yourself and get access to the Builder Track

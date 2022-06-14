@@ -1,82 +1,50 @@
-import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
-import Banner from './0Common/Banner';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import BirthPlace from './1BirthPlace';
 import WhyAutonolas from './2WhyAutonolas';
 import WhatIsAutonolas from './3WhatIsAutonolas';
 import WhatAreWeBuilding from './4WhatAreWeBuilding';
 import YourHeadstartIn from './5YourHeadstartIn';
-import AcceleratedLearning from './6AcceleratedLearning';
+import LearnToBuild from './6LearnToBuild';
 import DoYourLifesWork from './7DoYourLifesWork';
 import PhaseShiftInDapp from './8PhaseShiftInDapp';
 import Lore from './9Lore';
 import About from './10About';
-import JoinTheOlasTribe from './11JoinTheOlasTribe';
 
-import { GlobalStyle, Container } from './styles';
+const HomePage = ({ isNavigationOpen }) => (
+  <>
+    <BirthPlace isNavigationOpen={isNavigationOpen} />
 
-const Navigation = dynamic(() => import('./0Common/Navigation'), {
-  ssr: false,
-});
+    <WhyAutonolas />
 
-const HomePage = () => {
-  const [isNavigationOpen, setNavigationToggle] = useState(false);
+    <WhatIsAutonolas />
 
-  return (
-    <>
-      <Banner />
-      <Navigation
-        isNavigationOpen={isNavigationOpen}
-        setNavigationToggle={setNavigationToggle}
-      />
-      <Container data-testid="home-page">
-        <BirthPlace isNavigationOpen={isNavigationOpen} />
+    <WhatAreWeBuilding />
 
-        <WhyAutonolas />
+    <YourHeadstartIn />
 
-        <WhatIsAutonolas />
+    <LearnToBuild />
 
-        <WhatAreWeBuilding />
+    <DoYourLifesWork />
 
-        <YourHeadstartIn />
+    <PhaseShiftInDapp />
 
-        <AcceleratedLearning />
+    <Lore />
 
-        <DoYourLifesWork />
+    <About />
+  </>
+);
 
-        <PhaseShiftInDapp />
-
-        <Lore />
-
-        <About />
-
-        <JoinTheOlasTribe />
-      </Container>
-
-      <GlobalStyle isNavigationOpen={isNavigationOpen} />
-    </>
-  );
+HomePage.propTypes = {
+  isNavigationOpen: PropTypes.bool.isRequired,
 };
 
-export default HomePage;
+const mapStateToProps = state => {
+  const { isNavigationOpen } = state.navigation;
+  return { isNavigationOpen };
+};
 
-// TODO for improve performance
-/**
- * 1. Image elements do not have explicit width and height
- * 2. Add sitemap.xml
- * 3. update robots.txt
- * 4. need correct resolution images => section 5
- *
- *
+const mapDispatchToProps = {};
 
-import Image from 'next/image';
-<Image
-  src="/images/why-autonolas/image-1.png"
-  alt="Why Autonolas 1"
-  width={210}
-  height={290}
-  layout="responsive"
-/>
-
-//
- */
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

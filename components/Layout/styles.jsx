@@ -6,11 +6,7 @@ export const widths = {
   mobileSectionPadding: '20px 10px',
 };
 
-/**
- * margin for button top 32px
- */
-
-export const GlobalStyle = createGlobalStyle`
+export const LayoutGlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
@@ -18,6 +14,8 @@ export const GlobalStyle = createGlobalStyle`
     overflow: ${({ isNavigationOpen }) => (isNavigationOpen ? 'hidden' : 'auto')};
   }
 `;
+
+export default LayoutGlobalStyle;
 
 export const Container = styled.div`
   position: relative;
@@ -32,7 +30,6 @@ export const Container = styled.div`
   /* common */
   .btn-center {
     position: relative;
-    display: inline-block;
     left: 50%;
     transform: translateX(-50%);
   }

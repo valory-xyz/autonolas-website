@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { COLOR } from 'util/theme';
 import { useCheckMobileScreen } from 'common-util/hooks';
 import { getSocials } from 'common-util/functions';
@@ -16,7 +17,7 @@ import {
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
   const mapKey = `navigation-id-${eachNav.id}-${suffix}`;
-  const isRedirect = !!eachNav.url;
+  const externalLink = !!eachNav.url;
   const isIcon = eachNav.type === 'icon';
   const title = isIcon ? (
     <Image
@@ -32,9 +33,9 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
   return (
     <li className="nav-item" key={mapKey}>
       <a
-        href={isRedirect ? eachNav.url : `#${eachNav.id}`}
+        href={externalLink ? eachNav.url : `/#${eachNav.id}`}
         className="nav-link"
-        target={isRedirect ? '_blank' : '_self'}
+        target={externalLink ? '_blank' : '_self'}
         rel="noopener noreferrer"
         onClick={() => {
           callback(false);
@@ -49,6 +50,8 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 
 const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   const [isTransparent, setColorchange] = useState(true);
+  const router = useRouter();
+  const { pathname } = router;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,14 +87,29 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
     return `${name} desktop`;
   };
 
-  return (
-    <Container
-      style={{
+  const getNavStyle = () => {
+    // show tranparent navbar only on home page
+    if (pathname === '/') {
+      return {
         backgroundColor: isTransparent ? 'transparent' : COLOR.WHITE,
         top: isTransparent ? '64px' : '0px',
-      }}
-      navHeight={isNavigationOpen && isTransparent ? 56 : 0}
-    >
+      };
+    }
+
+    return { backgroundColor: COLOR.WHITE, position: 'relative' };
+  };
+
+  const getNavHeight = () => {
+    // 100% height on nav if it is not home-page
+    if (pathname !== '/') {
+      return 0;
+    }
+
+    return isNavigationOpen && isTransparent ? 56 : 0;
+  };
+
+  return (
+    <Container style={getNavStyle()} navHeight={getNavHeight()}>
       <nav className={`navbar ${navbarClassName()}`}>
         {isMobile ? (
           <>

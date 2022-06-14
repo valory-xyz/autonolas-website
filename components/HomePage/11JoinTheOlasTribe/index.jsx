@@ -103,6 +103,12 @@ const JoinTheOlasTribe = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 />
+                <Link
+                  href="https://docs.autonolas.network/"
+                  title="Docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
               </Anchor>
               {!isMobile && <Copyright device="desktop" />}
             </div>

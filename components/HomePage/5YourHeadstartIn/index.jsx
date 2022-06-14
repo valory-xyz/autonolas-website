@@ -48,7 +48,7 @@ const YourHeadStartIn = () => (
     <Button
       title="Dive into docs"
       className="btn-center"
-      onClick={() => window.open('https://valory-xyz.github.io/open-aea/')}
+      onClick={() => window.open('https://docs.autonolas.network/')}
     />
   </SectionFive>
 );

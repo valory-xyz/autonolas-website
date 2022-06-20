@@ -4,6 +4,8 @@ export const COLOR = {
   GREY_1: '#C4C4C4',
   WHITE: '#FFFFFF',
   BLACK: '#000000',
+
+  PURPLE: '#7200D6',
 };
 
 export const BOX_SHADOW = {};
@@ -17,6 +19,8 @@ export const FONT_SIZE = {
   20: '20px',
   18: '18px',
   16: '16px',
+
+  // TODO
 };
 
 export const BREAK_POINT = {
@@ -36,6 +40,7 @@ export const TRANSITION = {
 export const SIZES = {
   bannerHeight: '60px',
   navigationBarHeight: '84px',
+  maxWidth: '1100px',
 };
 
 export const MEDIA_QUERY = {

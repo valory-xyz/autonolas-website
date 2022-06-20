@@ -22,6 +22,8 @@ export default class MyDocument extends Document {
         <Head>
           <link href="/fonts/TeX-Gyre-Heros/stylesheet.css" rel="stylesheet" />
           <link href="/fonts/Webfont/stylesheet.css" rel="stylesheet" />
+          <link href="/fonts/NeueMachina/stylesheet.css" rel="stylesheet" />
+          <link href="/fonts/Manrope/stylesheet.css" rel="stylesheet" />
           <link rel="icon" type="image/png" href="/favicon.ico" />
           {styleTags}
         </Head>

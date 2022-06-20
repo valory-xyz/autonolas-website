@@ -14,6 +14,7 @@ const Navigation = dynamic(() => import('./Navigation'), {
 const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
   const router = useRouter();
   const { pathname } = router;
+  const isV2 = pathname === '/latest-website';
 
   return (
     <Container data-testid="home-page">
@@ -24,7 +25,7 @@ const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
       />
       <>{children}</>
       <LayoutGlobalStyle isNavigationOpen={isNavigationOpen} />
-      <JoinTheOlasTribe />
+      {!isV2 && <JoinTheOlasTribe />}
     </Container>
   );
 };

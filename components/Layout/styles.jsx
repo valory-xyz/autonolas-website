@@ -21,7 +21,7 @@ export const Container = styled.div`
   position: relative;
   margin: 0 auto;
   .section {
-    padding: 60px 50px;
+    padding: 2.5rem 4.5rem;
     background-size: 100% 100%;
     .header {
       margin-bottom: 50px;

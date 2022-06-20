@@ -21,6 +21,16 @@ class MyApp extends App {
 
     return (
       <>
+        <style global jsx>
+          {`
+            body {
+              font-family: "manrope__regular", sans-serif;
+              overscroll-behavior: none;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          `}
+        </style>
         <Head>
           <title>Autonolas | Let’s Put the ‘A’ Back in DAO</title>
           <meta

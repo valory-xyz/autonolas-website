@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { setNavigationToggle as setNavigationToggleFn } from 'store/navigation/actions';
 import JoinTheOlasTribe from '../HomePage/11JoinTheOlasTribe';
-import Banner from './Banner';
+// import Banner from './Banner';
 import { LayoutGlobalStyle, Container } from './styles';
 
 const Navigation = dynamic(() => import('./Navigation'), {
@@ -14,18 +14,18 @@ const Navigation = dynamic(() => import('./Navigation'), {
 const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
   const router = useRouter();
   const { pathname } = router;
-  const isV2 = pathname === '/latest-website';
+  console.log({ pathname });
 
   return (
     <Container data-testid="home-page">
-      {pathname === '/' && <Banner />}
+      {/* {pathname === '/' && <Banner />} */}
       <Navigation
         isNavigationOpen={isNavigationOpen}
         setNavigationToggle={setNavigationToggle}
       />
       <>{children}</>
       <LayoutGlobalStyle isNavigationOpen={isNavigationOpen} />
-      {!isV2 && <JoinTheOlasTribe />}
+      <JoinTheOlasTribe />
     </Container>
   );
 };

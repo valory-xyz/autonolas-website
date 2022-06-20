@@ -1,41 +1,39 @@
 import styled from 'styled-components';
-import { MEDIA_QUERY, SIZES } from 'util/theme';
+import { MEDIA_QUERY } from 'util/theme';
 import { widths } from '../../Layout/styles';
 
 export const SectionOne = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - ${SIZES.bannerHeight});
-  background-image: url("/images/birth-place/background.jpg");
+  justify-content: space-between;
+  height: calc(100vh);
+  background: linear-gradient(
+    180deg,
+    rgba(239, 255, 253, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(239, 255, 253, 1) 100%,
+    rgba(240, 240, 240, 1) 100%
+  );
   .header {
-    max-width: 1100px;
-    margin: 0;
-    margin-top: 96px;
     margin-bottom: 0 !important;
-    text-align: center;
-    line-height: 0.85;
-    font-size: 124px;
+    line-height: 1;
+    font-weight: bold;
   }
   .description {
-    text-align: center;
-    max-width: 800px;
-    margin: 3rem 0;
-    line-height: 1.4;
+    line-height: normal;
   }
   .action-btns {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 85%;
     button {
       margin: 0 0.5rem;
     }
-    button[type="outline"] {
-      padding-top: 6px;
-    }
+  }
+  &.section {
+    padding: 7rem 4.5rem !important;
   }
 
   ${MEDIA_QUERY.laptop} {
@@ -47,12 +45,8 @@ export const SectionOne = styled.div`
   ${MEDIA_QUERY.mobileL} {
     align-items: flex-start;
     justify-content: flex-start;
-    background-image: url("/images/birth-place/background-mobile.jpg");
     padding: ${({ isNavigationOpen: e }) => `${e ? '20px 0px' : widths.mobileSectionPadding}!important`};
     .header {
-      margin-right: 60px;
-      margin-top: 86px;
-      text-align: left;
       font-size: 54px;
     }
     .description {
@@ -94,4 +88,7 @@ export const SectionOne = styled.div`
   }
 `;
 
-export const ABC = styled.div``;
+export const DescActionButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;

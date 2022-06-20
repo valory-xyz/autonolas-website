@@ -92,7 +92,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
     if (pathname === '/') {
       return {
         backgroundColor: isTransparent ? 'transparent' : COLOR.WHITE,
-        top: isTransparent ? '64px' : '0px',
+        top: '0px',
       };
     }
 

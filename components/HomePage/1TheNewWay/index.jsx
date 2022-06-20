@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import Description from '../components/Description';
-import Button from '../components/Button';
-import Header from '../components/Header';
+import Button from 'common-util/Button';
+import Description from 'common-util/Description';
+import Header from 'common-util/Header';
 import { SectionOne, DescActionButtons } from './styles';
 
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (

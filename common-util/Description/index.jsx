@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { FONT_SIZE, BREAK_POINT } from 'util/theme';
 
 const Desc = styled.div`
+  font-family: neuemachina__light;
   ${({ type }) => {
     switch (type) {
       case 1:

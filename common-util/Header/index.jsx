@@ -5,9 +5,11 @@ import { MEDIA_QUERY } from 'util/theme';
 
 const H2 = styled.h2`
   margin: 0;
-  font-size: 108px;
+  font-size: 120px;
   line-height: normal;
-  font-family: triakis__fontheavy, sans-serif;
+  .sub-text {
+    font-size: 24px;
+  }
 
   ${MEDIA_QUERY.laptop} {
     font-size: 104px;

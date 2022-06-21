@@ -9,7 +9,7 @@ export const SectionOne = styled.div`
   justify-content: space-between;
   height: 100vh;
   min-height: 700px;
-  background-image: url("/images/v2/1TheNewWay/background.webp");
+  background-image: url("/images/1TheNewWay/background.webp");
   .header {
     margin-bottom: 0 !important;
     line-height: 1;

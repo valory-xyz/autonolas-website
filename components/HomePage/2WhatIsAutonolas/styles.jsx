@@ -3,7 +3,7 @@ import { backgroundGradient } from 'components/GlobalStyles';
 import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionTwo = styled.div`
-  ${backgroundGradient('/images/v2/2WhatIsAutonolas/background.png')}
+  ${backgroundGradient('/images/2WhatIsAutonolas/background.png')}
 `;
 
 export const Content = styled.div`

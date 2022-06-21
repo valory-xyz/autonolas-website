@@ -21,7 +21,7 @@ export const AutonolasService = styled.div`
   width: 48px;
   height: 48px;
   margin-left: 1rem;
-  ${backgroundImage('/images/v2/3Decentralized/ball.png')}
+  ${backgroundImage('/images/3Decentralized/ball.png')}
 `;
 
 export const PurbleBall = styled.div`
@@ -36,7 +36,7 @@ export const No = styled.div`
   width: 36px;
   height: 36px;
   margin: 0 auto;
-  ${backgroundImage('/images/v2/3Decentralized/X.png')}
+  ${backgroundImage('/images/3Decentralized/X.png')}
 `;
 
 export const ComparisonTable = styled.div`

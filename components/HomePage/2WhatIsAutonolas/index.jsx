@@ -48,7 +48,7 @@ const WhatIsAutonolas = () => {
           <div className={`column column-${index + 1}`}>
             <div className="img-container">
               <img
-                src={`/images/v2/2WhatIsAutonolas/${item.imageUrl}.png`}
+                src={`/images/2WhatIsAutonolas/${item.imageUrl}.png`}
                 alt={`${item.heading} Icon`}
               />
             </div>

@@ -1,15 +1,16 @@
+/* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { setNavigationToggle as setNavigationToggleFn } from 'store/navigation/actions';
-import JoinTheOlasTribe from '../HomePage/11JoinTheOlasTribe';
+// import JoinTheOlasTribe from '../HomePage/11JoinTheOlasTribe';
 // import Banner from './Banner';
 import { LayoutGlobalStyle, Container } from './styles';
 
-const Navigation = dynamic(() => import('./Navigation'), {
-  ssr: false,
-});
+// const Navigation = dynamic(() => import('./Navigation'), {
+//   ssr: false,
+// });
 
 const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
   const router = useRouter();
@@ -19,13 +20,13 @@ const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
   return (
     <Container data-testid="home-page">
       {/* {pathname === '/' && <Banner />} */}
-      <Navigation
+      {/* <Navigation
         isNavigationOpen={isNavigationOpen}
         setNavigationToggle={setNavigationToggle}
-      />
+      /> */}
       <>{children}</>
       <LayoutGlobalStyle isNavigationOpen={isNavigationOpen} />
-      <JoinTheOlasTribe />
+      {/* <JoinTheOlasTribe /> */}
     </Container>
   );
 };

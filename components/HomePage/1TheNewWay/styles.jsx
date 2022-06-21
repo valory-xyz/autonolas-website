@@ -15,6 +15,7 @@ export const SectionOne = styled.div`
     rgba(239, 255, 253, 1) 100%,
     rgba(240, 240, 240, 1) 100%
   );
+  background-image: url("/images/v2/1TheNewWay/background.webp");
   .header {
     margin-bottom: 0 !important;
     line-height: 1;

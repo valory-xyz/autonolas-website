@@ -2,11 +2,7 @@ import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionThree = styled.div`
-  background-image: url("/images/what-is-autonolas/background.jpg");
-  .header {
-    max-width: 420px;
-  }
-
+  /* background-image: url("/images/what-is-autonolas/background.jpg"); */
   ${MEDIA_QUERY.tablet} {
     background-image: url("/images/what-is-autonolas/background-mobile.jpg");
   }

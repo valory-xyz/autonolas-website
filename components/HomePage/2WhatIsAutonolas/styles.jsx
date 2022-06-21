@@ -2,11 +2,8 @@ import styled from 'styled-components';
 import { backgroundGradient } from 'components/GlobalStyles';
 import { MEDIA_QUERY } from 'util/theme';
 
-export const SectionThree = styled.div`
+export const SectionTwo = styled.div`
   ${backgroundGradient('/images/v2/2WhatIsAutonolas/background.png')}
-  ${MEDIA_QUERY.tablet} {
-    background-image: url("/images/2WhatIsAutonolas/background.jpg");
-  }
 `;
 
 export const Content = styled.div`

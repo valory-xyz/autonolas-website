@@ -7,7 +7,8 @@ export const SectionOne = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh);
+  height: 100vh;
+  min-height: 700px;
   background-image: url("/images/v2/1TheNewWay/background.webp");
   .header {
     margin-bottom: 0 !important;

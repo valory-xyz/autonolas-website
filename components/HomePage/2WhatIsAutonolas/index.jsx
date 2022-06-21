@@ -4,7 +4,7 @@ import React from 'react';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
 import { useCheckMobileScreen } from 'common-util/hooks';
-import { SectionThree, Content } from './styles';
+import { SectionTwo, Content } from './styles';
 
 const LIST = [
   {
@@ -29,7 +29,7 @@ const WhatIsAutonolas = () => {
   console.log({ isMobile });
 
   return (
-    <SectionThree className="section section-3" id="what-is-autonolas">
+    <SectionTwo className="section section-2" id="what-is-autonolas">
       <Description type={2} title="LEARN" />
 
       <Header
@@ -57,7 +57,7 @@ const WhatIsAutonolas = () => {
           </div>
         ))}
       </Content>
-    </SectionThree>
+    </SectionTwo>
   );
 };
 

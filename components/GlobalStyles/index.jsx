@@ -22,3 +22,10 @@ export const backgroundGradient = url => css`
     url(${url});
   background-blend-mode: multiply;
 `;
+
+export const backgroundImage = url => css`
+  background-image: url(${url});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+`;

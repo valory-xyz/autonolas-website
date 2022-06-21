@@ -6,10 +6,14 @@ import { MEDIA_QUERY } from 'util/theme';
 const H2 = styled.h2`
   margin: 0;
   font-size: 120px;
-  line-height: normal;
+  line-height: 1;
+  word-wrap: break-word;
   .sub-text {
     font-family: "manrope__light", sans-serif;
     font-weight: 500;
+  }
+  .ib {
+    display: inline-block;
   }
 
   ${MEDIA_QUERY.laptop} {

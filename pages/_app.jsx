@@ -29,6 +29,7 @@ class MyApp extends App {
               overscroll-behavior: none;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
+              font-size: 18px;
             }
           `}
         </style>

@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
-import WhatIsAutonolas from './2WhatIsAutonolas';
+// import WhatIsAutonolas from './2WhatIsAutonolas';
+import DecentralizedAndSophisticated from './3DecentralizedAndSophisticated';
 
 const HomePage = ({ isNavigationOpen }) => (
   <>
-    <WhatIsAutonolas />
+    {/* <WhatIsAutonolas /> */}
+    <DecentralizedAndSophisticated />
     <TheNewWay isNavigationOpen={isNavigationOpen} />
   </>
 );

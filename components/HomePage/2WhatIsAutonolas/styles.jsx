@@ -1,59 +1,60 @@
 import styled from 'styled-components';
+import { backgroundGradient } from 'components/GlobalStyles';
 import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionThree = styled.div`
-  /* background-image: url("/images/what-is-autonolas/background.jpg"); */
+  ${backgroundGradient('/images/v2/2WhatIsAutonolas/background.png')}
   ${MEDIA_QUERY.tablet} {
-    background-image: url("/images/what-is-autonolas/background-mobile.jpg");
+    background-image: url("/images/2WhatIsAutonolas/background.jpg");
   }
 `;
 
 export const Content = styled.div`
   position: relative;
-  img {
-    width: 100%;
-  }
-  .text {
-    position: absolute;
-    width: 320px;
-  }
-  .text-1 {
-    top: 52%;
-    left: 0;
-    text-align: left;
-  }
-  .text-2 {
-    top: 0%;
-    right: 0;
-    text-align: right;
+  display: flex;
+  justify-content: space-between;
+  .column {
+    max-width: 340px;
+    .img-container {
+      min-height: 180px;
+      img {
+        margin-left: 1rem;
+      }
+    }
+    .header-text {
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+      font-size: 34px;
+      font-family: "manrope__bold", sans-serif;
+      min-height: 92px;
+    }
+    .sub-text {
+      font-size: 22px;
+    }
+    /* content-images */
+    &.column-1 {
+      .img-container img {
+        width: 54%;
+      }
+    }
+    &.column-2 {
+      max-width: 340px;
+      .img-container img {
+        width: 64%;
+      }
+    }
+    &.column-3 {
+      .img-container img {
+        width: 54%;
+      }
+    }
   }
 
   ${MEDIA_QUERY.laptop} {
-    .text {
-      width: 260px;
-    }
   }
 
   ${MEDIA_QUERY.tablet} {
     display: flex;
     flex-direction: column;
-    img {
-      order: 2;
-      width: 77.5%;
-      margin: 32px auto;
-    }
-    .text {
-      position: relative;
-      font-size: 14px;
-    }
-    .text-1 {
-      order: 1;
-      max-width: 280px;
-    }
-    .text-2 {
-      order: 3;
-      align-self: flex-end;
-      max-width: 240px;
-    }
   }
 `;

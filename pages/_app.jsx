@@ -24,6 +24,7 @@ class MyApp extends App {
         <style global jsx>
           {`
             body {
+              margin: 0;
               font-family: "manrope__regular", sans-serif;
               overscroll-behavior: none;
               -webkit-font-smoothing: antialiased;

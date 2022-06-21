@@ -8,7 +8,8 @@ const H2 = styled.h2`
   font-size: 120px;
   line-height: normal;
   .sub-text {
-    font-size: 24px;
+    font-family: "manrope__light", sans-serif;
+    font-weight: 500;
   }
 
   ${MEDIA_QUERY.laptop} {

@@ -8,13 +8,6 @@ export const SectionOne = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: calc(100vh);
-  background: linear-gradient(
-    180deg,
-    rgba(239, 255, 253, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(239, 255, 253, 1) 100%,
-    rgba(240, 240, 240, 1) 100%
-  );
   background-image: url("/images/v2/1TheNewWay/background.webp");
   .header {
     margin-bottom: 0 !important;

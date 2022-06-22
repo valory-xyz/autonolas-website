@@ -8,6 +8,9 @@ const H2 = styled.h2`
   font-size: 120px;
   line-height: 1;
   word-wrap: break-word;
+  &.center {
+    text-align: center;
+  }
   .sub-text {
     font-family: "manrope__light", sans-serif;
     font-weight: 500;

@@ -1,5 +1,5 @@
-import { backgroundImage } from 'components/GlobalStyles';
 import styled from 'styled-components';
+import { backgroundImage } from 'components/GlobalStyles';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
 
 const IMG_URL = '/images/4HowDoAutonolasWork/how-autonomous-services-work.png';

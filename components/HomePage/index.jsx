@@ -8,16 +8,18 @@ import DecentralizedAndSophisticated from './3DecentralizedAndSophisticated';
 import HowDoAutonolasWork from './4HowDoAutonolasWork';
 import QuickIntroArticles from './5QuickIntroArticles';
 import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
+import StartBuilding from './7StartBuilding';
 
 const HomePage = ({ isNavigationOpen }) => (
   <>
-    <WhyBuildOnAutonolas />
+    <StartBuilding />
     {/*
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <WhatIsAutonolas />
     <DecentralizedAndSophisticated />
     <HowDoAutonolasWork />
     <QuickIntroArticles />
+    <WhyBuildOnAutonolas />
     */}
   </>
 );

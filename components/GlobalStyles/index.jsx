@@ -1,4 +1,5 @@
-import { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
+import { COLOR } from 'util/theme';
 
 // const GlobalStyles = styled.div`
 const GlobalStyle = createGlobalStyle`
@@ -6,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
   :after,
   :before {
     box-sizing: border-box;
+  }
+
+  a {
+    color: ${COLOR.PURPLE}
   }
 `;
 
@@ -23,6 +28,11 @@ export const backgroundGradient = url => css`
   background-blend-mode: multiply;
 `;
 
+export const SubText = styled.div`
+  font-size: 22px;
+`;
+
+// CSS
 export const containImage = css`
   background-size: contain;
   background-position: center;

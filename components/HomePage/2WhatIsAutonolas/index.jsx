@@ -15,7 +15,7 @@ const LIST = [
   {
     imageUrl: 'on-chain-protocol',
     heading: 'ON-CHAIN PROTOCOL',
-    subHeading: 'For running autonomous services and taking action on-chain',
+    subHeading: 'For securing autonomous services and taking action on-chain',
   },
   {
     imageUrl: 'ecosystem',

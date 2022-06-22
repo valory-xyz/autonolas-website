@@ -53,5 +53,16 @@ export const Content = styled.div`
   ${MEDIA_QUERY.tablet} {
     display: flex;
     flex-direction: column;
+    .column {
+      max-width: 280px;
+      .header-text {
+        margin-top: 1rem;
+        font-size: 20px;
+        min-height: auto;
+      }
+      .sub-text {
+        font-size: 18px;
+      }
+    }
   }
 `;

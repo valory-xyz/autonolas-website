@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -5,13 +6,17 @@ import TheNewWay from './1TheNewWay';
 import WhatIsAutonolas from './2WhatIsAutonolas';
 import DecentralizedAndSophisticated from './3DecentralizedAndSophisticated';
 import HowDoAutonolasWork from './4HowDoAutonolasWork';
+import QuickIntroArticles from './5QuickIntroArticles';
 
 const HomePage = ({ isNavigationOpen }) => (
   <>
+    <QuickIntroArticles />
     <TheNewWay isNavigationOpen={isNavigationOpen} />
+
+    {/* <TheNewWay isNavigationOpen={isNavigationOpen} />
     <WhatIsAutonolas />
     <DecentralizedAndSophisticated />
-    <HowDoAutonolasWork />
+    <HowDoAutonolasWork /> */}
   </>
 );
 

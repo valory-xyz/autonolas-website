@@ -23,9 +23,13 @@ export const backgroundGradient = url => css`
   background-blend-mode: multiply;
 `;
 
-export const backgroundImage = url => css`
-  background-image: url(${url});
+export const containImage = css`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+`;
+
+export const backgroundImage = url => css`
+  background-image: url(${url});
+  ${containImage}
 `;

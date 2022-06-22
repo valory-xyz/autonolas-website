@@ -34,10 +34,30 @@ export const Btn = styled.button`
           border: 1px solid ${COLOR.BLACK};
           background-color: ${COLOR.BLACK};
           color: ${COLOR.WHITE};
+          font-size: 20px;
           &:hover, &:active {
             background-color: ${COLOR.GREEN_2};
             color: ${COLOR.BLACK};
             border : 1px solid ${COLOR.GREEN_2};
+          }
+        `;
+      case 'link-arrow':
+        return `
+          display: flex;
+          align-items: center;
+          border: 1px solid transparent;
+          background-color: transparent;
+          color: ${COLOR.BLACK};
+          text-transform: initial;
+          font-size: 24px;
+          img {
+            margin-left: 1rem;
+            width: 40px;
+          }
+          &:hover, &:active {
+            background-color: transparent;
+            color: ${COLOR.BLACK};
+            border: 1px solid transparent;
           }
         `;
       case 'primary':
@@ -65,6 +85,11 @@ const CustomButton = ({
   return (
     <Btn type={type} className={clsName} {...rest}>
       {title}
+      {type === 'link-arrow' && (
+        <>
+          <img src="images/common/arrow.png" alt=" " loading="lazy" />
+        </>
+      )}
     </Btn>
   );
 };

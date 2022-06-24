@@ -19,6 +19,8 @@ export const FONT_SIZE = {
   20: '20px',
   18: '18px',
   16: '16px',
+  14: '14px',
+  12: '12px',
 
   // TODO
 };

@@ -12,6 +12,10 @@ export const Btn = styled.button`
   padding: 0.75rem 2rem;
   clip-path: none;
   border-radius: 48px;
+  &.mini {
+    padding: 0.35rem 1rem;
+    font-size: 12px;
+  }
   &:hover {
     cursor: pointer;
   }

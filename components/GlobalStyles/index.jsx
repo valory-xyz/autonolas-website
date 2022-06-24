@@ -32,7 +32,13 @@ export const SubText = styled.div`
   font-size: 22px;
 `;
 
-// CSS
+export const SeeAllBtnRow = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+`;
+
+// ------------- CSS -------------
 export const containImage = css`
   background-size: contain;
   background-position: center;

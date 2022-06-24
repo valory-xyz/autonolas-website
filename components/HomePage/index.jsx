@@ -9,10 +9,11 @@ import HowDoAutonolasWork from './4HowDoAutonolasWork';
 import QuickIntroArticles from './5QuickIntroArticles';
 import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
 import StartBuilding from './7StartBuilding';
+import WhatCouldYouBuild from './8WhatCouldYouBuild';
 
 const HomePage = ({ isNavigationOpen }) => (
   <>
-    <StartBuilding />
+    <WhatCouldYouBuild />
     {/*
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <WhatIsAutonolas />
@@ -20,6 +21,7 @@ const HomePage = ({ isNavigationOpen }) => (
     <HowDoAutonolasWork />
     <QuickIntroArticles />
     <WhyBuildOnAutonolas />
+    <StartBuilding />
     */}
   </>
 );

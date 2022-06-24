@@ -12,6 +12,7 @@ const H2 = styled.h2`
     text-align: center;
   }
   .sub-text {
+    display: inline-block;
     font-family: "manrope__light", sans-serif;
     font-weight: 500;
   }

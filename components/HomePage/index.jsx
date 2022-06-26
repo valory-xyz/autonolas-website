@@ -12,11 +12,22 @@ import StartBuilding from './7StartBuilding';
 import WhatCouldYouBuild from './8WhatCouldYouBuild';
 import Mission from './9Mission';
 import Team from './11Team';
+import Press from './12Press';
+import Blog from './13Blog';
+import Experience from './14Experience';
 
-const HomePage = ({ isNavigationOpen, cofounders, foundingTeam }) => (
-  <>
-    <Team cofounders={cofounders} foundingTeam={foundingTeam} />
-    {/*
+const HomePage = ({
+  isNavigationOpen,
+  cofounders,
+  foundingTeam,
+  press,
+  blogs,
+}) => {
+  console.log(blogs);
+  return (
+    <>
+      <Experience />
+      {/*
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <WhatIsAutonolas />
     <DecentralizedAndSophisticated />
@@ -26,19 +37,27 @@ const HomePage = ({ isNavigationOpen, cofounders, foundingTeam }) => (
     <StartBuilding />
     <WhatCouldYouBuild />
     <Mission />
+    <Team cofounders={cofounders} foundingTeam={foundingTeam} />
+      <Press press={press} />
+      <Blog  blogs={blogs} />
     */}
-  </>
-);
+    </>
+  );
+};
 
 HomePage.propTypes = {
   isNavigationOpen: PropTypes.bool.isRequired,
   cofounders: PropTypes.instanceOf(Array),
   foundingTeam: PropTypes.instanceOf(Array),
+  press: PropTypes.instanceOf(Array),
+  blogs: PropTypes.instanceOf(Array),
 };
 
 HomePage.defaultProps = {
   cofounders: [],
   foundingTeam: [],
+  press: [],
+  blogs: [],
 };
 
 const mapStateToProps = state => {

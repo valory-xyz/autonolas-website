@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${COLOR.PURPLE}
+    color: ${COLOR.PURPLE};
+    text-underline-offset: 3px;
   }
 `;
 

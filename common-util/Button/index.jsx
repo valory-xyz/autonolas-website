@@ -100,7 +100,7 @@ const CustomButton = ({
 
 CustomButton.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  type: PropTypes.oneOf(['black', 'primary', 'purple']),
+  type: PropTypes.oneOf(['black', 'primary', 'purple', 'link-arrow']),
   className: PropTypes.string,
 };
 

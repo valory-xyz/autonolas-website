@@ -11,9 +11,11 @@ import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
 import StartBuilding from './7StartBuilding';
 import WhatCouldYouBuild from './8WhatCouldYouBuild';
 import Mission from './9Mission';
+import Team from './11Team';
 
-const HomePage = ({ isNavigationOpen }) => (
+const HomePage = ({ isNavigationOpen, cofounders, foundingTeam }) => (
   <>
+    <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     {/*
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <WhatIsAutonolas />
@@ -30,6 +32,13 @@ const HomePage = ({ isNavigationOpen }) => (
 
 HomePage.propTypes = {
   isNavigationOpen: PropTypes.bool.isRequired,
+  cofounders: PropTypes.instanceOf(Array),
+  foundingTeam: PropTypes.instanceOf(Array),
+};
+
+HomePage.defaultProps = {
+  cofounders: [],
+  foundingTeam: [],
 };
 
 const mapStateToProps = state => {

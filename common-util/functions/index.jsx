@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import GithubS from '../../public/images/common/github-small.svg';
 import Twitter from '../../public/images/common/twitter.svg';
 import Linkedin from '../../public/images/common/linkedin.svg';
 import Discord from '../../public/images/common/discord.svg';
@@ -10,47 +9,40 @@ export const handleJoinDiscord = () => {
 
 export const getSocials = (socials, renderFormat = 'img') => (
   <div className="socials">
-    {socials.map(social => {
-      if (!social.url) return null;
+    {socials.map(({
+      url, type, iconSize, size,
+    }) => {
+      if (!url) return null;
 
-      const src = `/images/common/${social.type}${
-        social.iconSize ? `-${social.iconSize}` : ''
+      const src = `/images/common/${type}${
+        iconSize ? `-${iconSize}` : ''
       }.svg`;
 
       return (
         <a
-          href={social.url}
-          className={social.type}
+          href={url}
+          className={type}
           target="_blank"
           rel="noopener noreferrer"
-          key={`social-${social.type}`}
-          aria-label={`social-${social.type}`}
+          key={`social-${type}`}
+          aria-label={`social-${type}`}
         >
           {renderFormat === 'svg' ? (
             <>
-              {social.type === 'twitter' && <Twitter width={24} height={24} />}
-              {social.type === 'linkedin' && (
+              {type === 'twitter' && <Twitter width={24} height={24} />}
+              {type === 'linkedin' && (
                 <Linkedin width={24} height={24} />
               )}
-              {social.type === 'discord' && <Discord width={24} height={24} />}
-              {social.type === 'github' && (
-                <>
-                  {social.iconSize === 'small' ? (
-                    <GithubS width={24} height={24} />
-                  ) : (
-                    <GithubS width={24} height={24} />
-                  )}
-                </>
-              )}
+              {type === 'discord' && <Discord width={24} height={24} />}
             </>
           ) : (
             <>
-              {social.size ? (
+              {size ? (
                 <Image
                   src={src}
                   alt=""
-                  width={social.size.width}
-                  height={social.size.height}
+                  width={size.width}
+                  height={size.height}
                 />
               ) : (
                 <>

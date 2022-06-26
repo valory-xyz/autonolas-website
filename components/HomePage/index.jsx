@@ -26,7 +26,6 @@ const HomePage = ({
   console.log(blogs);
   return (
     <>
-      <Experience />
       {/*
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <WhatIsAutonolas />
@@ -40,6 +39,7 @@ const HomePage = ({
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
       <Press press={press} />
       <Blog  blogs={blogs} />
+      <Experience />
     */}
     </>
   );

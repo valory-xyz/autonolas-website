@@ -20,7 +20,7 @@ const WhatAreWeBuilding = () => (
         <>
           How&nbsp;
           <span className="sub-text">do</span>
-          &nbsp;autonomous service work?
+          &nbsp;autonomous services work?
         </>
       )}
     />

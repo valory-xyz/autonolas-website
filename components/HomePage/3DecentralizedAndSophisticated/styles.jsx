@@ -21,7 +21,7 @@ export const AutonolasService = styled.div`
   width: 48px;
   height: 48px;
   margin-left: 1rem;
-  ${backgroundImage('/images/3Decentralized/ball.png')}
+  ${backgroundImage('/images/3Decentralized/tick.png')}
 `;
 
 export const PurbleBall = styled.div`

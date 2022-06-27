@@ -3,7 +3,7 @@ import { MEDIA_QUERY } from 'util/theme';
 import { containImage } from 'components/GlobalStyles';
 
 export const SectionBlog = styled.div`
-  padding-bottom: 6rem;
+  padding-bottom: 6rem !important;
   .header {
   }
   ${MEDIA_QUERY.tablet} {

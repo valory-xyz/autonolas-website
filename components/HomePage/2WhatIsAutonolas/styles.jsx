@@ -3,7 +3,8 @@ import { backgroundImage } from 'components/GlobalStyles';
 import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionTwo = styled.div`
-  ${backgroundImage('/images/2WhatIsAutonolas/background.png')}
+  ${backgroundImage('/images/2WhatIsAutonolas/background.png')};
+  mix-blend-mode: multiply;
 `;
 
 export const Content = styled.div`
@@ -11,7 +12,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   .column {
-    max-width: 340px;
+    max-width: 260px;
     .img-container {
       min-height: 180px;
       img {
@@ -31,7 +32,7 @@ export const Content = styled.div`
     /* content-images */
     &.column-1 {
       .img-container img {
-        width: 54%;
+        width: 68%;
       }
     }
     &.column-2 {
@@ -42,7 +43,7 @@ export const Content = styled.div`
     }
     &.column-3 {
       .img-container img {
-        width: 54%;
+        width: 64%;
       }
     }
   }

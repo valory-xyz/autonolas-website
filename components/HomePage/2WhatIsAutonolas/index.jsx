@@ -1,9 +1,6 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
-// import Image from 'next/image';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
-import { useCheckMobileScreen } from 'common-util/hooks';
 import { SectionTwo, Content } from './styles';
 
 const LIST = [
@@ -20,45 +17,40 @@ const LIST = [
   {
     imageUrl: 'ecosystem',
     heading: 'ECOSYSTEM',
-    subHeading: 'Autonomous services in the wild, being used',
+    subHeading: 'Autonomous services running and being used by DAOs',
   },
 ];
 
-const WhatIsAutonolas = () => {
-  const isMobile = useCheckMobileScreen();
-  console.log({ isMobile });
+const WhatIsAutonolas = () => (
+  <SectionTwo className="section" id="learn">
+    <Description type={2} title="LEARN" />
 
-  return (
-    <SectionTwo className="section" id="learn">
-      <Description type={2} title="LEARN" />
-
-      <Header
-        className="header"
-        title={(
-          <>
-            What&nbsp;
-            <span className="sub-text">is</span>
+    <Header
+      className="header"
+      title={(
+        <>
+          What&nbsp;
+          <span className="sub-text">is</span>
             &nbsp;Autonolas?
-          </>
+        </>
         )}
-      />
+    />
 
-      <Content>
-        {LIST.map((item, index) => (
-          <div className={`column column-${index + 1}`}>
-            <div className="img-container">
-              <img
-                src={`/images/2WhatIsAutonolas/${item.imageUrl}.png`}
-                alt={`${item.heading} Icon`}
-              />
-            </div>
-            <div className="header-text">{item.heading}</div>
-            <div className="sub-text">{item.subHeading}</div>
+    <Content>
+      {LIST.map((item, index) => (
+        <div key={item.imageUrl} className={`column column-${index + 1}`}>
+          <div className="img-container">
+            <img
+              src={`/images/2WhatIsAutonolas/${item.imageUrl}.png`}
+              alt={`${item.heading} Icon`}
+            />
           </div>
-        ))}
-      </Content>
-    </SectionTwo>
-  );
-};
+          <div className="header-text">{item.heading}</div>
+          <div className="sub-text">{item.subHeading}</div>
+        </div>
+      ))}
+    </Content>
+  </SectionTwo>
+);
 
 export default WhatIsAutonolas;

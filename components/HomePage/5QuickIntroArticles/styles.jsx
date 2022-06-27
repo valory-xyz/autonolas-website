@@ -1,13 +1,11 @@
-import { containImage } from 'components/GlobalStyles';
 import styled from 'styled-components';
+import { containImage, SeeAllBtnRow } from 'components/GlobalStyles';
 import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionFive = styled.div`
-  .see-all {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
-  }
+.header{
+  margin-bottom: 1rem !important;
+}
   ${MEDIA_QUERY.tablet} {
   }
 `;
@@ -58,4 +56,9 @@ export const GoDeep = styled.div`
   /* REMOVE After go-deep */
   margin-top: 2rem;
   margin-bottom: -2.5rem;
+`;
+
+export const SeeAll = styled(SeeAllBtnRow)`
+  margin-top: 0;
+  margin-bottom: 2rem;
 `;

@@ -6,6 +6,17 @@ const URL = `${process.env.NEXT_PUBLIC_API_URL}/api`;
 
 export async function getServerSideProps() {
   // ----------- TEAM -----------
+  const educationQuery = qs.stringify({
+    populate: '*',
+  });
+
+  const educationResponse = await fetch(
+    `${URL}/education-articles?${educationQuery}`,
+  );
+  const educationJson = await educationResponse.json();
+  const educationArticles = get(educationJson, 'data') || [];
+
+  // ----------- TEAM -----------
   const teamQuery = qs.stringify({
     sort: ['name:asc'],
     populate: '*',
@@ -43,6 +54,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
+      educationArticles,
       cofounders,
       foundingTeam,
       press,

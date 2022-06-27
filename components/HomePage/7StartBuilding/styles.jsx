@@ -10,6 +10,7 @@ export const Content = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  padding-top: 2rem;
   .column {
     .img-container {
       height: 150px;
@@ -26,13 +27,14 @@ export const Content = styled.div`
     .sub-text {
       font-size: 22px;
       text-align: center;
-      margin: 1rem 0 3rem 0;
+      margin-top: 1rem;
+      min-height: 200px;
     }
     .action-btn {
       text-align: center;
     }
     &.column-1 {
-      margin-right: 8rem;
+      margin-right: 12rem;
       max-width: 340px;
       .img-container {
         margin: 0 auto;
@@ -40,9 +42,9 @@ export const Content = styled.div`
       }
     }
     &.column-2 {
-      max-width: 460px;
+      max-width: 360px;
       .img-container {
-        margin: 0.5rem auto 0 auto;
+        margin: 0 auto;
         width: 120px;
       }
     }

@@ -12,10 +12,7 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
     id="birth-place"
     isNavigationOpen={isNavigationOpen}
   >
-    <Header
-      className="header"
-      title="The New Way To Get Things Done In Crypto"
-    />
+    <Header className="header" title="Build Autonomous Services" />
 
     <DescActionButtons>
       <Description
@@ -24,15 +21,16 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
       />
 
       <div className="action-btns">
-        <Button
-          type="purple"
-          title="Start Building />"
-          onClick={() => window.open('mailto:bd@valory.xyz')}
-        />
+        <Link href="#build">
+          <a href="#build">
+            <Button type="purple" title="Start Building />" />
+          </a>
+        </Link>
 
-        {/* TODO */}
-        <Link href="#developers">
-          <Button title="What is Autonolas" />
+        <Link href="#learn">
+          <a href="#learn">
+            <Button title="What is Autonolas" />
+          </a>
         </Link>
       </div>
     </DescActionButtons>

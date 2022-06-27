@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
@@ -7,7 +8,7 @@ import Button from 'common-util/Button';
 import { useCheckMobileScreen } from 'common-util/hooks';
 import { getSocials } from 'common-util/functions';
 import { AutonolasLogo } from 'common-util/svg';
-import { NAV_1, NAV_2, NAVIGATION_SOCIALS } from './constants';
+import { NAV_1, NAVIGATION_SOCIALS } from './constants';
 import {
   DesktopNavBar,
   Hamburger,
@@ -70,10 +71,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   }, []);
 
   /* temporary variables */
-  const mobileMenu = [
-    ...NAV_1,
-    ...[...NAV_2].filter(({ type }) => type !== 'icon'),
-  ];
+  const mobileMenu = [...NAV_1];
   const isMobile = useCheckMobileScreen();
   const navbarClassName = () => {
     let name = 'navbar';
@@ -156,13 +154,17 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                 <AutonolasLogo width={124} height={60} />
               </a>
             </div>
+
             <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
-            <Button
-              type="purple"
-              // className="mini"
-              title="Start Building />"
-              onClick={() => window.open('mailto:bd@valory.xyz')}
-            />
+
+            <Link href="#build">
+              <a href="#build">
+                <Button
+                  type="purple"
+                  title="Start Building />"
+                />
+              </a>
+            </Link>
           </DesktopNavBar>
         )}
       </nav>

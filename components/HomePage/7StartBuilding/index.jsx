@@ -9,12 +9,14 @@ const LIST = [
     heading: 'DOCS',
     subHeading:
       'Work your way through our written documentation at your own pace.',
+    redirectTo: ' https://docs.autonolas.network/',
   },
   {
     imageUrl: 'dev-academy',
     heading: 'ACADEMY',
     subHeading:
-      'Follow videos in our Education Track. Then apply to the Builder Track for expert guidance in developing high-impact services.',
+      'Follow videos and complete projects in our Education Track. Then, apply to the Builder Track for expert guidance in developing high-impact services.',
+    redirectTo: 'https://autonolas.network/academy',
   },
 ];
 
@@ -23,21 +25,23 @@ const WhyBuildOnAutonolas = () => (
     <Header className="header center" title="Start Building" />
 
     <Content>
-      {LIST.map((item, index) => (
-        <div className={`column column-${index + 1}`}>
+      {LIST.map(({
+        heading, subHeading, imageUrl, redirectTo,
+      }, index) => (
+        <div key={imageUrl} className={`column column-${index + 1}`}>
           <div className="img-container">
             <img
-              src={`/images/7StartBuilding/${item.imageUrl}.png`}
-              alt={`${item.heading} Icon`}
+              src={`/images/7StartBuilding/${imageUrl}.png`}
+              alt={`${heading} Icon`}
             />
           </div>
-          <div className="header-text">{item.heading}</div>
-          <div className="sub-text">{item.subHeading}</div>
+          <div className="header-text">{heading}</div>
+          <div className="sub-text">{subHeading}</div>
           <div className="action-btn">
             <Button
               title="GET STARTED"
               type="black"
-              onClick={() => window.open('https://docs.autonolas.network/')}
+              onClick={() => window.open(redirectTo)}
             />
           </div>
         </div>

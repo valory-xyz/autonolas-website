@@ -1,53 +1,73 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
-import { SectionFive, Content, GoDeep } from './styles';
+import {
+  SectionFive, Content, GoDeep, SeeAll,
+} from './styles';
 
 const LIST = [
   {
-    imageUrl: 'open-source',
-    heading: 'What is Autonolas?',
+    headerImage: 'open-source',
+    readTime: 1,
+    title: 'What is Autonolas?',
   },
   {
-    imageUrl: 'on-chain-protocol',
-    heading: 'The concept of autonomy',
+    headerImage: 'on-chain-protocol',
+    readTime: 5,
+    title: 'The concept of autonomy',
   },
   {
-    imageUrl: 'ecosystem',
-    heading: 'Intro to technical architecture',
+    headerImage: 'ecosystem',
+    readTime: 5,
+    title: 'Intro to technical architecture',
   },
 ];
 
-const QuickIntroArticles = () => (
-  <SectionFive className="section section-5">
-    <Header className="header" title="Quick intro articles" />
+const QuickIntroArticles = ({ educationArticles }) => {
+  const list = educationArticles.length === 0 ? LIST : educationArticles.slice(0, 3);
 
-    <Content>
-      {LIST.map((item, index) => (
-        <div className={`column column-${index + 1}`}>
-          <div
-            className="img-container"
-            style={{
-              backgroundImage:
-                "url('/images/5QuickIntroArticles/what-is-autonolas.png')",
-            }}
-          />
-          <div className="header-text">{item.heading}</div>
-          <div className="sub-text">4 MIN READ</div>
-        </div>
-      ))}
-    </Content>
+  return (
+    <SectionFive className="section section-education-articles">
+      <Header className="header" title="Quick intro articles" />
 
-    <div className="see-all">
-      <Button
-        title="See all education articles"
-        type="link-arrow"
-        onClick={() => window.open('https://docs.autonolas.network/')}
-      />
-    </div>
+      <SeeAll>
+        <Button
+          title="See all education articles"
+          type="link-arrow"
+          onClick={() => window.open(`${window.location.origin}/education`)}
+        />
+      </SeeAll>
 
-    <GoDeep className="divider" />
-  </SectionFive>
-);
+      <Content>
+        {list.map(({ headerImage, title, readTime }, index) => (
+          <div key={headerImage} className={`column column-${index + 1}`}>
+            <div
+              className="img-container"
+              style={{
+                backgroundImage:
+                  "url('/images/5QuickIntroArticles/what-is-autonolas.png')",
+              }}
+            />
+            <div className="header-text">{title}</div>
+            <div className="sub-text">
+              {readTime}
+              &nbsp;
+              {readTime === 1 ? 'MIN' : 'MINS'}
+              &nbsp;
+              READ
+            </div>
+          </div>
+        ))}
+      </Content>
+
+      <GoDeep className="divider" />
+    </SectionFive>
+  );
+};
+
+QuickIntroArticles.propTypes = {
+  educationArticles: PropTypes.instanceOf(Array).isRequired,
+};
 
 export default QuickIntroArticles;

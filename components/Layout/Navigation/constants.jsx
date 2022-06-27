@@ -4,26 +4,6 @@ export const NAV_1 = [
   { name: 'MISSION', id: 'mission' },
   { name: 'USE', id: 'use' },
   { name: 'JOIN', id: 'join' },
-  { name: 'TEAM', id: 'team' },
-];
-
-export const NAV_2 = [
-  { name: 'Product', id: 'product' },
-  { name: 'Lore', id: 'lore' },
-  { name: 'About', id: 'about' },
-  {
-    name: 'Blog',
-    id: 'blog-redirect',
-    type: 'link',
-    url: 'https://autonolas.medium.com/',
-  },
-  {
-    name: '',
-    id: 'twitter-redirect',
-    type: 'icon',
-    iconName: 'twitter',
-    url: 'https://twitter.com/autonolas',
-  },
 ];
 
 export const NAVIGATION_SOCIALS = [

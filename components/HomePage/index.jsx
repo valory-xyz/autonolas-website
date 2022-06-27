@@ -19,13 +19,26 @@ import { LearnContainer } from './styles';
 
 const HomePage = ({
   isNavigationOpen,
+  educationArticles,
+  ideas,
   cofounders,
   foundingTeam,
   press,
   blogs,
 }) => (
   <>
-    <WhatCouldYouBuild />
+    <TheNewWay isNavigationOpen={isNavigationOpen} />
+
+    <LearnContainer>
+      <WhatIsAutonolas />
+      <DecentralizedAndSophisticated />
+      <HowDoAutonolasWork />
+      <QuickIntroArticles educationArticles={educationArticles} />
+    </LearnContainer>
+
+    <WhyBuildOnAutonolas />
+    <StartBuilding />
+    <WhatCouldYouBuild ideas={ideas} />
     <Mission />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
@@ -42,7 +55,6 @@ const HomePage = ({
 
     <WhyBuildOnAutonolas />
     <StartBuilding />
-
     <WhatCouldYouBuild />
     <Mission />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
@@ -54,6 +66,8 @@ const HomePage = ({
 
 HomePage.propTypes = {
   isNavigationOpen: PropTypes.bool.isRequired,
+  educationArticles: PropTypes.instanceOf(Array),
+  ideas: PropTypes.instanceOf(Array),
   cofounders: PropTypes.instanceOf(Array),
   foundingTeam: PropTypes.instanceOf(Array),
   press: PropTypes.instanceOf(Array),
@@ -61,6 +75,8 @@ HomePage.propTypes = {
 };
 
 HomePage.defaultProps = {
+  educationArticles: [],
+  ideas: [],
   cofounders: [],
   foundingTeam: [],
   press: [],

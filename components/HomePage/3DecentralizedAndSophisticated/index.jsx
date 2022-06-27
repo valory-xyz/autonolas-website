@@ -14,8 +14,8 @@ const DATA_ROWS = [
     id: 'location',
     name: 'LOCATION',
     smartContractService: true,
-    webServices: true,
-    decentralizedService: true,
+    webServices: false,
+    decentralizedService: false,
   },
   {
     id: 'decentralized',
@@ -41,7 +41,7 @@ const DATA_ROWS = [
   {
     id: 'composable',
     name: 'COMPOSABLE',
-    smartContractService: false,
+    smartContractService: true,
     webServices: false,
     decentralizedService: false,
   },
@@ -100,8 +100,8 @@ const WhyAutonolas = () => (
             <th>Smart Contracts</th>
             <th>Web Services</th>
             <th>
-              Decentralized Services
-              <div>(E.G. Oracles)</div>
+              Custom Decentralized
+              <div>Services (E.G. Oracles)</div>
             </th>
           </tr>
         </thead>

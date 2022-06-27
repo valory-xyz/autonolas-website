@@ -13,7 +13,7 @@ export const DesktopNavBar = styled.div`
     }
   }
   .btn {
-    min-width: 192px;
+    min-width: 212px;
     font-size: 14px;
   }
 

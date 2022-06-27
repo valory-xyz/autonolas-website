@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
-import { containImage } from 'components/GlobalStyles';
+import { containImage, SeeAllBtnRow } from 'components/GlobalStyles';
 
-export const SectionEight = styled.div`
+export const SectionWhatCouldYouBuild = styled.div`
   .header {
+    margin-bottom: 1rem !important;
   }
   ${MEDIA_QUERY.tablet} {
   }
@@ -56,4 +57,9 @@ export const Content = styled.div`
       }
     }
   }
+`;
+
+export const SeeAll = styled(SeeAllBtnRow)`
+  margin-top: 0;
+  margin-bottom: 2rem;
 `;

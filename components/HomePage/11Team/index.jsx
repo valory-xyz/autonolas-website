@@ -8,7 +8,7 @@ import { getSocials } from 'common-util/functions';
 import { SectionEleven, Content, TeamFooter } from './styles';
 
 const Team = ({ cofounders, foundingTeam }) => (
-  <SectionEleven className="section section-11" id="team">
+  <SectionEleven className="section section-team" id="team">
     <Header className="header" title="Core Team" />
     <Description type={2} title="CO-FOUNDERS" />
 
@@ -25,7 +25,7 @@ const Team = ({ cofounders, foundingTeam }) => (
         return (
           <div
             className={`column column-${index + 1}`}
-            key={`column-${id + 1}`}
+            key={`team-${id}`}
           >
             <div
               className="img-container"
@@ -46,13 +46,13 @@ const Team = ({ cofounders, foundingTeam }) => (
       <Button
         title={`See full team (${foundingTeam.length})`}
         type="link-arrow"
-        onClick={() => window.open('https://docs.autonolas.network/')}
+        onClick={() => window.open(`${window.location.origin}/team`)}
       />
 
       <Button
         title="See job openings"
         type="link-arrow"
-        onClick={() => window.open('https://docs.autonolas.network/')}
+        onClick={() => window.open('https://angel.co/company/valory-3')}
       />
     </TeamFooter>
   </SectionEleven>

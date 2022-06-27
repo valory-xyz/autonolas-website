@@ -26,7 +26,11 @@ const HomePage = ({
 }) => (
   <>
     <WhatCouldYouBuild />
-
+    <Mission />
+    <Team cofounders={cofounders} foundingTeam={foundingTeam} />
+    <Press press={press} />
+    <Blog blogs={blogs} />
+    <Experience />
     {/* <TheNewWay isNavigationOpen={isNavigationOpen} />
 
     <LearnContainer>
@@ -38,6 +42,7 @@ const HomePage = ({
 
     <WhyBuildOnAutonolas />
     <StartBuilding />
+
     <WhatCouldYouBuild />
     <Mission />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 import { containImage } from 'components/GlobalStyles';
 
-export const Section12 = styled.div`
+export const SectionBlog = styled.div`
+  padding-bottom: 6rem;
   .header {
   }
   ${MEDIA_QUERY.tablet} {

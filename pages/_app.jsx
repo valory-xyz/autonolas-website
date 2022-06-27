@@ -50,7 +50,7 @@ class MyApp extends App {
 }
 
 MyApp.propTypes = {
-  Component: PropTypes.func.isRequired,
+  Component: PropTypes.shape({}).isRequired,
   pageProps: PropTypes.shape({}).isRequired,
 };
 

@@ -14,7 +14,7 @@ const Experience = () => (
     <Button
       title="EXPERIENCE IT NOW"
       type="purple"
-      onClick={() => window.open('https://docs.autonolas.network/')}
+      onClick={() => window.open('https://autonolas.world/')}
     />
 
     <div className="consider-yourself">

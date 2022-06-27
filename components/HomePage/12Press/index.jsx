@@ -4,24 +4,30 @@ import get from 'lodash/get';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
-import { SeeAllBtnRow } from 'components/GlobalStyles';
+import { HeaderAndAction } from 'components/GlobalStyles';
 import { SectionPress, Content } from './styles';
 
 const PressAndBlogs = ({ press }) => (
   <SectionPress className="section section-press" id="press">
-    <Header className="header" title="Press" />
+    <HeaderAndAction>
+      <Header className="header" title="Press" />
+      <Button
+        title="See all"
+        type="link-arrow"
+        onClick={() => window.open(`${window.location.origin}/press`)}
+      />
+    </HeaderAndAction>
 
     <Content>
       {press.map(({ id, attributes }, index) => {
         const {
           title, thumbnail, type, publisher,
         } = attributes || {};
-        // TODO: remove once image is added
         const imageUrl = get(thumbnail, 'data.attributes.url') || '';
 
         return (
           <div
-            key={`blog-${id}`}
+            key={`press-${id}`}
             className={`column column-${index + 1}`}
             style={{ width: index === 0 || index === 1 ? '40%' : '27.5%' }}
           >
@@ -39,21 +45,13 @@ const PressAndBlogs = ({ press }) => (
               type="black"
               className="mini"
               onClick={() => {
-                window.open(`${window.location.host}/blog-post/${id}`);
+                window.open(`${window.location.origin}/press/${id}`);
               }}
             />
           </div>
         );
       })}
     </Content>
-
-    <SeeAllBtnRow>
-      <Button
-        title="See all"
-        type="link-arrow"
-        onClick={() => window.open('https://docs.autonolas.network/')}
-      />
-    </SeeAllBtnRow>
   </SectionPress>
 );
 

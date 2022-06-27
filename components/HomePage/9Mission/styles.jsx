@@ -18,7 +18,7 @@ export const Row = styled.div`
     max-width: 700px;
   }
   .glass-container {
-    width: 240px;
+    width: 420px;
     margin: 0 auto;
     img {
       width: 100%;

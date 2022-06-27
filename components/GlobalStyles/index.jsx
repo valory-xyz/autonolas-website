@@ -36,6 +36,15 @@ export const SubText = styled.div`
   font-size: 22px;
 `;
 
+export const HeaderAndAction = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  .header {
+    margin-bottom: 0 !important;
+  }
+`;
+
 export const SeeAllBtnRow = styled.div`
   display: flex;
   justify-content: flex-end;

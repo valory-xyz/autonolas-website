@@ -27,7 +27,7 @@ const Tag = ({ children, className, ...rest }) => {
 };
 
 Tag.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   className: PropTypes.string,
 };
 

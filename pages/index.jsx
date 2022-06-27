@@ -22,11 +22,20 @@ export async function getServerSideProps() {
   );
 
   // ----------- PRESS -----------
+  const pressQuery = qs.stringify({
+    sort: ['datePublished:asc'],
+    _limit: 5,
+    populate: '*',
+  });
+  const pressResponse = await fetch(`${URL}/media-appearances?${pressQuery}`);
+  const pressJson = await pressResponse.json();
+  const press = get(pressJson, 'data') || [];
 
   // ----------- BLOGS -----------
   const blogsQuery = qs.stringify({
     sort: ['datePublished:asc'],
     _limit: 5,
+    populate: '*',
   });
   const blogsResponse = await fetch(`${URL}/blog-posts?${blogsQuery}`);
   const blogsJson = await blogsResponse.json();
@@ -36,7 +45,7 @@ export async function getServerSideProps() {
     props: {
       cofounders,
       foundingTeam,
-      press: [],
+      press,
       blogs,
     },
   };

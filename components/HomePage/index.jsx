@@ -15,6 +15,7 @@ import Team from './11Team';
 import Press from './12Press';
 import Blog from './13Blog';
 import Experience from './14Experience';
+import { LearnContainer } from './styles';
 
 const HomePage = ({
   isNavigationOpen,
@@ -22,28 +23,29 @@ const HomePage = ({
   foundingTeam,
   press,
   blogs,
-}) => {
-  console.log(blogs);
-  return (
-    <>
-      {/*
-    <TheNewWay isNavigationOpen={isNavigationOpen} />
-    <WhatIsAutonolas />
-    <DecentralizedAndSophisticated />
-    <HowDoAutonolasWork />
-    <QuickIntroArticles />
+}) => (
+  <>
+    <WhatCouldYouBuild />
+
+    {/* <TheNewWay isNavigationOpen={isNavigationOpen} />
+
+    <LearnContainer>
+      <WhatIsAutonolas />
+      <DecentralizedAndSophisticated />
+      <HowDoAutonolasWork />
+      <QuickIntroArticles />
+    </LearnContainer>
+
     <WhyBuildOnAutonolas />
     <StartBuilding />
     <WhatCouldYouBuild />
     <Mission />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
-      <Press press={press} />
-      <Blog  blogs={blogs} />
-      <Experience />
-    */}
-    </>
-  );
-};
+    <Press press={press} />
+    <Blog blogs={blogs} />
+    <Experience /> */}
+  </>
+);
 
 HomePage.propTypes = {
   isNavigationOpen: PropTypes.bool.isRequired,

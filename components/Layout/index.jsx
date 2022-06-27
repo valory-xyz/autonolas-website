@@ -9,9 +9,9 @@ import { setNavigationToggle as setNavigationToggleFn } from 'store/navigation/a
 import Footer from './Footer';
 import { LayoutGlobalStyle, Container } from './styles';
 
-// const Navigation = dynamic(() => import('./Navigation'), {
-//   ssr: false,
-// });
+const Navigation = dynamic(() => import('./Navigation'), {
+  ssr: false,
+});
 
 const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
   const router = useRouter();
@@ -21,10 +21,10 @@ const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
   return (
     <Container data-testid="home-page">
       {/* {pathname === '/' && <Banner />} */}
-      {/* <Navigation
+      <Navigation
         isNavigationOpen={isNavigationOpen}
         setNavigationToggle={setNavigationToggle}
-      /> */}
+      />
       <>{children}</>
       <LayoutGlobalStyle isNavigationOpen={isNavigationOpen} />
       <Footer />

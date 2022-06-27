@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
+import Button from 'common-util/Button';
 import { useCheckMobileScreen } from 'common-util/hooks';
 import { getSocials } from 'common-util/functions';
 import { AutonolasLogo } from 'common-util/svg';
@@ -146,7 +147,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
           </>
         ) : (
           <DesktopNavBar>
-            <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
             <div className="nav-item-logo">
               <a
                 href="#banner"
@@ -156,7 +156,13 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                 <AutonolasLogo width={124} height={60} />
               </a>
             </div>
-            <NavMenu>{getNavigationsMenu(NAV_2, navToggle)}</NavMenu>
+            <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
+            <Button
+              type="purple"
+              // className="mini"
+              title="Start Building />"
+              onClick={() => window.open('mailto:bd@valory.xyz')}
+            />
           </DesktopNavBar>
         )}
       </nav>

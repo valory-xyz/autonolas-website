@@ -22,14 +22,20 @@ const Footer = () => (
       <Header className="header" title="Keep up with Autonolas" />
 
       <div className="row-socials">
-        <SocialConnect className="follow-us">
+        <SocialConnect
+          className="follow-us"
+          onClick={() => window.open('https://docs.autonolas.network/')}
+        >
           <div className="logo">
             <Twitter />
           </div>
           <div className="text">Follow us</div>
         </SocialConnect>
 
-        <SocialConnect className="join-discord">
+        <SocialConnect
+          className="join-discord"
+          onClick={() => window.open('https://docs.autonolas.network/')}
+        >
           <div className="logo">
             <Discord />
           </div>

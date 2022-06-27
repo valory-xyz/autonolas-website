@@ -19,7 +19,7 @@ const LIST = [
 ];
 
 const WhyBuildOnAutonolas = () => (
-  <SectionSeven className="section section-6" id="developers">
+  <SectionSeven className="section" id="build">
     <Header className="header center" title="Start Building" />
 
     <Content>
@@ -46,9 +46,7 @@ const WhyBuildOnAutonolas = () => (
 
     <CommissionUs>
       <p>Don’t have time to build right now?</p>
-      <a href="#banner">
-        Commission us to build your service
-      </a>
+      <a href="#banner">Commission us to build your service</a>
     </CommissionUs>
   </SectionSeven>
 );

@@ -9,8 +9,10 @@ const Container = styled.div`
   font-size: ${FONT_SIZE[14]};
   border-radius: 1rem;
   border: 1px solid ${COLOR.PURPLE};
-  padding: 0.35rem 1rem;
+  padding: 0.35rem 1rem 0.25rem 1rem;
+  line-height: normal;
   color: ${COLOR.PURPLE};
+  text-transform: capitalize;
   @media only screen and (max-width: ${BREAK_POINT.xl}) {
   }
 `;

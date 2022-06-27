@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR, MEDIA_QUERY } from 'util/theme';
+import { MEDIA_QUERY } from 'util/theme';
 import { containImage } from 'components/GlobalStyles';
 
 export const Section12 = styled.div`
@@ -22,7 +22,6 @@ export const Content = styled.div`
       background-position: left;
       margin-bottom: 0.75rem;
       /* TODO: remove once image is added */
-      background-color: ${COLOR.GREY_1}4a;
     }
     .header-text {
       margin: 0.75rem 0 0.5rem 0;

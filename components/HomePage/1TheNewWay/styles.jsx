@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
+import { backgroundImage } from 'components/GlobalStyles';
 import { widths } from '../../Layout/styles';
 
 export const SectionOne = styled.div`
@@ -9,7 +10,7 @@ export const SectionOne = styled.div`
   justify-content: space-between;
   height: 100vh;
   min-height: 700px;
-  background-image: url("/images/1TheNewWay/background.webp");
+  ${backgroundImage('/images/1TheNewWay/background.webp')}
   .header {
     margin-bottom: 0 !important;
     line-height: 1;

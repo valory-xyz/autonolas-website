@@ -53,3 +53,9 @@ export const Content = styled.div`
     }
   }
 `;
+
+export const GoDeep = styled.div`
+  /* REMOVE After go-deep */
+  margin-top: 2rem;
+  margin-bottom: -2.5rem;
+`;

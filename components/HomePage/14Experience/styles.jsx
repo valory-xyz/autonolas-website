@@ -13,6 +13,7 @@ export const SectionExperience = styled.div`
     margin-bottom: 1rem !important;
     margin-top: 4rem;
     padding-left: 5rem;
+    color: ${COLOR.WHITE} !important;
   }
   .description {
   }
@@ -28,7 +29,6 @@ export const SectionExperience = styled.div`
       color: ${COLOR.WHITE};
     }
   }
-
 
   ${MEDIA_QUERY.tablet} {
   }

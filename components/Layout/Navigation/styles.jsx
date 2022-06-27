@@ -6,12 +6,15 @@ export const DesktopNavBar = styled.div`
   align-items: center;
   width: 100%;
   .nav-item-logo {
-    min-width: 260px;
     display: flex;
     justify-content: center;
     img {
       width: 104px;
     }
+  }
+  .btn {
+    min-width: 192px;
+    font-size: 14px;
   }
 
   ${MEDIA_QUERY.laptop} {
@@ -65,11 +68,10 @@ export const NavMenu = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   .nav-item {
     .nav-link {
-      font-size: 14px;
       color: ${COLOR.BLACK};
       text-transform: uppercase;
       &:hover {

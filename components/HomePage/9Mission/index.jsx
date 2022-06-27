@@ -5,7 +5,7 @@ import Description from 'common-util/Description';
 import { SectionNine, Row } from './styles';
 
 const Mission = () => (
-  <SectionNine className="section section-9" id="lore">
+  <SectionNine className="section section-9" id="mission">
     <Description type={2} title="LEARN" />
 
     <Header

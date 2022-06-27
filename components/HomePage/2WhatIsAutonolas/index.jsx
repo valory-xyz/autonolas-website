@@ -29,7 +29,7 @@ const WhatIsAutonolas = () => {
   console.log({ isMobile });
 
   return (
-    <SectionTwo className="section section-2" id="what-is-autonolas">
+    <SectionTwo className="section" id="learn">
       <Description type={2} title="LEARN" />
 
       <Header

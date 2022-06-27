@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 
-export const SectionSix = styled.div``;
+export const SectionSix = styled.div`
+  padding-bottom: 0;
+  .header {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .divider {
+    padding-top: 3rem;
+  }
+`;
 
 export const Content = styled.div`
   position: relative;

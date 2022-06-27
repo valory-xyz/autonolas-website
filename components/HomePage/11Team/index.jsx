@@ -8,7 +8,7 @@ import { getSocials } from 'common-util/functions';
 import { SectionEleven, Content, TeamFooter } from './styles';
 
 const Team = ({ cofounders, foundingTeam }) => (
-  <SectionEleven className="section section-11">
+  <SectionEleven className="section section-11" id="team">
     <Header className="header" title="Core Team" />
     <Description type={2} title="CO-FOUNDERS" />
 

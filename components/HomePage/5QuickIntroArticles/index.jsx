@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
-import { SectionFive, Content } from './styles';
+import { SectionFive, Content, GoDeep } from './styles';
 
 const LIST = [
   {
@@ -45,6 +45,8 @@ const QuickIntroArticles = () => (
         onClick={() => window.open('https://docs.autonolas.network/')}
       />
     </div>
+
+    <GoDeep className="divider" />
   </SectionFive>
 );
 

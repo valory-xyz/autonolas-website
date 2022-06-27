@@ -22,7 +22,7 @@ const LIST = [
 ];
 
 const WhyBuildOnAutonolas = () => (
-  <SectionSix className="section section-6" id="developers">
+  <SectionSix className="section" id="build">
     <Description type={2} title="BUILD" className="center" />
 
     <Header
@@ -44,6 +44,8 @@ const WhyBuildOnAutonolas = () => (
         </div>
       ))}
     </Content>
+
+    <div className="divider" />
   </SectionSix>
 );
 

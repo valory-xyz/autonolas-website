@@ -16,7 +16,7 @@ export const FooterTop = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    margin: 3rem 5rem;
+    margin: 3rem 5rem 5rem 5rem;
     border-top: 1px solid ${COLOR.BLACK};
   }
   ${MEDIA_QUERY.tablet} {
@@ -27,6 +27,9 @@ export const SocialConnect = styled.div`
   width: 50%;
   padding-top: 2rem;
   text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
   .logo svg {
     width: 108px;
     height: 108px;
@@ -97,6 +100,7 @@ export const FooterBottom = styled.div`
       color: ${COLOR.BLACK};
       font-size: 22px;
       &:hover {
+        /* outline: auto; */
         color: ${COLOR.PURPLE} !important;
       }
     }

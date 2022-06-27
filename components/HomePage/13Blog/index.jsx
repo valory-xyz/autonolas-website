@@ -16,7 +16,7 @@ const PressAndBlogs = ({ blogs }) => (
           title, image, subtitle,
         } = attributes || {};
         // TODO: remove once image is added
-        const imageUrl = get(image, 'data.attributes.url') || '/images/8WhatCouldYouBuild/asset-management.png';
+        const imageUrl = get(image, 'data.attributes.url') || '';
 
         return (
           <div

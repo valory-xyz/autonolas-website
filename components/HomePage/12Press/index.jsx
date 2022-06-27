@@ -3,41 +3,43 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
+import Tag from 'common-util/Tag';
 import { SeeAllBtnRow } from 'components/GlobalStyles';
-import { Section12, Content } from './styles';
+import { SectionPress, Content } from './styles';
 
-const PressAndBlogs = ({ blogs }) => (
-  <Section12 className="section section-12" id="_______">
-    <Header className="header" title="From the blogs" />
+const PressAndBlogs = ({ press }) => (
+  <SectionPress className="section section-press" id="press">
+    <Header className="header" title="Press" />
 
     <Content>
-      {blogs.map(({ id, attributes }, index) => {
+      {press.map(({ id, attributes }, index) => {
         const {
-          title, image, subtitle,
+          title, thumbnail, type, publisher,
         } = attributes || {};
         // TODO: remove once image is added
-        const imageUrl = get(image, 'data.attributes.url') || '/images/8WhatCouldYouBuild/asset-management.png';
+        const imageUrl = get(thumbnail, 'data.attributes.url') || '';
 
         return (
           <div
             key={`blog-${id}`}
             className={`column column-${index + 1}`}
-            style={{ width: (index === 0 || index === 1) ? '40%' : '27.5%' }}
+            style={{ width: index === 0 || index === 1 ? '40%' : '27.5%' }}
           >
             <div
               className="img-container"
               style={{
-                backgroundImage: `url(${imageUrl})`,
+                backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
               }}
             />
-            <div className="header-text">{title}</div>
-            <div className="subtitle">{subtitle}</div>
+            <Tag>{type}</Tag>
+            <div className="header-text">{publisher}</div>
+            <div className="subtitle">{title}</div>
             <Button
               title="LEARN MORE"
               type="black"
               className="mini"
               onClick={() => {
-                window.open(`${window.location.href}blog-post/${id}`);
+                window.open(`${window.location.host}/blog-post/${id}`);
               }}
             />
           </div>
@@ -52,11 +54,11 @@ const PressAndBlogs = ({ blogs }) => (
         onClick={() => window.open('https://docs.autonolas.network/')}
       />
     </SeeAllBtnRow>
-  </Section12>
+  </SectionPress>
 );
 
 PressAndBlogs.propTypes = {
-  blogs: PropTypes.instanceOf(Array).isRequired,
+  press: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default PressAndBlogs;

@@ -55,6 +55,17 @@ export const FooterBottom = styled.div`
         padding: 2rem 0 2rem 3rem;
         border: 1px solid ${COLOR.BLACK};
         vertical-align: top;
+        a {
+          display: block;
+          color: ${COLOR.BLACK};
+          font-size: 22px;
+          text-decoration: none;
+          margin-bottom: 0.5rem;
+          &:hover,
+          &:active {
+            color: ${COLOR.PURPLE} !important;
+          }
+        }
         &:nth-child(1) {
           width: 200px;
           min-width: 200px;
@@ -85,23 +96,11 @@ export const FooterBottom = styled.div`
           margin-bottom: 2rem;
         }
       }
-    }
-  }
-  .ant-anchor {
-    &-link {
-      padding-left: 0;
-    }
-    &-ink {
-      &:before {
-        display: none;
-      }
-    }
-    &-link-title {
-      color: ${COLOR.BLACK};
-      font-size: 22px;
-      &:hover {
-        /* outline: auto; */
-        color: ${COLOR.PURPLE} !important;
+      &:nth-child(1) {
+        td:nth-child(1),
+        td:nth-child(4) {
+          border-bottom-color: transparent;
+        }
       }
     }
   }

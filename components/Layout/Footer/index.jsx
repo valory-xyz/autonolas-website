@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from 'common-util/Header';
-import { Anchor } from 'antd';
 import Twitter from '../../../public/images/common/twitter.svg';
 import Discord from '../../../public/images/common/discord.svg';
 import {
@@ -10,10 +9,10 @@ import {
   FooterBottom,
 } from './styles';
 
-const { Link } = Anchor;
-
 const getAnchor = (title, href) => (
-  <Link href={href} title={title} target="_blank" rel="noopener noreferrer" />
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    {title}
+  </a>
 );
 
 const Footer = () => (
@@ -24,7 +23,7 @@ const Footer = () => (
       <div className="row-socials">
         <SocialConnect
           className="follow-us"
-          onClick={() => window.open('https://docs.autonolas.network/')}
+          onClick={() => window.open('https://twitter.com/autonolas')}
         >
           <div className="logo">
             <Twitter />
@@ -34,7 +33,7 @@ const Footer = () => (
 
         <SocialConnect
           className="join-discord"
-          onClick={() => window.open('https://docs.autonolas.network/')}
+          onClick={() => window.open('https://discord.com/invite/z2PT65jKqQ')}
         >
           <div className="logo">
             <Discord />
@@ -59,33 +58,24 @@ const Footer = () => (
             <td>
               <div className="footer-title">LEARN</div>
               <div className="links">
-                <Anchor affix={false}>
-                  {getAnchor('EDUCATION', 'https://autonolas.medium.com/')}
-                  {getAnchor(
-                    'WHITEPAPAER (COMING SOON)',
-                    'https://autonolas.medium.com/',
-                  )}
-                </Anchor>
+                {getAnchor('EDUCATION', '/education')}
               </div>
             </td>
 
             <td>
               <div className="footer-title">BUILD</div>
               <div className="links">
-                <Anchor affix={false}>
-                  {getAnchor('DOCS', 'https://autonolas.medium.com/')}
-                  {getAnchor('ACADEMY', 'https://autonolas.medium.com/')}
-                  {getAnchor('CONSULTING', 'https://autonolas.medium.com/')}
-                </Anchor>
+                {getAnchor('DOCS', 'https://docs.autonolas.network/')}
+                {getAnchor('ACADEMY', '/academy')}
+                {getAnchor('COMMISION US', 'mailto:bd@valory.xyz')}
+                {getAnchor('IDEAS', '/ideas')}
               </div>
             </td>
 
             <td>
               <div className="footer-title">FOLLOW</div>
               <div className="links">
-                <Anchor affix={false}>
-                  {getAnchor('TWITTER', 'https://autonolas.medium.com/')}
-                </Anchor>
+                {getAnchor('TWITTER', 'https://twitter.com/autonolas')}
               </div>
             </td>
           </tr>
@@ -97,40 +87,26 @@ const Footer = () => (
             </td>
 
             <td>
-              <div className="footer-title">USE</div>
-              <div className="links">
-                <Anchor affix={false}>
-                  {getAnchor(
-                    'ECOSYSTEM SERVICES',
-                    'https://autonolas.medium.com/',
-                  )}
-                </Anchor>
-              </div>
-            </td>
-
-            <td>
               <div className="footer-title">JOIN</div>
               <div className="links">
-                <Anchor affix={false}>
-                  {getAnchor(
-                    'CONTRIBUTION OPPORTUNITIES',
-                    'https://autonolas.medium.com/',
-                  )}
-                  {getAnchor('ABOUT', 'https://autonolas.medium.com/')}
-                  {getAnchor('CAREERS', 'https://autonolas.medium.com/')}
-                  {getAnchor('DISCORD', 'https://autonolas.medium.com/')}
-                </Anchor>
+                {getAnchor(
+                  'CONTRIBUTION OPPORTUNITIES',
+                  '/contribution-opportunities',
+                )}
+                {getAnchor('TEAM', '/team')}
+                {getAnchor('CAREERS', 'https://angel.co/company/valory-3')}
+                {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ/')}
               </div>
             </td>
 
             <td>
               <div className="footer-title">EXPERIENCE</div>
               <div className="links">
-                <Anchor affix={false}>
-                  {getAnchor('ALTER ORBIS', '#experience')}
-                </Anchor>
+                {getAnchor('ALTER ORBIS', 'https://www.autonolas.world/')}
               </div>
             </td>
+
+            <td />
           </tr>
         </tbody>
       </table>

@@ -25,6 +25,7 @@ export const SectionExperience = styled.div`
   .consider-yourself {
     text-align: center;
     font-size: 22px;
+    min-height: 50px; // TODO: removed once the link is live
     a {
       color: ${COLOR.WHITE};
     }

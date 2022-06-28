@@ -1,11 +1,12 @@
 import get from 'lodash/get';
 import qs from 'qs';
+import { getBlogs } from 'common-util/api';
 import HomePage from 'components/HomePage';
 
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/api`;
 
 export async function getServerSideProps() {
-  // ----------- TEAM -----------
+  // ----------- EDUCATION ARTICLES -----------
   const educationQuery = qs.stringify({
     populate: '*',
   });
@@ -43,14 +44,7 @@ export async function getServerSideProps() {
   const press = get(pressJson, 'data') || [];
 
   // ----------- BLOGS -----------
-  const blogsQuery = qs.stringify({
-    sort: ['datePublished:asc'],
-    _limit: 5,
-    populate: '*',
-  });
-  const blogsResponse = await fetch(`${URL}/blog-posts?${blogsQuery}`);
-  const blogsJson = await blogsResponse.json();
-  const blogs = get(blogsJson, 'data') || [];
+  const blogs = await getBlogs();
 
   return {
     props: {
@@ -58,7 +52,7 @@ export async function getServerSideProps() {
       cofounders,
       foundingTeam,
       press,
-      blogs,
+      blogs: blogs.slice(0, 5) /* only 5 blog is required on homepage */,
     },
   };
 }

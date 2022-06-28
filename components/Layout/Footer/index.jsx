@@ -49,7 +49,7 @@ const Footer = () => (
           <tr>
             <td>
               <img
-                src="images/common/autonolas-logo.png"
+                src="/images/common/autonolas-logo.png"
                 alt=" "
                 loading="lazy"
               />

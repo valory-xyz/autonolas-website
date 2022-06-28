@@ -17,18 +17,20 @@ const Experience = () => (
       onClick={() => window.open('https://autonolas.world/')}
     />
 
-    <div className="consider-yourself">
-      <div>Consider yourself a world builder?</div>
-      <a
-        href="https://google.com"
-        className=""
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Submit an addition
-      </a>
-    </div>
+    <div className="consider-yourself" />
   </SectionExperience>
 );
 
 export default Experience;
+/*
+
+  <div>Consider yourself a world builder?</div>
+  <a
+    href="https://google.com"
+    className=""
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Submit an addition
+  </a>
+*/

@@ -56,3 +56,12 @@ export const getSocials = (socials, renderFormat = 'img') => (
     })}
   </div>
 );
+
+export const getFormattedDate = date => date;
+
+export const serverRedirectToError = () => ({
+  redirect: {
+    destination: '/_error',
+    permanent: false,
+  },
+});

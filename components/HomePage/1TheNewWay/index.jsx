@@ -9,7 +9,7 @@ import { SectionOne, DescActionButtons } from './styles';
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
   <SectionOne
     className="section section-1"
-    id="birth-place"
+    id="banner"
     isNavigationOpen={isNavigationOpen}
   >
     <Header className="header" title="Build Autonomous Services" />

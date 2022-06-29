@@ -13,7 +13,7 @@ import {
   DoThisTask,
 } from './styles';
 
-const LearnToBuild = () => {
+const AgentAcademy = () => {
   const isMobile = useCheckMobileScreen();
 
   return (
@@ -145,4 +145,4 @@ const LearnToBuild = () => {
   );
 };
 
-export default LearnToBuild;
+export default AgentAcademy;

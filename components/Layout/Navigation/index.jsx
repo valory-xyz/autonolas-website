@@ -34,18 +34,18 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 
   return (
     <li className="nav-item" key={mapKey}>
-      <a
+      <Link
         href={externalLink ? eachNav.url : `/#${eachNav.id}`}
-        className="nav-link"
-        target={externalLink ? '_blank' : '_self'}
-        rel="noopener noreferrer"
-        onClick={() => {
-          callback(false);
-          return true;
-        }}
+        passHref
       >
-        {title}
-      </a>
+        <a
+          className="nav-link"
+          target={externalLink ? '_blank' : '_self'}
+          rel="noopener noreferrer"
+        >
+          {title}
+        </a>
+      </Link>
     </li>
   );
 });
@@ -146,23 +146,22 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
         ) : (
           <DesktopNavBar>
             <div className="nav-item-logo">
-              <a
-                href="#banner"
-                className="nav-link"
-                aria-label="Autonolas Logo"
-              >
-                <AutonolasLogo width={124} height={60} />
-              </a>
+              <Link href="/#banner">
+                <a
+                  href="/#banner"
+                  className="nav-link"
+                  aria-label="Autonolas Logo"
+                >
+                  <AutonolasLogo width={124} height={60} />
+                </a>
+              </Link>
             </div>
 
             <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
 
             <Link href="#build">
               <a href="#build">
-                <Button
-                  type="purple"
-                  title="Start Building />"
-                />
+                <Button type="purple" title="Start Building />" />
               </a>
             </Link>
           </DesktopNavBar>

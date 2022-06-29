@@ -2,11 +2,7 @@ import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 import { backgroundImage } from 'components/GlobalStyles';
 
-export const BlogContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+export const IdeaContainer = styled.div`
   ${backgroundImage('/images/1TheNewWay/background.webp')}
   .header {
     text-align: center;
@@ -15,4 +11,4 @@ export const BlogContainer = styled.div`
   }
 `;
 
-export const EachBlogContainer = styled.div``;
+export const EachIdeaContainer = styled.div``;

@@ -24,7 +24,7 @@ export const SectionOne = styled.div`
     align-items: flex-end;
     justify-content: flex-end;
     width: 85%;
-    button {
+    .btn {
       margin: 0 0.5rem;
     }
   }
@@ -67,24 +67,13 @@ export const SectionOne = styled.div`
   }
 
   ${MEDIA_QUERY.mobileS} {
-    height: auto;
-    .header {
-      margin-right: 20px;
-    }
-    .description {
-      max-width: 280px;
-      margin-top: 3rem;
-      text-align: left;
-    }
-    .action-btns {
-      position: relative;
-      bottom: 16px;
-      width: 80%;
-    }
   }
 `;
 
 export const DescActionButtons = styled.div`
   display: flex;
   justify-content: space-between;
+  .description {
+    max-width: 700px;
+  }
 `;

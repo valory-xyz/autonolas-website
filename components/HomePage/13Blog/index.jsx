@@ -25,8 +25,9 @@ const PressAndBlogs = ({ blogs }) => (
         return (
           <div
             key={`blog-${id}`}
-            className={`column column-${index + 1}`}
-            style={{ width: index === 0 || index === 1 ? '40%' : '27.5%' }}
+            className={`column column-${index + 1} ${
+              index === 0 || index === 1 ? 'bigger-column' : ''
+            }`}
           >
             <div
               className="img-container"

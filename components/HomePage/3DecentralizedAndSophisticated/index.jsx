@@ -71,14 +71,14 @@ const DATA_ROWS = [
 const getChainType = type => (type ? 'ON-CHAIN' : 'OFF-CHAIN');
 
 const WhyAutonolas = () => (
-  <SectionThree className="section section-3" id="why-autonolas">
+  <SectionThree className="section section-3" id="what-are-autonomous-services">
     <Description type={2} title="WHAT ARE AUTONOMOUS SERVICES?" />
     <Header
       className="header"
       title={(
         <>
           Decentralized&nbsp;
-          <span className="sub-text">And</span>
+          <span className="sub-text">and</span>
           <span className="ib">Sophisticated</span>
         </>
       )}

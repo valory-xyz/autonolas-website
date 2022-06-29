@@ -5,6 +5,7 @@ export const SectionNine = styled.div`
   background-image: url("/images/9Mission/background.webp");
   .header {
     margin-top: 1rem;
+    margin-bottom: 1rem !important;
   }
 
   ${MEDIA_QUERY.tablet} {
@@ -19,7 +20,8 @@ export const Row = styled.div`
   }
   .glass-container {
     width: 420px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: 2rem;
     img {
       width: 100%;
       height: 100%;

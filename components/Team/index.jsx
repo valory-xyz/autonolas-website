@@ -1,33 +1,49 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Header from 'common-util/Header';
+import EachTeamMate from '../HomePage/11Team/EachTeamMate';
+import { Content } from '../HomePage/11Team/styles';
+import { TeamContainer, TeamListContainer } from './styles';
 
-const Team = () => <>TEAM</>;
+const contentStyle = {
+  // justifyContent: 'space-around',
+};
 
-export default Team;
+const Team = ({ cofounders, foundingTeam }) => (
+  <>
+    <TeamContainer className="content-list-section">
+      <Header className="header" title="Team" />
+    </TeamContainer>
 
-/*
+    <TeamListContainer className="section">
+      <Content style={contentStyle}>
+        {cofounders.map(({ id, attributes }) => (
+          <EachTeamMate key={`team-mate-${id}`} member={attributes} />
+        ))}
+      </Content>
+
+      <br />
+      <br />
+      <br />
+      <Header className="header sub-text" title="Founding team" />
+
+      <Content>
+        {foundingTeam.map(({ id, attributes }) => (
+          <EachTeamMate key={`team-mate-${id}`} member={attributes} />
+        ))}
+      </Content>
+    </TeamListContainer>
+  </>
+);
+
 Team.propTypes = {
-  isNavigationOpen: PropTypes.bool.isRequired,
   cofounders: PropTypes.instanceOf(Array),
   foundingTeam: PropTypes.instanceOf(Array),
-  press: PropTypes.instanceOf(Array),
-  blogs: PropTypes.instanceOf(Array),
 };
 
 Team.defaultProps = {
   cofounders: [],
   foundingTeam: [],
-  press: [],
-  blogs: [],
 };
 
-const mapStateToProps = state => {
-  const { isNavigationOpen } = state.navigation;
-  return { isNavigationOpen };
-};
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Team);
-*/
+export default Team;

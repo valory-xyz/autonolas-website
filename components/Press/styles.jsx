@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 import { backgroundImage } from 'components/GlobalStyles';
 
-export const BlogContainer = styled.div`
+export const PressContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,4 +15,4 @@ export const BlogContainer = styled.div`
   }
 `;
 
-export const EachBlogContainer = styled.div``;
+export const EachPressContainer = styled.div``;

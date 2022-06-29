@@ -29,13 +29,61 @@ export const getEducationArticles = async () => {
   return educationArticles;
 };
 
+// ----------- IDEAS -----------
+export const getIdeas = async () => {
+  const params = {
+    populate: '*',
+  };
+  const json = await apiCall('ideas', params);
+  const data = get(json, 'data') || [];
+  return data;
+};
+
+export const getIdea = async id => {
+  const params = {
+    populate: '*',
+  };
+  const json = await apiCall(`ideas/${id}`, params);
+  const data = get(json, 'data') || null;
+  return data;
+};
+
+// ----------- TEAM -----------
 export const getTeam = async () => {
   const params = {
     sort: ['name:asc'],
     populate: '*',
   };
   const json = await apiCall('team-members', params);
+  const cofounders = (get(json, 'data') || []).filter(
+    ({ attributes }) => !!attributes.cofounder, // only co-founders
+  );
+
+  const foundingTeam = (get(json, 'data') || []).filter(
+    ({ attributes }) => !attributes.cofounder, // except co-founders
+  );
+
+  return { cofounders, foundingTeam };
+};
+
+// ----------- PRESS -----------
+export const getPress = async () => {
+  const params = {
+    sort: ['datePublished:asc'],
+    _limit: 5,
+    populate: '*',
+  };
+  const json = await apiCall('media-appearances', params);
   const data = get(json, 'data') || [];
+  return data;
+};
+
+export const getEachPress = async id => {
+  const params = {
+    populate: '*',
+  };
+  const json = await apiCall(`media-appearances/${id}`, params);
+  const data = get(json, 'data') || null;
   return data;
 };
 

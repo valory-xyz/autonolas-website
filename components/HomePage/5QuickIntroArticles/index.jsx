@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
-import {
-  SectionFive, Content, GoDeep, SeeAll,
-} from './styles';
+import { SectionFive, Content, SeeAll } from './styles';
 
 const LIST = [
   {
@@ -54,14 +52,11 @@ const QuickIntroArticles = ({ educationArticles }) => {
               {readTime}
               &nbsp;
               {readTime === 1 ? 'MIN' : 'MINS'}
-              &nbsp;
-              READ
+              &nbsp; READ
             </div>
           </div>
         ))}
       </Content>
-
-      <GoDeep className="divider" />
     </SectionFive>
   );
 };

@@ -83,7 +83,11 @@ export const Btn = styled.button`
 `;
 
 const CustomButton = ({
-  title, type, className, ...rest
+  title,
+  type,
+  className,
+  ...rest
+  // hasArrowSuffix,
 }) => {
   const clsName = `btn ${className || ''}`.trim();
 
@@ -103,9 +107,11 @@ CustomButton.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   type: PropTypes.oneOf(['black', 'primary', 'purple', 'link-arrow']),
   className: PropTypes.string,
+  // hasArrowSuffix: PropTypes.bool,
 };
 
 CustomButton.defaultProps = {
+  // hasArrowSuffix: false,
   type: 'primary',
   className: '',
 };

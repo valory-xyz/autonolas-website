@@ -49,6 +49,11 @@ export const backgroundGradient = css`
   background-blend-mode: multiply;
 `;
 
+export const individualPageSection = css`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
 // ------------- common styles -------------
 export const SubText = styled.div`
   font-size: 22px;
@@ -70,10 +75,11 @@ export const SeeAllBtnRow = styled.div`
 `;
 
 export const TwoColumnContents = styled.div`
+  ${individualPageSection}
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 6rem 0;
   .column {
     width: 40%;

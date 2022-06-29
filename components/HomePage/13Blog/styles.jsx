@@ -17,6 +17,13 @@ export const Content = styled.div`
   gap: 3rem 0;
   justify-content: space-between;
   .column {
+    width: 27.5%;
+    &.bigger-column {
+      width: 40%;
+      .img-container {
+        min-height: 320px;
+      }
+    }
     .img-container {
       min-height: 260px;
       ${containImage};

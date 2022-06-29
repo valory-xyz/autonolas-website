@@ -33,7 +33,7 @@ export const Container = styled.div`
     min-height: 400px;
     margin-bottom: 4rem;
     padding: 7rem 4.5rem;
-    background-size: 100% 100%;
+    background-size: cover;
   }
   .each-content {
     &-header-image {

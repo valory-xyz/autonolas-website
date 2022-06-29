@@ -18,7 +18,7 @@ const getAnchor = (title, href) => (
 const Footer = () => (
   <FooterContainer className="section-footer" id="footer">
     <FooterTop>
-      <Header className="header" title="Keep up with Autonolas" />
+      <Header className="header center" title="Keep up with Autonolas" />
 
       <div className="row-socials">
         <SocialConnect
@@ -67,7 +67,7 @@ const Footer = () => (
               <div className="links">
                 {getAnchor('DOCS', 'https://docs.autonolas.network/')}
                 {getAnchor('ACADEMY', '/academy')}
-                {getAnchor('COMMISION US', 'mailto:bd@valory.xyz')}
+                {getAnchor('COMMISSION US', 'mailto:bd@valory.xyz')}
                 {getAnchor('IDEAS', '/ideas')}
               </div>
             </td>

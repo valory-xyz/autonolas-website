@@ -1,33 +1,60 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import get from 'lodash/get';
+import Button from 'common-util/Button';
+import Header from 'common-util/Header';
+import Tag from 'common-util/Tag';
+import { getFormattedDate } from 'common-util/functions';
+import { TwoColumnContents } from 'components/GlobalStyles';
+import { PressContainer } from './styles';
 
-const Press = () => <>PRESS</>;
+const Press = ({ press }) => (
+  <>
+    <PressContainer className="content-list-section">
+      <Header className="header" title="Press" />
+    </PressContainer>
 
-export default Press;
+    <TwoColumnContents className="section">
+      {press.map(({ id, attributes }, index) => {
+        const {
+          title, thumbnail, publisher, datePublished, type, link,
+        } = attributes || {};
+        const imageUrl = get(thumbnail, 'data[0].attributes.url') || '';
 
-/*
+        return (
+          <div key={`press-${id}`} className={`column column-${index + 1}`}>
+            <div
+              className="img-container"
+              style={{
+                backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
+              }}
+            />
+            <Tag>{type}</Tag>
+            <div className="header-text">{title}</div>
+            <div className="subtitle">{publisher}</div>
+            <div className="date-published">
+              {getFormattedDate(datePublished)}
+            </div>
+
+            <Button
+              title="LEARN MORE"
+              type="black"
+              className="mini"
+              onClick={() => window.open(link)}
+            />
+          </div>
+        );
+      })}
+    </TwoColumnContents>
+  </>
+);
+
 Press.propTypes = {
-  isNavigationOpen: PropTypes.bool.isRequired,
-  cofounders: PropTypes.instanceOf(Array),
-  foundingTeam: PropTypes.instanceOf(Array),
   press: PropTypes.instanceOf(Array),
-  blogs: PropTypes.instanceOf(Array),
 };
 
 Press.defaultProps = {
-  cofounders: [],
-  foundingTeam: [],
   press: [],
-  blogs: [],
 };
 
-const mapStateToProps = state => {
-  const { isNavigationOpen } = state.navigation;
-  return { isNavigationOpen };
-};
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Press);
-*/
+export default Press;

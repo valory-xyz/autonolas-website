@@ -31,7 +31,6 @@ export const Container = styled.div`
   /* section for individual page */
   .content-list-section {
     min-height: 400px;
-    margin-bottom: 4rem;
     padding: 7rem 4.5rem;
     background-size: cover;
   }

@@ -15,7 +15,7 @@ const Team = ({ cofounders, foundingTeam }) => (
       <Header className="header" title="Team" />
     </TeamContainer>
 
-    <TeamListContainer className="section">
+    <TeamListContainer className="section background-gradient">
       <Content style={contentStyle}>
         {cofounders.map(({ id, attributes }) => (
           <EachTeamMate key={`team-mate-${id}`} member={attributes} />
@@ -23,9 +23,6 @@ const Team = ({ cofounders, foundingTeam }) => (
       </Content>
 
       <br />
-      <br />
-      <br />
-      <Header className="header sub-text" title="Founding team" />
 
       <Content>
         {foundingTeam.map(({ id, attributes }) => (

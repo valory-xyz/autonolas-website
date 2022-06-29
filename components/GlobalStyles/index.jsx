@@ -1,31 +1,6 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
 
-// const GlobalStyles = styled.div`
-const GlobalStyle = createGlobalStyle`
-  *,
-  :after,
-  :before {
-    box-sizing: border-box;
-  }
-
-  a {
-    color: ${COLOR.PURPLE};
-    text-underline-offset: 3px;
-    &.btn {
-      display: inline-block;
-      text-decoration: none;
-    }
-  }
-
-  .divider {
-    border-bottom: 1px solid ${COLOR.BLACK};
-  }
-  
-`;
-
-export default GlobalStyle;
-
 // ------------- CSS -------------
 export const containImage = css`
   background-size: contain;
@@ -53,6 +28,32 @@ export const individualPageSection = css`
   max-width: 1200px;
   margin: 0 auto;
 `;
+
+// const GlobalStyles = styled.div`
+const GlobalStyle = createGlobalStyle`
+  *,
+  :after,
+  :before {
+    box-sizing: border-box;
+  }
+  a {
+    color: ${COLOR.PURPLE};
+    text-underline-offset: 3px;
+    &.btn {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  .divider {
+    border-bottom: 1px solid ${COLOR.BLACK};
+  }
+  .background-gradient {
+    ${backgroundGradient};
+  }
+  
+`;
+
+export default GlobalStyle;
 
 // ------------- common styles -------------
 export const SubText = styled.div`

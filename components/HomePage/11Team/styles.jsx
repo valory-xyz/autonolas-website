@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
-import { containImage } from 'components/GlobalStyles';
+import { containImage, individualPageSection } from 'components/GlobalStyles';
 
 export const SectionEleven = styled.div`
   background-image: url("/images/11Team/background.webp");
@@ -15,8 +15,10 @@ export const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${individualPageSection}
   .column {
     flex-basis: 27.5%;
+    max-width: 400px;
     .img-container {
       min-height: 260px;
       ${containImage};

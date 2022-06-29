@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
-import {
-  backgroundImage,
-  individualPageSection,
-} from 'components/GlobalStyles';
+import { backgroundImage } from 'components/GlobalStyles';
 
 export const TeamContainer = styled.div`
   ${backgroundImage('/images/1TheNewWay/background.webp')}
@@ -14,6 +11,4 @@ export const TeamContainer = styled.div`
   }
 `;
 
-export const TeamListContainer = styled.div`
-  ${individualPageSection}
-`;
+export const TeamListContainer = styled.div``;

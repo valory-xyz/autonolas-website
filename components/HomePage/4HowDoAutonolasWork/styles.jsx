@@ -26,7 +26,6 @@ export const Row = styled.div`
   .column-2 {
     width: 27.5%;
     padding-top: 8rem;
-
     .content {
       display: flex;
       padding: 0.75rem 0 1rem 0;
@@ -42,6 +41,20 @@ export const Row = styled.div`
       }
       .text {
         padding-right: 2rem;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.tablet} {
+    flex-direction: column;
+    .column-1 {
+      min-height: 300px;
+    }
+    .column-2 {
+      padding-top: 0;
+      width: 100%;
+      .content {
+        border-left: none;
       }
     }
   }

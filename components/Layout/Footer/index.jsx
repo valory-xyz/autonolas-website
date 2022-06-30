@@ -15,6 +15,17 @@ const getAnchor = (title, href) => (
   </a>
 );
 
+const footerLogo = (
+  <img src="/images/common/autonolas-logo.png" alt=" " loading="lazy" className="footer-logo" />
+);
+
+const footerCopyright = (
+  <div className="copyright">
+    <span>{`COPYRIGHT ${new Date().getFullYear()}`}</span>
+    <span>VALORY AG</span>
+  </div>
+);
+
 const Footer = () => (
   <FooterContainer className="section-footer" id="footer">
     <FooterTop>
@@ -47,13 +58,7 @@ const Footer = () => (
       <table>
         <tbody>
           <tr>
-            <td>
-              <img
-                src="/images/common/autonolas-logo.png"
-                alt=" "
-                loading="lazy"
-              />
-            </td>
+            <td>{footerLogo}</td>
 
             <td>
               <div className="footer-title">LEARN</div>
@@ -81,18 +86,11 @@ const Footer = () => (
           </tr>
 
           <tr>
-            <td className="copyright">
-              <span>{`COPYRIGHT ${new Date().getFullYear()}`}</span>
-              <span>VALORY AG</span>
-            </td>
+            <td className="copyright">{footerCopyright}</td>
 
             <td>
               <div className="footer-title">JOIN</div>
               <div className="links">
-                {getAnchor(
-                  'CONTRIBUTION OPPORTUNITIES',
-                  '/contribution-opportunities',
-                )}
                 {getAnchor('TEAM', '/team')}
                 {getAnchor('CAREERS', 'https://angel.co/company/valory-3')}
                 {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ/')}
@@ -110,6 +108,11 @@ const Footer = () => (
           </tr>
         </tbody>
       </table>
+
+      <div className="xs-footer">
+        <div>{footerLogo}</div>
+        {footerCopyright}
+      </div>
     </FooterBottom>
   </FooterContainer>
 );

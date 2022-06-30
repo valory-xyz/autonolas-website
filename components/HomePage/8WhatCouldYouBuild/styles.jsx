@@ -15,8 +15,12 @@ export const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  .column {
+  .details {
     flex-basis: 30%;
+  }
+  .column {
+    margin: 0 auto;
+    max-width: 400px;
     .img-container {
       min-height: 260px;
       ${containImage};

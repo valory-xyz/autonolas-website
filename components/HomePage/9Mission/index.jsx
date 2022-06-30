@@ -12,7 +12,8 @@ const Mission = () => (
       className="header"
       title={(
         <>
-          Let&apos;s make DAQs&nbsp;
+          Let&apos;s make DAOs&nbsp;
+          <br />
           <span className="sub-text">actually</span>
           &nbsp;autonomous
         </>

@@ -8,6 +8,9 @@ export const FooterContainer = styled.div`
     padding-left: 5rem;
   }
   ${MEDIA_QUERY.tablet} {
+    .header {
+      padding-left: 0rem;
+    }
   }
 `;
 
@@ -20,6 +23,12 @@ export const FooterTop = styled.div`
     border-top: 1px solid ${COLOR.BLACK};
   }
   ${MEDIA_QUERY.tablet} {
+    .row-socials {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      border-top: none;
+    }
   }
 `;
 
@@ -43,6 +52,23 @@ export const SocialConnect = styled.div`
     border-right: 1px solid ${COLOR.BLACK};
   }
   ${MEDIA_QUERY.tablet} {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid ${COLOR.BLACK};
+    .logo svg {
+      width: 80px;
+      height: 80px;
+    }
+    .text {
+      padding-top: 0rem;
+      font-size: 44px;
+    }
+    &.follow-us {
+      border-right: none;
+    }
   }
 `;
 
@@ -70,16 +96,6 @@ export const FooterBottom = styled.div`
           width: 200px;
           min-width: 200px;
           max-width: 200px;
-          img {
-            width: 92px;
-          }
-          &.copyright {
-            vertical-align: bottom;
-            span {
-              display: block;
-              font-weight: bold;
-            }
-          }
         }
         &:nth-child(2) {
           width: 30%;
@@ -104,6 +120,39 @@ export const FooterBottom = styled.div`
       }
     }
   }
+  img.footer-logo {
+    width: 92px;
+  }
+  .copyright {
+    vertical-align: bottom;
+    span {
+      display: block;
+      font-weight: bold;
+    }
+  }
+  .xs-footer {
+    display: none;
+  }
+
   ${MEDIA_QUERY.tablet} {
+    table {
+      tr {
+        td {
+          padding: 1rem 0 1rem 0.5rem;
+          a {
+            font-size: inherit;
+          }
+          &:nth-child(1) {
+            display: none;
+          }
+        }
+      }
+    }
+    .xs-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 1rem 0;
+    }
   }
 `;

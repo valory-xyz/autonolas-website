@@ -44,23 +44,6 @@ const HomePage = ({
     <Press press={press} />
     <Blog blogs={blogs} />
     <Experience />
-    {/* <TheNewWay isNavigationOpen={isNavigationOpen} />
-
-    <LearnContainer>
-      <WhatIsAutonolas />
-      <DecentralizedAndSophisticated />
-      <HowDoAutonolasWork />
-      <QuickIntroArticles />
-    </LearnContainer>
-
-    <WhyBuildOnAutonolas />
-    <StartBuilding />
-    <WhatCouldYouBuild />
-    <Mission />
-    <Team cofounders={cofounders} foundingTeam={foundingTeam} />
-    <Press press={press} />
-    <Blog blogs={blogs} />
-    <Experience /> */}
   </>
 );
 

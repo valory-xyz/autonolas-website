@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 import { backgroundImage } from 'components/GlobalStyles';
-import { widths } from '../../Layout/styles';
 
 export const SectionOne = styled.div`
   position: relative;
@@ -38,10 +37,12 @@ export const SectionOne = styled.div`
     }
   }
 
-  ${MEDIA_QUERY.mobileL} {
+  ${MEDIA_QUERY.tablet} {
     align-items: flex-start;
     justify-content: flex-start;
-    padding: ${({ isNavigationOpen: e }) => `${e ? '20px 0px' : widths.mobileSectionPadding}!important`};
+    &.section {
+      padding: 8rem 1rem 14rem 1rem !important;
+    }
     .header {
       font-size: 54px;
     }
@@ -59,6 +60,7 @@ export const SectionOne = styled.div`
       transform: translate(-50%, 0px);
       .btn {
         width: 100%;
+        text-align: center;
         &:nth-child(1) {
           margin-bottom: 1rem;
         }

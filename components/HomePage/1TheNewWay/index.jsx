@@ -22,11 +22,11 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
 
       <div className="action-btns">
         <Link href="#build" passHref>
-          <Button hasArrowSuffix type="purple" title="Start Building />" as="a" />
+          <Button hasArrowSuffix type="purple" title="Start Building" as="a" />
         </Link>
 
         <Link href="#what-are-autonomous-services" passHref>
-          <Button title="What is Autonolas" as="a" type="black" />
+          <Button title="What is Autonolas?" as="a" type="black" />
         </Link>
       </div>
     </DescActionButtons>

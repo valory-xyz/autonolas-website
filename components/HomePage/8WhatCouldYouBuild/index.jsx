@@ -4,7 +4,8 @@ import get from 'lodash/get';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
-import { SectionWhatCouldYouBuild, SeeAll, Content } from './styles';
+import { ThreeColumnContents } from 'components/GlobalStyles';
+import { SectionWhatCouldYouBuild, SeeAll } from './styles';
 
 // TODO: remove
 const LIST = [
@@ -87,7 +88,7 @@ const WhatCouldYouBuild = ({ ideas }) => {
         />
       </SeeAll>
 
-      <Content>
+      <ThreeColumnContents>
         {list.map(
           (
             {
@@ -98,32 +99,31 @@ const WhatCouldYouBuild = ({ ideas }) => {
             const imageUrl = get(image, 'data.attributes.url') || '';
 
             return (
-              <div
-                className={`column column-${index + 1}`}
-                key={`what-could-you-build-${id}`}
-              >
-                <div
-                  className="img-container"
-                  style={{
-                    backgroundImage: `url(${imageUrl})`,
-                  }}
-                />
-                <Tag>{type}</Tag>
-                <div className="header-text">{title}</div>
-                <div className="desc">{description}</div>
-                <div className="sub-text">{blueprint}</div>
-                {/* TODO */}
-                <Button
-                  title={detailsLink ? 'DETAILS' : 'REQUEST DETAILS'}
-                  type="black"
-                  className="mini"
-                  onClick={() => window.open(`${window.location.origin}/ideas/${id}`)}
-                />
+              <div className="details" key={`what-could-you-build-${id}`}>
+                <div className={`column column-${index + 1}`}>
+                  <div
+                    className="img-container"
+                    style={{
+                      backgroundImage: `url(${imageUrl})`,
+                    }}
+                  />
+                  <Tag>{type}</Tag>
+                  <div className="header-text">{title}</div>
+                  <div className="desc">{description}</div>
+                  <div className="sub-text">{blueprint}</div>
+                  {/* TODO */}
+                  <Button
+                    title={detailsLink ? 'DETAILS' : 'REQUEST DETAILS'}
+                    type="black"
+                    className="mini"
+                    onClick={() => window.open(`${window.location.origin}/ideas/${id}`)}
+                  />
+                </div>
               </div>
             );
           },
         )}
-      </Content>
+      </ThreeColumnContents>
     </SectionWhatCouldYouBuild>
   );
 };

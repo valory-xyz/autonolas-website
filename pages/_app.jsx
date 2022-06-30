@@ -34,10 +34,10 @@ class MyApp extends App {
           `}
         </style>
         <Head>
-          <title>Autonolas | Let’s Put the ‘A’ Back in DAO</title>
+          <title>Autonolas | Build Autonomous Services</title>
           <meta
             name="description"
-            content="Autonolas enables DAOs to put an autonomous software service at the heart of their off-chain operations."
+            content="Build, run and own autonomous services that power next-gen apps for crypto users and DAOs."
           />
         </Head>
         <Layout>

@@ -20,7 +20,7 @@ export const Table = styled.div``;
 export const AutonolasService = styled.div`
   width: 48px;
   height: 48px;
-  margin-left: 1rem;
+  margin: 0 auto;
   ${backgroundImage('/images/3Decentralized/tick.png')}
 `;
 
@@ -64,7 +64,6 @@ export const ComparisonTable = styled.div`
         &:nth-child(2) {
           font-weight: bold;
           width: 15%;
-          text-align: left;
           color: ${COLOR.PURPLE};
         }
         &:nth-child(3) {
@@ -84,15 +83,12 @@ export const ComparisonTable = styled.div`
         td {
           font-weight: bold;
           border-bottom: 1px solid ${COLOR.BORDER_GREY};
-          &:not(:first-child) {
-            text-align: center;
-          }
+          text-align: center;
           img {
             width: 48px;
             height: 48px;
           }
           &:nth-child(2) {
-            text-align: left;
             color: ${COLOR.PURPLE};
           }
         }

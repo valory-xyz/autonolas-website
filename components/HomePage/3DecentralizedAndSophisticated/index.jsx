@@ -102,7 +102,7 @@ const WhyAutonolas = () => (
             <th>Web Services</th>
             <th>
               Custom Decentralized
-              <div>Services (E.G. Oracles)</div>
+              <div>Services (e.g. oracles)</div>
             </th>
           </tr>
         </thead>

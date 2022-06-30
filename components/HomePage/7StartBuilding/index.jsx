@@ -50,7 +50,7 @@ const WhyBuildOnAutonolas = () => (
 
     <CommissionUs>
       <p>Don’t have time to build right now?</p>
-      <a href="#banner">Commission us to build your service</a>
+      <a href="mailto:bd@valory.xyz">Commission us to build your service</a>
     </CommissionUs>
   </SectionSeven>
 );

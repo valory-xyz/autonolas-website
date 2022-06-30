@@ -5,6 +5,9 @@ import { containImage } from 'components/GlobalStyles';
 export const SectionPress = styled.div`
   .header {
   }
+  .subtitle {
+    max-width: 42ch;
+  }
   ${MEDIA_QUERY.tablet} {
   }
 `;

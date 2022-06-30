@@ -6,6 +6,9 @@ export const SectionWhatCouldYouBuild = styled.div`
   .header {
     margin-bottom: 1rem !important;
   }
+  .desc {
+    max-width: 42ch;
+  }
   ${MEDIA_QUERY.tablet} {
   }
 `;

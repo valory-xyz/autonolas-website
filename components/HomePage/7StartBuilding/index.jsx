@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
-import { SectionSeven, Content, CommissionUs } from './styles';
+import { SectionSeven, Container, CommissionUs } from './styles';
 
 const LIST = [
   {
@@ -22,31 +22,33 @@ const LIST = [
 
 const WhyBuildOnAutonolas = () => (
   <SectionSeven className="section" id="build">
-    <Header className="header center" title="Start Building →" />
+    <Header className="header center" title="Start Building" />
 
-    <Content>
+    <Container>
       {LIST.map(({
         heading, subHeading, imageUrl, redirectTo,
       }, index) => (
         <div key={imageUrl} className={`column column-${index + 1}`}>
-          <div className="img-container">
+          <div className="img-container-custom">
             <img
               src={`/images/7StartBuilding/${imageUrl}.png`}
               alt={`${heading} Icon`}
             />
           </div>
-          <div className="header-text">{heading}</div>
-          <div className="sub-text">{subHeading}</div>
-          <div className="action-btn">
-            <Button
-              title="GET STARTED"
-              type="black"
-              onClick={() => window.open(redirectTo)}
-            />
+          <div className="text-content">
+            <div className="header-text">{heading}</div>
+            <div className="sub-text">{subHeading}</div>
+            <div className="action-btn">
+              <Button
+                title="GET STARTED"
+                type="black"
+                onClick={() => window.open(redirectTo)}
+              />
+            </div>
           </div>
         </div>
       ))}
-    </Content>
+    </Container>
 
     <CommissionUs>
       <p>Don’t have time to build right now?</p>

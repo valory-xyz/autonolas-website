@@ -27,4 +27,12 @@ export const Row = styled.div`
       height: 100%;
     }
   }
+
+  ${MEDIA_QUERY.tablet} {
+    flex-direction: column-reverse;
+    .glass-container {
+      max-width: 100%;
+      padding: 4rem 2rem;
+    }
+  }
 `;

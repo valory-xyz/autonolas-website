@@ -20,6 +20,7 @@ export const Content = styled.div`
     max-width: 260px;
     .img-container {
       min-height: 190px;
+      text-align: center;
     }
     .header-text {
       margin-top: 1rem;
@@ -27,9 +28,11 @@ export const Content = styled.div`
       font-size: 34px;
       font-family: "manrope__bold", sans-serif;
       min-height: 92px;
+      text-align: center;
     }
     .sub-text {
       font-size: 22px;
+      text-align: center;
     }
     /* content-images */
     &.column-1 {
@@ -69,17 +72,24 @@ export const Content = styled.div`
       .img-container {
         width: 50%;
         min-height: auto;
+        text-align: left;
       }
       .text-content {
         width: 50%;
+        text-align: left;
       }
       .header-text {
         // margin-top: 1rem;
         font-size: 20px;
         min-height: auto;
+        text-align: left;
       }
       .sub-text {
+        text-align: left;
         font-size: 18px;
+      }
+      .action-btn {
+        text-align: center;
       }
       /* content-images */
       &.column-1 {

@@ -19,8 +19,8 @@ const WhatAreWeBuilding = () => (
       title={(
         <>
           How&nbsp;
-          <span className="sub-text">do</span>
-          &nbsp;autonomous
+          <span className="sub-text">do&nbsp;</span>
+          autonomous
           <br />
           services work?
         </>

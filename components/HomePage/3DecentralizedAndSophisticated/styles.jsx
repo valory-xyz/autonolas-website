@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { backgroundImage } from 'components/GlobalStyles';
 import { MEDIA_QUERY, COLOR } from 'util/theme';
 
@@ -17,25 +17,35 @@ export const SectionThree = styled.div`
 
 export const Table = styled.div``;
 
+const ballAndCrossIcon = css`
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+  ${MEDIA_QUERY.tablet} {
+    width: 28px;
+    height: 28px;
+  }
+`;
+
 export const AutonolasService = styled.div`
   width: 48px;
   height: 48px;
   margin-left: 1rem;
   ${backgroundImage('/images/3Decentralized/tick.png')}
+  ${MEDIA_QUERY.tablet} {
+    width: 36px;
+    height: 36px;
+  }
 `;
 
 export const PurbleBall = styled.div`
-  width: 36px;
-  height: 36px;
+  ${ballAndCrossIcon}
   border-radius: 50%;
-  margin: 0 auto;
   background-color: ${COLOR.PURPLE};
 `;
 
 export const No = styled.div`
-  width: 36px;
-  height: 36px;
-  margin: 0 auto;
+  ${ballAndCrossIcon}
   ${backgroundImage('/images/3Decentralized/X.png')}
 `;
 
@@ -43,6 +53,7 @@ export const ComparisonTable = styled.div`
   overflow-x: auto;
   table {
     width: 100%;
+    max-width: 100%;
     background-color: transparent;
     border-collapse: collapse;
     th,
@@ -83,7 +94,6 @@ export const ComparisonTable = styled.div`
         }
         td {
           font-weight: bold;
-          border-bottom: 1px solid ${COLOR.BORDER_GREY};
           &:not(:first-child) {
             text-align: center;
           }
@@ -100,14 +110,21 @@ export const ComparisonTable = styled.div`
     }
   }
 
-  ${MEDIA_QUERY.mobileL} {
-    margin: 0 -1rem;
+  ${MEDIA_QUERY.tablet} {
     table {
       th,
       td {
         padding: 0.5rem 0.3rem;
-        word-break: break-word;
+        word-break: keep-all;
         font-size: 12px;
+      }
+      tbody {
+        tr {
+          td {
+            &:nth-child(2) {
+            }
+          }
+        }
       }
     }
   }

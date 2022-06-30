@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
-import { SectionSix, Content } from './styles';
+import { SectionSix, Container } from './styles';
 
 const LIST = [
   {
@@ -30,7 +30,7 @@ const WhyBuildOnAutonolas = () => (
 
     <Header className="header" title="Why build on Autonolas?" />
 
-    <Content>
+    <Container>
       {LIST.map(({ imageUrl, heading, subHeading }, index) => (
         <div key={imageUrl} className={`column column-${index + 1}`}>
           <div className="img-container">
@@ -39,11 +39,13 @@ const WhyBuildOnAutonolas = () => (
               alt={`${heading} Icon`}
             />
           </div>
-          <div className="header-text">{heading}</div>
-          <div className="sub-text">{subHeading}</div>
+          <div className="text-content">
+            <div className="header-text">{heading}</div>
+            <div className="sub-text">{subHeading}</div>
+          </div>
         </div>
       ))}
-    </Content>
+    </Container>
 
     <div className="divider" />
   </SectionSix>

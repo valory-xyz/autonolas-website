@@ -30,10 +30,10 @@ const WhatIsAutonolas = () => (
       title={(
         <>
           What&nbsp;
-          <span className="sub-text">is</span>
-            &nbsp;Autonolas?
+          <span className="sub-text">is&nbsp;</span>
+          Autonolas?
         </>
-        )}
+      )}
     />
 
     <Content>
@@ -45,8 +45,10 @@ const WhatIsAutonolas = () => (
               alt={`${item.heading} Icon`}
             />
           </div>
-          <div className="header-text">{item.heading}</div>
-          <div className="sub-text">{item.subHeading}</div>
+          <div className="text-content">
+            <div className="header-text">{item.heading}</div>
+            <div className="sub-text">{item.subHeading}</div>
+          </div>
         </div>
       ))}
     </Content>

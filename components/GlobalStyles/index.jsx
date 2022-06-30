@@ -148,7 +148,8 @@ export const ThreeColumnContents = styled.div`
     text-decoration: none;
   }
   .column {
-    margin: 0 auto;
+    color: inherit;
+    text-decoration: none;
     max-width: 400px;
     .img-container {
       min-height: 260px;

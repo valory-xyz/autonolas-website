@@ -23,9 +23,9 @@ const QuickIntroArticles = ({ educationArticles }) => (
         const { headerImage, title, readTime } = attributes || {};
 
         return (
-          <Link key={headerImage} href={`/${PATHS.EDUCATION_ARTICLES}/${id}`}>
-            <a className="details">
-              <div className="column">
+          <div className="details" key={headerImage}>
+            <Link href={`/${PATHS.EDUCATION_ARTICLES}/${id}`}>
+              <a className="column">
                 <div
                   className="img-container"
                   style={{
@@ -40,9 +40,9 @@ const QuickIntroArticles = ({ educationArticles }) => (
                   {readTime === 1 ? 'MIN' : 'MINS'}
                   &nbsp; READ
                 </div>
-              </div>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </div>
         );
       })}
     </Content>

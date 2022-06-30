@@ -138,6 +138,8 @@ export const ThreeColumnContents = styled.div`
   gap: 3rem;
   .details {
     flex-basis: 30%;
+    color: inherit;
+    text-decoration: none;
   }
   .column {
     margin: 0 auto;

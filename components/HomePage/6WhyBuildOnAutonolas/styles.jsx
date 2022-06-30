@@ -3,6 +3,9 @@ import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionSix = styled.div`
   padding-bottom: 0;
+  .description {
+    margin: 1rem 0 2rem 0;
+  }
   .header {
     margin-left: -2rem;
     margin-right: -2rem;

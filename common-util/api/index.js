@@ -20,13 +20,23 @@ const apiCall = async (subURL, params) => {
   return null;
 };
 
+// ----------- EDUCATION ARTICLES -----------
 export const getEducationArticles = async () => {
   const params = {
     populate: '*',
   };
-  const educationJson = await apiCall('education-articles', params);
-  const educationArticles = get(educationJson, 'data') || [];
-  return educationArticles;
+  const json = await apiCall('education-articles', params);
+  const data = get(json, 'data') || [];
+  return data;
+};
+
+export const getEducationArticle = async id => {
+  const params = {
+    populate: '*',
+  };
+  const json = await apiCall(`education-articles/${id}`, params);
+  const data = get(json, 'data') || null;
+  return data;
 };
 
 // ----------- IDEAS -----------

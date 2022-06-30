@@ -12,7 +12,7 @@ import EachPress from './EachPress';
 
 const PressAndBlogs = ({ press }) => {
   const firstTwoPress = (press || []).slice(0, 2);
-  const restOfThePress = (press || []).slice(0, 5);
+  const restOfThePress = (press || []).slice(2, 5);
 
   return (
     <SectionPress className="section section-press" id="press">

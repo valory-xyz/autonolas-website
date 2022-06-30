@@ -47,7 +47,7 @@ Blog.propTypes = {
 
 const PressAndBlogs = ({ blogs }) => {
   const firstTwoBlogs = (blogs || []).slice(0, 2);
-  const restOfTheBlogs = (blogs || []).slice(0, 5);
+  const restOfTheBlogs = (blogs || []).slice(2, 5);
 
   return (
     <SectionBlog className="section section-blog" id="blog">

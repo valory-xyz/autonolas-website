@@ -22,7 +22,7 @@ const LIST = [
 
 const WhyBuildOnAutonolas = () => (
   <SectionSeven className="section" id="build">
-    <Header className="header center" title="Start Building" />
+    <Header className="header center" title="Start Building →" />
 
     <Content>
       {LIST.map(({

@@ -5,6 +5,9 @@ export const SectionBlog = styled.div`
   padding-bottom: 6rem !important;
   .header {
   }
+  .subtitle {
+    max-width: 42ch;
+  }
   ${MEDIA_QUERY.tablet} {
   }
 `;

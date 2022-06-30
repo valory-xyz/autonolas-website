@@ -73,7 +73,7 @@ const Footer = () => (
                 {getAnchor('DOCS', 'https://docs.autonolas.network/')}
                 {getAnchor('ACADEMY', '/academy')}
                 {getAnchor('COMMISSION US', 'mailto:bd@valory.xyz')}
-                {getAnchor('IDEAS', '/ideas')}
+                {/* {getAnchor('IDEAS', '/ideas')} */}
               </div>
             </td>
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';
@@ -33,6 +34,11 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
     eachNav.name
   );
 
+  const handleClick = () => {
+    callback(false);
+    return true;
+  };
+
   return (
     <li className="nav-item" key={mapKey}>
       <Link href={externalLink ? eachNav.url : `/#${eachNav.id}`} passHref>
@@ -40,6 +46,10 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
           className="nav-link"
           target={externalLink ? '_blank' : '_self'}
           rel="noopener noreferrer"
+          role="button"
+          tabIndex={0}
+          onClick={handleClick}
+          onKeyDown={handleClick}
         >
           {title}
         </a>
@@ -67,7 +77,7 @@ const logo = (
 const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   const [isTransparent, setColorchange] = useState(true);
   const router = useRouter();
-  const { pathname } = router;
+  const { pathname, query } = router;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -101,8 +111,8 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   };
 
   const getNavStyle = () => {
-    // show tranparent navbar only on home page
-    if (pathname === '/') {
+    // show tranparent navbar if inner page
+    if (!get(query, 'id')) {
       return {
         backgroundColor: isTransparent ? 'transparent' : COLOR.WHITE,
         top: '0px',

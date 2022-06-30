@@ -1,33 +1,58 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import get from 'lodash/get';
+import Link from 'next/link';
+import Button from 'common-util/Button';
+import Header from 'common-util/Header';
+import { getFormattedDate } from 'common-util/functions';
+import { TwoColumnContents } from 'components/GlobalStyles';
+import { EducationArticlesContainer } from './styles';
 
-const Education = () => <>EDUCATION</>;
+const EducationArticle = ({ educationArticles }) => (
+  <>
+    <EducationArticlesContainer className="content-list-section">
+      <Header className="header" title="Education" />
+    </EducationArticlesContainer>
 
-export default Education;
+    <TwoColumnContents className="section background-gradient">
+      {educationArticles.map(({ id, attributes }) => {
+        const {
+          title, headerImage, subtitle, datePublished,
+        } = attributes || {};
+        const imageUrl = get(headerImage, 'data.attributes.url') || '';
 
-/*
-Education.propTypes = {
-  isNavigationOpen: PropTypes.bool.isRequired,
-  cofounders: PropTypes.instanceOf(Array),
-  foundingTeam: PropTypes.instanceOf(Array),
-  press: PropTypes.instanceOf(Array),
-  blogs: PropTypes.instanceOf(Array),
+        return (
+          <div className="column">
+            <div
+              className="img-container"
+              style={{
+                backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
+              }}
+            />
+            <div className="header-text">{title}</div>
+            <div className="subtitle">{subtitle}</div>
+            <div className="date-published">
+              {getFormattedDate(datePublished)}
+            </div>
+
+            <Link href={`/education-articles/${id}`}>
+              <a>
+                <Button title="LEARN MORE" type="black" className="mini" />
+              </a>
+            </Link>
+          </div>
+        );
+      })}
+    </TwoColumnContents>
+  </>
+);
+
+EducationArticle.propTypes = {
+  educationArticles: PropTypes.instanceOf(Array),
 };
 
-Education.defaultProps = {
-  cofounders: [],
-  foundingTeam: [],
-  press: [],
-  blogs: [],
+EducationArticle.defaultProps = {
+  educationArticles: [],
 };
 
-const mapStateToProps = state => {
-  const { isNavigationOpen } = state.navigation;
-  return { isNavigationOpen };
-};
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Education);
-*/
+export default EducationArticle;

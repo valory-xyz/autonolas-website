@@ -20,7 +20,7 @@ export const Content = styled.div`
     max-width: 260px;
     text-align: center;
     .img-container {
-      min-height: 180px;
+      min-height: 190px;
     }
     .header-text {
       margin-top: 4rem;
@@ -71,7 +71,7 @@ export const Content = styled.div`
         width: 50%;
       }
       .header-text {
-        margin-top: 1rem;
+        // margin-top: 1rem;
         font-size: 20px;
         min-height: auto;
       }

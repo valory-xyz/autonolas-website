@@ -78,7 +78,8 @@ const WhyAutonolas = () => (
       title={(
         <>
           Decentralized&nbsp;
-          <span className="sub-text">and</span>
+          <br />
+          <span className="sub-text">and</span>&nbsp;
           <span className="ib">Sophisticated</span>
         </>
       )}

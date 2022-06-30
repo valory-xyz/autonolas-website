@@ -22,7 +22,7 @@ const Mission = () => (
     <Row>
       <Description
         type={2}
-        title="Internal Operations are slow and stilted – subDAOs go some way, but not the whole way. DAOs run apps and protocols which are constrained by smart contract limitations and centralized/liability risks."
+        title="Internal Operations are slow and stilted — subDAOs only go so far. DAOS run apps and protocols which are constrained by smart contract limitations, centralization and liability risks. Autonolas aims to help."
         className="sub-content"
       />
       <div className="glass-container">

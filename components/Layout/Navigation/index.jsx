@@ -161,7 +161,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
 
             <Link href="#build">
               <a href="#build">
-                <Button type="purple" title="Start Building />" />
+                <Button type="purple" title="Start Building" />
               </a>
             </Link>
           </DesktopNavBar>

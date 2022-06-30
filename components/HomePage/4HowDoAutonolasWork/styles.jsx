@@ -55,6 +55,9 @@ export const Row = styled.div`
       width: 100%;
       .content {
         border-left: none;
+        .sr-no {
+          padding-top: 0rem;
+        }
       }
     }
   }

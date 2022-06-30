@@ -18,4 +18,8 @@ export const TeamFooter = styled.div`
     padding-left: 0;
     padding-right: 0;
   }
+
+  ${MEDIA_QUERY.tablet} {
+    flex-direction: column;
+  }
 `;

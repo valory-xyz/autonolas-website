@@ -26,7 +26,7 @@ const LIST = [
 
 const WhyBuildOnAutonolas = () => (
   <SectionSix className="section" id="build">
-    <Description type={2} title="BUILD" className="center" />
+    <Description type={2} title="BUILD" />
 
     <Header className="header" title="Why build on Autonolas?" />
 

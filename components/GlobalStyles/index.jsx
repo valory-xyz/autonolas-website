@@ -67,6 +67,15 @@ export const HeaderAndAction = styled.div`
   .header {
     margin-bottom: 0 !important;
   }
+
+  ${MEDIA_QUERY.tablet} {
+    &.xs-wrap {
+      flex-direction: column;
+      .btn {
+        padding-left: 0;
+      }
+    }
+  }
 `;
 
 export const SeeAllBtnRow = styled.div`
@@ -120,11 +129,13 @@ export const TwoColumnContents = styled.div`
   ${MEDIA_QUERY.tablet} {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    padding: 0 !important;
     .column {
-      width: auto;
+      width: 100%;
       .img-container {
         width: 100%;
-        min-height: 200px;
+        max-height: 200px;
       }
       .header-text {
       }
@@ -186,13 +197,32 @@ export const ThreeColumnContents = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    .details {
+      width: 100%;
+    }
     .column {
       .img-container {
-        min-height: 200px;
+        max-height: 200px;
       }
       .header-text {
       }
       .sub-text {
+      }
+      .btn {
+        width: auto;
+      }
+      .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &.team-column-contents {
+      .details {
+        flex-basis: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }

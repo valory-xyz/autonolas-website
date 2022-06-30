@@ -17,6 +17,7 @@ const EachPress = ({ press }) => {
       <div
         className="img-container"
         style={{
+          // backgroundImage: 'url("/images/11Team/background.webp")',
           backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
         }}
       />

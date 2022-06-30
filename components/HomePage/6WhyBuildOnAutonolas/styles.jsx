@@ -4,12 +4,13 @@ import { Content } from '../2WhatIsAutonolas/styles';
 
 export const SectionSix = styled.div`
   padding-bottom: 0;
-  .description {
-    margin: 1rem 0 2rem 0;
-  }
   .header {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+  .description {
+    margin: 1rem 0 2rem 0;
+    text-align: center;
   }
   .divider {
     padding-top: 3rem;
@@ -19,10 +20,16 @@ export const SectionSix = styled.div`
       margin-left: 0;
       margin-right: 0;
     }
+    .description {
+      text-align: left;
+    }
   }
 `;
 
 export const Container = styled(Content)`
+  .column {
+    max-width: 340px;
+  }
   ${MEDIA_QUERY.tablet} {
     .column {
       .img-container {

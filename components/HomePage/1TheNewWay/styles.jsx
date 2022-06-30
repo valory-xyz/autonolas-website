@@ -47,14 +47,12 @@ export const SectionOne = styled.div`
       font-size: 54px;
     }
     .description {
-      max-width: 280px;
-      margin-top: 3rem;
-      text-align: left;
+      position: absolute;
+      bottom: 200px;
     }
     .action-btns {
       flex-direction: column;
       position: absolute;
-      width: 80%;
       bottom: 40px;
       left: 50%;
       transform: translate(-50%, 0px);
@@ -69,6 +67,9 @@ export const SectionOne = styled.div`
   }
 
   ${MEDIA_QUERY.mobileS} {
+    .description {
+      bottom: 230px;
+    }
   }
 `;
 

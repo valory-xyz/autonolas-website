@@ -2,8 +2,8 @@ export const NAV_1 = [
   { name: 'Learn', id: 'learn' },
   { name: 'Build', id: 'build' },
   { name: 'Mission', id: 'mission' },
-  { name: 'Use', id: 'use' },
-  { name: 'Join', id: 'join' },
+  // { name: 'Use', id: 'use' },
+  // { name: 'Join', id: 'join' },
 ];
 
 export const NAVIGATION_SOCIALS = [

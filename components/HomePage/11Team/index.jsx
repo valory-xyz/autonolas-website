@@ -12,7 +12,7 @@ const Team = ({ cofounders, foundingTeam }) => (
     <Header className="header" title="Core Team" />
     <Description type={2} title="CO-FOUNDERS" />
 
-    <ThreeColumnContents>
+    <ThreeColumnContents className="team-column-contents">
       {cofounders.map(({ id, attributes }) => <EachTeamMate key={`team-mate-${id}`} member={attributes} />)}
     </ThreeColumnContents>
 

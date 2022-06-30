@@ -33,5 +33,19 @@ export const SectionExperience = styled.div`
   }
 
   ${MEDIA_QUERY.tablet} {
+    padding-top: 6rem !important;
+    text-align: center;
+    ${backgroundImage('/images/14Experience/background-mobile.png')};
+    .header {
+      margin-bottom: 2rem !important;
+      padding-left: 0;
+    }
+    .description {
+      max-width: 200px;
+    }
+    .btn {
+      margin: 3rem 0 0rem;
+      padding: 1rem 0rem;
+    }
   }
 `;

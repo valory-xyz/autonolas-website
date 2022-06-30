@@ -20,6 +20,7 @@ const Blog = ({ blog }) => {
       <div
         className="img-container"
         style={{
+          // backgroundImage: 'url("/images/11Team/background.webp")',
           backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
         }}
       />
@@ -51,7 +52,7 @@ const PressAndBlogs = ({ blogs }) => {
 
   return (
     <SectionBlog className="section section-blog" id="blog">
-      <HeaderAndAction>
+      <HeaderAndAction className="xs-wrap">
         <Header className="header" title="From the blogs" />
         <Button
           title="See all"

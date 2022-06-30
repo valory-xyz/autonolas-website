@@ -19,6 +19,13 @@ export const Content = styled(ThreeColumnContents)`
       min-height: 340px;
     }
   }
+  ${MEDIA_QUERY.tablet} {
+    .column {
+      .img-container {
+        min-height: 280px;
+      }
+    }
+  }
 `;
 
 export const GoDeep = styled.div`

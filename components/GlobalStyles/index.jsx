@@ -184,6 +184,7 @@ export const ThreeColumnContents = styled.div`
   ${MEDIA_QUERY.tablet} {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     .column {
       .img-container {
         min-height: 200px;

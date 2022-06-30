@@ -36,12 +36,12 @@ const HomePage = ({
     </LearnContainer>
 
     <WhyBuildOnAutonolas />
-    {/*  <StartBuilding />
+    <StartBuilding />
     <Mission />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
     <Blog blogs={blogs} />
-    <Experience /> */}
+    <Experience />
   </>
 );
 

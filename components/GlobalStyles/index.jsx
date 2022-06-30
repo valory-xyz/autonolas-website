@@ -25,7 +25,7 @@ export const backgroundGradient = css`
 `;
 
 export const individualPageSection = css`
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 `;
 
@@ -85,6 +85,7 @@ export const TwoColumnContents = styled.div`
   .column {
     width: 40%;
     .img-container {
+      width: 120%; /* image to havve more width than text */
       min-height: 260px;
       ${containImage};
       background-position: left;
@@ -120,12 +121,17 @@ export const TwoColumnContents = styled.div`
     display: flex;
     flex-direction: column;
     .column {
+      width: auto;
       .img-container {
+        width: 100%;
         min-height: 200px;
       }
       .header-text {
       }
       .sub-text {
+      }
+      .btn {
+        width: auto;
       }
     }
   }

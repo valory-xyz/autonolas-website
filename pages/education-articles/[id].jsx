@@ -1,21 +1,21 @@
 import { get } from 'lodash';
-import { getBlog } from 'common-util/api';
+import { getEducationArticle } from 'common-util/api';
 import { serverRedirectToError } from 'common-util/functions';
-import EachBlog from 'components/Blog/EachBlog';
+import EachEducationArticle from 'components/Education/EachEducationArticle';
 
 export async function getServerSideProps({ query }) {
   const id = get(query, 'id');
-  const blog = await getBlog(id);
+  const educationArticle = await getEducationArticle(id);
 
-  if (!blog) {
+  if (!educationArticle) {
     return serverRedirectToError();
   }
 
   return {
     props: {
-      blog,
+      educationArticle,
     },
   };
 }
 
-export default EachBlog;
+export default EachEducationArticle;

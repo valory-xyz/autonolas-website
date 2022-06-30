@@ -7,6 +7,9 @@ export const SectionFive = styled.div`
     margin-bottom: 1rem !important;
   }
   ${MEDIA_QUERY.tablet} {
+    .btn {
+      padding: 1rem 0;
+    }
   }
 `;
 

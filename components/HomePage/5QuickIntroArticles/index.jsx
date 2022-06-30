@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { SectionFive, Content, SeeAll } from './styles';
@@ -13,7 +14,7 @@ const QuickIntroArticles = ({ educationArticles }) => (
       <Button
         title="See all education articles"
         type="link-arrow"
-        onClick={() => window.open(`${window.location.origin}/education`)}
+        onClick={() => window.open(`${window.location.origin}/${PATHS.EDUCATION_ARTICLES}`)}
       />
     </SeeAll>
 
@@ -22,22 +23,22 @@ const QuickIntroArticles = ({ educationArticles }) => (
         const { headerImage, title, readTime } = attributes || {};
 
         return (
-          <Link key={headerImage} href={`/education-articles/${id}`}>
+          <Link key={headerImage} href={`/${PATHS.EDUCATION_ARTICLES}/${id}`}>
             <a className="details">
               <div className="column">
                 <div
                   className="img-container"
                   style={{
                     backgroundImage:
-                    "url('/images/5QuickIntroArticles/what-is-autonolas.png')",
+                      "url('/images/5QuickIntroArticles/what-is-autonolas.png')",
                   }}
                 />
                 <div className="header-text">{title}</div>
                 <div className="sub-text">
                   {readTime}
-                &nbsp;
+                  &nbsp;
                   {readTime === 1 ? 'MIN' : 'MINS'}
-                &nbsp; READ
+                  &nbsp; READ
                 </div>
               </div>
             </a>

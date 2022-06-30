@@ -30,10 +30,17 @@ export const Container = styled.div`
   }
   /* section for individual page */
   .content-list-section {
+    display: flex;
+    justify-content: center;
     min-height: 400px;
+    height: 100vh;
     padding: 7rem 4.5rem;
     background-size: cover;
+    ${MEDIA_QUERY.tablet} {
+      padding: 0;
+    }
   }
+
   .each-content {
     &-header-image {
       ${containImage}
@@ -66,7 +73,17 @@ export const Container = styled.div`
         padding-right: 3rem;
       }
     }
+    ${MEDIA_QUERY.tablet} {
+      &-header-image {
+        min-height: 200px;
+      }
+      &-body {
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+      }
+    }
   }
+
   /* common */
   .btn-center {
     position: relative;

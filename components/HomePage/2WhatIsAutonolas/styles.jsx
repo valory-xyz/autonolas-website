@@ -13,11 +13,9 @@ export const Content = styled.div`
   justify-content: space-between;
   .column {
     max-width: 260px;
+    text-align: center;
     .img-container {
       min-height: 180px;
-      img {
-        margin-left: 1rem;
-      }
     }
     .header-text {
       margin-top: 4rem;

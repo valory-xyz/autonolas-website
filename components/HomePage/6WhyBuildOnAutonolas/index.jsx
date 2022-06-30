@@ -28,7 +28,7 @@ const WhyBuildOnAutonolas = () => (
   <SectionSix className="section" id="build">
     <Description type={2} title="BUILD" className="center" />
 
-    <Header className="header" title="Why build on Autonolas?" />
+    <Header className="header center" title="Why build on Autonolas?" />
 
     <Content>
       {LIST.map(({ imageUrl, heading, subHeading }, index) => (

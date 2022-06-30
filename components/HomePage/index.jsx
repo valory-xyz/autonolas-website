@@ -9,7 +9,6 @@ import HowDoAutonolasWork from './4HowDoAutonolasWork';
 import QuickIntroArticles from './5QuickIntroArticles';
 import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
 import StartBuilding from './7StartBuilding';
-import WhatCouldYouBuild from './8WhatCouldYouBuild';
 import Mission from './9Mission';
 import Team from './11Team';
 import Press from './12Press';
@@ -38,29 +37,11 @@ const HomePage = ({
 
     <WhyBuildOnAutonolas />
     <StartBuilding />
-    <WhatCouldYouBuild ideas={ideas} />
     <Mission />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
     <Blog blogs={blogs} />
     <Experience />
-    {/* <TheNewWay isNavigationOpen={isNavigationOpen} />
-
-    <LearnContainer>
-      <WhatIsAutonolas />
-      <DecentralizedAndSophisticated />
-      <HowDoAutonolasWork />
-      <QuickIntroArticles />
-    </LearnContainer>
-
-    <WhyBuildOnAutonolas />
-    <StartBuilding />
-    <WhatCouldYouBuild />
-    <Mission />
-    <Team cofounders={cofounders} foundingTeam={foundingTeam} />
-    <Press press={press} />
-    <Blog blogs={blogs} />
-    <Experience /> */}
   </>
 );
 

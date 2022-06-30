@@ -83,20 +83,26 @@ export const Btn = styled.button`
 `;
 
 const CustomButton = ({
-  title,
-  type,
-  className,
-  ...rest
-  // hasArrowSuffix,
+  title, type, className, hasArrowSuffix, ...rest
 }) => {
   const clsName = `btn ${className || ''}`.trim();
 
   return (
-    <Btn type={type} className={clsName} {...rest}>
+    <Btn type={type} className={clsName} {...rest} hasArrowSuffix>
       {title}
       {type === 'link-arrow' && (
         <>
           <img src="images/common/arrow.png" alt=" " loading="lazy" />
+        </>
+      )}
+      {hasArrowSuffix && (
+        <>
+          <img
+            src="images/common/arrow-white.png"
+            alt=" "
+            loading="lazy"
+            style={{ width: 20, marginLeft: '1rem' }}
+          />
         </>
       )}
     </Btn>
@@ -107,11 +113,11 @@ CustomButton.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   type: PropTypes.oneOf(['black', 'primary', 'purple', 'link-arrow']),
   className: PropTypes.string,
-  // hasArrowSuffix: PropTypes.bool,
+  hasArrowSuffix: PropTypes.bool,
 };
 
 CustomButton.defaultProps = {
-  // hasArrowSuffix: false,
+  hasArrowSuffix: false,
   type: 'primary',
   className: '',
 };

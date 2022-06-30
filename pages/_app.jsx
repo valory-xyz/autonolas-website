@@ -2,6 +2,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
+import { BREAK_POINT } from 'util/theme';
 import GlobalStyle from 'components/GlobalStyles';
 import Layout from 'components/Layout';
 import initStore from '../store';
@@ -30,6 +31,16 @@ class MyApp extends App {
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
               font-size: 18px;
+            }
+            @media only screen and (max-width: ${BREAK_POINT.md}) {
+              body {
+                font-size: 16px;
+              }
+            }
+            @media only screen and (max-width: ${BREAK_POINT.sm}) {
+              body {
+                font-size: 14px;
+              }
             }
           `}
         </style>

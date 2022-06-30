@@ -26,7 +26,7 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
         </Link>
 
         <Link href="#what-are-autonomous-services" passHref>
-          <Button title="What is Autonolas" as="a" type="black" />
+          <Button title="What is Autonolas?" as="a" type="black" />
         </Link>
       </div>
     </DescActionButtons>

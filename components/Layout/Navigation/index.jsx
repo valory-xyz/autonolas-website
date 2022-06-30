@@ -13,6 +13,7 @@ import {
   DesktopNavBar,
   Hamburger,
   MobileNavigationContainer,
+  MobileCloseMenu,
   NavMenu,
   Container,
 } from './styles';
@@ -34,10 +35,7 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 
   return (
     <li className="nav-item" key={mapKey}>
-      <Link
-        href={externalLink ? eachNav.url : `/#${eachNav.id}`}
-        passHref
-      >
+      <Link href={externalLink ? eachNav.url : `/#${eachNav.id}`} passHref>
         <a
           className="nav-link"
           target={externalLink ? '_blank' : '_self'}
@@ -49,6 +47,22 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
     </li>
   );
 });
+
+const startBuildingBtn = (
+  <Link href="#build">
+    <a href="#build">
+      <Button type="purple" title="Start Building />" />
+    </a>
+  </Link>
+);
+
+const logo = (
+  <Link href="/#banner">
+    <a href="/#banner" className="nav-link" aria-label="Autonolas Logo">
+      <AutonolasLogo width={124} height={60} />
+    </a>
+  </Link>
+);
 
 const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   const [isTransparent, setColorchange] = useState(true);
@@ -114,56 +128,60 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
           <>
             {isNavigationOpen ? (
               <>
+                <MobileCloseMenu>
+                  <div className="close-menu-logo">{logo}</div>
+                  <div
+                    className="close-menu-text"
+                    aria-label="Navbar menu close"
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => navToggle(false)}
+                    onKeyDown={() => navToggle(false)}
+                  >
+                    CLOSE
+                  </div>
+                </MobileCloseMenu>
+
                 <NavMenu>
                   {isNavigationOpen
                     && getNavigationsMenu(mobileMenu, navToggle, 'mobile')}
                 </NavMenu>
+
                 {getSocials(NAVIGATION_SOCIALS)}
               </>
             ) : (
-              <MobileNavigationContainer>
-                <a
-                  href="#banner"
-                  className="nav-logo"
-                  aria-label="Autonolas logo"
-                >
-                  <AutonolasLogo width={124} height={54} />
-                </a>
-              </MobileNavigationContainer>
-            )}
+              <>
+                <MobileNavigationContainer>
+                  <a
+                    href="#banner"
+                    className="nav-logo"
+                    aria-label="Autonolas logo"
+                  >
+                    <AutonolasLogo width={124} height={54} />
+                  </a>
+                </MobileNavigationContainer>
 
-            <Hamburger
-              aria-label="Navbar menu"
-              role="button"
-              tabIndex={0}
-              onClick={() => navToggle(!isNavigationOpen)}
-              onKeyDown={() => navToggle(!isNavigationOpen)}
-            >
-              <span />
-              <span />
-            </Hamburger>
+                <Hamburger
+                  aria-label="Navbar menu open"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => navToggle(true)}
+                  onKeyDown={() => navToggle(true)}
+                >
+                  MENU
+                </Hamburger>
+
+                {startBuildingBtn}
+              </>
+            )}
           </>
         ) : (
           <DesktopNavBar>
-            <div className="nav-item-logo">
-              <Link href="/#banner">
-                <a
-                  href="/#banner"
-                  className="nav-link"
-                  aria-label="Autonolas Logo"
-                >
-                  <AutonolasLogo width={124} height={60} />
-                </a>
-              </Link>
-            </div>
+            <div className="nav-item-logo">{logo}</div>
 
             <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
 
-            <Link href="#build">
-              <a href="#build">
-                <Button type="purple" title="Start Building" />
-              </a>
-            </Link>
+            {startBuildingBtn}
           </DesktopNavBar>
         )}
       </nav>

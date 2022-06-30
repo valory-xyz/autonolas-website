@@ -3,17 +3,18 @@ import PropTypes from 'prop-types';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
+import { ThreeColumnContents } from 'components/GlobalStyles';
 import EachTeamMate from './EachTeamMate';
-import { SectionEleven, Content, TeamFooter } from './styles';
+import { SectionEleven, TeamFooter } from './styles';
 
 const Team = ({ cofounders, foundingTeam }) => (
   <SectionEleven className="section section-team" id="team">
     <Header className="header" title="Core Team" />
     <Description type={2} title="CO-FOUNDERS" />
 
-    <Content>
+    <ThreeColumnContents>
       {cofounders.map(({ id, attributes }) => <EachTeamMate key={`team-mate-${id}`} member={attributes} />)}
-    </Content>
+    </ThreeColumnContents>
 
     <TeamFooter>
       <Button

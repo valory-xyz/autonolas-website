@@ -1,5 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { COLOR, TRANSITION, MEDIA_QUERY } from 'util/theme';
+
+const openCloseText = css`
+  font-weight: bold;
+  font-size: 22px;
+`;
+
+const mobileCloseMenuHeight = '96px';
 
 export const DesktopNavBar = styled.div`
   display: flex;
@@ -41,29 +48,32 @@ export const MobileNavigationContainer = styled.div`
   }
 `;
 
-export const Hamburger = styled.div`
+export const MobileCloseMenu = styled.div`
   position: absolute;
-  right: 32px;
-  top: 24px;
+  height: ${mobileCloseMenuHeight};
   display: flex;
-  flex-direction: column;
-  span {
-    width: 60px;
-    height: 8px;
-    background-color: ${COLOR.BLACK};
-    display: inline-block;
-    transition: ${TRANSITION.all};
-    border-radius: 4px;
-    &:nth-child(1) {
-      margin-bottom: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  .close-menu {
+    &-logo {
+      height: 76px;
     }
-  }
-  &:focus {
-    outline: none;
+    &-text {
+      ${openCloseText}
+    }
   }
 `;
 
+export const Hamburger = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${openCloseText}
+`;
+
 export const NavMenu = styled.ul`
+  top: ${mobileCloseMenuHeight};
   width: 100%;
   padding: 0;
   margin: 0;
@@ -118,13 +128,16 @@ export const Container = styled.header`
   ${MEDIA_QUERY.tablet} {
     z-index: 2;
     .navbar {
-      padding: 8px 16px;
+      padding: 8px;
       &.is-open-for-mobile {
-        background-image: url("/images/birth-place/background.jpg");
-        height: calc(100vh - ${({ navHeight }) => `${navHeight}px`});
+        flex-direction: column !important;
+        background: ${COLOR.LIGHT_BLUE};
+        height: 100vh;
       }
       &.mobile {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         ${NavMenu} {
           position: relative;
           left: -100%;
@@ -142,8 +155,9 @@ export const Container = styled.header`
             line-height: normal;
             margin: 0 16px;
             .nav-link {
-              font-size: 24px;
-              text-transform: none;
+              font-size: 72px;
+              font-weight: bold;
+              text-transform: capitalize;
             }
           }
         }
@@ -157,6 +171,10 @@ export const Container = styled.header`
           a {
             margin: 0 !important;
           }
+        }
+        .btn {
+          font-size: inherit;
+          padding: 0.75rem 1rem;
         }
       }
     }

@@ -6,6 +6,7 @@ export const COLOR = {
   BLACK: '#000000',
 
   PURPLE: '#7200D6',
+  LIGHT_BLUE: '#E9FDFF',
 };
 
 export const BOX_SHADOW = {};

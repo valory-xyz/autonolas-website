@@ -13,6 +13,7 @@ const Mission = () => (
       title={(
         <>
           Let&apos;s make DAOs&nbsp;
+          <br />
           <span className="sub-text">actually</span>
           &nbsp;autonomous
         </>

@@ -13,17 +13,19 @@ const TeamMate = ({ member }) => {
   if (linkedinUrl) socials.push({ type: 'linkedin', url: linkedinUrl });
 
   return (
-    <div className="column">
-      <div
-        className="img-container"
-        style={{
-          backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
-        }}
-      />
-      <div className="header-text">{name}</div>
-      <div className="sub-text">{title}</div>
-      <div className="desc">{description}</div>
-      {getSocials(socials, 'svg')}
+    <div className="details">
+      <div className="column">
+        <div
+          className="img-container"
+          style={{
+            backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
+          }}
+        />
+        <div className="header-text">{name}</div>
+        <div className="sub-text">{title}</div>
+        <div className="desc">{description}</div>
+        {getSocials(socials, 'svg')}
+      </div>
     </div>
   );
 };

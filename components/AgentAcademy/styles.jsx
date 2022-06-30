@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
+import { backgroundImage } from 'components/GlobalStyles';
 
 export const Hr = styled.hr`
   margin: 0 -2rem;
@@ -149,5 +150,14 @@ export const ModulesFinished = styled.div`
         }
       }
     }
+  }
+`;
+
+export const AcademyContainer = styled.div`
+  ${backgroundImage('/images/1TheNewWay/background.webp')}
+  .header {
+    text-align: center;
+  }
+  ${MEDIA_QUERY.laptop} {
   }
 `;

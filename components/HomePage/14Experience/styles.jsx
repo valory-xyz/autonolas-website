@@ -6,9 +6,10 @@ export const SectionExperience = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 9rem !important;
+  padding-top: 8rem !important;
   color: ${COLOR.WHITE};
-  ${backgroundImage('/images/14Experience/background.png')};
+  background-size: cover;
+  ${backgroundImage('/images/14Experience/background.jpg')};
   .header {
     margin-bottom: 1rem !important;
     margin-top: 4rem;

@@ -87,8 +87,8 @@ const WhyAutonolas = () => (
 
     <Description
       type={2}
-      title="Software services you can build and own. They have the best of both smart
-    contracts and web 2 apps."
+      title="Software services you can build and own. Build with the best of smart
+    contracts and Web2 apps."
       className="sub-content"
     />
 

@@ -14,7 +14,7 @@ const LIST = [
     imageUrl: 'pioneer',
     heading: 'BECOME A PIONEER',
     subHeading:
-      'Get up to speed with cutting-edge tech stack, and make a name driving autonomy forward.',
+      'Get up to speed with our cutting-edge tech stack, and make a name driving autonomy forward.',
   },
   {
     imageUrl: 'business-model',

@@ -95,16 +95,7 @@ const CustomButton = ({
           <img src="images/common/arrow.png" alt=" " loading="lazy" />
         </>
       )}
-      {hasArrowSuffix && (
-        <>
-          <img
-            src="images/common/arrow-white.png"
-            alt=" "
-            loading="lazy"
-            style={{ width: 20, marginLeft: '1rem' }}
-          />
-        </>
-      )}
+      {hasArrowSuffix && " →"}
     </Btn>
   );
 };

@@ -11,7 +11,7 @@ import { EachBlogContainer } from './styles';
 const EachBlog = ({ blog }) => {
   const { attributes } = blog;
   const {
-    title, headerImage, datePublished, body,
+    title, subtitle, headerImage, datePublished, body,
   } = attributes || {};
   const imageUrl = get(headerImage, 'data[0].attributes.url') || '';
 
@@ -28,7 +28,7 @@ const EachBlog = ({ blog }) => {
         <Header className="header" title={title} />
 
         <div className="each-content-details">
-          <div className="subtitle">{title}</div>
+          <div className="subtitle">{subtitle}</div>
           <div className="date-published">
             {getFormattedDate(datePublished)}
           </div>

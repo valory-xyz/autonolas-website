@@ -5,12 +5,8 @@ export const FooterContainer = styled.div`
   .header {
     margin-bottom: 1rem !important;
     margin-top: 4rem;
-    padding-left: 5rem;
   }
   ${MEDIA_QUERY.tablet} {
-    .header {
-      padding-left: 0rem;
-    }
   }
 `;
 

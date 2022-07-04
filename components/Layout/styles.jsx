@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { MEDIA_QUERY, COLOR } from 'util/theme';
+import { MEDIA_QUERY } from 'util/theme';
 import { containImage, backgroundGradient } from 'components/GlobalStyles';
 
 export const widths = {

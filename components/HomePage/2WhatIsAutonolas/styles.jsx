@@ -13,6 +13,7 @@ export const SectionTwo = styled.div`
     background-size: contain !important;
     background-position: -1rem 2rem;
   }
+
   ${MEDIA_QUERY.mobileL} {
     .header {
       margin-bottom: 2rem !important;
@@ -43,6 +44,10 @@ export const Content = styled.div`
     }
     .sub-text {
       font-size: 22px;
+      text-align: center;
+      min-height: 200px !important;
+    }
+    .action-btn {
       text-align: center;
     }
     /* content-images */
@@ -77,9 +82,6 @@ export const Content = styled.div`
       }
       .sub-text {
         font-size: 19px;
-      }
-      .action-btn {
-        text-align: center;
       }
     }
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import get from 'lodash/get';
 import Link from 'next/link';
 import Button from 'common-util/Button';
@@ -33,7 +34,7 @@ const EachEducationArticle = ({ educationArticle }) => {
             {getFormattedDate(datePublished)}
           </div>
           <div className="body">
-            <ReactMarkdown>{body}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
           </div>
 
           <Link href="/education-articles" passHref>

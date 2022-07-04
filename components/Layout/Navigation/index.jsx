@@ -6,7 +6,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';
-import { useCheckMobileScreen } from 'common-util/hooks';
+import { useCheckMobileScreen } from 'common-util/hooks/useCheckMobileScreen';
 import { getSocials } from 'common-util/functions';
 import { AutonolasLogo } from 'common-util/svg';
 import { NAV_1, NAVIGATION_SOCIALS } from './constants';
@@ -67,7 +67,7 @@ const startBuildingBtn = (
 );
 
 const logo = (
-  <Link href="/#banner" passHref>
+  <Link href="/" passHref>
     <a className="nav-link" aria-label="Autonolas Logo">
       <AutonolasLogo width={124} height={60} />
     </a>

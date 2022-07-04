@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import get from 'lodash/get';
 import Link from 'next/link';
+import get from 'lodash/get';
 import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
@@ -28,14 +28,12 @@ const Blog = ({ blog }) => {
       />
       <div className="header-text">{title}</div>
       <div className="subtitle">{subtitle}</div>
-      <Button
-        title="LEARN MORE"
-        type="black"
-        className="mini"
-        onClick={() => {
-          window.open(`${window.location.origin}/blog/${id}`);
-        }}
-      />
+
+      <Link href={`/${PATHS.BLOG}/${id}`}>
+        <a>
+          <Button title="LEARN MORE" type="black" className="mini" />
+        </a>
+      </Link>
     </div>
   );
 };

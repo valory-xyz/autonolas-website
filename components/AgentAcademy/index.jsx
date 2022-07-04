@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
-import { useCheckMobileScreen } from 'common-util/hooks';
+import { useCheckMobileScreen } from 'common-util/hooks/useCheckMobileScreen';
 import LIST from './constants';
 import {
   Container,

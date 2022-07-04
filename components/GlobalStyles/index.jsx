@@ -119,9 +119,6 @@ export const TwoColumnContents = styled.div`
       margin: 0.75rem 0 0.5rem 0;
       font-size: 28px;
       font-family: "manrope__semibold", sans-serif;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
     .sub-text {
       font-size: 18px;
@@ -201,9 +198,6 @@ export const ThreeColumnContents = styled.div`
       margin: 0.75rem 0 0.5rem 0;
       font-size: 28px;
       font-family: "manrope__semibold", sans-serif;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
     .sub-text {
       font-size: 18px;

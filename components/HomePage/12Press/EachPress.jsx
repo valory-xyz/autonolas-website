@@ -22,8 +22,8 @@ const EachPress = ({ press }) => {
         }}
       />
       <Tag>{type}</Tag>
-      <div className="header-text">{publisher}</div>
-      <div className="subtitle">{title}</div>
+      <div className="header-text">{title}</div>
+      <div className="subtitle">{publisher}</div>
       <Button
         title="LEARN MORE"
         type="black"

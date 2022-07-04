@@ -106,7 +106,7 @@ export const TwoColumnContents = styled.div`
     width: 40%;
     .img-container {
       width: 120%; /* image to havve more width than text */
-      min-height: 260px;
+      min-height: 300px;
       ${containImage};
       background-position: left;
       margin-bottom: 0.75rem;

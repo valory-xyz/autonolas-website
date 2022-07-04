@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
 import Header from 'common-util/Header';
@@ -29,11 +28,9 @@ const Blog = ({ blog }) => {
       <div className="header-text">{title}</div>
       <div className="subtitle">{subtitle}</div>
 
-      <Link href={`/${PATHS.BLOG}/${id}`}>
-        <a>
-          <Button title="LEARN MORE" type="black" className="mini" />
-        </a>
-      </Link>
+      <a href={`/${PATHS.BLOG}/${id}`}>
+        <Button title="LEARN MORE" type="black" className="mini" />
+      </a>
     </div>
   );
 };
@@ -54,11 +51,9 @@ const PressAndBlogs = ({ blogs }) => {
     <SectionBlog className="section section-blog" id="blog">
       <HeaderAndAction className="xs-wrap">
         <Header className="header" title="From the blog" />
-        <Link href={`/${PATHS.BLOG}`} passHref>
-          <a className="no-underline">
-            <Button title="See all" type="link-arrow" />
-          </a>
-        </Link>
+        <a href={`/${PATHS.BLOG}`} className="no-underline">
+          <Button title="See all" type="link-arrow" />
+        </a>
       </HeaderAndAction>
 
       <TwoColumnContents className="two-column-contents">

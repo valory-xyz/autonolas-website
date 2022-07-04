@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import get from 'lodash/get';
 import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
@@ -27,11 +26,9 @@ const EachPress = ({ press }) => {
       <div className="header-text">{title}</div>
       <div className="subtitle">{publisher}</div>
 
-      <Link href={`/${PATHS.PRESS}/${id}`}>
-        <a>
-          <Button title="LEARN MORE" type="black" className="mini" />
-        </a>
-      </Link>
+      <a href={`/${PATHS.PRESS}/${id}`}>
+        <Button title="LEARN MORE" type="black" className="mini" />
+      </a>
     </div>
   );
 };

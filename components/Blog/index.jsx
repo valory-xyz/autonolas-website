@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
-import Link from 'next/link';
+import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { getFormattedDate } from 'common-util/functions';
@@ -35,11 +35,9 @@ const Blog = ({ blogs }) => (
               {getFormattedDate(datePublished)}
             </div>
 
-            <Link href={`/blog/${id}`}>
-              <a>
-                <Button title="LEARN MORE" type="black" className="mini" />
-              </a>
-            </Link>
+            <a href={`/${PATHS.BLOG}/${id}`}>
+              <Button title="LEARN MORE" type="black" className="mini" />
+            </a>
           </div>
         );
       })}

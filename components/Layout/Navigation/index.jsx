@@ -67,11 +67,9 @@ const startBuildingBtn = (
 );
 
 const logo = (
-  <Link href="/" passHref>
-    <a className="nav-link" aria-label="Autonolas Logo">
-      <AutonolasLogo width={124} height={60} />
-    </a>
-  </Link>
+  <a className="nav-link" href="/" aria-label="Autonolas Logo">
+    <AutonolasLogo width={124} height={60} />
+  </a>
 );
 
 const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {

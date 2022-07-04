@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import get from 'lodash/get';
-import Link from 'next/link';
+import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { getFormattedDate } from 'common-util/functions';
@@ -43,11 +43,9 @@ const EachBlog = ({ blog }) => {
             </ReactMarkdown>
           </div>
 
-          <Link href="/blog" passHref>
-            <a>
-              <Button title="BACK TO BLOG" />
-            </a>
-          </Link>
+          <a href={`/${PATHS.BLOG}`}>
+            <Button title="BACK TO BLOG" />
+          </a>
         </div>
       </div>
     </EachBlogContainer>

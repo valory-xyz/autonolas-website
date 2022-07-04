@@ -30,7 +30,7 @@ const PressAndBlogs = ({ press }) => {
         </Link>
       </HeaderAndAction>
 
-      <TwoColumnContents>
+      <TwoColumnContents className="two-column-contents">
         {firstTwoPress.map(item => (
           <EachPress press={item} key={`press-${item.id}`} />
         ))}

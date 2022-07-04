@@ -36,6 +36,9 @@ const GlobalStyle = createGlobalStyle`
   :before {
     box-sizing: border-box;
   }
+  .ml-2 {
+    margin-left: 2rem;
+  }
   a {
     color: ${COLOR.PURPLE};
     text-underline-offset: 3px;
@@ -70,6 +73,7 @@ export const SubText = styled.div`
 export const HeaderAndAction = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 3rem;
   .header {
     margin-bottom: 0 !important;
@@ -105,7 +109,7 @@ export const TwoColumnContents = styled.div`
   .column {
     width: 40%;
     .img-container {
-      width: 120%; /* image to havve more width than text */
+      width: 100%;
       min-height: 300px;
       ${containImage};
       background-position: left;
@@ -134,14 +138,24 @@ export const TwoColumnContents = styled.div`
     }
   }
 
+  ${MEDIA_QUERY.tabletL} {
+    .column {
+      .img-container {
+        min-height: 200px;
+      }
+    }
+    &.two-column-contents {
+      padding: 0 !important;
+    }
+  }
+
   ${MEDIA_QUERY.tablet} {
     gap: 2rem;
-    padding: 0 !important;
+    padding: 1rem !important;
     .column {
       width: 47.5%;
       .img-container {
         width: 100%;
-        max-height: 200px;
       }
       .header-text {
       }

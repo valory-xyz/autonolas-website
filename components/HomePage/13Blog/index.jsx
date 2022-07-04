@@ -63,11 +63,14 @@ const PressAndBlogs = ({ blogs }) => {
         </Link>
       </HeaderAndAction>
 
-      <TwoColumnContents>
+      <TwoColumnContents className="two-column-contents">
         {firstTwoBlogs.map(item => (
           <Blog blog={item} key={`blogs-${item.id}`} />
         ))}
       </TwoColumnContents>
+
+      <br />
+      <br />
 
       <ThreeColumnContents>
         {restOfTheBlogs.map(item => (

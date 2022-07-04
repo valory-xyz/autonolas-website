@@ -99,7 +99,7 @@ const CustomButton = ({
           <img src="images/common/arrow.png" alt=" " loading="lazy" />
         </>
       )}
-      {hasArrowSuffix && " →"}
+      {hasArrowSuffix && ' →'}
     </Btn>
   );
 };

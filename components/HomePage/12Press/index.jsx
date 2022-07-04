@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
+import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import {
@@ -18,11 +20,14 @@ const PressAndBlogs = ({ press }) => {
     <SectionPress className="section section-press" id="press">
       <HeaderAndAction>
         <Header className="header" title="Press" />
-        <Button
-          title="See all"
-          type="link-arrow"
-          onClick={() => window.open(`${window.location.origin}/press`)}
-        />
+        <Link href={`/${PATHS.PRESS}`} passHref>
+          <a className="no-underline">
+            <Button
+              title="See all"
+              type="link-arrow"
+            />
+          </a>
+        </Link>
       </HeaderAndAction>
 
       <TwoColumnContents>

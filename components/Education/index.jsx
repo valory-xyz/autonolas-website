@@ -22,7 +22,7 @@ const EducationArticle = ({ educationArticles }) => (
         const imageUrl = get(headerImage, 'data.attributes.url') || '';
 
         return (
-          <div className="column">
+          <div className="column" key={`education-article-${id}`}>
             <div
               className="img-container"
               style={{

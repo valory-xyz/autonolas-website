@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
+import Link from 'next/link';
+import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import {
@@ -54,16 +56,16 @@ const PressAndBlogs = ({ blogs }) => {
     <SectionBlog className="section section-blog" id="blog">
       <HeaderAndAction className="xs-wrap">
         <Header className="header" title="From the blog" />
-        <Button
-          title="See all"
-          type="link-arrow"
-          onClick={() => window.open(`${window.location.origin}/blog`)}
-        />
+        <Link href={`/${PATHS.BLOG}`} passHref>
+          <a className="no-underline">
+            <Button title="See all" type="link-arrow" />
+          </a>
+        </Link>
       </HeaderAndAction>
 
       <TwoColumnContents>
         {firstTwoBlogs.map(item => (
-          <Blog blog={item} />
+          <Blog blog={item} key={`blogs-${item.id}`} />
         ))}
       </TwoColumnContents>
 

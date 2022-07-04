@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
+import Link from 'next/link';
+import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
@@ -81,11 +83,14 @@ const WhatCouldYouBuild = ({ ideas }) => {
       />
 
       <SeeAll>
-        <Button
-          title="See all"
-          type="link-arrow"
-          onClick={() => window.open(`${window.location.origin}/ideas`)}
-        />
+        <Link href={`/${PATHS.IDEAS}`} passHref>
+          <a className="no-underline">
+            <Button
+              title="See all"
+              type="link-arrow"
+            />
+          </a>
+        </Link>
       </SeeAll>
 
       <ThreeColumnContents>

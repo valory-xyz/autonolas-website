@@ -11,11 +11,14 @@ const QuickIntroArticles = ({ educationArticles }) => (
     <Header className="header" title="Quick intro articles" />
 
     <SeeAll>
-      <Button
-        title="See all education articles"
-        type="link-arrow"
-        onClick={() => window.open(`${window.location.origin}/${PATHS.EDUCATION_ARTICLES}`)}
-      />
+      <Link href={`/${PATHS.EDUCATION_ARTICLES}`} passHref>
+        <a className="no-underline">
+          <Button
+            title="See all education articles"
+            type="link-arrow"
+          />
+        </a>
+      </Link>
     </SeeAll>
 
     <Content>

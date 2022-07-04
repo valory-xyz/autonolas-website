@@ -6,7 +6,6 @@ import get from 'lodash/get';
 import Link from 'next/link';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
-import { getFormattedDate } from 'common-util/functions';
 import { EachEducationArticleContainer } from './styles';
 
 const EachEducationArticle = ({ educationArticle }) => {
@@ -30,7 +29,8 @@ const EachEducationArticle = ({ educationArticle }) => {
 
         <div className="each-content-details">
           <div className="subtitle">
-            Read time: {readTime}
+            Read time:&nbsp;
+            {readTime}
             &nbsp;
             {readTime === 1 ? 'MIN' : 'MINS'}
           </div>

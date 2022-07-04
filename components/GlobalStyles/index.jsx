@@ -43,6 +43,9 @@ const GlobalStyle = createGlobalStyle`
       display: inline-block;
       text-decoration: none;
     }
+    &.no-underline {
+      text-decoration: none !important;
+    }
   }
   .divider {
     border-bottom: 1px solid ${COLOR.BLACK};

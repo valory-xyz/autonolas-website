@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import get from 'lodash/get';
-import Link from 'next/link';
+import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { EachEducationArticleContainer } from './styles';
@@ -38,11 +38,9 @@ const EachEducationArticle = ({ educationArticle }) => {
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
           </div>
 
-          <Link href="/education-articles" passHref>
-            <a>
-              <Button title="BACK TO ARTICLES" />
-            </a>
-          </Link>
+          <a href={`/${PATHS.EDUCATION_ARTICLES}`}>
+            <Button title="BACK TO ARTICLES" />
+          </a>
         </div>
       </div>
     </EachEducationArticleContainer>

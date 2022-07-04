@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import get from 'lodash/get';
-import Link from 'next/link';
+import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { getFormattedDate } from 'common-util/functions';
@@ -39,11 +39,9 @@ const EachPress = ({ press }) => {
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{type}</ReactMarkdown>
           </div>
 
-          <Link href="/press" passHref>
-            <a>
-              <Button title="BACK TO PRESS" />
-            </a>
-          </Link>
+          <a href={`/${PATHS.PRESS}`}>
+            <Button title="BACK TO PRESS" />
+          </a>
         </div>
       </div>
     </EachPressContainer>

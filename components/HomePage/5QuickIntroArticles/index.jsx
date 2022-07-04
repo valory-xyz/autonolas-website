@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
@@ -12,11 +11,9 @@ const QuickIntroArticles = ({ educationArticles }) => (
     <Header className="header" title="Quick intro articles" />
 
     <SeeAll>
-      <Link href={`/${PATHS.EDUCATION_ARTICLES}`} passHref>
-        <a className="no-underline">
-          <Button title="See all education articles" type="link-arrow" />
-        </a>
-      </Link>
+      <a href={`/${PATHS.EDUCATION_ARTICLES}`} className="no-underline">
+        <Button title="See all education articles" type="link-arrow" />
+      </a>
     </SeeAll>
 
     <Content>
@@ -26,23 +23,21 @@ const QuickIntroArticles = ({ educationArticles }) => (
 
         return (
           <div className="details" key={`articles-${id}`}>
-            <Link href={`/${PATHS.EDUCATION_ARTICLES}/${id}`} passHref>
-              <a className="column">
-                <div
-                  className="img-container"
-                  style={{
-                    backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
-                  }}
-                />
-                <div className="header-text">{title}</div>
-                <div className="sub-text">
-                  {readTime}
+            <a href={`/${PATHS.EDUCATION_ARTICLES}/${id}`} className="column">
+              <div
+                className="img-container"
+                style={{
+                  backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
+                }}
+              />
+              <div className="header-text">{title}</div>
+              <div className="sub-text">
+                {readTime}
                   &nbsp;
-                  {readTime === 1 ? 'MIN' : 'MINS'}
+                {readTime === 1 ? 'MIN' : 'MINS'}
                   &nbsp; READ
-                </div>
-              </a>
-            </Link>
+              </div>
+            </a>
           </div>
         );
       })}

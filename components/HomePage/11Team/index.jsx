@@ -18,7 +18,7 @@ const Team = ({ cofounders, foundingTeam }) => (
 
     <TeamFooter>
       <Button
-        title={`See full team (${foundingTeam.length})`}
+        title={`See full team (${foundingTeam.length + cofounders.length})`}
         type="link-arrow"
         onClick={() => window.open(`${window.location.origin}/team`)}
       />

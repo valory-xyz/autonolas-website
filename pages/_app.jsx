@@ -6,11 +6,7 @@ import GlobalStyle from 'components/GlobalStyles';
 import Layout from 'components/Layout';
 import initStore from '../store';
 import './styles.less';
-
-const siteTitle = 'Autonolas | Build Autonomous Services';
-const siteDescription = 'Build, run and own autonomous services that power next-gen apps for crypto users and DAOs.';
-const siteUrl = 'https://autonolas.network';
-const siteMetatagImage = '/images/site-metadata/site-metatag.png';
+import { SITE_DESCRIPTION, SITE_URL, SITE_TITLE, SITE_METATAG_IMAGE } from 'common-util/site-constants';
 
 const MyApp = ({ Component, pageProps }) => (
   <>
@@ -19,6 +15,7 @@ const MyApp = ({ Component, pageProps }) => (
         body {
           margin: 0;
           font-family: "manrope__regular", sans-serif;
+          line-height: 1.35;
           overscroll-behavior: none;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
@@ -38,20 +35,20 @@ const MyApp = ({ Component, pageProps }) => (
           __html: 'history.scrollRestoration = "manual"',
         }}
       />
-      <title>{siteTitle}</title>
-      <meta name="description" content={siteDescription} />
+      <title>{SITE_TITLE}</title>
+      <meta name="description" content={SITE_DESCRIPTION} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={siteUrl} />
-      <meta property="og:title" content={siteTitle} />
-      <meta property="og:description" content={siteDescription} />
-      <meta property="og:image" content={siteMetatagImage} />
+      <meta property="og:url" content={SITE_URL} />
+      <meta property="og:title" content={SITE_TITLE} />
+      <meta property="og:description" content={SITE_DESCRIPTION} />
+      <meta property="og:image" content={SITE_METATAG_IMAGE} />
 
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={siteUrl} />
-      <meta property="twitter:title" content={siteDescription} />
-      <meta property="twitter:description" content={siteDescription} />
-      <meta property="twitter:image" content={siteMetatagImage} />
+      <meta property="twitter:url" content={SITE_URL} />
+      <meta property="twitter:title" content={SITE_DESCRIPTION} />
+      <meta property="twitter:description" content={SITE_DESCRIPTION} />
+      <meta property="twitter:image" content={SITE_METATAG_IMAGE} />
     </Head>
     <Layout>
       <Component {...pageProps} />

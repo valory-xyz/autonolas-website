@@ -126,7 +126,6 @@ export const TwoColumnContents = styled.div`
       text-transform: uppercase;
     }
     .date-published {
-      color: ${COLOR.PURPLE};
       margin-top: 1rem;
     }
     .btn {

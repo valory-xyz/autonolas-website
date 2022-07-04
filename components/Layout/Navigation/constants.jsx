@@ -3,7 +3,8 @@ export const NAV_1 = [
   { name: 'Build', id: 'build' },
   { name: 'Mission', id: 'mission' },
   // { name: 'Use', id: 'use' },
-  { name: 'Join', id: 'join' },
+  { name: 'Team', id: 'team' },
+  { name: 'Blog', id: 'blog' },
 ];
 
 export const NAVIGATION_SOCIALS = [

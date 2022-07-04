@@ -19,7 +19,7 @@ const Experience = () => (
     </div>
     <Header className="header" title="Enter Alter Orbis" />
 
-    <Description type={2} title="Immerse yourself in Autonolas's lore." />
+    <Description type={2} title="Immerse yourself in Autonolas' lore" />
 
     <Button
       title="EXPERIENCE IT NOW"

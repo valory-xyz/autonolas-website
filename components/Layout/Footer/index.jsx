@@ -74,14 +74,14 @@ const Footer = () => (
             <td>
               <div className="footer-title">LEARN</div>
               <div className="links">
-                {getAnchor('EDUCATION', '/education')}
+                {getAnchor('EDUCATION', '/education-articles')}
               </div>
             </td>
 
             <td>
               <div className="footer-title">BUILD</div>
               <div className="links">
-                {getAnchor('DOCS', 'https://docs.autonolas.network/')}
+                {getAnchor('DOCS', 'https://docs.autonolas.network/', true)}
                 {getAnchor('ACADEMY', '/academy')}
                 {getAnchor('COMMISSION US', 'mailto:bd@valory.xyz')}
                 {/* {getAnchor('IDEAS', '/ideas')} */}
@@ -106,15 +106,15 @@ const Footer = () => (
               <div className="footer-title">JOIN</div>
               <div className="links">
                 {getAnchor('TEAM', '/team')}
-                {getAnchor('CAREERS', 'https://angel.co/company/valory-3')}
-                {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ/')}
+                {getAnchor('CAREERS', 'https://angel.co/company/valory-3', true)}
+                {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ/', true)}
               </div>
             </td>
 
             <td>
               <div className="footer-title">EXPERIENCE</div>
               <div className="links">
-                {getAnchor('ALTER ORBIS', 'https://www.autonolas.world/')}
+                {getAnchor('ALTER ORBIS', 'https://www.autonolas.world/', true)}
               </div>
             </td>
 

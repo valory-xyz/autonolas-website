@@ -5,6 +5,7 @@ import Button from 'common-util/Button';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
 import { SectionOne, DescActionButtons } from './styles';
+import { SITE_DESCRIPTION, SITE_TAGLINE } from 'common-util/site-constants';
 
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
   <SectionOne
@@ -12,12 +13,12 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
     id="banner"
     isNavigationOpen={isNavigationOpen}
   >
-    <Header className="header" title="Build Autonomous Services" />
+    <Header className="header" title={SITE_TAGLINE} />
 
     <DescActionButtons>
       <Description
         type={2}
-        title="Build, run and own autonomous services that power next-gen apps for crypto users and DAOs."
+        title={SITE_DESCRIPTION}
       />
 
       <div className="action-btns">

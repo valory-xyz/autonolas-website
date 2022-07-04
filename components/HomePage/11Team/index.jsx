@@ -8,7 +8,7 @@ import EachTeamMate from './EachTeamMate';
 import { SectionEleven, TeamFooter } from './styles';
 
 const Team = ({ cofounders, foundingTeam }) => (
-  <SectionEleven className="section section-team" id="join">
+  <SectionEleven className="section section-team" id="team">
     <Header className="header" title="Core Team" />
     <Description type={2} title="CO-FOUNDERS" />
 
@@ -18,7 +18,7 @@ const Team = ({ cofounders, foundingTeam }) => (
 
     <TeamFooter>
       <Button
-        title={`See full team (${foundingTeam.length})`}
+        title={`See full team (${foundingTeam.length + cofounders.length})`}
         type="link-arrow"
         onClick={() => window.open(`${window.location.origin}/team`)}
       />

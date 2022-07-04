@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
-import { useCheckMobileScreen } from 'common-util/hooks';
+import { useCheckMobileScreen } from 'common-util/hooks/useCheckMobileScreen';
 import { SectionNine, Row } from './styles';
 
 const Mission = () => {

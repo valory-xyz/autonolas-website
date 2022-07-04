@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import get from 'lodash/get';
 import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
+import PATHS from 'util/paths';
 
 const EachPress = ({ press }) => {
   const { id, attributes } = press || {};
@@ -24,14 +26,12 @@ const EachPress = ({ press }) => {
       <Tag>{type}</Tag>
       <div className="header-text">{title}</div>
       <div className="subtitle">{publisher}</div>
-      <Button
-        title="LEARN MORE"
-        type="black"
-        className="mini"
-        onClick={() => {
-          window.open(`${window.location.origin}/press/${id}`);
-        }}
-      />
+
+      <Link href={`/${PATHS.PRESS}/${id}`}>
+        <a>
+          <Button title="LEARN MORE" type="black" className="mini" />
+        </a>
+      </Link>
     </div>
   );
 };

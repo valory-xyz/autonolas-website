@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from 'common-util/Header';
+import Link from 'next/link';
+import PATHS from 'util/paths';
 import Twitter from '../../../public/images/common/twitter.svg';
 import Discord from '../../../public/images/common/discord.svg';
 import {
@@ -9,14 +11,23 @@ import {
   FooterBottom,
 } from './styles';
 
-const getAnchor = (title, href, inNewTab = false) => (
-  <a href={href} target={inNewTab && "_blank"} rel="noopener noreferrer">
+const getAnchor = (title, href, isLink) => (isLink ? (
+  <Link href={href} passHref>
+    <a>{title}</a>
+  </Link>
+) : (
+  <a href={href} target="_blank" rel="noopener noreferrer">
     {title}
   </a>
-);
+));
 
 const footerLogo = (
-  <img src="/images/common/autonolas-logo.png" alt=" " loading="lazy" className="footer-logo" />
+  <img
+    src="/images/common/autonolas-logo.png"
+    alt=" "
+    loading="lazy"
+    className="footer-logo"
+  />
 );
 
 const footerCopyright = (
@@ -80,7 +91,10 @@ const Footer = () => (
             <td>
               <div className="footer-title">FOLLOW</div>
               <div className="links">
+                {getAnchor('BLOG', `/${PATHS.BLOG}`, true)}
+                {getAnchor('PRESS', `/${PATHS.PRESS}`, true)}
                 {getAnchor('TWITTER', 'https://twitter.com/autonolas')}
+                {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ')}
               </div>
             </td>
           </tr>

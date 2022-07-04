@@ -9,7 +9,7 @@ const Experience = () => (
     <Description type={2} title="EXPERIENCE" className="desc-1" />
     <Header className="header" title="Enter Alter Orbis" />
 
-    <Description type={2} title="Immerse yourself in Autonolas's lore." />
+    <Description type={2} title="Immerse yourself in Autonolas' lore" />
 
     <Button
       title="EXPERIENCE IT NOW"

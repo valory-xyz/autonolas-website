@@ -61,7 +61,7 @@ const PressAndBlogs = ({ blogs }) => {
         />
       </HeaderAndAction>
 
-      <TwoColumnContents className="section">
+      <TwoColumnContents>
         {firstTwoBlogs.map(item => (
           <Blog blog={item} />
         ))}

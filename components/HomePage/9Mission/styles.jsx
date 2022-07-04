@@ -28,7 +28,22 @@ export const Row = styled.div`
     }
   }
 
+  ${MEDIA_QUERY.laptop} {
+    .description {
+      max-width: 500px;
+    }
+    .glass-container {
+      padding-left: 2rem;
+    }
+  }
+
   ${MEDIA_QUERY.tablet} {
+    .description {
+      max-width: 400px;
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
     flex-direction: column-reverse;
     .glass-container {
       max-width: 100%;

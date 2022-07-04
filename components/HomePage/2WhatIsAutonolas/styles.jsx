@@ -5,10 +5,18 @@ import { MEDIA_QUERY } from 'util/theme';
 export const SectionTwo = styled.div`
   ${backgroundImage('/images/2WhatIsAutonolas/background.png')};
   mix-blend-mode: multiply;
+  .description {
+    margin-bottom: 1rem;
+  }
 
   ${MEDIA_QUERY.tablet} {
     background-size: contain !important;
     background-position: -1rem 2rem;
+  }
+  ${MEDIA_QUERY.mobileL} {
+    .header {
+      margin-bottom: 2rem !important;
+    }
   }
 `;
 
@@ -57,9 +65,26 @@ export const Content = styled.div`
   }
 
   ${MEDIA_QUERY.laptop} {
+    gap: 0 1rem;
+    .column {
+      .img-container {
+      }
+      .text-content {
+      }
+      .header-text {
+        margin-top: 1rem;
+        font-size: 28px;
+      }
+      .sub-text {
+        font-size: 19px;
+      }
+      .action-btn {
+        text-align: center;
+      }
+    }
   }
 
-  ${MEDIA_QUERY.tablet} {
+  ${MEDIA_QUERY.mobileL} {
     display: flex;
     flex-direction: column;
     .column {
@@ -78,7 +103,6 @@ export const Content = styled.div`
         text-align: left;
       }
       .header-text {
-        margin-top: 1rem;
         font-size: 20px;
         min-height: auto;
         text-align: left;
@@ -86,9 +110,6 @@ export const Content = styled.div`
       .sub-text {
         text-align: left;
         font-size: 18px;
-      }
-      .action-btn {
-        text-align: center;
       }
       /* content-images */
       &.column-1 {

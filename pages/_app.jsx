@@ -32,14 +32,9 @@ class MyApp extends App {
               -moz-osx-font-smoothing: grayscale;
               font-size: 18px;
             }
-            @media only screen and (max-width: ${BREAK_POINT.md}) {
-              body {
-                font-size: 16px;
-              }
-            }
             @media only screen and (max-width: ${BREAK_POINT.sm}) {
               body {
-                font-size: 14px;
+                font-size: 16px;
               }
             }
           `}

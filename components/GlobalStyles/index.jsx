@@ -68,7 +68,7 @@ export const HeaderAndAction = styled.div`
     margin-bottom: 0 !important;
   }
 
-  ${MEDIA_QUERY.tablet} {
+  ${MEDIA_QUERY.mobileL} {
     &.xs-wrap {
       flex-direction: column;
       .btn {
@@ -82,6 +82,10 @@ export const SeeAllBtnRow = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 2rem;
+
+  ${MEDIA_QUERY.tablet} {
+    margin-bottom: 0rem;
+  }
 `;
 
 export const TwoColumnContents = styled.div`
@@ -123,16 +127,11 @@ export const TwoColumnContents = styled.div`
     }
   }
 
-  ${MEDIA_QUERY.laptop} {
-  }
-
   ${MEDIA_QUERY.tablet} {
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
     padding: 0 !important;
     .column {
-      width: 100%;
+      width: 47.5%;
       .img-container {
         width: 100%;
         max-height: 200px;
@@ -146,6 +145,15 @@ export const TwoColumnContents = styled.div`
       }
     }
   }
+
+  ${MEDIA_QUERY.mobileL} {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .column {
+      width: 100%;
+    }
+  }
 `;
 
 export const ThreeColumnContents = styled.div`
@@ -154,7 +162,7 @@ export const ThreeColumnContents = styled.div`
   flex-wrap: wrap;
   gap: 3rem;
   .details {
-    flex-basis: 30%;
+    width: 30%;
     color: inherit;
     text-decoration: none;
   }
@@ -191,9 +199,19 @@ export const ThreeColumnContents = styled.div`
   }
 
   ${MEDIA_QUERY.laptop} {
+    .details {
+      width: 28.5%;
+    }
   }
 
   ${MEDIA_QUERY.tablet} {
+    gap: 2rem;
+    .details {
+      width: 30%;
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
     display: flex;
     flex-direction: column;
     gap: 1rem;

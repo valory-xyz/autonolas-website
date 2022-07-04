@@ -19,6 +19,7 @@ const MyApp = ({ Component, pageProps }) => (
         body {
           margin: 0;
           font-family: "manrope__regular", sans-serif;
+          line-height: 1.35;
           overscroll-behavior: none;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;

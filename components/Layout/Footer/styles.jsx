@@ -7,6 +7,10 @@ export const FooterContainer = styled.div`
     margin-top: 4rem;
   }
   ${MEDIA_QUERY.tablet} {
+    .header {
+      padding-left: 0rem;
+      margin-top: 1rem;
+    }
   }
 `;
 
@@ -47,6 +51,7 @@ export const SocialConnect = styled.div`
   &.follow-us {
     border-right: 1px solid ${COLOR.BLACK};
   }
+
   ${MEDIA_QUERY.tablet} {
     display: flex;
     align-items: center;
@@ -64,6 +69,12 @@ export const SocialConnect = styled.div`
     }
     &.follow-us {
       border-right: none;
+    }
+  }
+
+  ${MEDIA_QUERY.mobileM} {
+    .text {
+      font-size: 34px;
     }
   }
 `;

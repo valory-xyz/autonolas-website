@@ -37,12 +37,33 @@ export const SectionOne = styled.div`
     }
   }
 
+  ${MEDIA_QUERY.tabletL} {
+    .header {
+      font-size: 90px;
+    }
+    .action-btns {
+      width: 100%;
+    }
+  }
+
   ${MEDIA_QUERY.tablet} {
+    &.section {
+      padding: 8rem 1rem 6rem 1rem !important;
+    }
+    .header {
+      /* font-size: 74px; */
+    }
+    .action-btns {
+      align-items: flex-start;
+      .btn {
+        font-size: 18px;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
     align-items: flex-start;
     justify-content: flex-start;
-    &.section {
-      padding: 8rem 1rem 14rem 1rem !important;
-    }
     .header {
       font-size: 54px;
     }
@@ -57,7 +78,7 @@ export const SectionOne = styled.div`
       left: 50%;
       transform: translate(-50%, 0px);
       .btn {
-        width: 100%;
+        width: 60%;
         text-align: center;
         &:nth-child(1) {
           margin-bottom: 1rem;
@@ -66,9 +87,14 @@ export const SectionOne = styled.div`
     }
   }
 
-  ${MEDIA_QUERY.mobileS} {
+  ${MEDIA_QUERY.mobileM} {
     .description {
       bottom: 230px;
+    }
+    .action-btns {
+      .btn {
+        width: auto;
+      }
     }
   }
 `;
@@ -78,5 +104,20 @@ export const DescActionButtons = styled.div`
   justify-content: space-between;
   .description {
     max-width: 700px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .description {
+      max-width: 380px;
+    }
+  }
+
+  ${MEDIA_QUERY.tabletL} {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    .action-btns {
+      justify-content: flex-start;
+    }
   }
 `;

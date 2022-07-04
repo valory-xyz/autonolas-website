@@ -28,8 +28,12 @@ export const Btn = styled.button`
   }
 
   ${MEDIA_QUERY.tablet} {
-    width: 100%;
     font-size: ${FONT_SIZE[22]};
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    width: 100%;
+    font-size: 18px;
   }
 
   ${({ type }) => {

@@ -179,4 +179,17 @@ export const Container = styled.header`
       }
     }
   }
+
+  ${MEDIA_QUERY.mobileM} {
+    .navbar {
+      &.mobile {
+        ${NavMenu} {
+          max-height: 420px;
+        }
+        .btn {
+          display: none;
+        }
+      }
+    }
+  }
 `;

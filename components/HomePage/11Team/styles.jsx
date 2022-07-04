@@ -19,7 +19,7 @@ export const TeamFooter = styled.div`
     padding-right: 0;
   }
 
-  ${MEDIA_QUERY.tablet} {
+  ${MEDIA_QUERY.mobileL} {
     flex-direction: column;
   }
 `;

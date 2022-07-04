@@ -15,6 +15,7 @@ export const SectionSix = styled.div`
   .divider {
     padding-top: 3rem;
   }
+
   ${MEDIA_QUERY.tablet} {
     .header {
       margin-left: 0;
@@ -30,8 +31,19 @@ export const Container = styled(Content)`
   .column {
     max-width: 340px;
   }
+
   ${MEDIA_QUERY.tablet} {
     .column {
+      width: 32%;
+      .img-container {
+        min-height: 160px;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    .column {
+      width: 100%;
       .img-container {
         width: 42%;
         min-height: auto;

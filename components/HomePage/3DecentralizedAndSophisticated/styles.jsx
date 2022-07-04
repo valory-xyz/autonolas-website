@@ -113,6 +113,14 @@ export const ComparisonTable = styled.div`
       td {
         padding: 0.5rem 0.3rem;
         word-break: keep-all;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    table {
+      th,
+      td {
         font-size: 12px;
       }
       tbody {

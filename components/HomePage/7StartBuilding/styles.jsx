@@ -23,7 +23,7 @@ export const Container = styled(C)`
       min-height: auto;
     }
     .sub-text {
-      min-height: 200px;
+      min-height: 150px;
     }
     &.column-1 {
       margin-right: 12rem;
@@ -41,6 +41,18 @@ export const Container = styled(C)`
   }
 
   ${MEDIA_QUERY.tablet} {
+    gap: 0 3rem;
+    .column {
+      .sub-text {
+        min-height: 140px;
+      }
+      &.column-1 {
+        margin-right: 0rem;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
     .column {
       .img-container-custom {
         margin-top: 1rem;
@@ -65,7 +77,7 @@ export const Container = styled(C)`
 export const CommissionUs = styled.div`
   font-size: 22px;
   text-align: center;
-  margin: 3rem auto 0 auto;
+  margin: 3rem auto 2rem auto;
   p {
     margin-bottom: 0.5rem;
   }

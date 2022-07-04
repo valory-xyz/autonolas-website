@@ -21,7 +21,7 @@ const H2 = styled.h2`
   }
 
   ${MEDIA_QUERY.laptop} {
-    font-size: 104px;
+    font-size: 94px;
   }
 
   ${MEDIA_QUERY.tablet} {

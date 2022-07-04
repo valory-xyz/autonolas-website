@@ -110,6 +110,7 @@ export const Content = styled.div`
       .sub-text {
         text-align: left;
         font-size: 18px;
+        min-height: auto !important;
       }
       /* content-images */
       &.column-1 {

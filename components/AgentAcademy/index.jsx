@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import Link from 'next/link';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
@@ -24,18 +23,27 @@ const AgentAcademy = () => {
         <Header className="header" title="Agent Academy" />
       </AcademyContainer>
 
-      <Container>
-        <Description type={4} title="AGENT DEV ACADEMY – EDUCATION TRACK" />
-        <Hr />
+      <Container className="section">
+        <Description type={4} title="ACADEMY EDUCATION TRACK" />
         <H3>
           <Image
-            src="/images/accelerated-learning/play-video.svg"
+            src="/images/Academy/video-icon.png"
             alt="Accelerated learning logo"
-            width={48}
+            width={96}
             height={isMobile ? 48 : 92}
           />
-          <div>Video Course</div>
+          <Header className="header ml-2" title="Video Course" />
         </H3>
+
+        <p className="info">
+          Welcome to the Autonolas Academy’s self-guided video course! These
+          videos and their associated tasks will teach you what you need to know
+          to get started as an autonomous service developer. Once you’ve
+          finished the course, you’ll be able to apply for our Builder Track.
+          The Builder Track is a cohort-based program where you’ll develop
+          autonomous services in collaboration with other builders—with expert
+          guidance along the way.
+        </p>
 
         <div className="row row-1">
           {LIST.map(({
@@ -121,32 +129,12 @@ const AgentAcademy = () => {
 
             <Hr />
             <ModulesFinished>
-              <div className="card-left">
-                <div className="logo">
-                  <Image
-                    src="/images/accelerated-learning/tool-icon.svg"
-                    alt="Accelerated learning logo"
-                    width={120}
-                    height={120}
-                  />
-                </div>
+              <Header className="header" title="Finished All The Modules?" />
 
-                <div className="content">
-                  <div className="title">Finished all the modules?</div>
-                  <div className="desc">
-                    Develop autonomous services with other builders, guided by
-                    our experts
-                  </div>
-                </div>
-              </div>
-
-              <div className="card-right">
-                <Button
-                  className="btn-center"
-                  title="Apply for Builder Track"
-                  onClick={() => window.open('https://forms.gle/5EWJumPddrviQrqp8')}
-                />
-              </div>
+              <Button
+                title="Apply for Builder Track"
+                onClick={() => window.open('https://forms.gle/5EWJumPddrviQrqp8')}
+              />
             </ModulesFinished>
           </div>
         </div>

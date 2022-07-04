@@ -8,6 +8,6 @@ export const SectionBlog = styled.div`
   .subtitle {
     max-width: 42ch;
   }
-  ${MEDIA_QUERY.tablet} {
+  ${MEDIA_QUERY.tabletL} {
   }
 `;

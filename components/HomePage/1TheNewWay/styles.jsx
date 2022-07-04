@@ -93,7 +93,7 @@ export const SectionOne = styled.div`
     }
     .action-btns {
       .btn {
-        width: auto;
+        width: 300px;
       }
     }
   }

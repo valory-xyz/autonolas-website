@@ -36,6 +36,7 @@ export const Container = styled.div`
     height: 100vh;
     padding: 7rem 4.5rem;
     background-size: cover;
+    align-items: center;
     ${MEDIA_QUERY.tablet} {
       padding: 0;
     }

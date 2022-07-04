@@ -59,16 +59,16 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 });
 
 const startBuildingBtn = (
-  <Link href="#build">
-    <a href="#build">
+  <Link href="/#build" passHref>
+    <a>
       <Button type="purple" title="Start Building" />
     </a>
   </Link>
 );
 
 const logo = (
-  <Link href="/#banner">
-    <a href="/#banner" className="nav-link" aria-label="Autonolas Logo">
+  <Link href="/#banner" passHref>
+    <a className="nav-link" aria-label="Autonolas Logo">
       <AutonolasLogo width={124} height={60} />
     </a>
   </Link>

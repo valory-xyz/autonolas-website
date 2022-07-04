@@ -35,7 +35,7 @@ const Ideas = ({ ideas }) => (
               {getFormattedDate(datePublished)}
             </div>
 
-            <Link href={`/ideas/${id}`}>
+            <Link href={`/ideas/${id}`} passHref>
               <a>
                 <Button title="LEARN MORE" type="black" className="mini" />
               </a>

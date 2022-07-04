@@ -15,14 +15,14 @@ const Press = ({ press }) => (
     </PressContainer>
 
     <TwoColumnContents className="section">
-      {press.map(({ id, attributes }, index) => {
+      {press.map(({ id, attributes }) => {
         const {
           title, thumbnail, publisher, datePublished, type, link,
         } = attributes || {};
-        const imageUrl = get(thumbnail, 'data[0].attributes.url') || '';
+        const imageUrl = get(thumbnail, 'data.attributes.url') || '';
 
         return (
-          <div key={`press-${id}`} className={`column column-${index + 1}`}>
+          <div key={`press-${id}`} className="column">
             <div
               className="img-container"
               style={{

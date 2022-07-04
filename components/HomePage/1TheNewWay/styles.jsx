@@ -23,7 +23,7 @@ export const SectionOne = styled.div`
     align-items: flex-end;
     justify-content: flex-end;
     width: 85%;
-    .btn {
+    a {
       margin: 0 0.5rem;
     }
   }

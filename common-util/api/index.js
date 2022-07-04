@@ -79,8 +79,7 @@ export const getTeam = async () => {
 // ----------- PRESS -----------
 export const getPress = async () => {
   const params = {
-    sort: ['datePublished:asc'],
-    _limit: 5,
+    sort: ['datePublished:desc'],
     populate: '*',
   };
   const json = await apiCall('media-appearances', params);
@@ -100,7 +99,7 @@ export const getEachPress = async id => {
 // ----------- BLOGS -----------
 export const getBlogs = async () => {
   const params = {
-    sort: ['datePublished:asc'],
+    sort: ['datePublished:desc'],
     populate: '*',
   };
   const json = await apiCall('blog-posts', params);

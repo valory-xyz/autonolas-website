@@ -44,7 +44,9 @@ const EachBlog = ({ blog }) => {
           </div>
 
           <Link href="/blog" passHref>
-            <Button title="BACK TO BLOG" as="a" />
+            <a>
+              <Button title="BACK TO BLOG" />
+            </a>
           </Link>
         </div>
       </div>

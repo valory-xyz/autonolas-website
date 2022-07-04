@@ -28,7 +28,7 @@ const EachEducationArticle = ({ educationArticle }) => {
         <Header className="header" title={title} />
 
         <div className="each-content-details">
-          <div className="subtitle">
+          <div className="date-published">
             Read time:&nbsp;
             {readTime}
             &nbsp;
@@ -39,7 +39,9 @@ const EachEducationArticle = ({ educationArticle }) => {
           </div>
 
           <Link href="/education-articles" passHref>
-            <Button title="BACK TO ARTICLES" as="a" />
+            <a>
+              <Button title="BACK TO ARTICLES" />
+            </a>
           </Link>
         </div>
       </div>

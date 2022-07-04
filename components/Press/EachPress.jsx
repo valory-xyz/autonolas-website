@@ -40,7 +40,9 @@ const EachPress = ({ press }) => {
           </div>
 
           <Link href="/press" passHref>
-            <Button title="BACK TO PRESS" as="a" />
+            <a>
+              <Button title="BACK TO PRESS" />
+            </a>
           </Link>
         </div>
       </div>

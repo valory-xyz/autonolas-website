@@ -8,7 +8,7 @@ import EachTeamMate from './EachTeamMate';
 import { SectionEleven, TeamFooter } from './styles';
 
 const Team = ({ cofounders, foundingTeam }) => (
-  <SectionEleven className="section section-team" id="team">
+  <SectionEleven className="section section-team" id="join">
     <Header className="header" title="Core Team" />
     <Description type={2} title="CO-FOUNDERS" />
 

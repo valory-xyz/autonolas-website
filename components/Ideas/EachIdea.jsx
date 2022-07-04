@@ -36,7 +36,9 @@ const EachIdea = ({ idea }) => {
           </div>
 
           <Link href="/ideas" passHref>
-            <Button title="BACK TO IDEAS" as="a" />
+            <a>
+              <Button title="BACK TO IDEAS" />
+            </a>
           </Link>
         </div>
       </div>

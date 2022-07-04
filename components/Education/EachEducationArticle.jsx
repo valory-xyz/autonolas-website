@@ -32,7 +32,7 @@ const EachEducationArticle = ({ educationArticle }) => {
             Read time:&nbsp;
             {readTime}
             &nbsp;
-            {readTime === 1 ? 'MIN' : 'MINS'}
+            {readTime === 1 ? 'min' : 'mins'}
           </div>
           <div className="body">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>

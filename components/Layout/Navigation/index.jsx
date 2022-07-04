@@ -61,7 +61,7 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 const startBuildingBtn = (
   <Link href="#build">
     <a href="#build">
-      <Button type="purple" title="Start Building />" />
+      <Button type="purple" title="Start Building" />
     </a>
   </Link>
 );

@@ -14,7 +14,7 @@ const LIST = [
     imageUrl: 'pioneer',
     heading: 'BECOME A PIONEER',
     subHeading:
-      'Get up to speed with cutting-edge tech stack, and make a name driving autonomy forward.',
+      'Get up to speed with our cutting-edge tech stack, and make a name driving autonomy forward.',
   },
   {
     imageUrl: 'business-model',
@@ -28,7 +28,7 @@ const WhyBuildOnAutonolas = () => (
   <SectionSix className="section" id="build">
     <Description type={2} title="BUILD" />
 
-    <Header className="header" title="Why build on Autonolas?" />
+    <Header className="header center" title="Why build on Autonolas?" />
 
     <Container>
       {LIST.map(({ imageUrl, heading, subHeading }, index) => (

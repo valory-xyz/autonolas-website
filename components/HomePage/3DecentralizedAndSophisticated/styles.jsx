@@ -30,7 +30,7 @@ const ballAndCrossIcon = css`
 export const AutonolasService = styled.div`
   width: 48px;
   height: 48px;
-  margin-left: 1rem;
+  margin: 0 auto;
   ${backgroundImage('/images/3Decentralized/tick.png')}
   ${MEDIA_QUERY.tablet} {
     width: 36px;
@@ -75,7 +75,6 @@ export const ComparisonTable = styled.div`
         &:nth-child(2) {
           font-weight: bold;
           width: 15%;
-          text-align: left;
           color: ${COLOR.PURPLE};
         }
         &:nth-child(3) {
@@ -94,15 +93,13 @@ export const ComparisonTable = styled.div`
         }
         td {
           font-weight: bold;
-          &:not(:first-child) {
-            text-align: center;
-          }
+          border-bottom: 1px solid ${COLOR.BORDER_GREY};
+          text-align: center;
           img {
             width: 48px;
             height: 48px;
           }
           &:nth-child(2) {
-            text-align: left;
             color: ${COLOR.PURPLE};
           }
         }

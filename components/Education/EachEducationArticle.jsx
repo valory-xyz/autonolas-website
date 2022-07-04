@@ -12,7 +12,7 @@ import { EachEducationArticleContainer } from './styles';
 const EachEducationArticle = ({ educationArticle }) => {
   const { attributes } = educationArticle;
   const {
-    title, headerImage, datePublished, body,
+    title, headerImage, readTime, body,
   } = attributes || {};
   const imageUrl = get(headerImage, 'data.attributes.url') || '';
 
@@ -29,9 +29,10 @@ const EachEducationArticle = ({ educationArticle }) => {
         <Header className="header" title={title} />
 
         <div className="each-content-details">
-          <div className="subtitle">{title}</div>
-          <div className="date-published">
-            {getFormattedDate(datePublished)}
+          <div className="subtitle">
+            Read time: {readTime}
+            &nbsp;
+            {readTime === 1 ? 'MIN' : 'MINS'}
           </div>
           <div className="body">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>

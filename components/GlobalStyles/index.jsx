@@ -117,7 +117,7 @@ export const TwoColumnContents = styled.div`
       white-space: nowrap;
     }
     .sub-text {
-      font-size: 12px;
+      font-size: 18px;
       margin: 1rem 0;
       text-transform: uppercase;
     }
@@ -189,7 +189,7 @@ export const ThreeColumnContents = styled.div`
       white-space: nowrap;
     }
     .sub-text {
-      font-size: 12px;
+      font-size: 18px;
       margin: 1rem 0;
       text-transform: uppercase;
     }

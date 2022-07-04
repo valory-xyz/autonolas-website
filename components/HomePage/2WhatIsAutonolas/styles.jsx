@@ -28,14 +28,11 @@ export const Content = styled.div`
   .column {
     max-width: 260px;
     .img-container {
-      min-height: 180px;
+      min-height: 190px;
       text-align: center;
-      img {
-        margin-left: 1rem;
-      }
     }
     .header-text {
-      margin-top: 4rem;
+      margin-top: 1rem;
       margin-bottom: 1rem;
       font-size: 34px;
       font-family: "manrope__bold", sans-serif;
@@ -95,6 +92,7 @@ export const Content = styled.div`
       max-width: 100% !important;
       align-items: flex-start;
       margin-bottom: 2rem;
+      text-align: center;
       .img-container {
         width: 50%;
         min-height: auto;

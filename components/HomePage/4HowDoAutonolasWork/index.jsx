@@ -18,9 +18,7 @@ const WhatAreWeBuilding = () => (
       className="header"
       title={(
         <>
-          How&nbsp;
-          <span className="sub-text">do&nbsp;</span>
-          autonomous
+          How&nbsp;do&nbsp;autonomous
           <br />
           services work?
         </>

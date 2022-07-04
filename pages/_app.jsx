@@ -8,6 +8,11 @@ import Layout from 'components/Layout';
 import initStore from '../store';
 import './styles.less';
 
+const siteTitle = "Autonolas | Build Autonomous Services"
+const siteDescription = "Build, run and own autonomous services that power next-gen apps for crypto users and DAOs."
+const siteUrl = "https://autonolas.network"
+const siteMetatagImage = "/images/site-metadata/site-metatag.png"
+
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     const pageProps = Component.getInitialProps
@@ -40,10 +45,37 @@ class MyApp extends App {
           `}
         </style>
         <Head>
-          <title>Autonolas | Build Autonomous Services</title>
+          <title>{siteTitle}</title>
           <meta
             name="description"
-            content="Build, run and own autonomous services that power next-gen apps for crypto users and DAOs."
+            content={siteDescription}
+          />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={siteUrl} />
+          <meta property="og:title" content={siteTitle} />
+          <meta
+            property="og:description"
+            content={siteDescription}
+          />
+          <meta
+            property="og:image"
+            content={siteMetatagImage}
+          />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content={siteUrl}
+          />
+          <meta property="twitter:title" content={siteDescription} />
+          <meta
+            property="twitter:description"
+            content={siteDescription}
+          />
+          <meta
+            property="twitter:image"
+            content={siteMetatagImage}
           />
         </Head>
         <Layout>

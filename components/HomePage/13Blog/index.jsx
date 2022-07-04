@@ -53,7 +53,7 @@ const PressAndBlogs = ({ blogs }) => {
   return (
     <SectionBlog className="section section-blog" id="blog">
       <HeaderAndAction className="xs-wrap">
-        <Header className="header" title="From the blogs" />
+        <Header className="header" title="From the blog" />
         <Button
           title="See all"
           type="link-arrow"

@@ -78,7 +78,8 @@ const WhyAutonolas = () => (
       title={(
         <>
           Decentralized&nbsp;
-          <span className="sub-text">and</span>
+          <br />
+          <span className="sub-text">and</span>&nbsp;
           <span className="ib">Sophisticated</span>
         </>
       )}
@@ -86,8 +87,8 @@ const WhyAutonolas = () => (
 
     <Description
       type={2}
-      title="Software services you can build and own. They have the best of both smart
-    contracts and web 2 apps."
+      title="Software services you can build and own. Build with the best of smart
+    contracts and Web2 apps."
       className="sub-content"
     />
 
@@ -101,7 +102,7 @@ const WhyAutonolas = () => (
             <th>Web Services</th>
             <th>
               Custom Decentralized
-              <div>Services (E.G. Oracles)</div>
+              <div>Services (e.g. oracles)</div>
             </th>
           </tr>
         </thead>

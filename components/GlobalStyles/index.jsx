@@ -50,7 +50,11 @@ const GlobalStyle = createGlobalStyle`
   .background-gradient {
     ${backgroundGradient};
   }
-  
+  .twitter-tweet {
+    border-left: 3px solid ${COLOR.GREY_1};
+    margin-left: 0;
+    padding-left: 2rem;
+  }
 `;
 
 export default GlobalStyle;

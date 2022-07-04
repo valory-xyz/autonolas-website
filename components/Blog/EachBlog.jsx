@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import get from 'lodash/get';
 import Link from 'next/link';
 import Button from 'common-util/Button';
@@ -33,7 +35,12 @@ const EachBlog = ({ blog }) => {
             {getFormattedDate(datePublished)}
           </div>
           <div className="body">
-            <ReactMarkdown>{body}</ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+            >
+              {body}
+            </ReactMarkdown>
           </div>
 
           <Link href="/blog" passHref>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import get from 'lodash/get';
 import Link from 'next/link';
 import Button from 'common-util/Button';
@@ -35,7 +36,7 @@ const EachPress = ({ press }) => {
 
           {/* TODO: remove? */}
           <div className="body">
-            <ReactMarkdown>{type}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{type}</ReactMarkdown>
           </div>
 
           <Link href="/press" passHref>

@@ -6,7 +6,17 @@ import { SectionExperience } from './styles';
 
 const Experience = () => (
   <SectionExperience className="section section-experience" id="experience">
-    <Description type={2} title="EXPERIENCE" className="desc-1" />
+    <div className="header-row">
+      <img src="/images/14Experience/alter-orbis-logo.png" alt="Alter Orbis" className="img-1" />
+
+      <Description type={2} title="EXPERIENCE" className="desc-1" />
+
+      <img
+        src="/images/14Experience/alter-orbis-symbols.png"
+        alt="Alter Orbis Symbol"
+        className="img-2"
+      />
+    </div>
     <Header className="header" title="Enter Alter Orbis" />
 
     <Description type={2} title="Immerse yourself in Autonolas's lore." />

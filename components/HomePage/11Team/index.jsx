@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
@@ -13,15 +14,18 @@ const Team = ({ cofounders, foundingTeam }) => (
     <Description type={2} title="CO-FOUNDERS" />
 
     <ThreeColumnContents className="team-column-contents">
-      {cofounders.map(({ id, attributes }) => <EachTeamMate key={`team-mate-${id}`} member={attributes} />)}
+      {cofounders.map(({ id, attributes }) => (
+        <EachTeamMate key={`team-mate-${id}`} member={attributes} />
+      ))}
     </ThreeColumnContents>
 
     <TeamFooter>
-      <Button
-        title={`See full team (${foundingTeam.length + cofounders.length})`}
-        type="link-arrow"
-        onClick={() => window.open(`${window.location.origin}/team`)}
-      />
+      <a href={`/${PATHS.TEAM}`} className="no-underline">
+        <Button
+          title={`See full team (${foundingTeam.length + cofounders.length})`}
+          type="link-arrow"
+        />
+      </a>
 
       <Button
         title="See job openings"

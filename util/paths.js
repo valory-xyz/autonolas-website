@@ -3,6 +3,7 @@ export const PATHS = {
   IDEAS: 'ideas',
   PRESS: 'press',
   BLOG: 'blog',
+  TEAM: 'team',
 };
 
 export default PATHS;

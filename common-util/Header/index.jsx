@@ -7,7 +7,7 @@ const H2 = styled.h2`
   margin: 0;
   font-size: 120px;
   line-height: 1;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   &.center {
     text-align: center;
   }
@@ -26,6 +26,7 @@ const H2 = styled.h2`
 
   ${MEDIA_QUERY.tablet} {
     font-size: 54px;
+    word-wrap: initial;
   }
 `;
 

@@ -14,9 +14,12 @@ const Team = ({ cofounders, foundingTeam }) => (
     <Description type={2} title="CO-FOUNDERS" />
 
     <ThreeColumnContents className="team-column-contents">
-      {cofounders.map(({ id, attributes }) => (
-        <EachTeamMate key={`team-mate-${id}`} member={attributes} />
-      ))}
+      {cofounders
+        .sort((a, b) => a.id - b.id)
+        .map(({ id, attributes }) => (
+          <EachTeamMate key={`team-mate-${id}`} member={attributes} />
+        ))
+      }
     </ThreeColumnContents>
 
     <TeamFooter>

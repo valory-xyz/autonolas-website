@@ -6,6 +6,9 @@ export const SectionEleven = styled.div`
   .description {
     margin: -1rem 0 5rem 0;
   }
+  .header {
+    margin-top: 2rem;
+  }
   ${MEDIA_QUERY.laptop} {
   }
 `;

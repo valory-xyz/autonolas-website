@@ -82,6 +82,7 @@ export const HeaderAndAction = styled.div`
   ${MEDIA_QUERY.mobileL} {
     &.xs-wrap {
       flex-direction: column;
+      align-items: flex-start;
       .btn {
         padding-left: 0;
       }
@@ -96,6 +97,13 @@ export const SeeAllBtnRow = styled.div`
 
   ${MEDIA_QUERY.tablet} {
     margin-bottom: 0rem;
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    justify-content: flex-start;
+    .btn {
+      padding: 0;
+    }
   }
 `;
 

@@ -56,6 +56,9 @@ export const Container = styled.div`
     }
     &-details {
       max-width: 740px;
+      img {
+        max-width: 100%;
+      }
       .subtitle {
         font-size: 22px;
         margin-top: 2rem;

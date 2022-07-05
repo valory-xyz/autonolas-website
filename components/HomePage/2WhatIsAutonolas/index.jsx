@@ -7,7 +7,7 @@ const LIST = [
   {
     imageUrl: 'open-source',
     heading: 'OPEN-SOURCE FRAMEWORK',
-    subHeading: 'Django for building autonomous services',
+    subHeading: 'Ruby on Rails for building autonomous services',
   },
   {
     imageUrl: 'on-chain-protocol',

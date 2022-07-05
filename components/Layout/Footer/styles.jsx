@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY, COLOR } from 'util/theme';
 
+
 export const FooterContainer = styled.div`
   .header {
     margin-bottom: 1rem !important;

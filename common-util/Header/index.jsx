@@ -28,6 +28,11 @@ const H2 = styled.h2`
     font-size: 54px;
     word-wrap: initial;
   }
+
+  ${MEDIA_QUERY.mobileL} {
+    font-size: 44px;
+    word-wrap: initial;
+  }
 `;
 
 const Header = ({ title, ...rest }) => <H2 {...rest}>{title}</H2>;

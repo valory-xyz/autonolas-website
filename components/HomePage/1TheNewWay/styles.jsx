@@ -78,7 +78,7 @@ export const SectionOne = styled.div`
       left: 50%;
       transform: translate(-50%, 0px);
       .btn {
-        width: 60%;
+        width: 100%;
         text-align: center;
         &:nth-child(1) {
           margin-bottom: 1rem;

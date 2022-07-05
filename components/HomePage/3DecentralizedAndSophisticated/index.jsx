@@ -60,8 +60,8 @@ const DATA_ROWS = [
     decentralizedService: true,
   },
   {
-    id: 'continous-on',
-    name: 'CONTINOUS / ALWAYS ON',
+    id: 'continuous-on',
+    name: 'CONTINUOUS / ALWAYS ON',
     smartContractService: false,
     webServices: true,
     decentralizedService: true,

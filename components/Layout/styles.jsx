@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { MEDIA_QUERY, COLOR } from 'util/theme';
+import { MEDIA_QUERY } from 'util/theme';
 import { containImage, backgroundGradient } from 'components/GlobalStyles';
 
 export const widths = {
@@ -56,6 +56,9 @@ export const Container = styled.div`
     }
     &-details {
       max-width: 740px;
+      img {
+        max-width: 100%;
+      }
       .subtitle {
         font-size: 22px;
         margin-top: 2rem;

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
+import Markdown from 'common-util/Markdown';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { getFormattedDate } from 'common-util/functions';
@@ -36,7 +35,7 @@ const EachPress = ({ press }) => {
 
           {/* TODO: remove? */}
           <div className="body">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{type}</ReactMarkdown>
+            <Markdown>{type}</Markdown>
           </div>
 
           <a href={`/${PATHS.PRESS}`}>

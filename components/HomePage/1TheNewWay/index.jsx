@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
-import { SectionOne, DescActionButtons } from './styles';
 import { SITE_DESCRIPTION, SITE_TAGLINE } from 'common-util/site-constants';
+import { SectionOne, DescActionButtons } from './styles';
 
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
   <SectionOne

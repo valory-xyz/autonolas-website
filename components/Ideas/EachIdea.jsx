@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
+import Markdown from 'common-util/Markdown';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import Tag from 'common-util/Tag';
@@ -32,7 +31,7 @@ const EachIdea = ({ idea }) => {
           <Tag>{type}</Tag>
           <div className="subtitle">{description}</div>
           <div className="body">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
+            <Markdown>{body}</Markdown>
           </div>
 
           <a href={`/${PATHS.IDEAS}`}>

@@ -70,6 +70,10 @@ export const Hamburger = styled.div`
   display: flex;
   flex-direction: column;
   ${openCloseText}
+
+  ${MEDIA_QUERY.mobileS} {
+    font-size: 16px;
+  }
 `;
 
 export const NavMenu = styled.ul`
@@ -191,6 +195,16 @@ export const Container = styled.header`
         }
         .btn {
           font-size: 13px;
+        }
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileS} {
+    .navbar {
+      &.mobile {
+        .nav-logo svg {
+          width: 70px;
         }
       }
     }

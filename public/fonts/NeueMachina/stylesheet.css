@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'neuemachina__black';
+  src: url('NeueMachina-Black.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'neuemachina__bold';
+  src: url('NeueMachina-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'neuemachina__light';
+  src: url('NeueMachina-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'neuemachina__medium';
+  src: url('NeueMachina-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'neuemachina__regular';
+  src: url('NeueMachina-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'neuemachina__ultrabold';
+  src: url('NeueMachina-Ultrabold.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'neuemachina__ultralight';
+  src: url('NeueMachina-Ultralight.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

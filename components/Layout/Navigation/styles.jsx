@@ -1,17 +1,27 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { COLOR, TRANSITION, MEDIA_QUERY } from 'util/theme';
+
+const openCloseText = css`
+  font-weight: bold;
+  font-size: 22px;
+`;
+
+const mobileCloseMenuHeight = '96px';
 
 export const DesktopNavBar = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   .nav-item-logo {
-    min-width: 260px;
     display: flex;
     justify-content: center;
     img {
       width: 104px;
     }
+  }
+  .btn {
+    min-width: 212px;
+    font-size: 14px;
   }
 
   ${MEDIA_QUERY.laptop} {
@@ -38,38 +48,44 @@ export const MobileNavigationContainer = styled.div`
   }
 `;
 
-export const Hamburger = styled.div`
+export const MobileCloseMenu = styled.div`
   position: absolute;
-  right: 32px;
-  top: 24px;
+  height: ${mobileCloseMenuHeight};
   display: flex;
-  flex-direction: column;
-  span {
-    width: 60px;
-    height: 8px;
-    background-color: ${COLOR.BLACK};
-    display: inline-block;
-    transition: ${TRANSITION.all};
-    border-radius: 4px;
-    &:nth-child(1) {
-      margin-bottom: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  .close-menu {
+    &-logo {
+      height: 76px;
+    }
+    &-text {
+      ${openCloseText}
     }
   }
-  &:focus {
-    outline: none;
+`;
+
+export const Hamburger = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${openCloseText}
+
+  ${MEDIA_QUERY.mobileS} {
+    font-size: 16px;
   }
 `;
 
 export const NavMenu = styled.ul`
+  top: ${mobileCloseMenuHeight};
   width: 100%;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   .nav-item {
     .nav-link {
-      font-size: 14px;
       color: ${COLOR.BLACK};
       text-transform: uppercase;
       &:hover {
@@ -116,13 +132,16 @@ export const Container = styled.header`
   ${MEDIA_QUERY.tablet} {
     z-index: 2;
     .navbar {
-      padding: 8px 16px;
+      padding: 8px;
       &.is-open-for-mobile {
-        background-image: url("/images/birth-place/background.jpg");
-        height: calc(100vh - ${({ navHeight }) => `${navHeight}px`});
+        flex-direction: column !important;
+        background: ${COLOR.LIGHT_BLUE};
+        height: 100vh;
       }
       &.mobile {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         ${NavMenu} {
           position: relative;
           left: -100%;
@@ -140,8 +159,9 @@ export const Container = styled.header`
             line-height: normal;
             margin: 0 16px;
             .nav-link {
-              font-size: 24px;
-              text-transform: none;
+              font-size: 72px;
+              font-weight: bold;
+              text-transform: capitalize;
             }
           }
         }
@@ -155,6 +175,36 @@ export const Container = styled.header`
           a {
             margin: 0 !important;
           }
+        }
+        .btn {
+          font-size: inherit;
+          padding: 0.75rem 1rem;
+        }
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileM} {
+    .navbar {
+      &.mobile {
+        ${NavMenu} {
+          max-height: 420px;
+        }
+        .nav-logo svg {
+          width: 90px;
+        }
+        .btn {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileS} {
+    .navbar {
+      &.mobile {
+        .nav-logo svg {
+          width: 70px;
         }
       }
     }

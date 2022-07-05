@@ -5,16 +5,33 @@ import { MEDIA_QUERY } from 'util/theme';
 
 const H2 = styled.h2`
   margin: 0;
-  font-size: 108px;
-  line-height: normal;
-  font-family: triakis__fontheavy, sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  overflow-wrap: break-word;
+  &.center {
+    text-align: center;
+  }
+  .sub-text {
+    display: inline-block;
+    font-family: "manrope__light", sans-serif;
+    font-weight: 500;
+  }
+  .ib {
+    display: inline-block;
+  }
 
   ${MEDIA_QUERY.laptop} {
-    font-size: 104px;
+    font-size: 94px;
   }
 
   ${MEDIA_QUERY.tablet} {
     font-size: 54px;
+    word-wrap: initial;
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    font-size: 44px;
+    word-wrap: initial;
   }
 `;
 

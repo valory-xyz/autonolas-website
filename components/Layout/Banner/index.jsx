@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { handleJoinDiscord } from 'common-util/functions';
 import { COLOR, FONT_SIZE, MEDIA_QUERY } from 'util/theme';
-import { useCheckMobileScreen } from 'common-util/hooks';
+import { useCheckMobileScreen } from 'common-util/hooks/useCheckMobileScreen';
 
 export const BannerContainer = styled.div`
   width: 100%;

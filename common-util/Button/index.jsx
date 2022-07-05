@@ -5,25 +5,18 @@ import { COLOR, FONT_SIZE, MEDIA_QUERY } from 'util/theme';
 
 export const Btn = styled.button`
   outline: none;
-  height: 64px;
-  width: 340px;
-  font-size: ${FONT_SIZE[26]};
+  font-size: ${FONT_SIZE[18]};
   text-transform: uppercase;
-  font-family: triakis__fontbold, sans-serif;
   transition: all 0.3s;
   line-height: normal;
-  padding-top: 10px;
-  clip-path: polygon(
-    20.6% 0%,
-    23.2% 13.6%,
-    78.7% 14.3%,
-    80.8% 0%,
-    96.5% 0%,
-    118% 100%,
-    3.1% 100%,
-    0% 85.7%,
-    0% 0%
-  );
+  padding: 0.75rem 2rem;
+  clip-path: none;
+  border-radius: 48px;
+  text-decoration: none;
+  &.mini {
+    padding: 0.35rem 1rem;
+    font-size: 12px;
+  }
   &:hover {
     cursor: pointer;
   }
@@ -35,54 +28,58 @@ export const Btn = styled.button`
   }
 
   ${MEDIA_QUERY.tablet} {
-    padding-top: 12px;
-    width: 100%;
     font-size: ${FONT_SIZE[22]};
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    width: 100%;
+    font-size: 18px;
   }
 
   ${({ type }) => {
     switch (type) {
-      case 'disabled':
+      case 'black':
         return `
-          border : 1px solid ${COLOR.GREY_1};
-          background-color: ${COLOR.GREY_1};
-          color: ${COLOR.BLACK};
-          &:hover {
-            cursor: not-allowed;
+          border: 1px solid ${COLOR.BLACK};
+          background-color: ${COLOR.BLACK};
+          color: ${COLOR.WHITE};
+          font-size: 20px;
+          &:hover, &:active {
+            background-color: ${COLOR.GREEN_2};
+            color: ${COLOR.BLACK};
+            border : 1px solid ${COLOR.GREEN_2};
           }
         `;
-      case 'invert':
+      case 'link-arrow':
         return `
-          border : 1px solid transparent;
-          background-color: ${COLOR.GREEN_2};
-          color: ${COLOR.BLACK};
-          &:hover {
-            border : 1px solid ${COLOR.BLACK};
-            background-color: ${COLOR.BLACK};
-            color: ${COLOR.GREEN_2};
-          }
-        `;
-      case 'outline':
-        return `
-          clip-path: none;
-          border : 1px solid ${COLOR.BLACK};
+          display: flex;
+          align-items: center;
+          border: 1px solid transparent;
           background-color: transparent;
           color: ${COLOR.BLACK};
-          &:hover {
-            background-color: ${COLOR.BLACK};
-            color: ${COLOR.GREEN_2};
+          text-transform: initial;
+          font-size: 24px;
+          img {
+            margin-left: 1rem;
+            width: 40px;
+          }
+          &:hover, &:active {
+            background-color: transparent;
+            color: ${COLOR.BLACK};
+            border: 1px solid transparent;
           }
         `;
       case 'primary':
+      case 'purple':
       default:
         return `
-          border : 1px solid ${COLOR.BLACK};
-          background-color: ${COLOR.BLACK};
-          color: ${COLOR.GREEN_2};
-          &:hover {
-            border : 1px solid ${COLOR.GREEN_2};
-            background-color: ${COLOR.GREEN_2};
+          border: 1px solid ${COLOR.PURPLE};
+          background-color: ${COLOR.PURPLE};
+          color: ${COLOR.WHITE};
+          &:hover, &:active {
+            background-color: ${COLOR.GREEN_1};
             color: ${COLOR.BLACK};
+            border : 1px solid ${COLOR.GREEN_1};
           }
         `;
     }
@@ -90,24 +87,32 @@ export const Btn = styled.button`
 `;
 
 const CustomButton = ({
-  title, type, className, ...rest
+  title, type, className, hasArrowSuffix, ...rest
 }) => {
   const clsName = `btn ${className || ''}`.trim();
 
   return (
-    <Btn type={type} className={clsName} {...rest}>
+    <Btn type={type} className={clsName} {...rest} hasArrowSuffix>
       {title}
+      {type === 'link-arrow' && (
+        <>
+          <img src="images/common/arrow.png" alt=" " loading="lazy" />
+        </>
+      )}
+      {hasArrowSuffix && ' →'}
     </Btn>
   );
 };
 
 CustomButton.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  type: PropTypes.oneOf(['disabled', 'primary', 'outline', 'invert']),
+  type: PropTypes.oneOf(['black', 'primary', 'purple', 'link-arrow']),
   className: PropTypes.string,
+  hasArrowSuffix: PropTypes.bool,
 };
 
 CustomButton.defaultProps = {
+  hasArrowSuffix: false,
   type: 'primary',
   className: '',
 };

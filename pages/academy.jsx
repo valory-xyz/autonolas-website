@@ -1,3 +1,3 @@
-import LearnToBuild from 'components/LearnToBuild';
+import AgentAcademy from 'components/AgentAcademy';
 
-export default LearnToBuild;
+export default AgentAcademy;

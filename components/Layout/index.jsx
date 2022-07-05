@@ -1,33 +1,25 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
 import { setNavigationToggle as setNavigationToggleFn } from 'store/navigation/actions';
-import JoinTheOlasTribe from '../HomePage/11JoinTheOlasTribe';
-import Banner from './Banner';
+import Footer from './Footer';
 import { LayoutGlobalStyle, Container } from './styles';
 
 const Navigation = dynamic(() => import('./Navigation'), {
   ssr: false,
 });
 
-const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => {
-  const router = useRouter();
-  const { pathname } = router;
-
-  return (
-    <Container data-testid="home-page">
-      {pathname === '/' && <Banner />}
-      <Navigation
-        isNavigationOpen={isNavigationOpen}
-        setNavigationToggle={setNavigationToggle}
-      />
-      <>{children}</>
-      <LayoutGlobalStyle isNavigationOpen={isNavigationOpen} />
-      <JoinTheOlasTribe />
-    </Container>
-  );
-};
+const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => (
+  <Container data-testid="home-page">
+    <Navigation
+      isNavigationOpen={isNavigationOpen}
+      setNavigationToggle={setNavigationToggle}
+    />
+    <>{children}</>
+    <LayoutGlobalStyle isNavigationOpen={isNavigationOpen} />
+    <Footer />
+  </Container>
+);
 
 NavigationBar.propTypes = {
   children: PropTypes.element,

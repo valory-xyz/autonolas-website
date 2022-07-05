@@ -1,27 +1,10 @@
 export const NAV_1 = [
-  { name: 'Why?', id: 'why-autonolas' },
-  { name: 'What?', id: 'what-is-autonolas' },
-  { name: 'Developers', id: 'developers' },
-  { name: 'Community', id: 'community' },
-];
-
-export const NAV_2 = [
-  { name: 'Product', id: 'product' },
-  { name: 'Lore', id: 'lore' },
-  { name: 'About', id: 'about' },
-  {
-    name: 'Blog',
-    id: 'blog-redirect',
-    type: 'link',
-    url: 'https://autonolas.medium.com/',
-  },
-  {
-    name: '',
-    id: 'twitter-redirect',
-    type: 'icon',
-    iconName: 'twitter',
-    url: 'https://twitter.com/autonolas',
-  },
+  { name: 'Learn', id: 'learn' },
+  { name: 'Build', id: 'build' },
+  { name: 'Mission', id: 'mission' },
+  // { name: 'Use', id: 'use' },
+  { name: 'Team', id: 'team' },
+  { name: 'Blog', id: 'blog' },
 ];
 
 export const NAVIGATION_SOCIALS = [

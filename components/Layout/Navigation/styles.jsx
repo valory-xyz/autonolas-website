@@ -186,8 +186,11 @@ export const Container = styled.header`
         ${NavMenu} {
           max-height: 420px;
         }
+        .nav-logo svg {
+          width: 90px;
+        }
         .btn {
-          display: none;
+          font-size: 13px;
         }
       }
     }

@@ -18,8 +18,7 @@ const Team = ({ cofounders, foundingTeam }) => (
         .sort((a, b) => a.id - b.id)
         .map(({ id, attributes }) => (
           <EachTeamMate key={`team-mate-${id}`} member={attributes} />
-        ))
-      }
+        ))}
     </ThreeColumnContents>
 
     <TeamFooter>

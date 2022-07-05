@@ -107,6 +107,7 @@ const Footer = () => (
                 {getAnchor('PRESS', `/${PATHS.PRESS}`, { isExternal: false })}
                 {getAnchor('TWITTER', 'https://twitter.com/autonolas')}
                 {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ')}
+                {getAnchor('GITHUB', 'https://github.com/valory-xyz')}
               </div>
             </td>
           </tr>

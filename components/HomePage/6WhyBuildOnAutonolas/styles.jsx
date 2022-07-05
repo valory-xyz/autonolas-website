@@ -25,6 +25,12 @@ export const SectionSix = styled.div`
       text-align: left;
     }
   }
+
+  ${MEDIA_QUERY.mobileL} {
+    .header.center {
+      text-align: left;
+    }
+  }
 `;
 
 export const Container = styled(Content)`

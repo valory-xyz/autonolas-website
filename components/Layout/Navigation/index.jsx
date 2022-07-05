@@ -161,7 +161,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
               <>
                 <MobileNavigationContainer>
                   <a
-                    href="#banner"
+                    href="/"
                     className="nav-logo"
                     aria-label="Autonolas logo"
                   >

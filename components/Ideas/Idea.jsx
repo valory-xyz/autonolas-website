@@ -51,7 +51,7 @@ const EachIdea = ({ idea }) => {
             <SubHeader>Monetisation Options</SubHeader>
             <p className="monetisation">{monetisation}</p>
 
-            <SubHeader>{`Imprementation Blueprints (${blueprints.length})`}</SubHeader>
+            <SubHeader>{`Implementation Blueprints (${blueprints.length})`}</SubHeader>
             <div className="blueprints">
               {blueprints.map(({ id, attributes: blueprint }) => {
                 const {

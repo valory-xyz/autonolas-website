@@ -6,25 +6,13 @@ import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import Tag from 'common-util/Tag';
-import { EachIdeaContainer, SubHeader, BluePrint } from './styles';
-
-// TODO: remove
-const LIST = [
-  {
-    id: 1,
-    distribution: 'A-1',
-    implementation_plan: 'B-1',
-    name: 'C-1',
-    nickname: 'D-1',
-  },
-  {
-    id: 2,
-    distribution: 'A-2',
-    implementation_plan: 'B-2',
-    name: 'C-2',
-    nickname: 'D-2',
-  },
-];
+import {
+  EachIdeaContainer,
+  SubHeader,
+  BluePrint,
+  BenefitName,
+  BenefitDistribution,
+} from './styles';
 
 const EachIdea = ({ idea }) => {
   const { attributes } = idea;
@@ -34,10 +22,11 @@ const EachIdea = ({ idea }) => {
     image,
     type,
     benefit_to_dao,
-    blueprints = LIST,
+    blueprints: blueprintsData,
     monetisation,
   } = attributes || {};
   const imageUrl = get(image, 'data[0].attributes.url') || '';
+  const blueprints = get(blueprintsData, 'data') || [];
 
   return (
     <EachIdeaContainer className="each-content">
@@ -54,7 +43,7 @@ const EachIdea = ({ idea }) => {
 
         <div className="each-content-details">
           <Tag>{type}</Tag>
-          <div className="subtitle">{description}</div>
+          <div className="subtitle subtitle-desc">{description}</div>
           <div className="body">
             <SubHeader>Benefit to DAOs</SubHeader>
             <p>{benefit_to_dao}</p>
@@ -64,20 +53,18 @@ const EachIdea = ({ idea }) => {
 
             <SubHeader>{`Imprementation Blueprints (${blueprints.length})`}</SubHeader>
             <div className="blueprints">
-              {blueprints.map(blueprint => {
+              {blueprints.map(({ id, attributes: blueprint }) => {
                 const {
-                  distribution,
-                  implementation_plan,
-                  id,
-                  name,
-                  nickname,
+                  distribution, implementation_plan, name, nickname,
                 } = blueprint || {};
                 return (
                   <BluePrint key={`blueprint-${id}`}>
-                    <p>{distribution}</p>
-                    <p>{implementation_plan}</p>
-                    <p>{name}</p>
+                    <BenefitName>{name}</BenefitName>
                     <p>{nickname}</p>
+                    <p>{implementation_plan}</p>
+
+                    <BenefitDistribution>Distribution</BenefitDistribution>
+                    <p>{distribution}</p>
                   </BluePrint>
                 );
               })}

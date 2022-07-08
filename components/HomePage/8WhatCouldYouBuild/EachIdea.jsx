@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
@@ -8,9 +9,15 @@ import PATHS from 'util/paths';
 const EachIdea = ({ idea }) => {
   const { id, attributes } = idea || {};
   const {
-    image, type, blueprint, description, category,
+    image,
+    type,
+    blueprints: blueprintsData,
+    description,
+    category,
+    benefit_to_dao,
   } = attributes || {};
   const imageUrl = get(image, 'data[0].attributes.url') || '';
+  const blueprints = get(blueprintsData, 'data') || [];
 
   return (
     <div className="column">
@@ -22,16 +29,27 @@ const EachIdea = ({ idea }) => {
       />
       <Tag>{type}</Tag>
 
-      {/* TODO: ask Oak */}
       <div className="header-text">{category}</div>
       <div className="desc">{description}</div>
       <div className="sub-text">
-        {`${(blueprint || []).length} IMPLEMENTATION BLUEPRINTS`}
+        {`${blueprints.length} IMPLEMENTATION BLUEPRINT${
+          blueprints.length === 1 ? '' : 'S'
+        }`}
       </div>
 
-      <a href={`/${PATHS.IDEAS}/${id}`}>
-        <Button title="LEARN MORE" type="black" className="mini" />
-      </a>
+      {benefit_to_dao ? (
+        <a href={`/${PATHS.IDEAS}/${id}`}>
+          <Button title="LEARN MORE" type="black" className="mini" />
+        </a>
+      ) : (
+        <a
+          href="mailto:bd@valory.xyz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button title="REQUEST DETAILS" type="black" className="mini" />
+        </a>
+      )}
     </div>
   );
 };

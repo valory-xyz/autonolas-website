@@ -19,8 +19,8 @@ const WhatCouldYouBuild = ({ ideas }) => (
       title={(
         <>
           What could&nbsp;
-          <span className="sub-text">you</span>
-          &nbsp;build?
+          <span className="sub-text">you&nbsp;</span>
+          build?
         </>
       )}
     />

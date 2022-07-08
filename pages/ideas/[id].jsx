@@ -1,5 +1,5 @@
 import { get } from 'lodash';
-import EachIdea from 'components/Ideas/EachIdea';
+import EachIdea from 'components/Ideas/Idea';
 import { getIdea } from 'common-util/api';
 import { serverRedirectToError } from 'common-util/functions';
 

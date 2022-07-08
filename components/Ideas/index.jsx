@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import get from 'lodash/get';
-import Button from 'common-util/Button';
 import Header from 'common-util/Header';
-import { getFormattedDate } from 'common-util/functions';
+import EachIdea from 'components/HomePage/8WhatCouldYouBuild/EachIdea';
 import { TwoColumnContents } from 'components/GlobalStyles';
 import { IdeaContainer } from './styles';
 
@@ -14,32 +12,9 @@ const Ideas = ({ ideas }) => (
     </IdeaContainer>
 
     <TwoColumnContents className="section">
-      {ideas.map(({ id, attributes }, index) => {
-        const {
-          title, headerImage, subtitle, datePublished,
-        } = attributes || {};
-        const imageUrl = get(headerImage, 'data[0].attributes.url') || '';
-
-        return (
-          <div key={`idea-${id}`} className={`column column-${index + 1}`}>
-            <div
-              className="img-container"
-              style={{
-                backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
-              }}
-            />
-            <div className="header-text">{title}</div>
-            <div className="subtitle">{subtitle}</div>
-            <div className="date-published">
-              {getFormattedDate(datePublished)}
-            </div>
-
-            <a href={`/ideas/${id}`}>
-              <Button title="LEARN MORE" type="black" className="mini" />
-            </a>
-          </div>
-        );
-      })}
+      {ideas.map(idea => (
+        <EachIdea idea={idea} key={`idea${idea.id}`} />
+      ))}
     </TwoColumnContents>
   </>
 );

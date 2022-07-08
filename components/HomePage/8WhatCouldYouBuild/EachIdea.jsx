@@ -5,15 +5,14 @@ import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
 import PATHS from 'util/paths';
 
-const EachPress = ({ press }) => {
-  const { id, attributes } = press || {};
+const EachIdea = ({ idea }) => {
+  const { id, attributes } = idea || {};
   const {
-    title, thumbnail, type, publisher,
+    image, type, blueprint, description, category,
   } = attributes || {};
-  const imageUrl = get(thumbnail, 'data.attributes.url') || '';
+  const imageUrl = get(image, 'data[0].attributes.url') || '';
 
   return (
-
     <div className="column">
       <div
         className="img-container"
@@ -22,18 +21,23 @@ const EachPress = ({ press }) => {
         }}
       />
       <Tag>{type}</Tag>
-      <div className="header-text">{title}</div>
-      <div className="subtitle">{publisher}</div>
 
-      <a href={`/${PATHS.PRESS}/${id}`}>
+      {/* TODO: ask Oak */}
+      <div className="header-text">{category}</div>
+      <div className="desc">{description}</div>
+      <div className="sub-text">
+        {`${(blueprint || []).length} IMPLEMENTATION BLUEPRINTS`}
+      </div>
+
+      <a href={`/${PATHS.IDEAS}/${id}`}>
         <Button title="LEARN MORE" type="black" className="mini" />
       </a>
     </div>
   );
 };
 
-EachPress.propTypes = {
-  press: PropTypes.instanceOf(Object).isRequired,
+EachIdea.propTypes = {
+  idea: PropTypes.instanceOf(Object).isRequired,
 };
 
-export default EachPress;
+export default EachIdea;

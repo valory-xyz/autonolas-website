@@ -2,7 +2,12 @@ import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import LIST from './constants';
 import {
-  AcademyContainer, Container, DoThisTask, Hr, ModulesFinished, VideoTable,
+  AcademyContainer,
+  Container,
+  DoThisTask,
+  Hr,
+  ModulesFinished,
+  VideoTable,
 } from './styles';
 
 const AgentAcademy = () => (
@@ -16,7 +21,7 @@ const AgentAcademy = () => (
             <br />
             Education Track
           </>
-)}
+        )}
       />
     </AcademyContainer>
 
@@ -37,34 +42,32 @@ const AgentAcademy = () => (
                 </tr>
               </thead>
               <tbody>
-                {subList.map(
-                  ({
-                    no, title, videoLink, length, slideLink,
-                  }) => (
-                    <tr key={`${id}-${no}`}>
-                      <td>{no}</td>
-                      <td>
-                        <a
-                          href={videoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {title}
-                        </a>
-                      </td>
-                      <td>{length}</td>
-                      <td>
-                        <a
-                          href={slideLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Slides
-                        </a>
-                      </td>
-                    </tr>
-                  ),
-                )}
+                {subList.map(({
+                  no, title, videoLink, length, slideLink,
+                }) => (
+                  <tr key={`${id}-${no}`}>
+                    <td>{no}</td>
+                    <td>
+                      <a
+                        href={videoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {title}
+                      </a>
+                    </td>
+                    <td>{length}</td>
+                    <td>
+                      <a
+                        href={slideLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Slides
+                      </a>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </VideoTable>
 
@@ -79,9 +82,9 @@ const AgentAcademy = () => (
                 >
                   this task
                 </a>
-                  &nbsp;when you&apos;ve finished Module&nbsp;
+                &nbsp;when you&apos;ve finished Module&nbsp;
                 {index}
-                  &nbsp;videos
+                &nbsp;videos
               </DoThisTask>
             ) : null}
 
@@ -100,7 +103,7 @@ const AgentAcademy = () => (
             >
               this project
             </a>
-              &nbsp;to challenge yourself and get access to the Builder Track
+            &nbsp;to challenge yourself and get access to the Builder Track
           </p>
 
           <Hr />

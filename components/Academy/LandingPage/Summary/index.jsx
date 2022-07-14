@@ -28,7 +28,17 @@ const Summary = () => (
       </Col>
       <Col xs={24} lg={8} className="summary-item">
         <img src="/images/Academy/LandingPage/summary-frequency.svg" alt="Icon to show summary frequency" />
-        <Description type={3} title="Frequency: a new cohort starts every 60 days" className="summary-item-text" />
+        <Description
+          type={3}
+          title={(
+            <>
+              <b>Next cohort: 15 August 2022.</b>
+              <br />
+              A new cohort starts every 60 days
+            </>
+)}
+          className="summary-item-text"
+        />
       </Col>
     </Row>
     <div className="centered-button">

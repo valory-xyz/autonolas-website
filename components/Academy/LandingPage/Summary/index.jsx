@@ -15,20 +15,41 @@ const Summary = () => (
           <br />
           at a Glance
         </>
-)}
+      )}
     />
     <Row className="summary-items">
       <Col xs={24} lg={8} className="summary-item">
-        <img src="/images/Academy/LandingPage/summary-duration.svg" alt="Icon to show summary duration" />
-        <Description type={3} title="Duration: 4 weeks" className="summary-item-text" />
+        <img
+          src="/images/Academy/LandingPage/summary-duration.svg"
+          alt="Icon to show summary duration"
+        />
+        <Description
+          type={3}
+          title="Duration: 4 weeks"
+          className="summary-item-text"
+        />
       </Col>
       <Col xs={24} lg={8} className="summary-item">
-        <img src="/images/Academy/LandingPage/summary-commitment.svg" alt="Icon to show summary commitment" />
-        <Description type={3} title="Time Commitment: 2 hours per week for coaching sessions + time to build" className="summary-item-text" />
+        <img
+          src="/images/Academy/LandingPage/summary-commitment.svg"
+          alt="Icon to show summary commitment"
+        />
+        <Description
+          type={3}
+          title="Time Commitment: 2 hours per week for coaching sessions + time to build"
+          className="summary-item-text"
+        />
       </Col>
       <Col xs={24} lg={8} className="summary-item">
-        <img src="/images/Academy/LandingPage/summary-frequency.svg" alt="Icon to show summary frequency" />
-        <Description type={3} title="Frequency: a new cohort starts every 60 days" className="summary-item-text" />
+        <img
+          src="/images/Academy/LandingPage/summary-frequency.svg"
+          alt="Icon to show summary frequency"
+        />
+        <Description
+          type={3}
+          title="Frequency: a new cohort starts every 60 days"
+          className="summary-item-text"
+        />
       </Col>
     </Row>
     <div className="centered-button">

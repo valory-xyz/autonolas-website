@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY, COLOR } from 'util/theme';
 
-
 export const WhySection = styled.div`
   padding-bottom: 0;
   .header {
@@ -18,7 +17,7 @@ export const WhySection = styled.div`
     padding: 1rem 0;
   }
   .big-number {
-    font-family: 'neuemachina__bold';
+    font-family: "neuemachina__bold";
     font-size: 96px;
     line-height: 100px;
     letter-spacing: -0.045em;

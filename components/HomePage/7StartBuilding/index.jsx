@@ -41,10 +41,7 @@ const WhyBuildOnAutonolas = () => (
             <div className="sub-text">{subHeading}</div>
             <div className="action-btn">
               <Link href={redirectTo} passHref>
-                <Button
-                  title="GET STARTED"
-                  type="black"
-                />
+                <Button title="GET STARTED" type="black" />
               </Link>
             </div>
           </div>

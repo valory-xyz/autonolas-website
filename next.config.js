@@ -9,7 +9,11 @@ module.exports = withAntdLess({
   },
   // lessVarsFilePath: '../pages/styles.less',
   productionBrowserSourceMaps: true,
-  webpack(config) {
+  webpack: config => {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader',
+    });
     return config;
   },
 });

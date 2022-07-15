@@ -7,7 +7,7 @@ import { Section } from './styles';
 
 const Content = () => (
   <Section className="section">
-    <Header title="What you will Learn" className="header" />
+    <Header title="What You Will Learn" className="header" />
     <Row align="bottom" className="body">
       <Col xs={24} lg={12}>
         <ul className="custom-bullet-points">

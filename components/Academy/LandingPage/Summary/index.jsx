@@ -47,7 +47,13 @@ const Summary = () => (
         />
         <Description
           type={3}
-          title="Frequency: a new cohort starts every 60 days"
+          title={(
+            <>
+              <b>Next cohort: 15 August 2022.</b>
+              <br />
+              A new cohort starts every 60 days
+            </>
+          )}
           className="summary-item-text"
         />
       </Col>

@@ -5,7 +5,6 @@ import Container from './styles';
 const CookieConsentBanner = () => (
   <Container>
     <CookieConsent
-      debug
       buttonText="Accept All"
       disableStyles
       containerClasses="banner-container"

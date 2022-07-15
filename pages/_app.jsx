@@ -25,22 +25,22 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <style global jsx>
         {`
-        body {
-          margin: 0;
-          font-family: "manrope__regular", sans-serif;
-          line-height: 1.35;
-          overscroll-behavior: none;
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          font-size: 18px;
-        }
-        @media only screen and (max-width: ${BREAK_POINT.sm}) {
           body {
-            font-size: 16px;
+            margin: 0;
+            font-family: "manrope__regular", sans-serif;
+            line-height: 1.35;
+            overscroll-behavior: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 18px;
           }
-        }
-      `}
+          @media only screen and (max-width: ${BREAK_POINT.sm}) {
+            body {
+              font-size: 16px;
+            }
+          }
+        `}
       </style>
       <Head>
         <title>{SITE_TITLE}</title>

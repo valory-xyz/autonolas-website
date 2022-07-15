@@ -101,13 +101,15 @@ const Footer = () => (
             </td>
 
             <td>
-              <div className="footer-title">FOLLOW</div>
+              <div className="footer-title">ABOUT</div>
               <div className="links">
                 {getAnchor('BLOG', `/${PATHS.BLOG}`, { isExternal: false })}
                 {getAnchor('PRESS', `/${PATHS.PRESS}`, { isExternal: false })}
                 {getAnchor('TWITTER', 'https://twitter.com/autonolas')}
                 {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ')}
                 {getAnchor('GITHUB', 'https://github.com/valory-xyz')}
+                {getAnchor('PRIVACY POLICY', `/${PATHS.PRIVACY_POLICY}`, { isExternal: false })}
+                {getAnchor('COOKIE POLICY', `/${PATHS.COOKIES_POLICY}`, { isExternal: false })}
               </div>
             </td>
           </tr>

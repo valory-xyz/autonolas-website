@@ -10,6 +10,7 @@ import {
 } from 'common-util/site-constants';
 import GlobalStyle from 'components/GlobalStyles';
 import Layout from 'components/Layout';
+import CookieConsentBanner from 'components/CookieConsentBanner';
 import initStore from '../store';
 import './styles.less';
 
@@ -53,6 +54,7 @@ const MyApp = ({ Component, pageProps }) => (
     <Layout>
       <Component {...pageProps} />
     </Layout>
+    <CookieConsentBanner />
     <GlobalStyle />
   </>
 );

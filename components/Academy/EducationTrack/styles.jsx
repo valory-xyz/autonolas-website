@@ -122,6 +122,7 @@ export const AcademyContainer = styled.div`
   ${backgroundImage('/images/1TheNewWay/background.webp')}
   .header {
     text-align: center;
+    font-weight: 900;
   }
   ${MEDIA_QUERY.laptop} {
   }

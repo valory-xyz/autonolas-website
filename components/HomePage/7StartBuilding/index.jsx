@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
+import Link from 'next/link';
 import { SectionSeven, Container, CommissionUs } from './styles';
 
 const LIST = [
@@ -16,7 +17,7 @@ const LIST = [
     heading: 'ACADEMY',
     subHeading:
       'Follow videos and complete projects in our Education Track. Then, apply to the Builder Track for expert guidance in developing high-impact services.',
-    redirectTo: 'https://autonolas.network/academy',
+    redirectTo: '/academy',
   },
 ];
 
@@ -39,11 +40,9 @@ const WhyBuildOnAutonolas = () => (
             <div className="header-text">{heading}</div>
             <div className="sub-text">{subHeading}</div>
             <div className="action-btn">
-              <Button
-                title="GET STARTED"
-                type="black"
-                onClick={() => window.open(redirectTo)}
-              />
+              <Link href={redirectTo} passHref>
+                <Button title="GET STARTED" type="black" />
+              </Link>
             </div>
           </div>
         </div>

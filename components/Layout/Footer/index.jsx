@@ -109,7 +109,7 @@ const Footer = () => (
                 {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ')}
                 {getAnchor('GITHUB', 'https://github.com/valory-xyz')}
                 {getAnchor('PRIVACY POLICY', `/${PATHS.PRIVACY_POLICY}`, { isExternal: false })}
-                {getAnchor('COOKIE POLICY', `/${PATHS.COOKIES_POLICY}`, { isExternal: false })}
+                {getAnchor('COOKIES POLICY', `/${PATHS.COOKIES_POLICY}`, { isExternal: false })}
               </div>
             </td>
           </tr>

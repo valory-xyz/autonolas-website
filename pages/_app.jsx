@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
@@ -11,13 +12,19 @@ import {
 import GlobalStyle from 'components/GlobalStyles';
 import Layout from 'components/Layout';
 import CookieConsentBanner from 'components/CookieConsentBanner';
+import { hotjar } from 'react-hotjar';
 import initStore from '../store';
 import './styles.less';
 
-const MyApp = ({ Component, pageProps }) => (
-  <>
-    <style global jsx>
-      {`
+const MyApp = ({ Component, pageProps }) => {
+  useEffect(() => {
+    hotjar.initialize(3066018, 6);
+  }, []);
+
+  return (
+    <>
+      <style global jsx>
+        {`
         body {
           margin: 0;
           font-family: "manrope__regular", sans-serif;
@@ -34,30 +41,31 @@ const MyApp = ({ Component, pageProps }) => (
           }
         }
       `}
-    </style>
-    <Head>
-      <title>{SITE_TITLE}</title>
-      <meta name="description" content={SITE_DESCRIPTION} />
+      </style>
+      <Head>
+        <title>{SITE_TITLE}</title>
+        <meta name="description" content={SITE_DESCRIPTION} />
 
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={SITE_URL} />
-      <meta property="og:title" content={SITE_TITLE} />
-      <meta property="og:description" content={SITE_DESCRIPTION} />
-      <meta property="og:image" content={SITE_METATAG_IMAGE} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:title" content={SITE_TITLE} />
+        <meta property="og:description" content={SITE_DESCRIPTION} />
+        <meta property="og:image" content={SITE_METATAG_IMAGE} />
 
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={SITE_URL} />
-      <meta property="twitter:title" content={SITE_DESCRIPTION} />
-      <meta property="twitter:description" content={SITE_DESCRIPTION} />
-      <meta property="twitter:image" content={SITE_METATAG_IMAGE} />
-    </Head>
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-    <CookieConsentBanner />
-    <GlobalStyle />
-  </>
-);
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={SITE_URL} />
+        <meta property="twitter:title" content={SITE_DESCRIPTION} />
+        <meta property="twitter:description" content={SITE_DESCRIPTION} />
+        <meta property="twitter:image" content={SITE_METATAG_IMAGE} />
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+      <CookieConsentBanner />
+      <GlobalStyle />
+    </>
+  );
+};
 
 MyApp.getInitialProps = async ({ Component, ctx }) => {
   const pageProps = Component.getInitialProps

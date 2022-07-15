@@ -12,6 +12,7 @@ export const COLOR = {
 export const BOX_SHADOW = {};
 
 export const FONT_SIZE = {
+  12: '12px',
   30: '30px',
   28: '28px',
   26: '26px',
@@ -21,7 +22,6 @@ export const FONT_SIZE = {
   18: '18px',
   16: '16px',
   14: '14px',
-  12: '12px',
 
   // TODO
 };

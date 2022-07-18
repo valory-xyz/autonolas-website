@@ -13,16 +13,16 @@ export const EcosystemServicesSection = styled.div`
   }
   .ecosystem-service {
     margin-bottom: 3rem;
-  }
-  .ecosystem-service-image {
-    margin-bottom: 1rem;
-  }
-  .ecosystem-service-title {
-  }
-  .ecosystem-service-description {
-    display: inline-block;
-    margin-bottom: 2rem;
-    max-width: 42ch;
+    &-image {
+      margin-bottom: 1rem;
+    }
+    &-title {
+    }
+    &-description {
+      display: inline-block;
+      margin-bottom: 2rem;
+      max-width: 42ch;
+    }
   }
 
   ${MEDIA_QUERY.tablet} {

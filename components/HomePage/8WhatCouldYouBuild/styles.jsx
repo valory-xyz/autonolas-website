@@ -13,10 +13,10 @@ export const SectionWhatCouldYouBuild = styled.div`
   .oracle-sell {
     text-align: center;
     margin-bottom: 3rem;
-  }
-  .oracle-sell-description {
-    display: inline-block;
-    margin-bottom: 1rem;
+    &-description {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
   }
   ${MEDIA_QUERY.tablet} {
   }
@@ -81,7 +81,6 @@ export const SeeAll = styled(SeeAllBtnRow)`
 `;
 
 export const IdeaGroup = styled.div`
-  margin-bottom: 3rem;
   .group-title {
     margin-bottom: 1rem;
     font-family: "neuemachina__regular";

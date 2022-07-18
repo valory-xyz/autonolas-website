@@ -2,7 +2,6 @@ import { widths } from 'components/Layout/styles';
 import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 
-
 export const EcosystemServicesSection = styled.div`
   padding: 7rem 4.5rem;
   .header {
@@ -19,7 +18,6 @@ export const EcosystemServicesSection = styled.div`
     margin-bottom: 1rem;
   }
   .ecosystem-service-title {
-
   }
   .ecosystem-service-description {
     display: inline-block;

@@ -84,14 +84,13 @@ export const IdeaGroup = styled.div`
   margin-bottom: 3rem;
   .group-title {
     margin-bottom: 1rem;
-    font-family: 'neuemachina__regular';
+    font-family: "neuemachina__regular";
     text-transform: uppercase;
   }
   .idea {
     margin-bottom: 2rem;
   }
   .idea-title {
-
   }
   .idea-text {
     line-height: 1.45;

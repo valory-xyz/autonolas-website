@@ -4,7 +4,7 @@ import { containImage, backgroundGradient } from 'components/GlobalStyles';
 
 export const widths = {
   maxSectionWidth: '1500px',
-  mobileSectionPadding: '20px 10px',
+  mobileSectionPadding: '3rem 2rem',
 };
 
 export const LayoutGlobalStyle = createGlobalStyle`

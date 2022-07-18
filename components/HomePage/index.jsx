@@ -15,6 +15,8 @@ import Press from './12Press';
 import Blog from './13Blog';
 import Experience from './14Experience';
 import { LearnContainer } from './styles';
+import WhatCouldYouBuild from './8WhatCouldYouBuild';
+import EcosystemServices from './10EcosystemServiceAndHelpGrow';
 
 const HomePage = ({
   isNavigationOpen,
@@ -36,8 +38,10 @@ const HomePage = ({
     </LearnContainer>
 
     <WhyBuildOnAutonolas />
+    <WhatCouldYouBuild />
     <StartBuilding />
     <Mission />
+    <EcosystemServices />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
     <Blog blogs={blogs} />

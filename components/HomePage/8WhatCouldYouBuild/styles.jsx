@@ -81,17 +81,24 @@ export const SeeAll = styled(SeeAllBtnRow)`
 `;
 
 export const IdeaGroup = styled.div`
+  margin-bottom: 2rem;
   .group-title {
     margin-bottom: 1rem;
     font-family: "neuemachina__regular";
     text-transform: uppercase;
   }
   .idea {
-    margin-bottom: 2rem;
+    &-title {
+    }
+    &-text {
+      line-height: 1.45;
+    }
   }
-  .idea-title {
-  }
-  .idea-text {
-    line-height: 1.45;
+
+  ${MEDIA_QUERY.tabletL} {
+    margin-bottom: 3rem;
+    .idea:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
 `;

@@ -41,7 +41,6 @@ export const Container = styled.div`
       padding: 0;
     }
   }
-
   .each-content {
     &-header-image {
       ${containImage}

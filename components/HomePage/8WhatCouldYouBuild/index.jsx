@@ -9,8 +9,10 @@ import { ThreeColumnContents } from 'components/GlobalStyles';
 import { Col, Row } from 'antd';
 import Description from 'common-util/Description';
 import Title from 'antd/lib/typography/Title';
+import Link from 'next/link';
 import Text from 'antd/lib/typography/Text';
 import { SectionWhatCouldYouBuild, SeeAll, IdeaGroup } from './styles';
+import CustomButton from 'common-util/Button';
 
 const ideaGroups = [
   {
@@ -61,7 +63,7 @@ const ideaGroups = [
     ideas: [
       {
         id: 'oracles',
-        title: 'Oracles (On-chain Data Reporter)',
+        title: '*Oracles (On-chain Data Reporter)',
         description: 'Build future-proof oracles that are totally customizable, without permission, and owned by you.',
       },
       {
@@ -166,7 +168,16 @@ const WhatCouldYouBuild = ({ ideas }) => (
         },
       )
     }
+
+    <div className="oracle-sell">
+      <Title>*Future-proof your stack with a customizable oracle</Title>
+      <Text className="oracle-sell-description">Autonolas Oracles are a unique way to advance the capabilities of your stack.</Text>
+      <br />
+      <Link href="/oracles" passHref><CustomButton title="Learn more" /></Link>
+    </div>
+
     <div className="divider" />
+
   </SectionWhatCouldYouBuild>
 );
 

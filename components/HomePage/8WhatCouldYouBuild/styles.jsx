@@ -10,6 +10,14 @@ export const SectionWhatCouldYouBuild = styled.div`
   .desc {
     max-width: 42ch;
   }
+  .oracle-sell {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .oracle-sell-description {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
   ${MEDIA_QUERY.tablet} {
   }
 `;

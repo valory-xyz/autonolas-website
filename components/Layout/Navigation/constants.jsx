@@ -2,7 +2,7 @@ export const NAV_1 = [
   { name: 'Learn', id: 'learn' },
   { name: 'Build', id: 'build' },
   { name: 'Mission', id: 'mission' },
-  // { name: 'Use', id: 'use' },
+  { name: 'Use', id: 'use' },
   { name: 'Team', id: 'team' },
   { name: 'Blog', id: 'blog' },
 ];

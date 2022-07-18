@@ -16,6 +16,7 @@ import Blog from './13Blog';
 import Experience from './14Experience';
 import { LearnContainer } from './styles';
 import WhatCouldYouBuild from './8WhatCouldYouBuild';
+import EcosystemServices from './10EcosystemServiceAndHelpGrow';
 
 const HomePage = ({
   isNavigationOpen,
@@ -40,6 +41,7 @@ const HomePage = ({
     <WhatCouldYouBuild />
     <StartBuilding />
     <Mission />
+    <EcosystemServices />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
     <Blog blogs={blogs} />

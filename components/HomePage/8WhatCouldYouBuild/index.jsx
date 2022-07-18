@@ -1,18 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import get from 'lodash/get';
-import PATHS from 'util/paths';
 import Header from 'common-util/Header';
-import Button from 'common-util/Button';
-import Tag from 'common-util/Tag';
-import { ThreeColumnContents } from 'components/GlobalStyles';
 import { Col, Row } from 'antd';
 import Description from 'common-util/Description';
 import Title from 'antd/lib/typography/Title';
 import Link from 'next/link';
 import Text from 'antd/lib/typography/Text';
-import { SectionWhatCouldYouBuild, SeeAll, IdeaGroup } from './styles';
 import CustomButton from 'common-util/Button';
+import { SectionWhatCouldYouBuild, IdeaGroup } from './styles';
 
 const ideaGroups = [
   {
@@ -80,7 +74,7 @@ const ideaGroups = [
   },
 ];
 
-const WhatCouldYouBuild = ({ ideas }) => (
+const WhatCouldYouBuild = () => (
   <SectionWhatCouldYouBuild
     className="section section-what-could-you-build"
     id="idea"
@@ -180,9 +174,5 @@ const WhatCouldYouBuild = ({ ideas }) => (
 
   </SectionWhatCouldYouBuild>
 );
-
-WhatCouldYouBuild.propTypes = {
-  ideas: PropTypes.instanceOf(Array).isRequired,
-};
 
 export default WhatCouldYouBuild;

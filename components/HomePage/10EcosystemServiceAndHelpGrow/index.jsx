@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import {
-  Button, Col, Image, Row,
+  Col, Image, Row,
 } from 'antd';
 import Text from 'antd/lib/typography/Text';
 import Title from 'antd/lib/typography/Title';
 import CustomButton from 'common-util/Button';
 import Header from 'common-util/Header';
 import React from 'react';
-import Link from 'next/link';
 import { EcosystemServicesSection } from './styles';
 
 const BASE_IMAGES_PATH = '/images/10EcosystemServices/';

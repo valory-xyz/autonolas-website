@@ -14,22 +14,22 @@ const ideaGroups = [
     title: 'Internal DAO Operations',
     ideas: [
       {
-        id: 'asset-whitelisting',
-        title: 'Asset Whitelisting',
-        description:
-          'Dynamically evaluates assets based on diverse datasets to add and remove from whitelists.',
-      },
-      {
         id: 'meta-yield-hunter',
         title: 'Meta Yield Hunter',
         description:
           'Use machine learning to track yield opportunities across chains and protocols. Autonomously move positions to optimize yield.',
       },
       {
+        id: 'asset-whitelisting',
+        title: 'Asset Whitelisting',
+        description:
+          'Dynamically evaluates assets based on diverse datasets to add and remove from whitelists.',
+      },
+      {
         id: 'contribution-coordinator',
         title: 'Contribution Coordinator',
         description:
-          'Reduce the need for complex DAO management hierarchies. Watch for contributions on Github, Twitter etc and adjust on-chain rewards & permissions accordingly.',
+          'Watch for contributions on Github, Twitter etc and adjust on-chain rewards & permissions accordingly.',
       },
     ],
   },

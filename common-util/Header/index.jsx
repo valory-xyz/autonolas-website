@@ -5,9 +5,10 @@ import { MEDIA_QUERY } from 'util/theme';
 
 const H2 = styled.h2`
   margin: 0;
-  font-size: 120px;
+  font-size: 116px;
   line-height: 1;
   overflow-wrap: break-word;
+  font-family: "manrope__semibold", sans-serif;
   &.center {
     text-align: center;
   }

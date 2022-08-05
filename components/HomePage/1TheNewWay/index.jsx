@@ -13,7 +13,7 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
     id="banner"
     isNavigationOpen={isNavigationOpen}
   >
-    <Header className="header" title={SITE_TAGLINE} />
+    <Header className="header" title={SITE_TAGLINE} as="h1" />
 
     <DescActionButtons>
       <Description

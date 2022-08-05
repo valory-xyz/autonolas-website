@@ -10,7 +10,7 @@ export const SectionOne = styled.div`
   height: 100vh;
   min-height: 700px;
   background: linear-gradient(
-    119deg,
+    80deg,
     rgba(223, 189, 252, 1) 0%,
     rgba(203, 251, 255, 1) 24%,
     rgba(246, 235, 255, 1) 82%
@@ -19,7 +19,6 @@ export const SectionOne = styled.div`
   .header {
     margin-bottom: 0 !important;
     line-height: 1;
-    font-weight: bold;
   }
   .description {
     line-height: normal;

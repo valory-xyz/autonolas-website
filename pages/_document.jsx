@@ -1,4 +1,6 @@
-import Document from 'next/document';
+import Document, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -8,11 +10,7 @@ export default class MyDocument extends Document {
 
     try {
       ctx.renderPage = () => originalRenderPage({
-        enhanceApp: App => props => sheet.collectStyles(
-          <>
-            <App {...props} />
-          </>,
-        ),
+        enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
       });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -28,5 +26,23 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <link href="/fonts/TeX-Gyre-Heros/stylesheet.css" rel="stylesheet" />
+          <link href="/fonts/NeueMachina/stylesheet.css" rel="stylesheet" />
+          <link href="/fonts/Manrope/stylesheet.css" rel="stylesheet" />
+          <link rel="icon" type="image/png" href="/favicon.ico" />
+        </Head>
+
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }

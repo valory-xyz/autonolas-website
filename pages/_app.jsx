@@ -1,22 +1,18 @@
 import { useEffect } from 'react';
+import { hotjar } from 'react-hotjar';
 import Head from 'next/head';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
 import { BREAK_POINT } from 'util/theme';
-import {
-  SITE_DESCRIPTION,
-  SITE_URL,
-  SITE_TITLE,
-  SITE_METATAG_IMAGE,
-} from 'common-util/site-constants';
+import { SITE_TITLE, SITE_DESCRIPTION } from 'util/constants';
+import Meta from 'common-util/meta';
 import GlobalStyle from 'components/GlobalStyles';
 import Layout from 'components/Layout';
 import CookieConsentBanner from 'components/CookieConsentBanner';
-import { hotjar } from 'react-hotjar';
 import initStore from '../store';
 import './styles.less';
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps, router }) => {
   useEffect(() => {
     hotjar.initialize(3066018, 6);
   }, []);
@@ -42,44 +38,40 @@ const MyApp = ({ Component, pageProps }) => {
           }
         `}
       </style>
+
       <Head>
         <title>{SITE_TITLE}</title>
         <meta name="description" content={SITE_DESCRIPTION} />
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={SITE_URL} />
-        <meta property="og:title" content={SITE_TITLE} />
-        <meta property="og:description" content={SITE_DESCRIPTION} />
-        <meta property="og:image" content={SITE_METATAG_IMAGE} />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={SITE_URL} />
-        <meta property="twitter:title" content={SITE_DESCRIPTION} />
-        <meta property="twitter:description" content={SITE_DESCRIPTION} />
-        <meta property="twitter:image" content={SITE_METATAG_IMAGE} />
+        <Meta pathname={router.pathname} />
       </Head>
+
       <Layout>
         <Component {...pageProps} />
       </Layout>
+
       <CookieConsentBanner />
       <GlobalStyle />
     </>
   );
 };
 
-MyApp.getInitialProps = async ({ Component, ctx }) => {
+MyApp.getInitialProps = async ({ Component, ctx, router }) => {
   const pageProps = Component.getInitialProps
     ? await Component.getInitialProps(ctx)
     : {};
 
-  return { pageProps, store: ctx.store.getState() };
+  return { pageProps, store: ctx.store.getState(), router };
 };
 
 MyApp.propTypes = {
   Component: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})])
     .isRequired,
   pageProps: PropTypes.shape({}).isRequired,
-  router: PropTypes.shape({}).isRequired,
+  router: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
 };
 
 /* MyApp.defaultProps = {

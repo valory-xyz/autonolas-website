@@ -25,7 +25,6 @@ const MyApp = ({ Component, pageProps, router }) => {
             margin: 0;
             font-family: "manrope__regular", sans-serif;
             line-height: 1.35;
-            overscroll-behavior: none;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;

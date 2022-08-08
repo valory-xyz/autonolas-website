@@ -9,7 +9,7 @@ export const SectionOne = styled.div`
   justify-content: space-between;
   height: 100vh;
   min-height: 700px;
-  background: linear-gradient(
+  background-color: linear-gradient(
     80deg,
     rgba(223, 189, 252, 1) 0%,
     rgba(203, 251, 255, 1) 24%,

@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import dynamic from 'next/dynamic';
 import { setNavigationToggle as setNavigationToggleFn } from 'store/navigation/actions';
-import Navigation from './Navigation';
 import Footer from './Footer';
 import { LayoutGlobalStyle, Container } from './styles';
+
+const Navigation = dynamic(() => import('./Navigation'), {
+  ssr: false,
+});
 
 const NavigationBar = ({ isNavigationOpen, setNavigationToggle, children }) => (
   <Container data-testid="home-page">

@@ -17,6 +17,9 @@ const Meta = ({ meta }) => {
 
   return (
     <>
+      <title>{metaInfo.title}</title>
+      <meta name="description" content={metaInfo.description} />
+
       <meta property="og:type" content="website" />
       <meta property="og:url" content={metaInfo.siteUrl} />
       <meta property="og:title" content={metaInfo.title} />

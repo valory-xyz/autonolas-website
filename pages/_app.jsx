@@ -4,11 +4,7 @@ import Head from 'next/head';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
 import { BREAK_POINT } from 'util/theme';
-import {
-  SITE_TITLE,
-  SITE_DESCRIPTION,
-  CUSTOM_META_PAGES,
-} from 'util/constants';
+import { CUSTOM_META_PAGES } from 'util/constants';
 import Meta from 'common-util/meta';
 import GlobalStyle from 'components/GlobalStyles';
 import Layout from 'components/Layout';
@@ -44,12 +40,7 @@ const MyApp = ({ Component, pageProps, router }) => {
         `}
       </style>
 
-      <Head>
-        <title>{SITE_TITLE}</title>
-        <meta name="description" content={SITE_DESCRIPTION} />
-
-        {!hasCustomMeta && <Meta />}
-      </Head>
+      <Head>{!hasCustomMeta && <Meta />}</Head>
 
       <Layout>
         <Component {...pageProps} />

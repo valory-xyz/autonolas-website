@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
-import { SITE_DESCRIPTION, SITE_TAGLINE } from 'common-util/site-constants';
+import { SITE_DESCRIPTION, SITE_TAGLINE } from 'util/constants';
 import { SectionOne, DescActionButtons } from './styles';
 
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
@@ -13,7 +13,7 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
     id="banner"
     isNavigationOpen={isNavigationOpen}
   >
-    <Header className="header" title={SITE_TAGLINE} />
+    <Header className="header" title={SITE_TAGLINE} as="h1" />
 
     <DescActionButtons>
       <Description

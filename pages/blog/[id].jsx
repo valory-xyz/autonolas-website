@@ -1,5 +1,4 @@
 import get from 'lodash/get';
-import Head from 'next/head';
 import { SITE_URL } from 'util/constants';
 import { getBlog } from 'common-util/api';
 import Meta from 'common-util/meta';
@@ -37,9 +36,7 @@ const EachBlogPage = props => {
 
   return (
     <>
-      <Head>
-        <Meta meta={meta} />
-      </Head>
+      <Meta meta={meta} />
       <EachBlog {...props} />
     </>
   );

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { hotjar } from 'react-hotjar';
-import Head from 'next/head';
 import { createWrapper } from 'next-redux-wrapper';
 import PropTypes from 'prop-types';
 import { BREAK_POINT } from 'util/theme';
@@ -40,7 +39,7 @@ const MyApp = ({ Component, pageProps, router }) => {
         `}
       </style>
 
-      <Head>{!hasCustomMeta && <Meta />}</Head>
+      {!hasCustomMeta && <Meta />}
 
       <Layout>
         <Component {...pageProps} />

@@ -1,22 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { META_TAGS_INFO } from 'util/constants';
-
-// TODO
-// const PAGES = {
-// '/academy': {
-//   siteUrl: '',
-//   title: '',
-//   description: '',
-//   image: '',
-// },
-// };
+import Head from 'next/head';
 
 const Meta = ({ meta }) => {
   const metaInfo = meta || META_TAGS_INFO;
 
   return (
-    <>
+    <Head>
       <title>{metaInfo.title}</title>
       <meta name="description" content={metaInfo.description} />
 
@@ -31,7 +22,7 @@ const Meta = ({ meta }) => {
       <meta property="twitter:title" content={metaInfo.description} />
       <meta property="twitter:description" content={metaInfo.description} />
       <meta property="twitter:image" content={metaInfo.image} />
-    </>
+    </Head>
   );
 };
 

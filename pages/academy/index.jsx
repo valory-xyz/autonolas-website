@@ -7,7 +7,7 @@ const LandingPage = props => {
     siteUrl: `${SITE_URL}/academy`,
     title: 'Autonolas | Autonolas Academy',
     description: 'Learn to build and run your own autonomous services with our self-guided program.',
-    image: `${process.env.NEXT_PUBLIC_API_URL}/img02_183a3ade60.png`,
+    image: `${process.env.NEXT_PUBLIC_API_URL}/uploads/img02_183a3ade60.png`,
   };
 
   return (

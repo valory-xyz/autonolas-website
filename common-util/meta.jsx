@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import { META_TAGS_INFO } from 'util/constants';
 
 // TODO
-const PAGES = {
-  // '/academy': {
-  //   siteUrl: '',
-  //   title: '',
-  //   description: '',
-  //   image: '',
-  // },
-};
+// const PAGES = {
+// '/academy': {
+//   siteUrl: '',
+//   title: '',
+//   description: '',
+//   image: '',
+// },
+// };
 
-const Meta = ({ pathname }) => {
-  const metaInfo = PAGES[pathname] || META_TAGS_INFO;
+const Meta = ({ meta }) => {
+  const metaInfo = meta || META_TAGS_INFO;
 
   return (
     <>
@@ -33,7 +33,11 @@ const Meta = ({ pathname }) => {
 };
 
 Meta.propTypes = {
-  pathname: PropTypes.string.isRequired,
+  meta: PropTypes.shape({}),
+};
+
+Meta.defaultProps = {
+  meta: null,
 };
 
 export default Meta;

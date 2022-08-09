@@ -10,3 +10,5 @@ export const META_TAGS_INFO = {
   description: SITE_DESCRIPTION,
   image: `${SITE_URL}/images/site-metadata/site-metatag.png`,
 };
+
+export const CUSTOM_META_PAGES = ['/blog'];

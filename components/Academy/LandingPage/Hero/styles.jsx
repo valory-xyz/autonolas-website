@@ -13,7 +13,6 @@ export const HeroSection = styled.div`
   .header {
     margin-bottom: 0 !important;
     line-height: 1;
-    font-weight: bold;
   }
   .description {
     line-height: normal;

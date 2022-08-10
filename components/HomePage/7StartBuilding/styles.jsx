@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { backgroundImage } from 'components/GlobalStyles';
-import { MEDIA_QUERY } from 'util/theme';
+import { MEDIA_QUERY, COLOR } from 'util/theme';
 import { Content as C } from '../2WhatIsAutonolas/styles';
 
 export const SectionSeven = styled.div`
@@ -83,5 +83,6 @@ export const CommissionUs = styled.div`
   }
   a {
     font-weight: bold;
+    color: ${COLOR.PURPLE};
   }
 `;

@@ -1,7 +1,7 @@
-import { Col, Image, Row } from 'antd';
+import Image from 'next/image';
+import { Col, Row } from 'antd';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
-import React from 'react';
 import CallToActionButton from '../CallToActionButton';
 import { Section } from './styles';
 
@@ -26,6 +26,8 @@ const Content = () => (
         <Image
           src="/images/Academy/LandingPage/agent-service.png"
           className="agent-service-image"
+          width={648}
+          height={392}
         />
       </Col>
     </Row>

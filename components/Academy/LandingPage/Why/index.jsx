@@ -1,7 +1,7 @@
-import React from 'react';
+import Image from 'next/image';
+import { Col, Row } from 'antd';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
-import { Col, Image, Row } from 'antd';
 import { WhySection } from './styles';
 
 const Why = () => (
@@ -25,17 +25,25 @@ const Why = () => (
 
     <Row align="middle">
       <Col xs={24} lg={10}>
-        <Image src="images/Academy/LandingPage/pre-autonolas.svg" />
+        <Image
+          src="/images/Academy/LandingPage/pre-autonolas.svg"
+          width={540}
+          height={422}
+        />
       </Col>
       <Col xs={24} lg={4} className="arrow-image-container">
         <img
-          src="images/Academy/LandingPage/arrow.svg"
+          src="/images/Academy/LandingPage/arrow.svg"
           className="arrow-image"
           alt=""
         />
       </Col>
       <Col xs={24} lg={10}>
-        <Image src="images/Academy/LandingPage/post-autonolas.svg" />
+        <Image
+          src="/images/Academy/LandingPage/post-autonolas.svg"
+          width={540}
+          height={422}
+        />
       </Col>
     </Row>
   </WhySection>

@@ -49,7 +49,7 @@ const Summary = () => (
           type={3}
           title={(
             <>
-              <b>Next cohort: 15 August 2022.</b>
+              <b>Next cohort: 7th September 2022.</b>
               <br />
               A new cohort starts every 60 days
             </>

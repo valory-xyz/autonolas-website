@@ -1,9 +1,6 @@
 # Autonolas Website
 This repository contains code for the [Autonolas website](https://www.autonolas.network/).
 
-## Project Status
-This project is currently in development. Feel free to create a branch and send me a PR for changes.
-
 ## Tech Stack
 - ReactJS
 - NextJS

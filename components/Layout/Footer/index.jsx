@@ -96,6 +96,9 @@ const Footer = () => (
                 })}
                 {getAnchor('ACADEMY', '/academy', { isExternal: false })}
                 {getAnchor('COMMISSION US', 'mailto:bd@valory.xyz')}
+                {getAnchor('PROTOCOL REGISTRY', 'https://protocol.autonolas.network/', {
+                  isExternal: true,
+                })}
                 {/* {getAnchor('IDEAS', '/ideas')} */}
               </div>
             </td>

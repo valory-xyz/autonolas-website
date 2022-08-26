@@ -1,4 +1,4 @@
-import { SITE_URL } from 'util/constants';
+import { SITE_URL } from 'util/constants/site';
 import Meta from 'common-util/meta';
 import Academy from 'components/Academy/LandingPage';
 

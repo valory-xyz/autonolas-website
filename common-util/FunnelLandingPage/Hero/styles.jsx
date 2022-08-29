@@ -9,7 +9,7 @@ export const HeroSection = styled.div`
   height: 100vh;
   min-height: 700px;
   .header {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
     line-height: 1;
   }
   .description {
@@ -50,7 +50,7 @@ export const HeroSection = styled.div`
     .header {
       /* font-size: 74px; */
     }
-    .action-btns {
+    .action-btn {
       align-items: flex-start;
       .btn {
         font-size: 18px;
@@ -61,19 +61,17 @@ export const HeroSection = styled.div`
   ${MEDIA_QUERY.mobileL} {
     align-items: flex-start;
     justify-content: flex-start;
-    .header {
+    &.section > .header {
+      margin-bottom: 5rem;
       font-size: 54px;
     }
-    .description {
-      position: absolute;
-      bottom: 200px;
-    }
-    .action-btns {
+    .action-btn {
       flex-direction: column;
       position: absolute;
       bottom: 40px;
       left: 50%;
       transform: translate(-50%, 0px);
+      width: 100%;
       .btn {
         width: 100%;
         text-align: center;

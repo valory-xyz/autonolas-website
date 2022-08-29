@@ -52,7 +52,7 @@ export const FUNNELS = [
     lead: '',
     cta: {
       btnText: 'Start Earning Contribution Points',
-      href: 'https://autonolas.network/blog/30',
+      href: '/blog/30',
     },
   },
   {
@@ -66,7 +66,7 @@ export const FUNNELS = [
     lead: 'Get qualified, receive engagements and build cutting-edge, impactful, autonomous systems.',
     cta: {
       btnText: 'Join the Academy',
-      href: 'https://autonolas.network/academy',
+      href: '/academy',
     },
   },
 ];

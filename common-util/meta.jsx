@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { META_TAGS_INFO } from 'util/constants';
+import { META_TAGS_INFO } from 'util/constants/site';
 import Head from 'next/head';
 
 const Meta = ({ meta }) => {

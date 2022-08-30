@@ -1,5 +1,5 @@
 import { get } from 'lodash';
-import { SITE_URL } from 'util/constants';
+import { SITE_URL } from 'util/constants/site';
 import { getEducationArticle } from 'common-util/api';
 import { serverRedirectToError } from 'common-util/functions';
 import Meta from 'common-util/meta';

@@ -22,7 +22,7 @@ export const SiderCard = styled.div`
   border: 1px solid ${COLOR.PURPLE};
   &.card-sticky {
     position: sticky;
-    top: 0;
+    top: 20px;
   }
   .sub-title {
     font-family: neuemachina__light;

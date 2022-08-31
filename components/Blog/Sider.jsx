@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography } from 'antd';
 import Button from 'common-util/Button';
+import { handleJoinDiscord } from 'common-util/functions';
 import { SiderCard as Card } from './styles';
 
 const { Title } = Typography;
 
 const Sider = ({ funnel }) => {
   const {
-    lead, name, persona, cta_btn_text, cta_href, emoji,
+    lead, name, persona, cta_href, emoji,
   } = funnel || {};
   return (
     <>
@@ -21,7 +22,7 @@ const Sider = ({ funnel }) => {
         </div>
         <Button title="SUBSCRIBE TO MAILING LIST" />
         <div className="or-text">OR</div>
-        <Button title="JOIN DISCORD" />
+        <Button title="JOIN DISCORD" onClick={handleJoinDiscord} />
       </Card>
 
       {funnel && (
@@ -30,7 +31,7 @@ const Sider = ({ funnel }) => {
           <Title level={2}>{persona}</Title>
           <div className="desc">{lead}</div>
           <Button
-            title={cta_btn_text}
+            title="LEARN MORE"
             onClick={() => {
               window.open(
                 cta_href,

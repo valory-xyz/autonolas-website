@@ -8,6 +8,9 @@ export const HeroSection = styled.div`
   justify-content: space-between;
   height: 100vh;
   min-height: 700px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   .header {
     margin-bottom: 0;
     line-height: 1;

@@ -15,6 +15,7 @@ const EachBlog = ({ blog }) => {
     title, subtitle, headerImage, datePublished, body, funnel,
   } = attributes || {};
   const imageUrl = get(headerImage, 'data[0].attributes.url') || '';
+  const funnelName = get(funnel, 'data.attributes.name');
 
   return (
     <EachBlogContainer className="each-content">
@@ -33,6 +34,12 @@ const EachBlog = ({ blog }) => {
             <div className="subtitle">{subtitle}</div>
             <div className="date-published">
               {getFormattedDate(datePublished)}
+              {funnelName && (
+                <>
+                  &nbsp;&bull;&nbsp;
+                  {funnelName}
+                </>
+              )}
             </div>
             <div className="body">
               <Markdown>{body}</Markdown>

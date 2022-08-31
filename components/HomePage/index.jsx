@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
+import WhoDoesAutonolasHelp from './1WhoDoesAutonolasHelp';
 import WhatIsAutonolas from './2WhatIsAutonolas';
 import DecentralizedAndSophisticated from './3DecentralizedAndSophisticated';
 import HowDoAutonolasWork from './4HowDoAutonolasWork';
@@ -31,6 +32,7 @@ const HomePage = ({
     <TheNewWay isNavigationOpen={isNavigationOpen} />
 
     <LearnContainer>
+      <WhoDoesAutonolasHelp />
       <WhatIsAutonolas />
       <DecentralizedAndSophisticated />
       <HowDoAutonolasWork />

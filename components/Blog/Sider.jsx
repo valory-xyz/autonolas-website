@@ -1,19 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography } from 'antd';
+import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';
 import { handleJoinDiscord } from 'common-util/functions';
+import { DiscordLogo } from 'common-util/svg';
 import { SiderCard as Card } from './styles';
 
 const { Title } = Typography;
 
 const Sider = ({ funnel }) => {
   const {
-    lead, name, persona, cta_href, emoji,
+    lead, name, persona, cta_href, emoji, color,
   } = funnel || {};
   return (
     <>
       <Card className="mb-1">
+        <div className="img-container">
+          <img
+            src="/images/2WhatIsAutonolas/ecosystem.png"
+            alt=""
+            style={{ width: '50%', marginBottom: '1rem' }}
+          />
+        </div>
         <p className="sub-title">Sign up for updates</p>
         <Title level={2}>Stay at the autonomous edge</Title>
         <div className="desc">
@@ -22,7 +31,16 @@ const Sider = ({ funnel }) => {
         </div>
         <Button title="SUBSCRIBE TO MAILING LIST" />
         <div className="or-text">OR</div>
-        <Button title="JOIN DISCORD" onClick={handleJoinDiscord} />
+        <Button
+          title={(
+            <>
+              <DiscordLogo fill={COLOR.WHITE} width={24} height={24} />
+              JOIN DISCORD
+            </>
+          )}
+          className="join-discord-btn"
+          onClick={handleJoinDiscord}
+        />
       </Card>
 
       {funnel && (
@@ -32,6 +50,7 @@ const Sider = ({ funnel }) => {
           <div className="desc">{lead}</div>
           <Button
             title="LEARN MORE"
+            style={{ backgroundColor: color }}
             onClick={() => {
               window.open(
                 cta_href,

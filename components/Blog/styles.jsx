@@ -43,6 +43,20 @@ export const SiderCard = styled.div`
     padding: 0.5rem 1rem !important;
     font-size: 16px;
     margin-top: 0 !important;
+    &.join-discord-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        margin-right: 0.5rem;
+        transition-duration: 0.3s;
+      }
+      &:hover {
+        svg path {
+          fill: ${COLOR.PURPLE};
+        }
+      }
+    }
   }
 `;
 

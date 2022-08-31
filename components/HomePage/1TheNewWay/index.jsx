@@ -41,12 +41,6 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
             <Button hasArrowSuffix type="purple" title="Start Building" />
           </a>
         </Link>
-
-        <Link href="#learn" passHref>
-          <a>
-            <Button title="What is Autonolas?" type="black" />
-          </a>
-        </Link>
       </div>
     </DescActionButtons>
   </SectionOne>

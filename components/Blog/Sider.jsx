@@ -11,7 +11,7 @@ const { Title } = Typography;
 
 const Sider = ({ funnel }) => {
   const {
-    lead, name, persona, cta_href, emoji, color,
+    lead, name, tagline, emoji,
   } = funnel || {};
   return (
     <>
@@ -46,16 +46,12 @@ const Sider = ({ funnel }) => {
       {funnel && (
         <Card className="card-sticky">
           <p className="sub-title">{`${emoji} ${name}`}</p>
-          <Title level={2}>{persona}</Title>
+          <Title level={2}>{tagline}</Title>
           <div className="desc">{lead}</div>
           <Button
             title="LEARN MORE"
-            style={{ backgroundColor: color }}
             onClick={() => {
-              window.open(
-                cta_href,
-                !(cta_href || '').includes('https') ? '_self' : '_target',
-              );
+              window.open('/autonomous-developers');
             }}
           />
         </Card>

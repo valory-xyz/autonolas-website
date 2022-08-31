@@ -58,6 +58,17 @@ export const SiderCard = styled.div`
       }
     }
   }
+
+  ${MEDIA_QUERY.mobileM} {
+    &.card-sticky {
+      position: relative;
+      top: 0px;
+    }
+  }
+
+  ${MEDIA_QUERY.mobileS} {
+    width: auto;
+  }
 `;
 
 export const EachBlogContainer = styled.div`
@@ -68,9 +79,20 @@ export const EachBlogContainer = styled.div`
     &-1 {
     }
     &-2 {
+      margin-top: 2rem;
       margin-left: 2rem;
     }
   }
   .each-content-sider {
+  }
+
+  ${MEDIA_QUERY.tablet} {
+    .each-content-details {
+      flex-direction: column;
+      &-2 {
+        margin-top: 2rem;
+        margin-left: 0rem;
+      }
+    }
   }
 `;

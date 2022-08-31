@@ -95,6 +95,18 @@ export const HeroSection = styled.div`
       }
     }
   }
+
+  ${MEDIA_QUERY.mobileL} {
+    &.section > .header {
+      margin-bottom: 4rem;
+      font-size: 46px;
+    }
+  }
+  ${MEDIA_QUERY.mobileS} {
+    &.section > .header {
+      font-size: 42px;
+    }
+  }
 `;
 
 export const DescActionButtons = styled.div`

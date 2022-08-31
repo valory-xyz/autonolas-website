@@ -13,16 +13,10 @@ const Hero = ({
     id="banner"
     isNavigationOpen={isNavigationOpen}
   >
-    <Header
-      className="header"
-      title={title}
-    />
+    <Header className="header" title={title} />
 
     <DescActionButtons>
-      <Description
-        type={2}
-        title={subtitle}
-      />
+      <Description type={2} title={subtitle || ''} />
 
       <div className="action-btn">
         <CallToActionButton href={href} btnText={btnText} />
@@ -32,11 +26,16 @@ const Hero = ({
 );
 
 Hero.propTypes = {
-  isNavigationOpen: PropTypes.bool.isRequired,
+  isNavigationOpen: PropTypes.bool,
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   href: PropTypes.string.isRequired,
   btnText: PropTypes.string.isRequired,
+};
+
+Hero.defaultProps = {
+  isNavigationOpen: false,
+  subtitle: '',
 };
 
 export default Hero;

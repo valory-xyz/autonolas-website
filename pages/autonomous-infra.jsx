@@ -1,3 +1,19 @@
-import AutonomousInfra from 'components/FunnelLandingPages/AutonomousInfra';
+import FunnelLandingPage from 'common-util/FunnelLandingPage';
+import { getFunnel } from 'common-util/api';
+import { serverRedirectToError } from 'common-util/functions';
 
-export default AutonomousInfra;
+export async function getServerSideProps() {
+  const funnel = await getFunnel(1);
+
+  if (!funnel) {
+    return serverRedirectToError();
+  }
+
+  return {
+    props: {
+      funnel,
+    },
+  };
+}
+
+export default FunnelLandingPage;

@@ -1,3 +1,19 @@
-import DAOAutonomy from 'components/FunnelLandingPages/DAOAutonomy';
+import FunnelLandingPage from 'common-util/FunnelLandingPage';
+import { getFunnel } from 'common-util/api';
+import { serverRedirectToError } from 'common-util/functions';
 
-export default DAOAutonomy;
+export async function getServerSideProps() {
+  const funnel = await getFunnel(3);
+
+  if (!funnel) {
+    return serverRedirectToError();
+  }
+
+  return {
+    props: {
+      funnel,
+    },
+  };
+}
+
+export default FunnelLandingPage;

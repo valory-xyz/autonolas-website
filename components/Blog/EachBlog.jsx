@@ -6,14 +6,16 @@ import Markdown from 'common-util/Markdown';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { getFormattedDate } from 'common-util/functions';
+import Sider from './Sider';
 import { EachBlogContainer } from './styles';
 
 const EachBlog = ({ blog }) => {
   const { attributes } = blog;
   const {
-    title, subtitle, headerImage, datePublished, body,
+    title, subtitle, headerImage, datePublished, body, funnel,
   } = attributes || {};
   const imageUrl = get(headerImage, 'data[0].attributes.url') || '';
+  const funnelName = get(funnel, 'data.attributes.name');
 
   return (
     <EachBlogContainer className="each-content">
@@ -28,17 +30,28 @@ const EachBlog = ({ blog }) => {
         <Header className="header" title={title} />
 
         <div className="each-content-details">
-          <div className="subtitle">{subtitle}</div>
-          <div className="date-published">
-            {getFormattedDate(datePublished)}
-          </div>
-          <div className="body">
-            <Markdown>{body}</Markdown>
-          </div>
+          <div className="each-content-details-1">
+            <div className="subtitle">{subtitle}</div>
+            <div className="date-published">
+              {getFormattedDate(datePublished)}
+              {funnelName && (
+                <>
+                  &nbsp;&bull;&nbsp;
+                  {funnelName}
+                </>
+              )}
+            </div>
+            <div className="body">
+              <Markdown>{body}</Markdown>
+            </div>
 
-          <a href={`/${PATHS.BLOG}`}>
-            <Button title="BACK TO BLOG" />
-          </a>
+            <a href={`/${PATHS.BLOG}`}>
+              <Button title="BACK TO BLOG" />
+            </a>
+          </div>
+          <div className="each-content-details-2">
+            <Sider funnel={get(funnel, 'data.attributes')} />
+          </div>
         </div>
       </div>
     </EachBlogContainer>

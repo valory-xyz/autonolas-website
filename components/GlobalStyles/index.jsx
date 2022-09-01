@@ -39,6 +39,9 @@ const GlobalStyle = createGlobalStyle`
   .ml-2 {
     margin-left: 2rem;
   }
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
   a {
     color: ${COLOR.PURPLE};
     text-underline-offset: 3px;

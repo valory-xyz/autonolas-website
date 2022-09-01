@@ -75,7 +75,8 @@ export const Container = styled.div`
         padding-right: 3rem;
       }
     }
-    ${MEDIA_QUERY.tablet} {
+
+    ${MEDIA_QUERY.tabletL} {
       &-header-image {
         min-height: 200px;
       }
@@ -123,5 +124,4 @@ export const Container = styled.div`
       }
     }
   }
-  
 `;

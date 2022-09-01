@@ -33,7 +33,7 @@ const WhoDoesAutonolasHelp = () => (
     className="section section-autonolas-help"
     id="autonolas-help"
   >
-    <Description type={2} title="WHO DOES AUTONOLAS HELP?" />
+    <Description type={2} title="WHO BENEFITS FROM AUTONOLAS?" />
 
     <br />
     <br />

@@ -38,7 +38,7 @@ const WhoDoesAutonolasHelp = () => (
     <br />
     <br />
 
-    <ThreeColumnContents>
+    <ThreeColumnContents className="three-column-content">
       {LIST.map(item => (
         <div className="details" key={`blogs-${item.id}`}>
           <div className="column">
@@ -51,7 +51,7 @@ const WhoDoesAutonolasHelp = () => (
             <div className="header-text">{item.title}</div>
             <div className="subtitle">{item.desc}</div>
 
-            <a href={`/${item.redirectTo}`}>
+            <a href={`/${item.redirectTo}`} className="each-content-action">
               <Button title="LEARN MORE" type="black" className="mini" />
             </a>
           </div>

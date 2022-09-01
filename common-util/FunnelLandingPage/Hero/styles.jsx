@@ -8,6 +8,9 @@ export const HeroSection = styled.div`
   justify-content: space-between;
   height: 100vh;
   min-height: 700px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   .header {
     margin-bottom: 0;
     line-height: 1;
@@ -90,6 +93,18 @@ export const HeroSection = styled.div`
       .btn {
         width: 300px;
       }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    &.section > .header {
+      margin-bottom: 4rem;
+      font-size: 46px;
+    }
+  }
+  ${MEDIA_QUERY.mobileS} {
+    &.section > .header {
+      font-size: 42px;
     }
   }
 `;

@@ -15,7 +15,7 @@ export const Btn = styled.button`
   text-decoration: none;
   &.mini {
     padding: 0.35rem 1rem;
-    font-size: 12px;
+    font-size: 14px;
   }
   &:hover {
     cursor: pointer;

@@ -79,7 +79,7 @@ const Description = ({
 };
 
 Description.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   className: PropTypes.string,
   type: PropTypes.number,
 };

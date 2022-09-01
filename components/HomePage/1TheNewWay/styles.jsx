@@ -7,7 +7,7 @@ export const SectionOne = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 87.5vh;
   min-height: 700px;
   background-color: linear-gradient(
     80deg,

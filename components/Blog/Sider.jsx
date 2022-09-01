@@ -11,7 +11,7 @@ const { Title } = Typography;
 
 const Sider = ({ funnel }) => {
   const {
-    lead, name, tagline, emoji,
+    lead, name, tagline, emoji, landing_page,
   } = funnel || {};
   return (
     <>
@@ -51,12 +51,9 @@ const Sider = ({ funnel }) => {
           <p className="sub-title">{`${emoji} ${name}`}</p>
           <Title level={2}>{tagline}</Title>
           <div className="desc">{lead}</div>
-          <Button
-            title="LEARN MORE"
-            onClick={() => {
-              window.open('/autonomous-developers');
-            }}
-          />
+          <a href={`/${landing_page}`}>
+            <Button title="LEARN MORE" />
+          </a>
         </Card>
       )}
     </>

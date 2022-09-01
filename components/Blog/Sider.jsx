@@ -29,7 +29,10 @@ const Sider = ({ funnel }) => {
           Be the first to hear about everything new in the world of Autonolas,
           autonomous services and full-stack autonomy.
         </div>
-        <Button title="SUBSCRIBE TO MAILING LIST" />
+        <Button
+          title="SUBSCRIBE TO MAILING LIST"
+          onClick={() => window.open('http://eepurl.com/hQaJOP', '_target')}
+        />
         <div className="or-text">OR</div>
         <Button
           title={(

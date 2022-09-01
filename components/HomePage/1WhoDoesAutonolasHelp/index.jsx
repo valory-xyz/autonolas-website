@@ -1,6 +1,4 @@
 import React from 'react';
-// import PropTypes from "prop-types";
-import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
 import { ThreeColumnContents } from 'components/GlobalStyles';
@@ -11,19 +9,22 @@ const LIST = [
     id: 1,
     title: 'DAO Operators',
     desc: 'Outspace your competition and remain decentralized with rich social coordination and software-based operations.',
-    imgUrl: 'background.webp',
+    imgUrl: 'dao-operators.png',
+    redirectTo: 'dao-autonomy',
   },
   {
     id: 2,
     title: 'Protocol Developers',
     desc: 'Build and own unified off-chain infrastructure like oracles, keepers and bridges.',
-    imgUrl: 'background.webp',
+    imgUrl: 'protocol-devs.png',
+    redirectTo: 'autonomous-infra',
   },
   {
     id: 3,
     title: 'Product People',
     desc: 'Break out of competitive categories, take market share and expand to mainstream friendly UXes by leveraging the power of off-chain decentralization.',
-    imgUrl: 'background.webp',
+    imgUrl: 'product-people.png',
+    redirectTo: 'smart-products',
   },
 ];
 
@@ -50,7 +51,7 @@ const WhoDoesAutonolasHelp = () => (
             <div className="header-text">{item.title}</div>
             <div className="subtitle">{item.desc}</div>
 
-            <a href={`/${PATHS.BLOG}/${item.id}`}>
+            <a href={`/${item.redirectTo}`}>
               <Button title="LEARN MORE" type="black" className="mini" />
             </a>
           </div>

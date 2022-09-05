@@ -1,6 +1,9 @@
 import { get } from 'lodash';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+import { SITE_URL } from 'util/constants/site';
 import Hero from 'common-util/FunnelLandingPage/Hero';
+import Meta from 'common-util/meta';
 
 /**
  * Funnel number indicates `id` in cms-backend
@@ -11,17 +14,30 @@ import Hero from 'common-util/FunnelLandingPage/Hero';
  * 5. Autonomous Developers
  */
 const FunnelLandingPage = ({ funnel, imgUrl }) => {
+  const router = useRouter();
+  const { pathname } = router;
   const {
     tagline, lead, cta_href, cta_btn_text,
   } = get(funnel, 'attributes') || {};
+
   return (
-    <Hero
-      title={tagline}
-      subtitle={lead}
-      href={cta_href}
-      btnText={cta_btn_text}
-      imgUrl={imgUrl}
-    />
+    <>
+      <Meta
+        meta={{
+          siteUrl: `${SITE_URL}${pathname}`,
+          title: tagline,
+          description: lead,
+          image: imgUrl,
+        }}
+      />
+      <Hero
+        title={tagline}
+        subtitle={lead}
+        href={cta_href}
+        btnText={cta_btn_text}
+        imgUrl={imgUrl}
+      />
+    </>
   );
 };
 

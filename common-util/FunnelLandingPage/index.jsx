@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { SITE_URL } from 'util/constants/site';
 import Hero from 'common-util/FunnelLandingPage/Hero';
 import Meta from 'common-util/meta';
+import { getHostName } from 'common-util/functions';
 
 /**
  * Funnel number indicates `id` in cms-backend
@@ -14,7 +15,6 @@ import Meta from 'common-util/meta';
  * 5. Autonomous Developers
  */
 const FunnelLandingPage = ({ funnel, name }) => {
-  const host = get(window, 'location.host') || SITE_URL;
   const router = useRouter();
   const { pathname } = router;
   const {
@@ -28,7 +28,7 @@ const FunnelLandingPage = ({ funnel, name }) => {
           siteUrl: `${SITE_URL}${pathname}`,
           title: tagline,
           description: lead,
-          image: `${host}/images/funnels/metadata/${name}.png`,
+          image: `${getHostName()}/images/funnels/metadata/${name}.png`,
         }}
       />
       <Hero

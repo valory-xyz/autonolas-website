@@ -12,7 +12,7 @@ export async function getServerSideProps() {
   return {
     props: {
       funnel,
-      imgUrl: '/images/funnels/3.jpg',
+      name: 'dao-autonomy',
     },
   };
 }

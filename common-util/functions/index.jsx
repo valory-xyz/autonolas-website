@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import get from 'lodash/get';
+import { SITE_URL } from 'util/constants/site';
 import Twitter from '../../public/images/common/twitter.svg';
 import Linkedin from '../../public/images/common/linkedin.svg';
 import Discord from '../../public/images/common/discord.svg';
@@ -14,9 +16,7 @@ export const getSocials = (socials, renderFormat = 'img') => (
     }) => {
       if (!url) return null;
 
-      const src = `/images/common/${type}${
-        iconSize ? `-${iconSize}` : ''
-      }.svg`;
+      const src = `/images/common/${type}${iconSize ? `-${iconSize}` : ''}.svg`;
 
       return (
         <a
@@ -30,9 +30,7 @@ export const getSocials = (socials, renderFormat = 'img') => (
           {renderFormat === 'svg' ? (
             <>
               {type === 'twitter' && <Twitter width={24} height={24} />}
-              {type === 'linkedin' && (
-                <Linkedin width={24} height={24} />
-              )}
+              {type === 'linkedin' && <Linkedin width={24} height={24} />}
               {type === 'discord' && <Discord width={24} height={24} />}
             </>
           ) : (
@@ -65,3 +63,8 @@ export const serverRedirectToError = () => ({
     permanent: false,
   },
 });
+
+export const getHostName = () => {
+  if (typeof window === 'undefined') return SITE_URL;
+  return get(window, 'location.host');
+};

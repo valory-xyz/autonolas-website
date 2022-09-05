@@ -12,7 +12,7 @@ export async function getServerSideProps() {
   return {
     props: {
       funnel,
-      imgUrl: '/images/funnels/1.jpg',
+      name: 'autonomous-infra',
     },
   };
 }

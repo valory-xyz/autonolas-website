@@ -14,4 +14,15 @@ export const META_TAGS_INFO = {
   image: `${SITE_URL}/images/site-metadata/site-metatag.png`,
 };
 
-export const CUSTOM_META_PAGES = ['/blog', '/education-articles', 'academy'];
+export const CUSTOM_META_PAGES = [
+  '/blog',
+  '/education-articles',
+  'academy',
+
+  // funnels landing pages
+  'autonomous-contributors',
+  'autonomous-developers',
+  'autonomous-infra',
+  'dao-autonomy',
+  'smart-products',
+];

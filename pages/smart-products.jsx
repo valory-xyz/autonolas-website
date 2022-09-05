@@ -13,6 +13,7 @@ export async function getServerSideProps() {
     props: {
       funnel,
       imgUrl: '/images/funnels/2.jpg',
+      name: 'smart-products',
     },
   };
 }

@@ -13,7 +13,7 @@ import Meta from 'common-util/meta';
  * 4. Autonomous Contributors
  * 5. Autonomous Developers
  */
-const FunnelLandingPage = ({ funnel, imgUrl }) => {
+const FunnelLandingPage = ({ funnel, name }) => {
   const router = useRouter();
   const { pathname } = router;
   const {
@@ -27,7 +27,7 @@ const FunnelLandingPage = ({ funnel, imgUrl }) => {
           siteUrl: `${SITE_URL}${pathname}`,
           title: tagline,
           description: lead,
-          image: `${SITE_URL}${imgUrl}`,
+          image: `${SITE_URL}/images/funnels/${name}.png`,
         }}
       />
       <Hero
@@ -35,7 +35,7 @@ const FunnelLandingPage = ({ funnel, imgUrl }) => {
         subtitle={lead}
         href={cta_href}
         btnText={cta_btn_text}
-        imgUrl={imgUrl}
+        imgUrl={`/images/funnels/${name}.jpg`}
       />
     </>
   );
@@ -43,7 +43,7 @@ const FunnelLandingPage = ({ funnel, imgUrl }) => {
 
 FunnelLandingPage.propTypes = {
   funnel: PropTypes.instanceOf(Object).isRequired,
-  imgUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default FunnelLandingPage;

@@ -132,6 +132,6 @@ export const getTestimonials = async () => {
     populate: '*',
   };
   const json = await apiCall('testimonials', params);
-  const data = get(json, 'data') || null;
+  const data = get(json, 'data') || [];
   return data;
 };

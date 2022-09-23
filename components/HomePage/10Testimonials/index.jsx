@@ -3,7 +3,12 @@ import { Row, Col, Typography } from 'antd';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import Header from 'common-util/Header';
-import { SectionTestimonial, EachTestimonial, EmptyLogo } from './styles';
+import {
+  SectionTestimonial,
+  EachTestimonial,
+  EmptyLogo,
+  EmployeeDetails,
+} from './styles';
 
 const { Title } = Typography;
 
@@ -20,7 +25,7 @@ const Team = ({ testimonials }) => (
         const userImage = get(user_image, 'data.attributes.url');
 
         return (
-          <Col lg={6} md={6} xs={24}>
+          <Col xl={6} lg={12} sm={12} xs={24}>
             <EachTestimonial key={`testimonial-${id}`}>
               <Row className="testimonial-text">
                 <Col lg={24} xs={24}>
@@ -37,9 +42,7 @@ const Team = ({ testimonials }) => (
                   {userImage ? (
                     <img
                       src={`${process.env.NEXT_PUBLIC_API_URL}${userImage}`}
-                      width={120}
-                      height={120}
-                      alt=" "
+                      alt={`Testimonial by ${user_name} from ${company_name}`}
                     />
                   ) : (
                     <EmptyLogo />
@@ -47,15 +50,15 @@ const Team = ({ testimonials }) => (
                 </Col>
 
                 <Col lg={12} xs={12}>
-                  <Row justify="space-between" align="stretch">
-                    <Col span={24}>
+                  <EmployeeDetails>
+                    <div className="info-1">
                       <Title level={5}>{user_name}</Title>
                       <div className="user_title">{user_title}</div>
-                    </Col>
-                    <Col span={24}>
+                    </div>
+                    <div className="info-2">
                       <Title level={3}>{company_name}</Title>
-                    </Col>
-                  </Row>
+                    </div>
+                  </EmployeeDetails>
                 </Col>
               </Row>
             </EachTestimonial>

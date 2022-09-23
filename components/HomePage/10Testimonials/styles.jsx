@@ -24,20 +24,47 @@ export const EachTestimonial = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  p {
+    margin: 0;
+  }
   .company-info {
     margin-top: 2rem;
     img {
       border-radius: 20px;
+      width: 120px;
+      height: 120px;
     }
     .ant-row-stretch {
       height: 100%;
-      h5,
-      h3 {
-        margin: 0;
-      }
     }
     .user_title {
       font-size: 14px;
     }
+  }
+
+  ${MEDIA_QUERY.tabletL} {
+    .company-info {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    .company-info {
+      margin-top: 1rem;
+    }
+  }
+`;
+
+export const EmployeeDetails = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h5,
+  h3 {
+    margin: 0;
   }
 `;

@@ -125,3 +125,13 @@ export const getFunnel = async id => {
   const data = get(json, 'data') || null;
   return data;
 };
+
+// ----------- TESTIMONIALS -----------
+export const getTestimonials = async () => {
+  const params = {
+    populate: '*',
+  };
+  const json = await apiCall('testimonials', params);
+  const data = get(json, 'data') || null;
+  return data;
+};

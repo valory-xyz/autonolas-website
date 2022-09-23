@@ -11,6 +11,7 @@ import QuickIntroArticles from './5QuickIntroArticles';
 import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
 import StartBuilding from './7StartBuilding';
 import Mission from './9Mission';
+import Testimonials from './10Testimonials';
 import Team from './11Team';
 import Press from './12Press';
 import Blog from './13Blog';
@@ -27,6 +28,7 @@ const HomePage = ({
   foundingTeam,
   press,
   blogs,
+  testimonials,
 }) => (
   <>
     <TheNewWay isNavigationOpen={isNavigationOpen} />
@@ -44,6 +46,7 @@ const HomePage = ({
     <StartBuilding />
     <Mission />
     <EcosystemServices />
+    <Testimonials testimonials={testimonials} />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
     <Blog blogs={blogs} />
@@ -59,6 +62,7 @@ HomePage.propTypes = {
   foundingTeam: PropTypes.instanceOf(Array),
   press: PropTypes.instanceOf(Array),
   blogs: PropTypes.instanceOf(Array),
+  testimonials: PropTypes.instanceOf(Array),
 };
 
 HomePage.defaultProps = {
@@ -68,6 +72,7 @@ HomePage.defaultProps = {
   foundingTeam: [],
   press: [],
   blogs: [],
+  testimonials: [],
 };
 
 const mapStateToProps = state => {

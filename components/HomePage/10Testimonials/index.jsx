@@ -3,6 +3,7 @@ import { Row, Col, Typography } from 'antd';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import Header from 'common-util/Header';
+import Markdown from 'common-util/Markdown';
 import {
   SectionTestimonial,
   EachTestimonial,
@@ -29,11 +30,9 @@ const Team = ({ testimonials }) => (
             <EachTestimonial key={`testimonial-${id}`}>
               <Row className="testimonial-text">
                 <Col lg={24} xs={24}>
-                  <p>
-                    &ldquo;
-                    {text}
-                    &rdquo;
-                  </p>
+                  &ldquo;
+                  <Markdown>{text}</Markdown>
+                  &rdquo;
                 </Col>
               </Row>
 
@@ -66,6 +65,8 @@ const Team = ({ testimonials }) => (
         );
       })}
     </Row>
+
+    <br />
   </SectionTestimonial>
 );
 

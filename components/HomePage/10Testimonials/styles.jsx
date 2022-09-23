@@ -24,8 +24,11 @@ export const EachTestimonial = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  p {
-    margin: 0;
+  .testimonial-text {
+    p {
+      display: inline;
+      margin: 0;
+    }
   }
   .company-info {
     margin-top: 2rem;

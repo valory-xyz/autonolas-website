@@ -1,9 +1,10 @@
 import FunnelLandingPage from 'common-util/FunnelLandingPage';
 import AssetManagement from 'common-util/FunnelLandingPage/6AssetManagement';
-import { getFunnel } from 'common-util/api';
+import { getEducationArticles, getFunnel } from 'common-util/api';
 import { serverRedirectToError } from 'common-util/functions';
 
 export async function getServerSideProps() {
+  const educationArticles = await getEducationArticles();
   const funnel = await getFunnel(6);
 
   if (!funnel) {
@@ -13,6 +14,7 @@ export async function getServerSideProps() {
   return {
     props: {
       funnel,
+      educationArticles: educationArticles.slice(0, 3) /* only 3 items */,
       name: 'dao-autonomy',
     },
   };
@@ -21,7 +23,7 @@ export async function getServerSideProps() {
 const AssetManagementInfra = props => (
   <>
     <FunnelLandingPage {...props} />
-    <AssetManagement />
+    <AssetManagement {...props} />
   </>
 );
 

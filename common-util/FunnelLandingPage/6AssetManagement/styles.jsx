@@ -25,7 +25,13 @@ const backgroundGradientCss = css`
 `;
 
 export const AssetManagementContainer = styled.div`
+  > .section {
+    padding: 4rem 4.5rem;
+  }
   ${MEDIA_QUERY.tablet} {
+    > .section {
+      padding: 3rem 2rem;
+    }
     .ant-col {
       padding: 0 !important;
     }
@@ -187,8 +193,6 @@ export const HowToBuildOneContainer = styled.div`
 
 export const Features = styled.div`
   .each-feature {
-    flex-basis: 20%;
-    width: 20%;
     .img-container {
       width: 120px;
       padding: 2rem 0;
@@ -196,9 +200,7 @@ export const Features = styled.div`
   }
 
   ${MEDIA_QUERY.laptop} {
-    .each-feature {
-      flex-basis: auto;
-      width: auto;
-    }
   }
 `;
+
+export const GetStartedContainer = styled.div``;

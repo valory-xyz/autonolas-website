@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Row, Col, Divider, Grid,
 } from 'antd';
+import get from 'lodash/get';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
 import { HeaderText } from 'common-util/styles';
@@ -14,9 +15,9 @@ import {
 } from './data';
 
 import Balancer from './Balancer';
+import CallToActionButton from '../Hero/CallToActionButton';
 
 // part of the homepage
-import WhoDoesAutonolasHelp from '../../../components/HomePage/1WhoDoesAutonolasHelp';
 import WhatIsAutonolas from '../../../components/HomePage/2WhatIsAutonolas';
 import DecentralizedAndSophisticated from '../../../components/HomePage/3DecentralizedAndSophisticated';
 import HowDoAutonolasWork from '../../../components/HomePage/4HowDoAutonolasWork';
@@ -32,6 +33,7 @@ import {
   HowItWorksContainer,
   HowToBuildOneContainer,
   Features,
+  GetStartedContainer,
 } from './styles';
 
 const { useBreakpoint } = Grid;
@@ -43,7 +45,7 @@ const getFeatures = list => (
         key={`feature-${index + 1}`}
         xs={12}
         md={8}
-        lg={6}
+        lg={8}
         className="each-feature"
       >
         <div className="img-container">
@@ -59,8 +61,10 @@ const getFeatures = list => (
   </>
 );
 
-const AssetManagement = ({ educationArticles }) => {
+const AssetManagement = ({ educationArticles, funnel }) => {
   const screens = useBreakpoint();
+  const { cta_href, cta_btn_text } = get(funnel, 'attributes') || {};
+
   return (
     <AssetManagementContainer>
       <BenefitsContainer className="section">
@@ -152,18 +156,26 @@ const AssetManagement = ({ educationArticles }) => {
       <Balancer />
 
       <LearnContainer>
-        <WhoDoesAutonolasHelp />
         <WhatIsAutonolas />
         <DecentralizedAndSophisticated />
         <HowDoAutonolasWork />
         <QuickIntroArticles educationArticles={educationArticles} />
       </LearnContainer>
+
+      <GetStartedContainer className="section">
+        <Header
+          className="header"
+          title="Get Started Building The Next Generation Of DeFi Asset Management"
+        />
+        <CallToActionButton href={cta_href} btnText={cta_btn_text} />
+      </GetStartedContainer>
     </AssetManagementContainer>
   );
 };
 
 AssetManagement.propTypes = {
   educationArticles: PropTypes.instanceOf(Array),
+  funnel: PropTypes.instanceOf(Object).isRequired,
 };
 
 AssetManagement.defaultProps = {

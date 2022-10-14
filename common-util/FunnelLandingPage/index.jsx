@@ -1,5 +1,5 @@
-import get from 'lodash/get';
 import { useRouter } from 'next/router';
+import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import { SITE_URL } from 'util/constants/site';
 import Hero from 'common-util/FunnelLandingPage/Hero';

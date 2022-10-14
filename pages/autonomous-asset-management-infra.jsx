@@ -15,7 +15,7 @@ export async function getServerSideProps() {
     props: {
       funnel,
       educationArticles: educationArticles.slice(0, 3) /* only 3 items */,
-      name: 'dao-autonomy',
+      name: 'autonomous-asset-management-infra',
     },
   };
 }

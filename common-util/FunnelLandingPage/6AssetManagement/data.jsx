@@ -26,6 +26,44 @@ export const BENEFITS_LIST = [
   },
 ];
 
+export const HOW_IT_WORKS = [
+  {
+    desc: 'Autonomous service, powered by Autonolas',
+    imageUrl: '1.png',
+  },
+  {
+    desc: 'Add & remove assets, change weights',
+    imageUrl: '2.png',
+  },
+  {
+    desc: 'Balancer Managed Pool',
+    imageUrl: '3.png',
+  },
+];
+
+export const HOW_TO_BUILD_ONE = [
+  {
+    name: '1',
+    desc: 'Design your asset management strategy',
+    imageUrl: '1.png',
+  },
+  {
+    name: '2',
+    desc: 'Fork our code',
+    imageUrl: '2.png',
+  },
+  {
+    name: '3',
+    desc: 'Add your code in Python',
+    imageUrl: '3.png',
+  },
+  {
+    name: '4',
+    desc: 'Deploy pool & code via our on-chain protocol',
+    imageUrl: '4.png',
+  },
+];
+
 export const FEATURES = [
   {
     name: 'Decentralized',

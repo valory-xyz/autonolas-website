@@ -144,7 +144,7 @@ const AssetManagement = ({ educationArticles }) => {
         <Header className="header" title="Features:" />
         <Row gutter={[32, 0]}>
           {getFeatures(FEATURES.slice(0, 5))}
-          {!screens.md && <Divider style={dividerCss} />}
+          {!(screens.md || screens.xs) && <Divider style={dividerCss} />}
           {getFeatures(FEATURES.slice(5, 10))}
         </Row>
       </Features>

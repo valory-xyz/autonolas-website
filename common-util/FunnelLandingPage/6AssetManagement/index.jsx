@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row, Col, Divider } from 'antd';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
 import { HeaderText } from 'common-util/styles';
-import { Row, Col, Divider } from 'antd';
 import {
   BENEFITS_LIST,
   HOW_TO_BUILD_ONE,
   HOW_IT_WORKS,
   FEATURES,
 } from './data';
+
+import Balancer from './Balancer';
 
 // part of the homepage
 import WhoDoesAutonolasHelp from '../../../components/HomePage/1WhoDoesAutonolasHelp';
@@ -55,6 +57,26 @@ const getFeatures = list => (
 
 const AssetManagement = ({ educationArticles }) => (
   <AssetManagementContainer>
+    <BenefitsContainer className="section">
+      <Header className="header" title="Benefits:" />
+      <Row gutter={[32, 0]}>
+        {BENEFITS_LIST.map(({
+          id, name, desc, imageUrl,
+        }) => (
+          <Col key={id} xs={24} md={6} lg={6} className="each-benefit">
+            <div className="img-container">
+              <FullImage
+                src={`images/funnels/6AssetManagement/benefits/${imageUrl}`}
+                alt=" "
+              />
+            </div>
+            <HeaderText>{name}</HeaderText>
+            <div>{desc}</div>
+          </Col>
+        ))}
+      </Row>
+    </BenefitsContainer>
+
     <HowItWorksAndBuildOneSection>
       <HowItWorksContainer className="section">
         <Header className="header" title="How it works:" />
@@ -108,26 +130,6 @@ const AssetManagement = ({ educationArticles }) => (
       </HowToBuildOneContainer>
     </HowItWorksAndBuildOneSection>
 
-    <BenefitsContainer className="section">
-      <Header className="header" title="Benefits:" />
-      <Row gutter={[32, 0]}>
-        {BENEFITS_LIST.map(({
-          id, name, desc, imageUrl,
-        }) => (
-          <Col key={id} xs={24} md={6} lg={6} className="each-benefit">
-            <div className="img-container">
-              <FullImage
-                src={`images/funnels/6AssetManagement/benefits/${imageUrl}`}
-                alt=" "
-              />
-            </div>
-            <HeaderText>{name}</HeaderText>
-            <div>{desc}</div>
-          </Col>
-        ))}
-      </Row>
-    </BenefitsContainer>
-
     <Features className="section">
       <Header className="header" title="Features:" />
       <Row gutter={[32, 0]}>
@@ -136,6 +138,8 @@ const AssetManagement = ({ educationArticles }) => (
         {getFeatures(FEATURES.slice(5, 10))}
       </Row>
     </Features>
+
+    <Balancer />
 
     <LearnContainer>
       <WhoDoesAutonolasHelp />

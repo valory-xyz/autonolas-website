@@ -119,7 +119,7 @@ const AssetManagement = ({ educationArticles }) => {
                 <Col
                   key={`how-to-build-one-${index + 1}`}
                   xs={24}
-                  md={6}
+                  md={12}
                   lg={6}
                   className="each-how-to-build"
                 >

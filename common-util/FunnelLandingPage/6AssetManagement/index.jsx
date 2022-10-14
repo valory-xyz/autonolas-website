@@ -1,49 +1,64 @@
 import React from 'react';
 import Header from 'common-util/Header';
 import { HeaderText } from 'common-util/styles';
-import { Row, Col } from 'antd';
-import { AssetManagementContainer, BenefitsContainer } from './styles';
+import { Row, Col, Divider } from 'antd';
+import { BENEFITS_LIST, FEATURES } from './data';
+import {
+  dividerCss,
+  AssetManagementContainer,
+  FullImage,
+  BenefitsContainer,
+  HowItWorksAndBuildOneSection,
+  HowItWorksContainer,
+  HowToBuildOneContainer,
+  Features,
+} from './styles';
 
-const BENEFITS_LIST = [
-  {
-    id: 'b-1',
-    name: 'Attract More Liquidity',
-    desc: 'Build novel products and keep your edge in the asset management market',
-    imageUrl: 'attract-more-liquidity.png',
-  },
-  {
-    id: 'b-1',
-    name: 'Stay Compliant',
-    desc: 'Run automated funds without breaking any laws',
-    imageUrl: 'stay-compliant.png',
-  },
-  {
-    id: 'b-1',
-    name: 'Take Control',
-    desc: 'Plan for the future with total control and flexibility of your product infrastructure',
-    imageUrl: 'take-control.png',
-  },
-  {
-    id: 'b-1',
-    name: 'Scale',
-    desc: 'Deploy and manage more products, all with high-uptime',
-    imageUrl: 'scale.png',
-  },
-];
+const getFeatures = list => (
+  <>
+    {list.map(({ name, desc, imageUrl }, index) => (
+      <Col
+        key={`feature-${index + 1}`}
+        xs={24}
+        md={6}
+        lg={6}
+        className="each-feature"
+      >
+        <div className="img-container">
+          <FullImage
+            src={`images/funnels/6AssetManagement/features/${imageUrl}`}
+            alt=" "
+          />
+        </div>
+        <HeaderText>{name}</HeaderText>
+        <div>{desc}</div>
+      </Col>
+    ))}
+  </>
+);
 
 const AssetManagement = () => (
   <AssetManagementContainer>
+    <HowItWorksAndBuildOneSection>
+      <HowItWorksContainer className="section">
+        <Header className="header" title="How it works:" />
+      </HowItWorksContainer>
+
+      <HowToBuildOneContainer className="section">
+        <Header className="header" title="How to build one:" />
+      </HowToBuildOneContainer>
+    </HowItWorksAndBuildOneSection>
+
     <BenefitsContainer className="section">
       <Header className="header" title="Benefits:" />
-
       <Row gutter={[32, 0]}>
         {BENEFITS_LIST.map(({
           id, name, desc, imageUrl,
         }) => (
           <Col key={id} xs={24} md={6} lg={6} className="each-benefit">
             <div className="img-container">
-              <img
-                src={`images/funnels/6AssetManagement/${imageUrl}`}
+              <FullImage
+                src={`images/funnels/6AssetManagement/benefits/${imageUrl}`}
                 alt=" "
               />
             </div>
@@ -52,8 +67,16 @@ const AssetManagement = () => (
           </Col>
         ))}
       </Row>
-      <div />
     </BenefitsContainer>
+
+    <Features className="section">
+      <Header className="header" title="Features:" />
+      <Row gutter={[32, 0]}>
+        {getFeatures(FEATURES.slice(0, 5))}
+        <Divider style={dividerCss} />
+        {getFeatures(FEATURES.slice(5, 10))}
+      </Row>
+    </Features>
   </AssetManagementContainer>
 );
 

@@ -3,6 +3,12 @@ import { COLOR } from 'util/theme';
 
 export const AssetManagementContainer = styled.div``;
 
+export const dividerCss = {
+  backgroundColor: COLOR.BLACK,
+  marginTop: '2rem',
+  marginBottom: '0rem',
+};
+
 const shortLineCss = css`
   content: " ";
   position: absolute;
@@ -20,10 +26,14 @@ const backgroundGradientCss = css`
   );
 `;
 
+export const FullImage = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
 export const BenefitsContainer = styled.div`
   ${backgroundGradientCss}
   .each-benefit {
-    border-top: 1px solid ${COLOR.BLACK};
     .img-container {
       width: 160px;
       padding: 2rem 0;
@@ -51,4 +61,21 @@ export const BenefitsContainer = styled.div`
   }
 `;
 
-// export const AssetManagementContainer = styled.div``;
+export const HowItWorksAndBuildOneSection = styled.div`
+  ${backgroundGradientCss}
+`;
+
+export const HowItWorksContainer = styled.div``;
+
+export const HowToBuildOneContainer = styled.div``;
+
+export const Features = styled.div`
+  .each-feature {
+    flex-basis: 20%;
+    width: 20%;
+    .img-container {
+      width: 120px;
+      padding: 2rem 0;
+    }
+  }
+`;

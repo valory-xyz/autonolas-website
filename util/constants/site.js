@@ -25,4 +25,5 @@ export const CUSTOM_META_PAGES = [
   'autonomous-infra',
   'dao-autonomy',
   'smart-products',
+  'autonomous-asset-management-infra',
 ];

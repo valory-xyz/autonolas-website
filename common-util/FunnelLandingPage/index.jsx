@@ -1,5 +1,5 @@
-import get from 'lodash/get';
 import { useRouter } from 'next/router';
+import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import { SITE_URL } from 'util/constants/site';
 import Hero from 'common-util/FunnelLandingPage/Hero';
@@ -13,6 +13,7 @@ import { getHostName } from 'common-util/functions';
  * 3. DAO Autonomy
  * 4. Autonomous Contributors
  * 5. Autonomous Developers
+ * 6. Autonomous Asset Management Infra
  */
 const FunnelLandingPage = ({ funnel, name }) => {
   const router = useRouter();

@@ -152,7 +152,7 @@ export const Container = styled.header`
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          justify-content: space-around;
+          justify-content: stretch;
           transition: 0.3s;
           .nav-item {
             margin: 2.5rem 0;

@@ -15,7 +15,7 @@ const LIST = [
   {
     id: 2,
     title: 'Protocol Developers',
-    desc: 'Build and own unified off-chain infrastructure like oracles, keepers and bridges.',
+    desc: 'Build and own unified off-chain infrastructure like oracles, keepers and bridges from composable building blocks.',
     imgUrl: 'protocol-devs.png',
     redirectTo: 'autonomous-infra',
   },

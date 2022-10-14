@@ -52,4 +52,11 @@ export const BorderBoxes = styled.div`
   }
 `;
 
-export const A = styled.div``;
+export const HeaderText = styled.div`
+  margin-bottom: 0.5rem;
+  font-size: 28px;
+  font-family: "manrope__semibold", sans-serif;
+  ${MEDIA_QUERY.tablet} {
+    font-size: 22px;
+  }
+`;

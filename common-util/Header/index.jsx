@@ -25,6 +25,11 @@ const H2 = styled.h2`
     font-size: 94px;
   }
 
+  ${MEDIA_QUERY.tabletL} {
+    font-size: 74px;
+    word-wrap: initial;
+  }
+
   ${MEDIA_QUERY.tablet} {
     font-size: 54px;
     word-wrap: initial;

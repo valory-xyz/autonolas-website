@@ -34,13 +34,10 @@ export const FullImage = styled.img`
 export const BenefitsContainer = styled.div`
   ${backgroundGradientCss}
   .each-benefit {
+    border-top: 1px solid ${COLOR.BLACK};
     .img-container {
       width: 160px;
       padding: 2rem 0;
-      img {
-        width: 100%;
-        height: 100%;
-      }
     }
     &:nth-child(2) {
       &:before {
@@ -65,9 +62,63 @@ export const HowItWorksAndBuildOneSection = styled.div`
   ${backgroundGradientCss}
 `;
 
-export const HowItWorksContainer = styled.div``;
+export const HowItWorksContainer = styled.div`
+  .each-how-it-works {
+    text-align: center;
+    .img-container {
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem auto;
+      img {
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      .description {
+        width: 320px;
+        margin: 0 auto;
+      }
+    }
+  }
+`;
 
-export const HowToBuildOneContainer = styled.div``;
+export const HowToBuildOneContainer = styled.div`
+  .each-how-to-build {
+    .img-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      img {
+        width: 100%;
+      }
+    }
+    &:not(:last-child) {
+      .img-container {
+        &::after {
+          content: "→";
+          position: absolute;
+          left: 67.5%;
+          font-size: 80px;
+          transform: translate(100%, 0%);
+          font-family: manrope__extralight;
+        }
+      }
+    }
+    .header-text {
+      color: ${COLOR.PURPLE};
+      font-size: 70px;
+    }
+    .description {
+      width: 85%;
+    }
+  }
+`;
 
 export const Features = styled.div`
   .each-feature {

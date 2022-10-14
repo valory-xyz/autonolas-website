@@ -1,9 +1,15 @@
 import React from 'react';
-import Header from 'common-util/Header';
 import PropTypes from 'prop-types';
+import Header from 'common-util/Header';
+import Description from 'common-util/Description';
 import { HeaderText } from 'common-util/styles';
 import { Row, Col, Divider } from 'antd';
-import { BENEFITS_LIST, FEATURES } from './data';
+import {
+  BENEFITS_LIST,
+  HOW_TO_BUILD_ONE,
+  HOW_IT_WORKS,
+  FEATURES,
+} from './data';
 
 // part of the homepage
 import WhoDoesAutonolasHelp from '../../../components/HomePage/1WhoDoesAutonolasHelp';
@@ -52,10 +58,53 @@ const AssetManagement = ({ educationArticles }) => (
     <HowItWorksAndBuildOneSection>
       <HowItWorksContainer className="section">
         <Header className="header" title="How it works:" />
+        <Row gutter={[32, 0]}>
+          {HOW_IT_WORKS.map(({ desc, imageUrl, imgStyle }, index) => (
+            <Col
+              key={`how-it-works-${index + 1}`}
+              xs={24}
+              md={index === 1 ? 10 : 7}
+              lg={index === 1 ? 10 : 7}
+              className="each-how-it-works"
+            >
+              <div className="img-container" style={imgStyle}>
+                <img
+                  src={`images/funnels/6AssetManagement/HowItWorks/${imageUrl}`}
+                  alt=" "
+                />
+              </div>
+              <Description type={2} title={desc || ''} />
+            </Col>
+          ))}
+        </Row>
       </HowItWorksContainer>
+
+      <Divider style={dividerCss} />
 
       <HowToBuildOneContainer className="section">
         <Header className="header" title="How to build one:" />
+        <Row gutter={[32, 0]}>
+          {HOW_TO_BUILD_ONE.map(({
+            name, desc, imageUrl, imgStyle,
+          }, index) => (
+            <Col
+              key={`how-to-build-one-${index + 1}`}
+              xs={24}
+              md={6}
+              lg={6}
+              className="each-how-to-build"
+            >
+              <div className="img-container" style={imgStyle}>
+                <img
+                  src={`images/funnels/6AssetManagement/HowToBuildOne/${imageUrl}`}
+                  alt=" "
+                />
+              </div>
+              <HeaderText className="header-text">{name}</HeaderText>
+              <Description type={2} title={desc || ''} />
+            </Col>
+          ))}
+        </Row>
       </HowToBuildOneContainer>
     </HowItWorksAndBuildOneSection>
 

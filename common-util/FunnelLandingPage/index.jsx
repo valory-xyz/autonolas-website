@@ -13,6 +13,7 @@ import { getHostName } from 'common-util/functions';
  * 3. DAO Autonomy
  * 4. Autonomous Contributors
  * 5. Autonomous Developers
+ * 6. Autonomous Asset Management Infra
  */
 const FunnelLandingPage = ({ funnel, name }) => {
   const router = useRouter();

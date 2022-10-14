@@ -26,13 +26,10 @@ export const Row = styled.div`
     margin-bottom: 4rem;
   }
 
-  ${MEDIA_QUERY.laptop} {
+  ${MEDIA_QUERY.tablet} {
     .description {
-      max-width: 500px;
+      font-size: 40px;
+      margin-bottom: 2rem;
     }
-  }
-
-  ${MEDIA_QUERY.mobileL} {
-    flex-direction: column-reverse;
   }
 `;

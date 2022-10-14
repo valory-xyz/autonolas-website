@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
-import { COLOR } from 'util/theme';
-
-export const AssetManagementContainer = styled.div``;
+import { COLOR, MEDIA_QUERY } from 'util/theme';
 
 export const dividerCss = {
   backgroundColor: COLOR.BLACK,
@@ -24,6 +22,17 @@ const backgroundGradientCss = css`
     rgba(224, 250, 239, 0) 33.33%,
     #e0faef 90.31%
   );
+`;
+
+export const AssetManagementContainer = styled.div`
+  ${MEDIA_QUERY.tablet} {
+    .ant-col {
+      padding: 0 !important;
+    }
+    .ant-divider {
+      margin-top: 0 !important;
+    }
+  }
 `;
 
 export const FullImage = styled.img`
@@ -56,6 +65,26 @@ export const BenefitsContainer = styled.div`
       }
     }
   }
+
+  ${MEDIA_QUERY.tablet} {
+    .each-benefit {
+      border: none;
+      .img-container {
+        width: 120px;
+      }
+      &:nth-child(2) {
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
 `;
 
 export const HowItWorksAndBuildOneSection = styled.div`
@@ -79,6 +108,20 @@ export const HowItWorksContainer = styled.div`
       .description {
         width: 320px;
         margin: 0 auto;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.tablet} {
+    .each-how-it-works {
+      .img-container {
+        width: 120px !important;
+        height: 120px;
+      }
+      &:nth-child(2) {
+        .description {
+          width: auto;
+        }
       }
     }
   }
@@ -118,6 +161,28 @@ export const HowToBuildOneContainer = styled.div`
       width: 85%;
     }
   }
+
+  ${MEDIA_QUERY.tablet} {
+    .each-how-to-build {
+      display: flex;
+      align-items: center;
+      .img-container {
+        width: 45% !important;
+        margin-right: 2rem;
+        + div {
+          width: 50%;
+        }
+      }
+      &:not(:last-child) {
+        .img-container {
+          &::after {
+            content: "";
+            display: none;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const Features = styled.div`
@@ -127,6 +192,13 @@ export const Features = styled.div`
     .img-container {
       width: 120px;
       padding: 2rem 0;
+    }
+  }
+
+  ${MEDIA_QUERY.laptop} {
+    .each-feature {
+      flex-basis: auto;
+      width: auto;
     }
   }
 `;

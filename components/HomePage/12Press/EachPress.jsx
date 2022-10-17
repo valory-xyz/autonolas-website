@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
-import PATHS from 'util/paths';
 
 const EachPress = ({ press }) => {
-  const { id, attributes } = press || {};
+  const { attributes } = press || {};
   const {
-    title, thumbnail, type, publisher,
+    title, thumbnail, type, publisher, link,
   } = attributes || {};
   const imageUrl = get(thumbnail, 'data.attributes.url') || '';
 
   return (
-
     <div className="column">
       <div
         className="img-container"
@@ -26,9 +24,12 @@ const EachPress = ({ press }) => {
       <div className="header-text">{title}</div>
       <div className="subtitle">{publisher}</div>
 
-      <a href={`/${PATHS.PRESS}/${id}`}>
-        <Button title="LEARN MORE" type="black" className="mini" />
-      </a>
+      <Button
+        title="LEARN MORE"
+        type="black"
+        className="mini"
+        onClick={() => window.open(link)}
+      />
     </div>
   );
 };

@@ -29,7 +29,7 @@ const FunnelLandingPage = ({ funnel, name }) => {
           siteUrl: `${SITE_URL}${pathname}`,
           title: tagline,
           description: lead,
-          image: `${getHostName()}/images/funnels/metadata/${name}.png`,
+          image: `${getHostName()}/images/funnels/metadata/${name}.jpg`,
         }}
       />
       <Hero

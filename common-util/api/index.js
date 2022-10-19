@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
-import get from 'lodash/get';
 import qs from 'qs';
+import get from 'lodash/get';
+import isFinite from 'lodash/isFinite';
 
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/api`;
 
@@ -8,7 +9,7 @@ const apiCall = async (subURL, params) => {
   const stringifyParams = qs.stringify(params);
 
   try {
-    const response = await fetch(`${URL}/${subURL}?${stringifyParams}`);
+    const response = await fetch(`${URL}/${subURL}${params ? '?' : ''}${stringifyParams}`);
     const json = await response.json();
     return json;
   } catch (error) {
@@ -107,13 +108,28 @@ export const getBlogs = async () => {
   return data;
 };
 
+
+/**
+ * `Blog` should be able to return a response if queried with `id` or `slug`.
+ * If `filters` query is used, the response will be an array hence return the 1st element fetched
+ *
+ * @example
+ * /blog/1
+ * /blog/blog-one
+ *
+ */
 export const getBlog = async id => {
   const params = {
     populate: '*',
   };
-  const json = await apiCall(`blog-posts/${id}`, params);
-  const data = get(json, 'data') || null;
-  return data;
+
+  if (isFinite(Number(id))) {
+    const json = await apiCall(`blog-posts/${id}`, params);
+    return get(json, 'data') || null;
+  }
+
+  const json = await apiCall(`blog-posts?filters[slug][$eq]=${id}`);
+  return get(json, 'data[0]') || null;
 };
 
 // ----------- FUNNELS -----------

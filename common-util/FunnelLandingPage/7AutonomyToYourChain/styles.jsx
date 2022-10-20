@@ -57,20 +57,11 @@ export const BenefitsContainer = styled.div`
 `;
 
 export const WhatItInvolves = styled.div`
-  /* TODO */
-  /* .mini-border-top {
-    position: relative;
-    border-top: 1px solid ${COLOR.BLACK};
-    &:after {
-      ${shortLineCss}
-      right: 16px;
-    }
-  } */
   .each-what-it-involves {
     .img-container {
       position: relative;
-      width: 180px;
-      height: 180px;
+      width: 240px;
+      height: 240px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,7 +73,13 @@ export const WhatItInvolves = styled.div`
     .details-row {
       display: flex;
       align-items: flex-start;
-      padding-top: 1rem;
+      padding: 2rem 3rem;
+      position: relative;
+      border-top: 1px solid ${COLOR.BLACK};
+      &:after {
+        ${shortLineCss}
+        right: 0px;
+      }
       .header-text {
         color: ${COLOR.PURPLE};
         font-size: 70px;
@@ -91,6 +88,12 @@ export const WhatItInvolves = styled.div`
       }
       .description {
         width: 85%;
+        text-align: center;
+      }
+    }
+    &:last-child {
+      .details-row:after {
+        display: none;
       }
     }
   }
@@ -127,10 +130,12 @@ export const ExistingContainer = styled.div`
     margin-top: 1rem;
     margin-bottom: 3rem;
     .img-container {
+      position: relative;
       height: 164px;
       margin: 0 auto 2rem auto;
       padding-bottom: 1rem;
       border-bottom: 1px solid ${COLOR.BLACK};
+      text-align: center;
       img {
         height: 100%;
       }
@@ -142,6 +147,20 @@ export const ExistingContainer = styled.div`
         font-size: 26px;
         font-family: "manrope__bold";
         margin-bottom: 0.25rem;
+      }
+    }
+    /* even */
+    &:nth-child(2n + 2) {
+      .img-container {
+        &:after {
+          ${shortLineCss}
+          top: auto;
+          bottom: 0;
+          left: -1rem;
+        }
+      }
+      .details-row {
+        padding-left: 3rem;
       }
     }
   }

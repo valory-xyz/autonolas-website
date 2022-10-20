@@ -55,7 +55,7 @@ const AutonomyToYourChain = ({ educationArticles, funnel }) => {
 
       <WhatItInvolves className="section">
         <Header className="header" title="What it involves:" />
-        <Row gutter={[32, 0]}>
+        <Row>
           {WHAT_IT_INVOLVES.map(({
             name, desc, imageUrl, imgStyle,
           }, index) => (

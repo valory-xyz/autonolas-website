@@ -21,7 +21,7 @@ export const WHAT_IT_INVOLVES = [
     name: '1',
     desc: 'Deployment – we’ll bring our protocol to your chain',
     imageUrl: 'deployment.png',
-    imgStyle: { width: '220px' },
+    imgStyle: { width: '300px' },
   },
   {
     name: '2',

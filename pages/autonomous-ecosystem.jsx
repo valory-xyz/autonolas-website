@@ -1,5 +1,5 @@
 import FunnelLandingPage from 'common-util/FunnelLandingPage';
-import AutonomousEcosystem from 'common-util/FunnelLandingPage/7AutonomousEcosystem';
+import AutonomousEcosystem from 'common-util/FunnelLandingPage/7AutonomousEcosystem ';
 import { getEducationArticles, getFunnel } from 'common-util/api';
 import { serverRedirectToError } from 'common-util/functions';
 

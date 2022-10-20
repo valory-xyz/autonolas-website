@@ -8,7 +8,6 @@ import { HeaderText } from 'common-util/styles';
 import { BENEFITS_LIST, WHAT_IT_INVOLVES, EXISTING_SERVICE } from './data';
 
 // part of the homepage
-import WhoDoesAutonolasHelp from '../../../components/HomePage/1WhoDoesAutonolasHelp';
 import WhatIsAutonolas from '../../../components/HomePage/2WhatIsAutonolas';
 import DecentralizedAndSophisticated from '../../../components/HomePage/3DecentralizedAndSophisticated';
 import HowDoAutonolasWork from '../../../components/HomePage/4HowDoAutonolasWork';
@@ -114,7 +113,6 @@ const AutonomousEcosystem = ({ educationArticles, funnel }) => {
       </ExistingContainer>
 
       <LearnContainer>
-        <WhoDoesAutonolasHelp />
         <WhatIsAutonolas />
         <DecentralizedAndSophisticated />
         <HowDoAutonolasWork />

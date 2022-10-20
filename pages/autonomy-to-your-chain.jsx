@@ -3,9 +3,11 @@ import AutonomyToYourChain from 'common-util/FunnelLandingPage/7AutonomyToYourCh
 import { getEducationArticles, getFunnel } from 'common-util/api';
 import { serverRedirectToError } from 'common-util/functions';
 
+// TODO: replace 7AutonomyToYourChain
+// TODO: replace autonomy-to-your-chain
 export async function getServerSideProps() {
   const educationArticles = await getEducationArticles();
-  const funnel = await getFunnel(6);
+  const funnel = await getFunnel(7);
 
   if (!funnel) {
     return serverRedirectToError();
@@ -15,16 +17,16 @@ export async function getServerSideProps() {
     props: {
       funnel,
       educationArticles: educationArticles.slice(0, 3) /* only 3 items */,
-      name: 'autonomous-asset-management-infra',
+      name: 'autonomy-to-your-chain',
     },
   };
 }
 
-const AssetManagementInfra = props => (
+const AutonomyToYourChainComponent = props => (
   <>
     <FunnelLandingPage {...props} />
     <AutonomyToYourChain {...props} />
   </>
 );
 
-export default AssetManagementInfra;
+export default AutonomyToYourChainComponent;

@@ -24,7 +24,7 @@ const Desc = styled.div`
         `;
       case 4:
         return `
-          font-size : ${FONT_SIZE[18]};
+          font-size : ${FONT_SIZE[24]};
         `;
       case 10:
       default:

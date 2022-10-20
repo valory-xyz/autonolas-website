@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { MEDIA_QUERY } from 'util/theme';
 
 export const BalancerContainer = styled.div`
-  background-image: url("/images/funnels/6AssetManagement/background.jpg");
+  background-image: url("/images/funnels/6AssetManagement/balancer-background.jpg");
   .x-balancer {
     max-width: 900px;
     margin: 3rem 0;

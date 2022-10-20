@@ -24,8 +24,8 @@ import HowDoAutonolasWork from '../../../components/HomePage/4HowDoAutonolasWork
 import QuickIntroArticles from '../../../components/HomePage/5QuickIntroArticles';
 import { LearnContainer } from '../../../components/HomePage/styles';
 
+import { dividerCss } from '../styles';
 import {
-  dividerCss,
   AssetManagementContainer,
   FullImage,
   BenefitsContainer,

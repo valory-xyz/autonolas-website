@@ -106,7 +106,7 @@ const AutonomyToYourChain = ({ educationArticles, funnel }) => {
               </div>
               <div className="details-row">
                 <div className="header-text">{name}</div>
-                <Description type={4} title={desc || ''} />
+                <div className="desc">{desc || ''}</div>
               </div>
             </Col>
           ))}

@@ -183,11 +183,16 @@ export const ExistingContainer = styled.div`
     }
     .details-row {
       max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 24px;
+      > div {
+        display: inline;
+      }
       .header-text {
         color: ${COLOR.PURPLE};
-        font-size: 26px;
         font-family: "manrope__bold";
-        margin-bottom: 0.25rem;
+        padding-right: 4px;
       }
     }
     /* even */
@@ -235,6 +240,7 @@ export const ExistingContainer = styled.div`
         }
       }
       .details-row {
+        font-size: 18px;
         padding-left: 0 !important;
       }
       &:not(:last-child) {

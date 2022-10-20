@@ -14,7 +14,7 @@ import { getHostName } from 'common-util/functions';
  * 4. Autonomous Contributors
  * 5. Autonomous Developers
  * 6. Autonomous Asset Management Infra
- * 7. 7AutonomyToYourChain
+ * 7. Autonomous Ecosystem
  */
 
 const FunnelLandingPage = ({ funnel, name }) => {

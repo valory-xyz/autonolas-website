@@ -25,7 +25,7 @@ import {
   BringPowerContainer,
 } from './styles';
 
-const AutonomyToYourChain = ({ educationArticles, funnel }) => {
+const AutonomousEcosystem = ({ educationArticles, funnel }) => {
   const { cta_href, cta_btn_text } = get(funnel, 'attributes') || {};
 
   return (
@@ -39,7 +39,7 @@ const AutonomyToYourChain = ({ educationArticles, funnel }) => {
             <Col key={id} xs={24} md={6} lg={8} className="each-benefit">
               <div className="img-container">
                 <FullImage
-                  src={`images/funnels/7AutonomyToYourChain/Benefits/${imageUrl}`}
+                  src={`images/funnels/7AutonomousEcosystem/Benefits/${imageUrl}`}
                   alt=" "
                 />
               </div>
@@ -68,7 +68,7 @@ const AutonomyToYourChain = ({ educationArticles, funnel }) => {
             >
               <div className="img-container" style={imgStyle}>
                 <img
-                  src={`images/funnels/7AutonomyToYourChain/WhatItInvolves/${imageUrl}`}
+                  src={`images/funnels/7AutonomousEcosystem/WhatItInvolves/${imageUrl}`}
                   alt=" "
                 />
               </div>
@@ -100,7 +100,7 @@ const AutonomyToYourChain = ({ educationArticles, funnel }) => {
             >
               <div className="img-container" style={imgStyle}>
                 <img
-                  src={`images/funnels/7AutonomyToYourChain/ExistingServices/${imageUrl}`}
+                  src={`images/funnels/7AutonomousEcosystem/ExistingServices/${imageUrl}`}
                   alt=" "
                 />
               </div>
@@ -132,14 +132,14 @@ const AutonomyToYourChain = ({ educationArticles, funnel }) => {
   );
 };
 
-AutonomyToYourChain.propTypes = {
+AutonomousEcosystem.propTypes = {
   educationArticles: PropTypes.instanceOf(Array),
   funnel: PropTypes.instanceOf(Object).isRequired,
 };
 
-AutonomyToYourChain.defaultProps = {
+AutonomousEcosystem.defaultProps = {
   educationArticles: [],
 
 };
 
-export default AutonomyToYourChain;
+export default AutonomousEcosystem;

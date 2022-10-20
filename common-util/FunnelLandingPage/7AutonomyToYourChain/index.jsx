@@ -39,7 +39,7 @@ const AutonomyToYourChain = ({ educationArticles, funnel }) => {
             <Col key={id} xs={24} md={6} lg={8} className="each-benefit">
               <div className="img-container">
                 <FullImage
-                  src={`images/funnels/7AutonomyToYourChain/benefits/${imageUrl}`}
+                  src={`images/funnels/7AutonomyToYourChain/Benefits/${imageUrl}`}
                   alt=" "
                 />
               </div>

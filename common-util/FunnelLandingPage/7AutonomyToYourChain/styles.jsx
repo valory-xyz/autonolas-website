@@ -54,6 +54,23 @@ export const BenefitsContainer = styled.div`
       }
     }
   }
+
+  ${MEDIA_QUERY.mobileL} {
+    .each-benefit {
+      display: flex;
+      margin-bottom: 2rem;
+      max-width: 100%;
+      .img-container {
+        width: 120px;
+        max-height: 140px;
+        padding: 0;
+        margin-right: 1rem;
+        + div {
+          width: 60%;
+        }
+      }
+    }
+  }
 `;
 
 export const WhatItInvolves = styled.div`
@@ -98,24 +115,48 @@ export const WhatItInvolves = styled.div`
     }
   }
 
-  ${MEDIA_QUERY.tablet} {
+  ${MEDIA_QUERY.laptop} {
+    .each-what-it-involves {
+      .img-container {
+        width: 180px;
+        height: 180px;
+      }
+      .details-row {
+        padding: 2rem;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.tabletL} {
+    .each-what-it-involves {
+      .img-container {
+        width: 120px !important;
+        height: 120px !important;
+      }
+      .details-row {
+        padding: 1rem;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
     .each-what-it-involves {
       display: flex;
-      align-items: center;
-      .img-container {
-        width: 45% !important;
-        margin-right: 2rem;
-        + div {
-          width: 50%;
+      .details-row {
+        border-top: none;
+        width: 80%;
+        .header-text {
+          font-size: 40px;
+          width: 60px;
+        }
+        .description {
+          text-align: left;
+        }
+        &::after {
+          display: none;
         }
       }
-      &:not(:last-child) {
-        .img-container {
-          &::after {
-            content: "";
-            display: none;
-          }
-        }
+      .img-container {
       }
     }
   }
@@ -164,7 +205,42 @@ export const ExistingContainer = styled.div`
       }
     }
   }
-  ${MEDIA_QUERY.tablet} {
+
+  ${MEDIA_QUERY.laptop} {
+    .each-existing-service {
+      .img-container {
+        height: 108px;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.tabletL} {
+    .each-existing-service {
+      &:first-child > .img-container img {
+        height: 70%;
+        margin-bottom: -5rem;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    .each-existing-service {
+      margin-bottom: 1rem;
+      padding-bottom: 2rem !important;
+      .img-container {
+        border-bottom: none;
+        margin-bottom: 0;
+        &:after {
+          display: none;
+        }
+      }
+      .details-row {
+        padding-left: 0 !important;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid ${COLOR.BLACK};
+      }
+    }
   }
 `;
 

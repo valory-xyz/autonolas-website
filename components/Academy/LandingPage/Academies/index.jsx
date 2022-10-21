@@ -23,7 +23,9 @@ const columns = [
     title: 'Participants',
     dataIndex: 'participants',
     key: 'participants',
-    render: value => (value || []).map(e => <div>{e.name}</div>),
+    render: value => (value || []).map(e => (
+      <div>{e.link ? getAnchor(e.name, e.link) : e.name}</div>
+    )),
     width: 300,
   },
   {
@@ -114,7 +116,7 @@ const data = [
       link: null,
     },
     participants: [
-      { name: 'Skale (Chadwick & Jace)' },
+      { name: 'Skale (Chadwick & Jace)', link: 'https://skale.space/ ' },
       { name: 'Dhiraj' },
       { name: 'The Great Axios' },
     ],
@@ -130,7 +132,7 @@ const data = [
 ];
 
 const Academies = () => (
-  <AcademiesContainer className="section">
+  <AcademiesContainer className="section" id="past-cohorts">
     <Header title="Past cohorts" className="header" />
     <Table columns={columns} dataSource={data} pagination={false} bordered />
   </AcademiesContainer>

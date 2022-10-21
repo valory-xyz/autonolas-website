@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import get from 'lodash/get';
+import Link from 'next/link';
 import { SITE_URL } from 'util/constants/site';
 import Twitter from '../../public/images/common/twitter.svg';
 import Linkedin from '../../public/images/common/linkedin.svg';
@@ -67,4 +68,23 @@ export const serverRedirectToError = () => ({
 export const getHostName = () => {
   if (typeof window === 'undefined') return SITE_URL;
   return get(window, 'location.host');
+};
+
+
+export const getAnchor = (title, href, otherProps) => {
+  const { isLink, isExternal = true } = otherProps || {};
+
+  return isLink ? (
+    <Link href={href} passHref>
+      <a>{title}</a>
+    </Link>
+  ) : (
+    <a
+      href={href}
+      target={isExternal ? '_blank' : ''}
+      rel="noopener noreferrer"
+    >
+      {title}
+    </a>
+  );
 };

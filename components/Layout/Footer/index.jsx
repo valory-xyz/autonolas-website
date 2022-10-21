@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from 'common-util/Header';
-import Link from 'next/link';
+import { getAnchor } from 'common-util/functions';
 import PATHS from 'util/paths';
 import Twitter from '../../../public/images/common/twitter.svg';
 import Discord from '../../../public/images/common/discord.svg';
@@ -10,24 +10,6 @@ import {
   SocialConnect,
   FooterBottom,
 } from './styles';
-
-const getAnchor = (title, href, otherProps) => {
-  const { isLink, isExternal = true } = otherProps || {};
-
-  return isLink ? (
-    <Link href={href} passHref>
-      <a>{title}</a>
-    </Link>
-  ) : (
-    <a
-      href={href}
-      target={isExternal ? '_blank' : ''}
-      rel="noopener noreferrer"
-    >
-      {title}
-    </a>
-  );
-};
 
 const footerLogo = (
   <img

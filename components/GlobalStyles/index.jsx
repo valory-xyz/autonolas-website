@@ -64,6 +64,12 @@ const GlobalStyle = createGlobalStyle`
     margin-left: 0;
     padding-left: 2rem;
   }
+  .ant-table {
+    font-size: inherit;
+    .ant-table-tbody > tr.ant-table-row > td {
+      background: unset;
+    }
+  }
 `;
 
 export default GlobalStyle;

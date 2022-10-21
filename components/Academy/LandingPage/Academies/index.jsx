@@ -102,7 +102,7 @@ const data = [
     product: [
       {
         name: 'Keeper Service II',
-        link: 'https://github.com/valory-xyz/agent-academy-3',
+        link: 'https://github.com/valory-xyz/agent-academy-2',
         isWip: true,
       },
     ],

@@ -1,28 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
-
-export const dividerCss = {
-  backgroundColor: COLOR.BLACK,
-  marginTop: '2rem',
-  marginBottom: '0rem',
-};
-
-const shortLineCss = css`
-  content: " ";
-  position: absolute;
-  height: 50px;
-  width: 1px;
-  background: ${COLOR.BLACK};
-  top: 0;
-`;
-
-const backgroundGradientCss = css`
-  background: linear-gradient(
-    180deg,
-    rgba(224, 250, 239, 0) 33.33%,
-    #e0faef 90.31%
-  );
-`;
+import { shortLineCss, backgroundGradientCss } from '../styles';
 
 export const AssetManagementContainer = styled.div`
   > .section {

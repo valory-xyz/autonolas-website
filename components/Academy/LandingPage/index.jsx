@@ -5,6 +5,7 @@ import Content from './Content';
 import Hero from './Hero';
 import Why from './Why';
 import Summary from './Summary';
+import Academies from './Academies';
 import { Body } from './styles';
 
 const LandingPage = ({ isNavigationOpen }) => (
@@ -17,6 +18,7 @@ const LandingPage = ({ isNavigationOpen }) => (
       <Divider className="custom-divider" />
       <Summary />
     </Body>
+    <Academies />
   </>
 );
 

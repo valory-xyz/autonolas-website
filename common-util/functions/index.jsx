@@ -70,7 +70,6 @@ export const getHostName = () => {
   return get(window, 'location.host');
 };
 
-
 export const getAnchor = (title, href, otherProps) => {
   const { isLink, isExternal = true } = otherProps || {};
 

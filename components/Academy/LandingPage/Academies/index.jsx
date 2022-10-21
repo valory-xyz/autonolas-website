@@ -34,11 +34,18 @@ const columns = [
     key: 'product',
     render: value => (
       <div>
-        {(value || []).map(e => (
+        {(value || []).map((e, index) => (
           <>
+            {value.length > 1 && index === value.length - 1 ? ' & ' : ', '}
             {getAnchor(e.name, e.link)}
-            <br />
-            {e.isWip ? '(WIP)' : ''}
+            {e.isWip ? (
+              <>
+                <br />
+                (WIP)
+              </>
+            ) : (
+              ''
+            )}
           </>
         ))}
       </div>
@@ -65,6 +72,11 @@ const data = [
       {
         name: 'El Collectooorr',
         link: 'https://elcollectooorr.art/',
+        isWip: false,
+      },
+      {
+        name: 'code',
+        link: 'https://github.com/valory-xyz/agent-academy-1',
         isWip: false,
       },
     ],
@@ -102,7 +114,7 @@ const data = [
     product: [
       {
         name: 'Keeper Service II',
-        link: 'https://github.com/valory-xyz/agent-academy-3',
+        link: 'https://github.com/valory-xyz/agent-academy-2',
         isWip: true,
       },
     ],

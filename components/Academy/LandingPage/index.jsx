@@ -15,10 +15,10 @@ const LandingPage = ({ isNavigationOpen }) => (
       <Why />
       <Divider className="custom-divider" />
       <Content />
-      <Academies />
       <Divider className="custom-divider" />
       <Summary />
     </Body>
+    <Academies />
   </>
 );
 

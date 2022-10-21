@@ -1,4 +1,5 @@
 import { Table } from 'antd';
+import Header from 'common-util/Header';
 import { getAnchor } from 'common-util/functions';
 import { AcademiesContainer } from './styles';
 
@@ -7,7 +8,15 @@ const columns = [
     title: 'Cohort',
     dataIndex: 'cohort',
     key: 'cohort',
-    render: text => getAnchor(text, 'https://twitter.com/autonolas'),
+    render: value => (
+      <div>
+        {value.name}
+        <br />
+        (
+        {value.link ? getAnchor(value.linkName, value.link) : 'Ongoing'}
+        )
+      </div>
+    ),
     width: 300,
   },
   {
@@ -21,56 +30,99 @@ const columns = [
     title: 'Product',
     dataIndex: 'product',
     key: 'product',
-    render: value => (value || []).map(e => getAnchor(e.name, e.link)),
+    render: value => (
+      <div>
+        {(value || []).map(e => (
+          <>
+            {getAnchor(e.name, e.link)}
+            <br />
+            {e.isWip ? '(WIP)' : ''}
+          </>
+        ))}
+      </div>
+    ),
   },
-  {
-    title: 'Quotes',
-    dataIndex: 'quotes',
-    key: 'quotes',
-    render: value => value,
-  },
+  // {
+  //   title: 'Quotes',
+  //   dataIndex: 'quotes',
+  //   key: 'quotes',
+  //   render: value => value,
+  // },
 ];
 
 const data = [
   {
     key: '1',
-    cohort: 'Academy 1',
-    participants: [{ name: 'A' }, { name: 'B' }, { name: 'C' }],
-    product: [{ name: 'El Collectooorr', link: 'https://elcollectooorr.art/' }],
+    cohort: {
+      name: 'Academy 1',
+      linkName: 'NFTs 1-3',
+      link: 'https://nftrade.com/assets/avalanche/0x8f36ff50a331e638aa510f092b5448a03d432611',
+    },
+    participants: [{ name: 'Ardian' }, { name: 'Marcel' }, { name: 'Simon' }],
+    product: [
+      {
+        name: 'El Collectooorr',
+        link: 'https://elcollectooorr.art/',
+        isWip: false,
+      },
+    ],
     quotes: '',
   },
   {
     key: '2',
-    cohort: 'Academy 2',
-    participants: [{ name: 'A' }, { name: 'B' }, { name: 'C' }],
+    cohort: {
+      name: 'Academy 2',
+      linkName: 'NFTs 4',
+      link: 'https://nftrade.com/assets/avalanche/0x8f36ff50a331e638aa510f092b5448a03d432611',
+    },
+    participants: [{ name: 'Deadzen' }, { name: '+ 5 non-NFT ' }],
     product: [
       {
         name: 'Keeper Service',
         link: 'https://github.com/valory-xyz/agent-academy-2',
+        isWip: true,
       },
     ],
     quotes: '',
   },
   {
     key: '3',
-    cohort: 'Academy 3',
-    participants: [{ name: 'A' }, { name: 'B' }, { name: 'C' }],
+    cohort: {
+      name: 'Academy 3',
+      linkName: 'NFT 5 & 6',
+      link: 'https://nftrade.com/assets/avalanche/0x8f36ff50a331e638aa510f092b5448a03d432611',
+    },
+    participants: [
+      { name: 'Philipp Bunke' },
+      { name: 'Gab' },
+      { name: '+ 2 non-NFT' },
+    ],
     product: [
       {
         name: 'Keeper Service II',
         link: 'https://github.com/valory-xyz/agent-academy-3',
+        isWip: true,
       },
     ],
     quotes: '',
   },
   {
     key: '4',
-    cohort: 'Academy 4',
-    participants: [{ name: 'A' }, { name: 'B' }, { name: 'C' }],
+    cohort: {
+      name: 'Academy 4',
+      linkName: 'Ongoing',
+      link: null,
+    },
+    participants: [
+      { name: 'Skale (Chadwick & Jace)' },
+      { name: 'Dhiraj' },
+      { name: 'The Great Axios' },
+    ],
     product: [
       {
         name: 'Autonomous service to forward RPC requests to specific endpoints',
         link: 'https://github.com/valory-xyz/agent-academy-4',
+        isWip: true,
       },
     ],
     quotes: '',
@@ -79,7 +131,8 @@ const data = [
 
 const Academies = () => (
   <AcademiesContainer className="section">
-    <Table columns={columns} dataSource={data} pagination={false} />
+    <Header title="Past cohorts" className="header" />
+    <Table columns={columns} dataSource={data} pagination={false} bordered />
   </AcademiesContainer>
 );
 

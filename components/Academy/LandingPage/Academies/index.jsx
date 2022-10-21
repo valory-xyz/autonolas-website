@@ -36,7 +36,7 @@ const columns = [
       <div>
         {(value || []).map((e, index) => (
           <>
-            {value.length > 1 && index === value.length - 1 ? ' & ' : ', '}
+            {value.length > 1 && index === value.length - 1 ? ' & ' : ''}
             {getAnchor(e.name, e.link)}
             {e.isWip ? (
               <>

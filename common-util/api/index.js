@@ -119,16 +119,16 @@ export const getBlogs = async () => {
  *
  */
 export const getBlog = async id => {
-  const params = {
-    populate: '*',
-  };
+  const params = { populate: '*' };
 
   if (isFinite(Number(id))) {
     const json = await apiCall(`blog-posts/${id}`, params);
     return get(json, 'data') || null;
   }
 
-  const json = await apiCall(`blog-posts?filters[slug][$eq]=${id}`);
+  // id is `slug` here
+  const slugParams = { ...params, 'filters[slug][$eq]': id };
+  const json = await apiCall('blog-posts', slugParams);
   return get(json, 'data[0]') || null;
 };
 

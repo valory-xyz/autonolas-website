@@ -34,11 +34,18 @@ const columns = [
     key: 'product',
     render: value => (
       <div>
-        {(value || []).map(e => (
+        {(value || []).map((e, index) => (
           <>
+            {value.length > 1 && index === value.length - 1 ? ' & ' : ''}
             {getAnchor(e.name, e.link)}
-            <br />
-            {e.isWip ? '(WIP)' : ''}
+            {e.isWip ? (
+              <>
+                <br />
+                (WIP)
+              </>
+            ) : (
+              ''
+            )}
           </>
         ))}
       </div>
@@ -67,6 +74,11 @@ const data = [
         link: 'https://elcollectooorr.art/',
         isWip: false,
       },
+      {
+        name: 'code',
+        link: 'https://github.com/valory-xyz/agent-academy-1',
+        isWip: false,
+      },
     ],
     quotes: '',
   },
@@ -77,7 +89,7 @@ const data = [
       linkName: 'NFTs 4',
       link: 'https://nftrade.com/assets/avalanche/0x8f36ff50a331e638aa510f092b5448a03d432611',
     },
-    participants: [{ name: 'Deadzen' }, { name: '+ 5 non-NFT ' }],
+    participants: [{ name: 'Deadzen' }, { name: '+ 5 who didn\'t complete ' }],
     product: [
       {
         name: 'Keeper Service',
@@ -97,7 +109,7 @@ const data = [
     participants: [
       { name: 'Philipp Bunke' },
       { name: 'Gab' },
-      { name: '+ 2 non-NFT' },
+      { name: '+ 2 who didn\'t complete' },
     ],
     product: [
       {

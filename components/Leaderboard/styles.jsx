@@ -18,8 +18,7 @@ export const LeaderboardContainer = styled.div`
 export const LeaderboardContent = styled.div`
   .leaderboard-table {
     iframe {
-
-      margin: 0 auto;
+      margin: 0 auto 3rem auto;
       display: flex;
     }
   }

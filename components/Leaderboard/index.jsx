@@ -8,10 +8,12 @@ import { LeaderboardContainer, LeaderboardContent } from './styles';
 const Leaderboard = () => (
   <>
     <LeaderboardContainer className="content-list-section">
-      <Header className="header" title="Leaderboard" />
+      <Header className="header" title="Community Leaderboard" />
     </LeaderboardContainer>
 
     <LeaderboardContent className="section">
+      <Header className="header" title="Current Rankings" />
+
       <div className="leaderboard-table">
         <iframe
           width={920}

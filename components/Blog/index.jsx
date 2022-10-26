@@ -35,7 +35,7 @@ const Blog = ({ blogs }) => (
               {getFormattedDate(datePublished)}
             </div>
 
-            <a href={`/${PATHS.BLOG}/${slug || id}`}>
+            <a href={`/${PATHS.BLOG}/${slug}`}>
               <Button title="LEARN MORE" type="black" className="mini" />
             </a>
           </div>

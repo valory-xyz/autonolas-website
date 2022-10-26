@@ -118,10 +118,13 @@ export const getBlogs = async () => {
  * /blog/blog-one
  *
  */
+
+export const isIdUsedToFetchBlog = id => !!(isFinite(Number(id)));
+
 export const getBlog = async id => {
   const params = { populate: '*' };
 
-  if (isFinite(Number(id))) {
+  if ((isIdUsedToFetchBlog(id))) {
     const json = await apiCall(`blog-posts/${id}`, params);
     return get(json, 'data') || null;
   }

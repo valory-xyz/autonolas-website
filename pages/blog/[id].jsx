@@ -13,7 +13,7 @@ export async function getServerSideProps(ctx) {
 
   // slug should always be present if query is `id` or `slug`
   // else redirect to error page
-  if (slug) {
+  if (!slug) {
     return serverRedirectToError();
   }
 
@@ -22,7 +22,11 @@ export async function getServerSideProps(ctx) {
     return {
       redirect: {
         destination: `/blog/${slug}`,
-        permanent: false,
+        /**
+         * https://stackoverflow.com/questions/1393280/http-redirect-301-permanent-vs-302-temporary/1393298#1393298
+         * 301 = permanent: true
+         */
+        permanent: true,
       },
     };
   }

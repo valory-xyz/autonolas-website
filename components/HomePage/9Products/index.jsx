@@ -2,8 +2,8 @@ import {
   Col, Row, Typography, Grid,
 } from 'antd';
 import Image from 'next/image';
-import Header from 'common-util/Header';
 import { COLOR } from 'util/theme';
+import Header from 'common-util/Header';
 import { ProductsSection, HeadersRow, ProductCard } from './styles';
 
 const { Text } = Typography;

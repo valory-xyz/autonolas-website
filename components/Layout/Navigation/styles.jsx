@@ -159,7 +159,7 @@ export const Container = styled.header`
             line-height: normal;
             margin: 0 16px;
             .nav-link {
-              font-size: 72px;
+              font-size: 58px;
               font-weight: bold;
               text-transform: capitalize;
             }
@@ -195,6 +195,22 @@ export const Container = styled.header`
         }
         .btn {
           font-size: 13px;
+        }
+      }
+    }
+  }
+
+  /* smaller mobile screen */
+  @media only screen and (max-height: 700px) and (max-width: 400px) {
+    .navbar {
+      &.mobile {
+        ${NavMenu} {
+          .nav-item {
+            line-height: 1.3;
+            .nav-link {
+              font-size: 54px;
+            }
+          }
         }
       }
     }

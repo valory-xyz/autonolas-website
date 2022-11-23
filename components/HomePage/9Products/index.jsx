@@ -76,7 +76,7 @@ const getProductList = (list, type) => list.map(eachProduct => {
   } = eachProduct;
 
   return (
-    <Col xs={24} sm={12} lg={12} key={id} className="product">
+    <Col lg={12} sm={12} xs={24} key={id} className="product">
       <ProductCard
         target="_blank"
         rel="noopener noreferrer"
@@ -98,25 +98,26 @@ const getProductList = (list, type) => list.map(eachProduct => {
 
 const Products = () => {
   const screens = useBreakpoint();
-  // console.log(screens);
+  const isIpadAndLess = (screens.xs || screens.sm) && !screens.lg;
   const forUserHeader = <h3 className="product-title main-title">For Users</h3>;
+
   return (
     <ProductsSection id="products" className="section">
       <Header title="Products" />
 
       <HeadersRow>
-        <Col lg={12} sm={12} xs={24}>
+        <Col lg={12} sm={24} xs={24}>
           <h3 className="product-title main-title">For Developers</h3>
         </Col>
-        {!screens.xs && (
-          <Col lg={12} sm={12} xs={24}>
+        {!isIpadAndLess && (
+          <Col lg={12} sm={24} xs={24}>
             {forUserHeader}
           </Col>
         )}
       </HeadersRow>
 
       <Row>
-        <Col lg={12} sm={12}>
+        <Col lg={12} sm={24} xs={24}>
           <Row>
             <Col lg={24} xs={24}>
               <h3 className="product-title subtitle">Core</h3>
@@ -130,23 +131,12 @@ const Products = () => {
           </Row>
         </Col>
 
-        <Col lg={12} sm={12}>
+        <Col lg={12} sm={24} xs={24}>
           <HeadersRow>
-            {screens.xs && (
-              <Col xs={24}>
-                {forUserHeader}
-              </Col>
-            )}
+            {isIpadAndLess && <Col xs={24}>{forUserHeader}</Col>}
           </HeadersRow>
 
-          <Row>
-            {!screens.sm && (
-              <Col lg={24} xs={24}>
-                <h3 className="product-title subtitle"> </h3>
-              </Col>
-            )}
-            {getProductList(FOR_USERS, 'users')}
-          </Row>
+          <Row>{getProductList(FOR_USERS, 'users')}</Row>
         </Col>
       </Row>
     </ProductsSection>

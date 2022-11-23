@@ -276,3 +276,26 @@ export const ThreeColumnContents = styled.div`
     }
   }
 `;
+
+/**
+ * Used in texts inside card
+ */
+export const HeaderText = styled.h3`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 34px;
+  font-family: "manrope__bold", sans-serif;
+  min-height: 92px;
+  text-align: center;
+
+  ${MEDIA_QUERY.laptop} {
+    margin-top: 1rem;
+    font-size: 28px;
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    font-size: 20px;
+    min-height: auto;
+    text-align: left;
+  }
+`;

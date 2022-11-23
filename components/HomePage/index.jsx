@@ -10,14 +10,14 @@ import HowDoAutonolasWork from './4HowDoAutonolasWork';
 import QuickIntroArticles from './5QuickIntroArticles';
 import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
 import StartBuilding from './7StartBuilding';
+import WhatCouldYouBuild from './8WhatCouldYouBuild';
+import Products from './9Products';
 import Mission from './9Mission';
 import Team from './11Team';
 import Press from './12Press';
 import Blog from './13Blog';
 import Experience from './14Experience';
 import { LearnContainer } from './styles';
-import WhatCouldYouBuild from './8WhatCouldYouBuild';
-import EcosystemServices from './10EcosystemServiceAndHelpGrow';
 
 const HomePage = ({
   isNavigationOpen,
@@ -42,8 +42,8 @@ const HomePage = ({
     <WhyBuildOnAutonolas />
     <WhatCouldYouBuild />
     <StartBuilding />
+    <Products />
     <Mission />
-    <EcosystemServices />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
     <Blog blogs={blogs} />

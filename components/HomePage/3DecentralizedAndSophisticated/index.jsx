@@ -66,6 +66,13 @@ const DATA_ROWS = [
     webServices: true,
     decentralizedService: true,
   },
+  {
+    id: 'full-stack',
+    name: 'FULL-STACK',
+    smartContractService: false,
+    webServices: true,
+    decentralizedService: false,
+  },
 ];
 
 const getChainType = type => (type ? 'ON-CHAIN' : 'OFF-CHAIN');

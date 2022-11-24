@@ -4,7 +4,7 @@ import Description from 'common-util/Description';
 import {
   SectionThree,
   ComparisonTable,
-  PurbleBall,
+  Yes,
   AutonolasService,
   No,
 } from './styles';
@@ -39,13 +39,6 @@ const DATA_ROWS = [
     decentralizedService: true,
   },
   {
-    id: 'composable',
-    name: 'COMPOSABLE',
-    smartContractService: true,
-    webServices: false,
-    decentralizedService: false,
-  },
-  {
     id: 'complex-processing',
     name: 'COMPLEX PROCESSING',
     smartContractService: false,
@@ -54,17 +47,45 @@ const DATA_ROWS = [
   },
   {
     id: 'cross-chain',
-    name: 'CROSS CHAIN',
+    name: 'CROSS-CHAIN',
     smartContractService: false,
     webServices: true,
     decentralizedService: true,
   },
   {
     id: 'continuous-on',
-    name: 'CONTINUOUS / ALWAYS ON',
+    name: 'CONTINUOUS / ALWAYS-ON',
     smartContractService: false,
     webServices: true,
     decentralizedService: true,
+  },
+  {
+    id: 'flexible',
+    name: 'FLEXIBLE',
+    smartContractService: true,
+    webServices: true,
+    decentralizedService: false,
+  },
+  {
+    id: 'composable',
+    name: 'COMPOSABLE',
+    smartContractService: true,
+    webServices: false,
+    decentralizedService: false,
+  },
+  {
+    id: 'dao-owned',
+    name: 'DAO-OWNED',
+    smartContractService: true,
+    webServices: false,
+    decentralizedService: false,
+  },
+  {
+    id: 'full-stack',
+    name: 'FULL-STACK',
+    smartContractService: false,
+    webServices: true,
+    decentralizedService: false,
   },
 ];
 
@@ -103,7 +124,7 @@ const WhyAutonolas = () => (
             <th>Web Services</th>
             <th>
               Custom Decentralized
-              <div>Services (e.g. oracles)</div>
+              <div>Services (e.g. Oracles)</div>
             </th>
           </tr>
         </thead>
@@ -134,9 +155,9 @@ const WhyAutonolas = () => (
                   <td>
                     <AutonolasService />
                   </td>
-                  <td>{smartContractService ? <PurbleBall /> : <No />}</td>
-                  <td>{webServices ? <PurbleBall /> : <No />}</td>
-                  <td>{decentralizedService ? <PurbleBall /> : <No />}</td>
+                  <td>{smartContractService ? <Yes /> : <No />}</td>
+                  <td>{webServices ? <Yes /> : <No />}</td>
+                  <td>{decentralizedService ? <Yes /> : <No />}</td>
                 </tr>
               );
             },

@@ -17,7 +17,27 @@ export const SectionThree = styled.div`
 
 export const Table = styled.div``;
 
-const ballAndCrossIcon = css`
+const tickIconCss = css`
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  ${MEDIA_QUERY.tablet} {
+    width: 36px;
+    height: 36px;
+  }
+`;
+
+export const AutonolasService = styled.div`
+  ${tickIconCss}
+  ${backgroundImage('/images/3Decentralized/purple-tick.png')}
+`;
+
+export const Yes = styled.div`
+  ${tickIconCss}
+  ${backgroundImage('/images/3Decentralized/tick.png')}
+`;
+
+export const No = styled.div`
   width: 36px;
   height: 36px;
   margin: 0 auto;
@@ -25,28 +45,7 @@ const ballAndCrossIcon = css`
     width: 28px;
     height: 28px;
   }
-`;
-
-export const AutonolasService = styled.div`
-  width: 48px;
-  height: 48px;
-  margin: 0 auto;
-  ${backgroundImage('/images/3Decentralized/tick.png')}
-  ${MEDIA_QUERY.tablet} {
-    width: 36px;
-    height: 36px;
-  }
-`;
-
-export const PurbleBall = styled.div`
-  ${ballAndCrossIcon}
-  border-radius: 50%;
-  background-color: ${COLOR.PURPLE};
-`;
-
-export const No = styled.div`
-  ${ballAndCrossIcon}
-  ${backgroundImage('/images/3Decentralized/X.png')}
+  ${backgroundImage('/images/3Decentralized/x.png')}
 `;
 
 export const ComparisonTable = styled.div`
@@ -58,7 +57,7 @@ export const ComparisonTable = styled.div`
     border-collapse: collapse;
     th,
     td {
-      padding: 0.85rem 1rem;
+      padding: 0.5rem 1rem;
       &:first-child {
         border-right-color: transparent;
       }
@@ -91,6 +90,9 @@ export const ComparisonTable = styled.div`
         &:not(:first-child) td {
           border-top: 1px solid ${COLOR.BORDER_GREY};
         }
+        &:first-child {
+          line-height: 2.75;
+        }
         td {
           font-weight: bold;
           border-bottom: 1px solid ${COLOR.BORDER_GREY};
@@ -98,6 +100,10 @@ export const ComparisonTable = styled.div`
           img {
             width: 48px;
             height: 48px;
+          }
+          &:nth-child(1) {
+            text-align: left;
+            padding-left: 0;
           }
           &:nth-child(2) {
             color: ${COLOR.PURPLE};

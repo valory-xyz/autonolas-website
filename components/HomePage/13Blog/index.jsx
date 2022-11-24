@@ -13,7 +13,9 @@ import { SectionBlog } from './styles';
 
 const Blog = ({ blog }) => {
   const { id, attributes } = blog || {};
-  const { title, headerImage, subtitle } = attributes || {};
+  const {
+    title, headerImage, subtitle, slug,
+  } = attributes || {};
   const imageUrl = get(headerImage, 'data[0].attributes.url') || '';
 
   return (
@@ -21,14 +23,13 @@ const Blog = ({ blog }) => {
       <div
         className="img-container"
         style={{
-          // backgroundImage: 'url("/images/11Team/background.webp")',
           backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
         }}
       />
       <div className="header-text">{title}</div>
       <div className="subtitle">{subtitle}</div>
 
-      <a href={`/${PATHS.BLOG}/${id}`}>
+      <a href={`/${PATHS.BLOG}/${slug}`}>
         <Button title="LEARN MORE" type="black" className="mini" />
       </a>
     </div>

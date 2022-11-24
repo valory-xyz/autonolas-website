@@ -17,7 +17,7 @@ const Blog = ({ blogs }) => (
     <TwoColumnContents className="section">
       {blogs.map(({ id, attributes }, index) => {
         const {
-          title, headerImage, subtitle, datePublished,
+          title, headerImage, subtitle, datePublished, slug,
         } = attributes || {};
         const imageUrl = get(headerImage, 'data[0].attributes.url') || '';
 
@@ -35,7 +35,7 @@ const Blog = ({ blogs }) => (
               {getFormattedDate(datePublished)}
             </div>
 
-            <a href={`/${PATHS.BLOG}/${id}`}>
+            <a href={`/${PATHS.BLOG}/${slug}`}>
               <Button title="LEARN MORE" type="black" className="mini" />
             </a>
           </div>

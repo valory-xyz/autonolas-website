@@ -45,7 +45,7 @@ export const No = styled.div`
     width: 28px;
     height: 28px;
   }
-  ${backgroundImage('/images/3Decentralized/X.png')}
+  ${backgroundImage('/images/3Decentralized/x.png')}
 `;
 
 export const ComparisonTable = styled.div`

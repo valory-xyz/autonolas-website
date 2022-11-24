@@ -4,7 +4,7 @@ import Description from 'common-util/Description';
 import {
   SectionThree,
   ComparisonTable,
-  PurbleBall,
+  Yes,
   AutonolasService,
   No,
 } from './styles';
@@ -141,9 +141,9 @@ const WhyAutonolas = () => (
                   <td>
                     <AutonolasService />
                   </td>
-                  <td>{smartContractService ? <PurbleBall /> : <No />}</td>
-                  <td>{webServices ? <PurbleBall /> : <No />}</td>
-                  <td>{decentralizedService ? <PurbleBall /> : <No />}</td>
+                  <td>{smartContractService ? <Yes /> : <No />}</td>
+                  <td>{webServices ? <Yes /> : <No />}</td>
+                  <td>{decentralizedService ? <Yes /> : <No />}</td>
                 </tr>
               );
             },

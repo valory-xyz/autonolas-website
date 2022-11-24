@@ -17,7 +17,27 @@ export const SectionThree = styled.div`
 
 export const Table = styled.div``;
 
-const ballAndCrossIcon = css`
+const tickIconCss = css`
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  ${MEDIA_QUERY.tablet} {
+    width: 36px;
+    height: 36px;
+  }
+`;
+
+export const AutonolasService = styled.div`
+  ${tickIconCss}
+  ${backgroundImage('/images/3Decentralized/purple-tick.png')}
+`;
+
+export const Yes = styled.div`
+  ${tickIconCss}
+  ${backgroundImage('/images/3Decentralized/tick.png')}
+`;
+
+export const No = styled.div`
   width: 36px;
   height: 36px;
   margin: 0 auto;
@@ -25,27 +45,6 @@ const ballAndCrossIcon = css`
     width: 28px;
     height: 28px;
   }
-`;
-
-export const AutonolasService = styled.div`
-  width: 48px;
-  height: 48px;
-  margin: 0 auto;
-  ${backgroundImage('/images/3Decentralized/tick.png')}
-  ${MEDIA_QUERY.tablet} {
-    width: 36px;
-    height: 36px;
-  }
-`;
-
-export const PurbleBall = styled.div`
-  ${ballAndCrossIcon}
-  border-radius: 50%;
-  background-color: ${COLOR.PURPLE};
-`;
-
-export const No = styled.div`
-  ${ballAndCrossIcon}
   ${backgroundImage('/images/3Decentralized/X.png')}
 `;
 

@@ -38,6 +38,7 @@ const FOR_DEVELOPERS_TOOLKITS = [
     description: 'Build autonomous asset management products',
     link: 'https://www.autonolas.network/autonomous-asset-management-infra',
     color: COLOR.PURPLE,
+    isExternal: false,
   },
   {
     id: 'custom-oracle-infra',
@@ -67,18 +68,19 @@ const FOR_USERS = [
       'Strenghten the Autonolas ecosystem to earn points and upgrade your Alter Orbis character',
     link: 'https://www.autonolas.network/community-leaderboard',
     color: COLOR.GREEN_2,
+    isExternal: false,
   },
 ];
 
 const getProductList = (list, type) => list.map(eachProduct => {
   const {
-    id, imageFilename, title, description, link,
+    id, imageFilename, title, description, link, isExternal = true,
   } = eachProduct;
 
   return (
     <Col lg={12} sm={12} xs={24} key={id} className="product">
       <ProductCard
-        target="_blank"
+        target={isExternal ? '_blank' : '_self'}
         rel="noopener noreferrer"
         href={link}
         className={type}

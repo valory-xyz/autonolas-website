@@ -59,9 +59,9 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 });
 
 const startBuildingBtn = (
-  <Link href="/#build" passHref>
+  <Link href="/#ecosystem-builders" passHref>
     <a>
-      <Button type="purple" title="Start Building" />
+      <Button type="purple" title="Get support with your project" />
     </a>
   </Link>
 );

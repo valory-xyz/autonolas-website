@@ -4,11 +4,7 @@ import Link from 'next/link';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
-import {
-  SITE_DESCRIPTION_PART_1,
-  SITE_DESCRIPTION_PART_2,
-  SITE_TAGLINE,
-} from 'util/constants/site';
+import { SITE_DESCRIPTION, SITE_TAGLINE } from 'util/constants/site';
 import { SectionOne, DescActionButtons } from './styles';
 
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
@@ -20,25 +16,12 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
     <Header className="header" title={SITE_TAGLINE} as="h1" />
 
     <DescActionButtons>
-      <Description
-        type={2}
-        title={(
-          <>
-            {SITE_DESCRIPTION_PART_1}
-            &nbsp;
-            <span className="bold" style={{ display: 'inline-block' }}>
-              and
-            </span>
-            &nbsp;
-            {SITE_DESCRIPTION_PART_2}
-          </>
-        )}
-      />
+      <Description type={2} title={SITE_DESCRIPTION} />
 
       <div className="action-btns">
-        <Link href="#build" passHref>
+        <Link href="/#ecosystem-builders" passHref>
           <a>
-            <Button hasArrowSuffix type="purple" title="Start Building" />
+            <Button hasArrowSuffix type="purple" title="Get support with your project" />
           </a>
         </Link>
       </div>

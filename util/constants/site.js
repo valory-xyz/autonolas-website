@@ -1,10 +1,7 @@
 export const SITE_URL = 'https://autonolas.network';
-export const SITE_TAGLINE = 'Build Autonomous Services';
+export const SITE_TAGLINE = 'Own & Decentralize your Off-chain Processes';
 export const SITE_TITLE = `Autonolas | ${SITE_TAGLINE}`;
-export const SITE_DESCRIPTION_PART_1 = 'Dev tools for creating novel software services that are decentralized';
-export const SITE_DESCRIPTION_PART_2 = 'smart. Take your DAO, protocol or app into the next generation today.';
-
-export const SITE_DESCRIPTION = `${SITE_DESCRIPTION_PART_1} and ${SITE_DESCRIPTION_PART_2}`;
+export const SITE_DESCRIPTION = 'Our open-source software stack enables you to run your DAO/Dev/Product/Growth Ops as a unified, decentralized off-chain system.';
 export const SITE_METATAG_IMAGE = `${SITE_URL}/images/site-metadata/site-metatag.jpg`;
 
 export const META_TAGS_INFO = {

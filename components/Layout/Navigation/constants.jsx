@@ -1,9 +1,10 @@
+// TODO
 export const NAV_1 = [
-  { name: 'Learn', id: 'learn' },
-  { name: 'Build', id: 'build' },
-  { name: 'Mission', id: 'mission' },
+  { name: 'Why Autonolas?', id: 'learn' },
   { name: 'Products', id: 'products' },
-  { name: 'Team', id: 'team' },
+  { name: 'Learn & Build', id: 'learn' },
+  { name: 'Ecosystem Builders', id: 'build' },
+  { name: 'Press', id: 'press' },
   { name: 'Blog', id: 'blog' },
 ];
 

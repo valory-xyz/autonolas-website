@@ -1,6 +1,11 @@
-import { Row, Col } from 'antd/lib';
+import Image from 'next/image';
+import {
+  Row, Col, Divider, Grid,
+} from 'antd';
 import Header from 'common-util/Header';
 import { SectionTwo, Content } from './styles';
+
+const { useBreakpoint } = Grid;
 
 const LIST = [
   {
@@ -28,35 +33,69 @@ const LIST = [
   },
 ];
 
-const WhatIsAutonolas = () => (
-  <SectionTwo className="section" id="learn">
-    <Header className="header" title="Scale your DAO" />
+const WhatIsAutonolas = () => {
+  const screens = useBreakpoint();
 
-    <Content>
-      <Row gutter={[32, 0]}>
-        {LIST.map(({ heading, subHeading, imageUrl }, index) => (
-          <Col
-            key={`scale-your-dao-${imageUrl}`}
-            xs={24}
-            md={6}
-            lg={6}
-            className={`column column-${index + 1}`}
-          >
-            <div className="img-container">
-              <img
-                src={`/images/1ScaleYourDao/${imageUrl}.png`}
-                alt={`${heading} Icon`}
-              />
-            </div>
-            <div className="text-content">
-              <div className="header-text">{heading}</div>
-              <div className="sub-text">{subHeading}</div>
-            </div>
-          </Col>
-        ))}
-      </Row>
-    </Content>
-  </SectionTwo>
-);
+  return (
+    <SectionTwo className="section" id="learn">
+      <Header className="header" title="Scale your DAO" />
+
+      {screens.xs ? (
+        <Image
+          src="/images/1ScaleYourDao/header-mobile.png"
+          width="100%"
+          height="40px"
+          layout="responsive"
+          objectFit="contain"
+        />
+      ) : (
+        <Image
+          src="/images/1ScaleYourDao/header-desktop.png"
+          width="100%"
+          height="40px"
+          layout="responsive"
+          objectFit="contain"
+        />
+      )}
+      <Image
+        src="/images/1ScaleYourDao/header-desktop.png"
+        alt=""
+        title=""
+        width="100%"
+        height="40px"
+        layout="responsive"
+        objectFit="contain"
+      />
+
+      <Divider />
+      <br />
+
+      <Content>
+        <Row gutter={[32, 0]}>
+          {LIST.map(({ heading, subHeading, imageUrl }, index) => (
+            <Col
+              key={`scale-your-dao-${imageUrl}`}
+              xs={24}
+              md={6}
+              lg={6}
+              className={`column column-${index + 1}`}
+            >
+              <div className="img-container">
+                <img
+                  src={`/images/1ScaleYourDao/${imageUrl}.png`}
+                  alt={`${heading} Icon`}
+                />
+              </div>
+              <div className="text-content">
+                <div className="header-text">{heading}</div>
+                <div className="sub-text">{subHeading}</div>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Content>
+    </SectionTwo>
+  );
+};
 
 export default WhatIsAutonolas;

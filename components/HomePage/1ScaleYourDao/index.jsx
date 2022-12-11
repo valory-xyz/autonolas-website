@@ -3,7 +3,7 @@ import {
   Row, Col, Divider, Grid,
 } from 'antd';
 import Header from 'common-util/Header';
-import { SectionTwo, Content } from './styles';
+import { SectionScaleYourDao, Content } from './styles';
 
 const { useBreakpoint } = Grid;
 
@@ -33,18 +33,18 @@ const LIST = [
   },
 ];
 
-const WhatIsAutonolas = () => {
+const ScaleYourDao = () => {
   const screens = useBreakpoint();
 
   return (
-    <SectionTwo className="section" id="learn">
+    <SectionScaleYourDao className="section" id="why-autonolas">
       <Header className="header" title="Scale your DAO" />
 
       {screens.xs ? (
         <Image
           src="/images/1ScaleYourDao/header-mobile.png"
           width="100%"
-          height="40px"
+          height="190px"
           layout="responsive"
           objectFit="contain"
         />
@@ -57,15 +57,6 @@ const WhatIsAutonolas = () => {
           objectFit="contain"
         />
       )}
-      <Image
-        src="/images/1ScaleYourDao/header-desktop.png"
-        alt=""
-        title=""
-        width="100%"
-        height="40px"
-        layout="responsive"
-        objectFit="contain"
-      />
 
       <Divider />
       <br />
@@ -94,8 +85,8 @@ const WhatIsAutonolas = () => {
           ))}
         </Row>
       </Content>
-    </SectionTwo>
+    </SectionScaleYourDao>
   );
 };
 
-export default WhatIsAutonolas;
+export default ScaleYourDao;

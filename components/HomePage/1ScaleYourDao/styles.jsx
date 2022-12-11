@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
 
-export const SectionTwo = styled.div`
+export const SectionScaleYourDao = styled.div`
   .ant-divider {
     background-color: ${COLOR.BLACK};
   }

@@ -7,7 +7,7 @@ import Header from 'common-util/Header';
 import { SectionFive, Content, SeeAll } from './styles';
 
 const QuickIntroArticles = ({ educationArticles }) => (
-  <SectionFive className="section section-education-articles">
+  <SectionFive className="section section-education-articles" id="quick-intro-articles">
     <Header className="header" title="Quick intro articles" />
 
     <SeeAll>

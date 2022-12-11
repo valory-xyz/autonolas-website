@@ -1,19 +1,10 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
 import ScaleYourDao from './1ScaleYourDao';
-import WhoDoesAutonolasHelp from './Learn/1WhoDoesAutonolasHelp';
-import WhatIsAutonolas from './2WhatIsAutonolas';
-import DecentralizedAndSophisticated from './3DecentralizedAndSophisticated';
-import HowDoAutonolasWork from './4HowDoAutonolasWork';
-import QuickIntroArticles from './5QuickIntroArticles';
-import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
 import StartBuilding from './7StartBuilding';
-import WhatCouldYouBuild from './8WhatCouldYouBuild';
 import Products from './9Products';
-import Mission from './9Mission';
 import Team from './11Team';
 import Press from './12Press';
 import Blog from './13Blog';
@@ -22,8 +13,6 @@ import { LearnContainer } from './styles';
 
 const HomePage = ({
   isNavigationOpen,
-  educationArticles,
-  ideas,
   cofounders,
   foundingTeam,
   press,
@@ -34,18 +23,10 @@ const HomePage = ({
 
     <LearnContainer>
       <ScaleYourDao />
-      <WhoDoesAutonolasHelp />
-      <WhatIsAutonolas />
-      <DecentralizedAndSophisticated />
-      <HowDoAutonolasWork />
-      <QuickIntroArticles educationArticles={educationArticles} />
     </LearnContainer>
 
-    <WhyBuildOnAutonolas />
-    <WhatCouldYouBuild />
     <StartBuilding />
     <Products />
-    <Mission />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
     <Press press={press} />
     <Blog blogs={blogs} />
@@ -55,8 +36,6 @@ const HomePage = ({
 
 HomePage.propTypes = {
   isNavigationOpen: PropTypes.bool.isRequired,
-  educationArticles: PropTypes.instanceOf(Array),
-  ideas: PropTypes.instanceOf(Array),
   cofounders: PropTypes.instanceOf(Array),
   foundingTeam: PropTypes.instanceOf(Array),
   press: PropTypes.instanceOf(Array),
@@ -64,8 +43,6 @@ HomePage.propTypes = {
 };
 
 HomePage.defaultProps = {
-  educationArticles: [],
-  ideas: [],
   cofounders: [],
   foundingTeam: [],
   press: [],

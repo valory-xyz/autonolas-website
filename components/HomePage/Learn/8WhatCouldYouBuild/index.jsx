@@ -86,7 +86,7 @@ const ideaGroups = [
 const WhatCouldYouBuild = () => (
   <SectionWhatCouldYouBuild
     className="section section-what-could-you-build"
-    id="idea"
+    id="what-could-you-build"
   >
     <Header
       className="header"

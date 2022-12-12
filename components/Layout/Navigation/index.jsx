@@ -17,6 +17,7 @@ import {
   MobileCloseMenu,
   NavMenu,
   Container,
+  Banner,
 } from './styles';
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
@@ -132,6 +133,22 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   return (
     <Container style={getNavStyle()} navHeight={getNavHeight()}>
       <nav className={`navbar ${navbarClassName()}`}>
+        <Banner>
+          <div>
+            <span role="img" aria-label="Star">
+              ⭐ ⭐ ⭐
+            </span>
+            &nbsp;Show off your contributions to Autonolas! Mint a badge which
+            evolves as you earn contribution points.&nbsp;
+          </div>
+          <Button
+            type="black"
+            className="mini"
+            title="Mint badge"
+            onClick={() => window.open('https://contribute.autonolas.network')}
+          />
+        </Banner>
+
         {isMobile ? (
           <>
             {isNavigationOpen ? (
@@ -160,11 +177,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
             ) : (
               <>
                 <MobileNavigationContainer>
-                  <a
-                    href="/"
-                    className="nav-logo"
-                    aria-label="Autonolas logo"
-                  >
+                  <a href="/" className="nav-logo" aria-label="Autonolas logo">
                     <AutonolasLogo width={124} height={54} />
                   </a>
                 </MobileNavigationContainer>
@@ -186,9 +199,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
         ) : (
           <DesktopNavBar>
             <div className="nav-item-logo">{logo}</div>
-
             <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
-
             {startBuildingBtn}
           </DesktopNavBar>
         )}

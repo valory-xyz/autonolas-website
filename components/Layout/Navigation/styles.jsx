@@ -12,6 +12,7 @@ export const DesktopNavBar = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 2px 16px;
   .nav-item-logo {
     display: flex;
     justify-content: center;
@@ -103,10 +104,6 @@ export const Container = styled.header`
   z-index: 100;
   transition: ${TRANSITION.all};
   .navbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 16px;
   }
 
   /* common */
@@ -225,4 +222,13 @@ export const Container = styled.header`
       }
     }
   }
+`;
+
+export const Banner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${COLOR.PURPLE};
+  padding: 8px;
+  color: ${COLOR.WHITE};
 `;

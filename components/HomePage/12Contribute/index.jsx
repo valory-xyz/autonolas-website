@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
-
-import { SectionContributeContainer, DescActionButtons } from './styles';
+import { DescActionButtons } from '../1TheNewWay/styles';
+import { SectionContributeContainer } from './styles';
 
 const SectionContribute = ({ isNavigationOpen }) => (
   <SectionContributeContainer

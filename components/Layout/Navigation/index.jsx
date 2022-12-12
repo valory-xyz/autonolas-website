@@ -18,6 +18,7 @@ import {
   NavMenu,
   Container,
   Banner,
+  MobileNavBox,
 } from './styles';
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
@@ -133,21 +134,23 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   return (
     <Container style={getNavStyle()} navHeight={getNavHeight()}>
       <nav className={`navbar ${navbarClassName()}`}>
-        <Banner>
-          <div>
-            <span role="img" aria-label="Star">
-              ⭐ ⭐ ⭐
-            </span>
-            &nbsp;Show off your contributions to Autonolas! Mint a badge which
-            evolves as you earn contribution points.&nbsp;
-          </div>
-          <Button
-            type="black"
-            className="mini"
-            title="Mint badge"
-            onClick={() => window.open('https://contribute.autonolas.network')}
-          />
-        </Banner>
+        {!isNavigationOpen && (
+          <Banner>
+            <div>
+              <span role="img" aria-label="Star">
+                ⭐ ⭐ ⭐
+              </span>
+              &nbsp;Show off your contributions to Autonolas! Mint a badge which
+              evolves as you earn contribution points.&nbsp;
+            </div>
+            <Button
+              type="black"
+              className="mini"
+              title="Mint badge"
+              onClick={() => window.open('https://contribute.autonolas.network')}
+            />
+          </Banner>
+        )}
 
         {isMobile ? (
           <>
@@ -175,7 +178,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                 {getSocials(NAVIGATION_SOCIALS)}
               </>
             ) : (
-              <>
+              <MobileNavBox>
                 <MobileNavigationContainer>
                   <a href="/" className="nav-logo" aria-label="Autonolas logo">
                     <AutonolasLogo width={124} height={54} />
@@ -193,7 +196,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                 </Hamburger>
 
                 {startBuildingBtn}
-              </>
+              </MobileNavBox>
             )}
           </>
         ) : (

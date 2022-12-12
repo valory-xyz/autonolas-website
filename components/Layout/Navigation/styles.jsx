@@ -129,7 +129,6 @@ export const Container = styled.header`
   ${MEDIA_QUERY.tablet} {
     z-index: 2;
     .navbar {
-      padding: 8px;
       &.is-open-for-mobile {
         flex-direction: column !important;
         background: ${COLOR.LIGHT_BLUE};
@@ -224,6 +223,13 @@ export const Container = styled.header`
   }
 `;
 
+export const MobileNavBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 8px;
+`;
+
 export const Banner = styled.div`
   display: flex;
   align-items: center;
@@ -231,4 +237,12 @@ export const Banner = styled.div`
   background-color: ${COLOR.PURPLE};
   padding: 8px;
   color: ${COLOR.WHITE};
+  width: 100%;
+
+  ${MEDIA_QUERY.mobileM} {
+    display: inline-flex;
+    button {
+      width: auto;
+    }
+  }
 `;

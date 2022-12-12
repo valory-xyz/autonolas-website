@@ -65,16 +65,21 @@ const FOR_USERS = [
     imageStyle: { width: 80, height: 80 },
     title: 'Autonolas Contribute',
     description:
-      'Strenghten the Autonolas ecosystem to earn points and upgrade your Alter Orbis character',
-    link: 'https://www.autonolas.network/community-leaderboard',
+      'Make guided contributions and get recognized for your efforts',
+    link: 'https://contribute.autonolas.network',
     color: COLOR.GREEN_2,
-    isExternal: false,
+    isExternal: true,
   },
 ];
 
 const getProductList = (list, type) => list.map(eachProduct => {
   const {
-    id, imageFilename, title, description, link, isExternal = true,
+    id,
+    imageFilename,
+    title,
+    description,
+    link,
+    isExternal = true,
   } = eachProduct;
 
   return (

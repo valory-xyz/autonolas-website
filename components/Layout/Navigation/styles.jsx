@@ -184,7 +184,7 @@ export const Container = styled.header`
     .navbar {
       &.mobile {
         ${NavMenu} {
-          max-height: 420px;
+          max-height: 680px;
         }
         .nav-logo svg {
           width: 90px;

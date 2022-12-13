@@ -138,7 +138,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
           <Banner>
             <div>
               <span role="img" aria-label="Star">
-                ⭐ ⭐ ⭐
+                ✨ ✨ ✨
               </span>
               &nbsp;Show off your contributions to Autonolas! Mint a badge which
               evolves as you earn contribution points.&nbsp;

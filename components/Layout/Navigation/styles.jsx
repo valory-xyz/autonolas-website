@@ -239,7 +239,7 @@ export const Banner = styled.div`
   color: ${COLOR.WHITE};
   width: 100%;
 
-  ${MEDIA_QUERY.mobileM} {
+  ${MEDIA_QUERY.mobileL} {
     display: inline-flex;
     button {
       width: auto;

@@ -12,6 +12,7 @@ export const DesktopNavBar = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 2px 16px;
   .nav-item-logo {
     display: flex;
     justify-content: center;
@@ -103,10 +104,6 @@ export const Container = styled.header`
   z-index: 100;
   transition: ${TRANSITION.all};
   .navbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 16px;
   }
 
   /* common */
@@ -132,7 +129,6 @@ export const Container = styled.header`
   ${MEDIA_QUERY.tablet} {
     z-index: 2;
     .navbar {
-      padding: 8px;
       &.is-open-for-mobile {
         flex-direction: column !important;
         background: ${COLOR.LIGHT_BLUE};
@@ -188,7 +184,7 @@ export const Container = styled.header`
     .navbar {
       &.mobile {
         ${NavMenu} {
-          max-height: 420px;
+          max-height: 680px;
         }
         .nav-logo svg {
           width: 90px;
@@ -223,6 +219,30 @@ export const Container = styled.header`
           width: 70px;
         }
       }
+    }
+  }
+`;
+
+export const MobileNavBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 8px;
+`;
+
+export const Banner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${COLOR.PURPLE};
+  padding: 8px;
+  color: ${COLOR.WHITE};
+  width: 100%;
+
+  ${MEDIA_QUERY.mobileL} {
+    display: inline-flex;
+    button {
+      width: 140px;
     }
   }
 `;

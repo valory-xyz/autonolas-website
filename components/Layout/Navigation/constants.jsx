@@ -4,6 +4,7 @@ export const NAV_1 = [
   { name: 'Mission', id: 'mission' },
   { name: 'Products', id: 'products' },
   { name: 'Team', id: 'team' },
+  { name: 'Contribute', id: 'contribute' },
   { name: 'Blog', id: 'blog' },
 ];
 

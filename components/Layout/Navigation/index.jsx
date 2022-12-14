@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { get } from 'lodash';
+import { Grid } from 'antd';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';
@@ -20,6 +21,8 @@ import {
   Banner,
   MobileNavBox,
 } from './styles';
+
+const { useBreakpoint } = Grid;
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
   const mapKey = `navigation-id-${eachNav.id}-${suffix}`;
@@ -75,6 +78,7 @@ const logo = (
 );
 
 const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
+  const screens = useBreakpoint();
   const [isTransparent, setColorchange] = useState(true);
   const router = useRouter();
   const { pathname, query } = router;
@@ -131,6 +135,8 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
     return isNavigationOpen && isTransparent ? 56 : 0;
   };
 
+  const isSmallScreen = screens.xs || (screens.sm && !screens.md);
+
   return (
     <Container style={getNavStyle()} navHeight={getNavHeight()}>
       <nav className={`navbar ${navbarClassName()}`}>
@@ -138,10 +144,17 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
           <Banner>
             <div>
               <span role="img" aria-label="Star">
-                ✨ ✨ ✨
+                ✨
+                {!isSmallScreen && <>&nbsp;✨ &nbsp;✨</>}
               </span>
-              &nbsp;Show off your contributions to Autonolas! Mint a badge which
-              evolves as you earn contribution points.&nbsp;
+              &nbsp;Show off your contributions to Autonolas!
+              {!isSmallScreen && (
+                <>
+                  &nbsp; Mint a badge which evolves as you earn contribution
+                  points.
+                </>
+              )}
+              &nbsp;
             </div>
             <Button
               type="black"

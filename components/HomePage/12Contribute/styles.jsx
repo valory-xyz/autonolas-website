@@ -14,9 +14,10 @@ export const SectionContributeContainer = styled(SectionOne)`
     &.section {
       padding: 3rem 1rem 6rem 1rem !important;
       .description {
-        bottom: 160px;
+        bottom: 130px;
       }
       .action-btns {
+        bottom: 20px;
         align-items: center;
       }
     }

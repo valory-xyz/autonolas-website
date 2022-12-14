@@ -242,7 +242,7 @@ export const Banner = styled.div`
   ${MEDIA_QUERY.mobileL} {
     display: inline-flex;
     button {
-      width: auto;
+      width: 140px;
     }
   }
 `;

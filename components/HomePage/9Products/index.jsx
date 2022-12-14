@@ -61,7 +61,7 @@ const FOR_USERS = [
   },
   {
     id: 'autonolas-contribute',
-    imageFilename: 'alter-orbis.png',
+    imageFilename: 'contribute.png',
     imageStyle: { width: 80, height: 80 },
     title: 'Autonolas Contribute',
     description:

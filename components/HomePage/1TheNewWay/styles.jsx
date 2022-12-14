@@ -53,7 +53,7 @@ export const SectionOne = styled.div`
 
   ${MEDIA_QUERY.tablet} {
     &.section {
-      padding: 8rem 1rem 6rem 1rem !important;
+      padding: 10rem 1rem 6rem 1rem !important;
     }
     .header {
       /* font-size: 74px; */

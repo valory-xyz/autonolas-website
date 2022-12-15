@@ -4,6 +4,7 @@ export const NAV_1 = [
   { name: 'Products', id: 'products' },
   { name: 'Learn & Build', id: 'learn' },
   { name: 'Ecosystem Builders', id: 'build' },
+  { name: 'Contribute', id: 'contribute' },
   { name: 'Press', id: 'press' },
   { name: 'Blog', id: 'blog' },
 ];

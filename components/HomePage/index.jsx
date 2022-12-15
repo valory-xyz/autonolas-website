@@ -6,6 +6,7 @@ import ScaleYourDao from './1ScaleYourDao';
 import StartBuilding from './7StartBuilding';
 import Products from './9Products';
 import Team from './11Team';
+import Contribute from './12Contribute';
 import Press from './12Press';
 import Blog from './13Blog';
 import Experience from './14Experience';
@@ -28,6 +29,7 @@ const HomePage = ({
     <StartBuilding />
     <Products />
     <Team cofounders={cofounders} foundingTeam={foundingTeam} />
+    <Contribute />
     <Press press={press} />
     <Blog blogs={blogs} />
     <Experience />

@@ -41,8 +41,13 @@ export const Content = styled.div`
   }
 
   ${MEDIA_QUERY.laptop} {
-    .column .header-text {
-      font-size: 28px;
+    .column {
+      .img-container {
+        height: 140px;
+      }
+      .header-text {
+        font-size: 28px;
+      }
     }
   }
 

@@ -37,7 +37,7 @@ export const SectionOne = styled.div`
 
   ${MEDIA_QUERY.laptop} {
     .header {
-      font-size: 104px;
+      font-size: 94px;
     }
   }
 

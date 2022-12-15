@@ -19,8 +19,8 @@ const HomePage = ({
   <>
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <ScaleYourDao />
-    <StartBuilding />
     <Products />
+    <StartBuilding />
     <EcosystemBuilders />
     <Contribute />
     <Press press={press} />

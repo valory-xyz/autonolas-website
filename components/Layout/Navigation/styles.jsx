@@ -27,7 +27,10 @@ export const DesktopNavBar = styled.div`
 
   ${MEDIA_QUERY.laptop} {
     .nav-item-logo {
-      min-width: 180px;
+      min-width: 140px;
+    }
+    .start-building-in-nav {
+      display: none;
     }
   }
 
@@ -109,6 +112,7 @@ export const Container = styled.header`
   /* common */
   li {
     list-style: none;
+    margin: 0 8px;
   }
   a {
     text-decoration: none;

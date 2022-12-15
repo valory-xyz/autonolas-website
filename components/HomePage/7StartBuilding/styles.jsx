@@ -6,6 +6,12 @@ import { Content as C } from '../../Learn/2WhatIsAutonolas/styles';
 
 export const SectionSeven = styled.div`
   ${backgroundImage('/images/7StartBuilding/background.webp')}
+
+  ${MEDIA_QUERY.mobileL} {
+    &.section {
+      padding: 3rem 1rem;
+    }
+  }
 `;
 
 export const Container = styled(C)`
@@ -47,40 +53,6 @@ export const Container = styled(C)`
       }
     }
   }
-
-  ${MEDIA_QUERY.tablet} {
-    gap: 0 3rem;
-    .column {
-      .sub-text {
-        min-height: 140px;
-      }
-      &.column-1 {
-        margin-right: 0rem;
-      }
-    }
-  }
-
-  ${MEDIA_QUERY.mobileL} {
-    .column {
-      .img-container-custom {
-        margin-top: 1rem;
-        img {
-          width: 80% !important;
-        }
-      }
-      .text-content {
-        width: 64%;
-      }
-      .sub-text {
-        min-height: auto;
-        margin-bottom: 2rem;
-      }
-      .action-btn .btn {
-        font-size: 16px;
-      }
-    }
-  }
-
   &::after {
     content: " ";
     position: absolute;
@@ -89,6 +61,58 @@ export const Container = styled(C)`
     width: 1px;
     height: 140%;
     background-color: ${COLOR.BLACK};
+  }
+
+  ${MEDIA_QUERY.laptop} {
+    .column {
+      &.column-1 {
+        margin-right: 2rem;
+      }
+    }
+    &::after {
+      left: 30%;
+    }
+  }
+
+  ${MEDIA_QUERY.tablet} {
+    gap: 0 3rem;
+    .column {
+      .sub-text {
+        min-height: 140px;
+      }
+      &.column-1 {
+        max-width: auto;
+        margin-right: 0rem;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    .column {
+      .img-container-custom {
+        width: 140px !important;
+        margin-top: 0.25rem;
+        img {
+          width: 70% !important;
+        }
+      }
+      .text-content {
+        width: 64%;
+      }
+      .header-text {
+        min-height: auto;
+      }
+      .sub-text {
+        min-height: auto;
+        margin-bottom: 1rem;
+      }
+      .action-btn .btn {
+        font-size: 16px;
+      }
+    }
+    &::after {
+      display: none;
+    }
   }
 `;
 

@@ -65,7 +65,7 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 
 const startBuildingBtn = (
   <Link href="/#ecosystem-builders" passHref>
-    <a>
+    <a className="start-building-in-nav">
       <Button type="purple" title="Get support with your project" />
     </a>
   </Link>

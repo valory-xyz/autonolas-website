@@ -17,7 +17,6 @@ export const SectionOne = styled.div`
   );
   ${backgroundImage('/images/1TheNewWay/background.webp')}
   .header {
-    margin-bottom: 0 !important;
     line-height: 1;
   }
   .description {
@@ -33,7 +32,7 @@ export const SectionOne = styled.div`
     }
   }
   &.section {
-    padding: 7rem 4.5rem !important;
+    padding: 8rem 4.5rem !important;
   }
 
   ${MEDIA_QUERY.laptop} {

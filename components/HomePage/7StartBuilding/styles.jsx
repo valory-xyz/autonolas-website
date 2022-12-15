@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Row } from 'antd/lib';
 import { backgroundImage } from 'components/GlobalStyles';
 import { MEDIA_QUERY, COLOR } from 'util/theme';
-import { Content as C } from '../Learn/2WhatIsAutonolas/styles';
+import { Content as C } from '../../Learn/2WhatIsAutonolas/styles';
 
 export const SectionSeven = styled.div`
   ${backgroundImage('/images/7StartBuilding/background.webp')}

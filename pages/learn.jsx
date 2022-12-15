@@ -1,5 +1,5 @@
 import { getEducationArticles } from 'common-util/api';
-import LearnPage from 'components/HomePage/Learn';
+import LearnPage from 'components/Learn';
 
 export async function getServerSideProps() {
   const educationArticles = await getEducationArticles();

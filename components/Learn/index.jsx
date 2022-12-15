@@ -9,7 +9,7 @@ import QuickIntroArticles from './5QuickIntroArticles';
 import WhyBuildOnAutonolas from './6WhyBuildOnAutonolas';
 import WhatCouldYouBuild from './8WhatCouldYouBuild';
 import Mission from './9Mission';
-import { LearnContainer } from '../styles';
+import { LearnContainer } from '../HomePage/styles';
 
 export const LEARN_LIST = [
   { name: 'Who benefits from Autonolas?', id: 'autonolas-help' },

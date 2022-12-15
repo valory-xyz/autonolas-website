@@ -2,7 +2,7 @@
 export const NAV_1 = [
   { name: 'Why Autonolas?', id: 'why-autonolas' },
   { name: 'Products', id: 'products' },
-  { name: 'Learn & Build', id: 'learn' },
+  { name: 'Learn & Build', id: 'learn-and-build' },
   { name: 'Ecosystem Builders', id: 'ecosystem-builders' },
   { name: 'Contribute', id: 'contribute' },
   { name: 'Press', id: 'press' },

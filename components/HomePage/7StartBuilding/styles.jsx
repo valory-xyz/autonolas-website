@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Row } from 'antd/lib';
 import { backgroundImage } from 'components/GlobalStyles';
 import { MEDIA_QUERY, COLOR } from 'util/theme';
 import { Content as C } from '../Learn/2WhatIsAutonolas/styles';
@@ -8,9 +9,11 @@ export const SectionSeven = styled.div`
 `;
 
 export const Container = styled(C)`
+  position: relative;
   justify-content: center;
   padding-top: 2rem;
   .column {
+    max-width: 340px;
     .img-container-custom {
       margin: 0 auto;
       height: 150px;
@@ -20,7 +23,7 @@ export const Container = styled(C)`
     }
     .header-text {
       margin-top: 0rem;
-      min-height: auto;
+      min-height: 45px;
     }
     .sub-text {
       min-height: 150px;
@@ -29,10 +32,15 @@ export const Container = styled(C)`
       margin-right: 12rem;
       max-width: 340px;
       .img-container-custom {
-        width: 140px;
+        width: 180px;
       }
     }
     &.column-2 {
+      .img-container-custom {
+        width: 140px;
+      }
+    }
+    &.column-3 {
       max-width: 360px;
       .img-container-custom {
         width: 120px;
@@ -72,6 +80,16 @@ export const Container = styled(C)`
       }
     }
   }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: -50px;
+    left: 27.5%;
+    width: 1px;
+    height: 140%;
+    background-color: ${COLOR.BLACK};
+  }
 `;
 
 export const CommissionUs = styled.div`
@@ -84,5 +102,17 @@ export const CommissionUs = styled.div`
   a {
     font-weight: bold;
     color: ${COLOR.PURPLE};
+  }
+`;
+
+export const HeadersRow = styled(Row)`
+  margin-top: 2rem;
+  .ant-col {
+    border-top: 1px solid ${COLOR.BLACK};
+    border-bottom: 1px solid ${COLOR.BLACK};
+    h3 {
+      font-size: 24px;
+      margin: 0.5rem 0;
+    }
   }
 `;

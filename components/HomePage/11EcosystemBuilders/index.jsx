@@ -7,7 +7,7 @@ import { SectionEcosystemBuilders, Container, HeadersRow } from './styles';
 
 const LIST = [
   {
-    imageUrl: 'docs',
+    imageUrl: '1',
     heading: 'Valory',
     subHeading:
       'Valory built the core technology behind Autonolas. The team is a VC-backed group of engineers, researchers and commercial thinkers. Valory is the expert in DAO-owned, decentralized off-chain systems, and is the right choice for your next project.',
@@ -32,7 +32,7 @@ const LIST = [
     ),
   },
   {
-    imageUrl: 'dev-academy',
+    imageUrl: '2',
     heading: 'Want to help teams build autonomous services?',
     component: (
       <div>
@@ -70,7 +70,7 @@ const WhyBuildOnAutonolas = () => (
 
               <div className="img-container-custom">
                 <img
-                  src={`/images/7StartBuilding/${imageUrl}.png`}
+                  src={`/images/11EcosystemBuilders/${imageUrl}.png`}
                   alt={`${heading} Icon`}
                 />
               </div>

@@ -94,12 +94,18 @@ export const SectionOne = styled.div`
 
   ${MEDIA_QUERY.mobileM} {
     .description {
-      bottom: 230px;
+      bottom: 160px;
     }
     .action-btns {
       .btn {
         width: 300px;
       }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileS} {
+    .header {
+      font-size: 44px;
     }
   }
 `;

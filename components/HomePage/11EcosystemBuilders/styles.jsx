@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Row } from 'antd/lib';
 import { MEDIA_QUERY, COLOR } from 'util/theme';
-import { backgroundImage } from 'components/GlobalStyles';
+import { backgroundGradient } from 'components/GlobalStyles';
 // import { Content as C } from '../Learn/2WhatIsAutonolas/styles';
 
 export const SectionEcosystemBuilders = styled.div`
-  ${backgroundImage('/images/7StartBuilding/background.webp')}
+  ${backgroundGradient};
   .header {
     margin-top: 1rem;
   }

@@ -10,7 +10,6 @@ import Contribute from './12Contribute';
 import Press from './12Press';
 import Blog from './13Blog';
 import Experience from './14Experience';
-import { LearnContainer } from './styles';
 
 const HomePage = ({
   isNavigationOpen,
@@ -19,11 +18,7 @@ const HomePage = ({
 }) => (
   <>
     <TheNewWay isNavigationOpen={isNavigationOpen} />
-
-    <LearnContainer>
-      <ScaleYourDao />
-    </LearnContainer>
-
+    <ScaleYourDao />
     <StartBuilding />
     <Products />
     <EcosystemBuilders />

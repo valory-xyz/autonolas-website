@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
+import { backgroundGradient } from 'components/GlobalStyles';
 
 export const SectionScaleYourDao = styled.div`
+  ${backgroundGradient};
   .ant-divider {
     background-color: ${COLOR.BLACK};
   }

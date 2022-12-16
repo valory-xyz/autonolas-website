@@ -12,7 +12,7 @@ const LIST = [
     imageUrl: '1',
     heading: 'Get consistent results at lower cost',
     subHeading:
-      'Run complex workflows in software without expensive constributors',
+      'Run complex workflows in software without expensive contributors.',
   },
   {
     imageUrl: '2',

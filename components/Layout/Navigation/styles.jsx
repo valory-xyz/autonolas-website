@@ -239,11 +239,14 @@ export const MobileNavBox = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2px 8px;
+<<<<<<< HEAD
   ${MEDIA_QUERY.mobileL} {
     a {
       max-width: 170px;
     }
   }
+=======
+>>>>>>> main
 `;
 
 export const Banner = styled.div`

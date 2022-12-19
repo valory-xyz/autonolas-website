@@ -170,10 +170,6 @@ export const TwoColumnContents = styled.div`
       .img-container {
         width: 100%;
       }
-      .header-text {
-      }
-      .sub-text {
-      }
       .btn {
         width: auto;
       }

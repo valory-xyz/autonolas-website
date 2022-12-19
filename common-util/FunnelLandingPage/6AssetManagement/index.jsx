@@ -18,10 +18,10 @@ import Balancer from './Balancer';
 import CallToActionButton from '../Hero/CallToActionButton';
 
 // part of the homepage
-import WhatIsAutonolas from '../../../components/HomePage/2WhatIsAutonolas';
-import DecentralizedAndSophisticated from '../../../components/HomePage/3DecentralizedAndSophisticated';
-import HowDoAutonolasWork from '../../../components/HomePage/4HowDoAutonolasWork';
-import QuickIntroArticles from '../../../components/HomePage/5QuickIntroArticles';
+import WhatIsAutonolas from '../../../components/Learn/2WhatIsAutonolas';
+import DecentralizedAndSophisticated from '../../../components/Learn/3DecentralizedAndSophisticated';
+import HowDoAutonolasWork from '../../../components/Learn/4HowDoAutonolasWork';
+import QuickIntroArticles from '../../../components/Learn/5QuickIntroArticles';
 import { LearnContainer } from '../../../components/HomePage/styles';
 
 import { dividerCss } from '../styles';

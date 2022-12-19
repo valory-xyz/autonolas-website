@@ -13,7 +13,7 @@ const DATA = [
 ];
 
 const WhatAreWeBuilding = () => (
-  <SectionFour className="section section-4">
+  <SectionFour className="section section-4" id="how-do-autonomous-services-work">
     <Header
       className="header"
       title={(

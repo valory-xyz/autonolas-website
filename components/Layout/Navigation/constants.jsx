@@ -1,10 +1,7 @@
 export const NAV_1 = [
-  { name: 'Learn', id: 'learn' },
-  { name: 'Build', id: 'build' },
-  { name: 'Mission', id: 'mission' },
+  { name: 'Why Autonolas?', id: 'why-autonolas' },
   { name: 'Products', id: 'products' },
-  { name: 'Team', id: 'team' },
-  { name: 'Contribute', id: 'contribute' },
+  { name: 'Learn & Build', id: 'learn-and-build' },
   { name: 'Blog', id: 'blog' },
 ];
 

@@ -93,8 +93,8 @@ const getProductList = (list, type) => list.map(eachProduct => {
         <Image
           src={BASE_IMAGES_PATH + imageFilename}
           className="product-image"
-          width="96px"
-          height="96px"
+          width="100px"
+          height="100px"
         />
         <h3 className="product-title">{title}</h3>
         <Text className="product-description">{description}</Text>

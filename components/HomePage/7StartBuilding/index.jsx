@@ -101,7 +101,9 @@ const LearnAndBuild = () => {
           <CommissionUs>
             <p>Don’t have time to build right now?</p>
             <Link href="/#ecosystem-builders" passHref>
-              Get support from an ecosystem builder
+              <a>
+                <Button hasArrowSuffix type="purple" title="Get support with your project" />
+              </a>
             </Link>
           </CommissionUs>
         </Col>

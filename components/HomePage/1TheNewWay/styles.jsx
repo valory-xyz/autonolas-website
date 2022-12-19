@@ -16,8 +16,17 @@ export const SectionOne = styled.div`
     rgba(246, 235, 255, 1) 82%
   );
   ${backgroundImage('/images/1TheNewWay/background.webp')}
+  .text-rotator-container {
+    display: inline-block;
+    width: 11ch;
+    background-color: rgba(114, 0, 214, 0.1);
+  }
+  .text-rotator-text {
+    margin-left: 5px;
+  }
   .header {
     line-height: 1;
+    max-width: 15ch;
   }
   .description {
     line-height: normal;
@@ -32,7 +41,7 @@ export const SectionOne = styled.div`
     }
   }
   &.section {
-    padding: 8rem 4.5rem !important;
+    padding: 8rem 4rem 4rem 4rem !important;
   }
 
   ${MEDIA_QUERY.laptop} {

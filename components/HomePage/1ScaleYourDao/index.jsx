@@ -50,8 +50,8 @@ const ScaleYourDao = () => {
         />
       ) : (
         <Image
-          src="/images/1ScaleYourDao/header-desktop.png"
-          width="100%"
+          src="/images/1ScaleYourDao/header-desktop.svg"
+          width="90%"
           height="40px"
           layout="responsive"
           objectFit="contain"

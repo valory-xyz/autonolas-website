@@ -24,10 +24,11 @@ const LIST = [
 
         <div className="action-btn">
           <a href="mailto:bd@valory.xyz">
-            <Button title="get support with your project" type="black" />
+            <Button className="btn-get-support" title="Get support with your project" type="black" />
           </a>
+          <br />
+          Button not working? Email bd@valory.xyz
         </div>
-
       </div>
     ),
   },

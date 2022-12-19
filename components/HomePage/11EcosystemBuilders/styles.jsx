@@ -2,12 +2,15 @@ import styled from 'styled-components';
 import { Row } from 'antd/lib';
 import { MEDIA_QUERY, COLOR } from 'util/theme';
 import { backgroundGradient } from 'components/GlobalStyles';
-// import { Content as C } from '../Learn/2WhatIsAutonolas/styles';
 
 export const SectionEcosystemBuilders = styled.div`
   ${backgroundGradient};
   .header {
     margin-top: 1rem;
+  }
+
+  .btn-get-support {
+    margin-bottom: 10px;
   }
 `;
 
@@ -40,48 +43,7 @@ export const Container = styled.div`
       }
     }
   }
-  /* .column {
-    .img-container-custom {
-      margin: 0 auto;
-      height: 150px;
-      img {
-        width: 100%;
-      }
-    }
-    .header-text {
-      margin-top: 0rem;
-      min-height: auto;
-    }
-    .sub-text {
-      min-height: 150px;
-    }
-    &.column-1 {
-      margin-right: 12rem;
-      max-width: 340px;
-      .img-container-custom {
-        width: 140px;
-      }
-    }
-    &.column-2 {
-      max-width: 360px;
-      .img-container-custom {
-        width: 120px;
-      }
-    }
-  }
 
-  ${MEDIA_QUERY.tablet} {
-    gap: 0 3rem;
-    .column {
-      .sub-text {
-        min-height: 140px;
-      }
-      &.column-1 {
-        margin-right: 0rem;
-      }
-    }
-  }
-*/
   ${MEDIA_QUERY.mobileL} {
     .column {
       flex-direction: column;

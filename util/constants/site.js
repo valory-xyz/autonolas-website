@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://autonolas.network';
-export const SITE_TAGLINE = 'Own & Decentralize your Off-chain Processes';
+export const SITE_TAGLINE = 'Own & Decentralize Your Off-chain Processes';
 export const SITE_TITLE = `Autonolas | ${SITE_TAGLINE}`;
-export const SITE_DESCRIPTION = 'Our open-source software stack enables you to run your DAO/Dev/Product/Growth Ops as a unified, decentralized off-chain system.';
+export const SITE_DESCRIPTION = 'Our open-source software stack enables you to run your operations as a unified, decentralized off-chain system.';
 export const SITE_METATAG_IMAGE = `${SITE_URL}/images/site-metadata/site-metatag.jpg`;
 
 export const META_TAGS_INFO = {

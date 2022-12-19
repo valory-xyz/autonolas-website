@@ -1,12 +1,7 @@
 import styled from 'styled-components';
-import { COLOR, MEDIA_QUERY } from 'util/theme';
-import { backgroundGradient } from 'components/GlobalStyles';
+import { MEDIA_QUERY } from 'util/theme';
 
 export const SectionScaleYourDao = styled.div`
-  ${backgroundGradient};
-  .ant-divider {
-    background-color: ${COLOR.BLACK};
-  }
   ${MEDIA_QUERY.mobileL} {
     .header {
       margin-bottom: 2rem !important;
@@ -49,6 +44,29 @@ export const Content = styled.div`
         font-size: 28px;
       }
     }
+  }
+
+  ${MEDIA_QUERY.tablet} {
+    .column {
+      margin-bottom: 2rem;
+      .img-container {
+        height: 120px;
+        img {
+          height: 100%;
+          width: 120px !important;
+        }
+      }
+      .text-content {
+        .header-text {
+          font-size: 20px;
+          margin-top: 1rem;
+          min-height: auto;
+        }
+        .sub-text {
+          font-size: 18px;
+          min-height: auto !important;
+        }
+      }
   }
 
   ${MEDIA_QUERY.mobileL} {

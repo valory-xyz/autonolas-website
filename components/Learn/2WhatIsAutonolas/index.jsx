@@ -22,7 +22,7 @@ const LIST = [
 ];
 
 const WhatIsAutonolas = () => (
-  <SectionTwo className="section" id="learn">
+  <SectionTwo className="section" id="what-is-autonolas">
     <Description type={2} title="LEARN" />
 
     <Header

@@ -27,7 +27,10 @@ export const DesktopNavBar = styled.div`
 
   ${MEDIA_QUERY.laptop} {
     .nav-item-logo {
-      min-width: 180px;
+      min-width: 140px;
+    }
+    .start-building-in-nav {
+      display: none;
     }
   }
 
@@ -109,6 +112,7 @@ export const Container = styled.header`
   /* common */
   li {
     list-style: none;
+    margin: 0 8px;
   }
   a {
     text-decoration: none;
@@ -151,13 +155,13 @@ export const Container = styled.header`
           justify-content: stretch;
           transition: 0.3s;
           .nav-item {
-            margin: 2.5rem 0;
             line-height: normal;
-            margin: 0 16px;
+            margin: 0 1rem 1rem 0;
             .nav-link {
-              font-size: 58px;
+              font-size: 46px;
               font-weight: bold;
               text-transform: capitalize;
+              line-height: 1.2;
             }
           }
         }
@@ -218,6 +222,13 @@ export const Container = styled.header`
         .nav-logo svg {
           width: 70px;
         }
+        ${NavMenu} {
+          .nav-item {
+            .nav-link {
+              font-size: 40px;
+            }
+          }
+        }
       }
     }
   }
@@ -228,6 +239,11 @@ export const MobileNavBox = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2px 8px;
+  ${MEDIA_QUERY.mobileL} {
+    a {
+      max-width: 170px;
+    }
+  }
 `;
 
 export const Banner = styled.div`

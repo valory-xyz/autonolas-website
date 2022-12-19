@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from 'common-util/Header';
-import Description from 'common-util/Description';
 import { SectionSix, Container } from './styles';
 
 const LIST = [
@@ -25,9 +24,7 @@ const LIST = [
 ];
 
 const WhyBuildOnAutonolas = () => (
-  <SectionSix className="section" id="build">
-    <Description type={2} title="BUILD" />
-
+  <SectionSix className="section" id="why-build-on-autonolas">
     <Header className="header center" title="Why build on Autonolas?" />
 
     <Container>

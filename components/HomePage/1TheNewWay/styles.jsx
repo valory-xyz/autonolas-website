@@ -16,9 +16,17 @@ export const SectionOne = styled.div`
     rgba(246, 235, 255, 1) 82%
   );
   ${backgroundImage('/images/1TheNewWay/background.webp')}
+  .text-rotator-container {
+    display: inline-block;
+    width: 11ch;
+    background-color: rgba(114, 0, 214, 0.1);
+  }
+  .text-rotator-text {
+    margin-left: 5px;
+  }
   .header {
-    margin-bottom: 0 !important;
     line-height: 1;
+    max-width: 15ch;
   }
   .description {
     line-height: normal;
@@ -33,12 +41,12 @@ export const SectionOne = styled.div`
     }
   }
   &.section {
-    padding: 7rem 4.5rem !important;
+    padding: 8rem 4rem 4rem 4rem !important;
   }
 
   ${MEDIA_QUERY.laptop} {
     .header {
-      font-size: 104px;
+      font-size: 94px;
     }
   }
 
@@ -94,12 +102,18 @@ export const SectionOne = styled.div`
 
   ${MEDIA_QUERY.mobileM} {
     .description {
-      bottom: 230px;
+      bottom: 160px;
     }
     .action-btns {
       .btn {
         width: 300px;
       }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileS} {
+    .header {
+      font-size: 44px;
     }
   }
 `;

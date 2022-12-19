@@ -64,9 +64,9 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 });
 
 const startBuildingBtn = (
-  <Link href="/#build" passHref>
-    <a>
-      <Button type="purple" title="Start Building" />
+  <Link href="/#ecosystem-builders" passHref>
+    <a className="start-building-in-nav">
+      <Button type="purple" title="Get support" />
     </a>
   </Link>
 );
@@ -145,13 +145,12 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
             <div>
               <span role="img" aria-label="Star">
                 ✨
-                {!isSmallScreen && <>&nbsp;✨ &nbsp;✨</>}
               </span>
-              &nbsp;Show off your contributions to Autonolas!
+              &nbsp;Show off your contributions to Autonolas!&nbsp;
               {!isSmallScreen && (
                 <>
                   &nbsp; Mint a badge which evolves as you earn contribution
-                  points.
+                  points. &nbsp;
                 </>
               )}
               &nbsp;

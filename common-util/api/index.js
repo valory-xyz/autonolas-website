@@ -59,24 +59,6 @@ export const getIdea = async id => {
   return data;
 };
 
-// ----------- TEAM -----------
-export const getTeam = async () => {
-  const params = {
-    sort: ['name:asc'],
-    populate: '*',
-  };
-  const json = await apiCall('team-members', params);
-  const cofounders = (get(json, 'data') || []).filter(
-    ({ attributes }) => !!attributes.cofounder, // only co-founders
-  );
-
-  const foundingTeam = (get(json, 'data') || []).filter(
-    ({ attributes }) => !attributes.cofounder, // except co-founders
-  );
-
-  return { cofounders, foundingTeam };
-};
-
 // ----------- PRESS -----------
 export const getPress = async () => {
   const params = {

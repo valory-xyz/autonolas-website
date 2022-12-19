@@ -86,7 +86,7 @@ const ideaGroups = [
 const WhatCouldYouBuild = () => (
   <SectionWhatCouldYouBuild
     className="section section-what-could-you-build"
-    id="idea"
+    id="what-could-you-build"
   >
     <Header
       className="header"
@@ -100,59 +100,13 @@ const WhatCouldYouBuild = () => (
       )}
     />
 
-    {/* <SeeAll>
-      <a href={`/${PATHS.IDEAS}`} className="no-underline">
-        <Button
-          title="See all"
-          type="link-arrow"
-        />
-      </a>
-    </SeeAll> */}
-
-    {/* <ThreeColumnContents>
-      {(ideas || []).slice(0, 6).map(
-        (
-          {
-            title, image, type, blueprint, description, detailsLink, id,
-          },
-          index,
-        ) => {
-          const imageUrl = get(image, 'data.attributes.url') || '';
-
-          return (
-            <div className="details" key={`what-could-you-build-${id}`}>
-              <div className={`column column-${index + 1}`}>
-                <div
-                  className="img-container"
-                  style={{
-                    backgroundImage: `url(${imageUrl})`,
-                  }}
-                />
-                <Tag>{type}</Tag>
-                <div className="header-text">{title}</div>
-                <div className="desc">{description}</div>
-                <div className="sub-text">{blueprint}</div> */}
-    {/* TODO */}
-    {/* <Button
-                  title={detailsLink ? 'DETAILS' : 'REQUEST DETAILS'}
-                  type="black"
-                  className="mini"
-                  onClick={() => window.open(`${window.location.origin}/ideas/${id}`)}
-                />
-              </div>
-            </div>
-          );
-        },
-      )}
-    </ThreeColumnContents> */}
-
     {ideaGroups.map(ideaGroup => {
       const { id, ideas, title } = ideaGroup;
 
       return (
         <IdeaGroup key={id}>
           <Description type={1} title={title} className="group-title" />
-          <Row gutter={12}>
+          <Row gutter={48}>
             {ideas.map(idea => (
               <Col xs={24} lg={8} key={idea.id} className="idea">
                 <Title level={3} className="idea-title">

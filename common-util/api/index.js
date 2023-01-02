@@ -84,6 +84,8 @@ export const getBlogs = async () => {
   const params = {
     sort: ['datePublished:desc'],
     populate: '*',
+    // fetches max of 1000 blogs on the homepage
+    'pagination[limit]': 1000,
   };
   const json = await apiCall('blog-posts', params);
   const data = get(json, 'data') || [];

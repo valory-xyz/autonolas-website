@@ -9,10 +9,10 @@ const { useBreakpoint } = Grid;
 
 const LIST = [
   {
-    imageUrl: '1',
-    heading: 'Get consistent results at lower cost',
+    imageUrl: '4',
+    heading: 'Unify off-chain code',
     subHeading:
-      'Run complex workflows in software without expensive contributors.',
+      'Consolidate your existing data, compute and transaction automation process.',
   },
   {
     imageUrl: '2',
@@ -24,12 +24,6 @@ const LIST = [
     heading: 'Reduce liability',
     subHeading:
       'Replace processes that depend on individual humans and bots with off-chain software systems, run by independent operators.',
-  },
-  {
-    imageUrl: '4',
-    heading: 'Unify off-chain code',
-    subHeading:
-      'Consolidate your existing data, compute and transaction automation process.',
   },
 ];
 
@@ -67,8 +61,8 @@ const ScaleYourDao = () => {
             <Col
               key={`scale-your-dao-${imageUrl}`}
               xs={24}
-              md={6}
-              lg={6}
+              md={8}
+              lg={8}
               className={`column column-${index + 1}`}
             >
               <div className="img-container">

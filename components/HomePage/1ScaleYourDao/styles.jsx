@@ -27,8 +27,8 @@ export const Content = styled.div`
     }
 
     /* content-images */
-    &.column .img-container img {
-      width: 55%;
+    .img-container img {
+      width: 190px;
     }
     &.column-4 .img-container img {
       width: 60%;
@@ -39,6 +39,9 @@ export const Content = styled.div`
     .column {
       .img-container {
         height: 140px;
+        img {
+          width: 150px;
+        }
       }
       .header-text {
         font-size: 28px;
@@ -67,6 +70,7 @@ export const Content = styled.div`
           min-height: auto !important;
         }
       }
+    }
   }
 
   ${MEDIA_QUERY.mobileL} {

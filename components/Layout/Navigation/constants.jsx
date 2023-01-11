@@ -3,7 +3,11 @@ export const NAV_1 = [
   { name: 'Products', id: 'products' },
   { name: 'Learn & Build', id: 'learn-and-build' },
   { name: 'Blog', id: 'blog' },
-  { name: 'Docs', id: 'docs', url: 'https://docs.autonolas.network/' },
+  {
+    name: 'Docs',
+    id: 'docs',
+    url: 'https://docs.autonolas.network/',
+  },
 ];
 
 export const NAVIGATION_SOCIALS = [

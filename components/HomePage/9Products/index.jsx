@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+import { openUrl } from 'common-util/functions';
 import { ProductsSection, HeadersRow, ProductCard } from './styles';
 
 const { Text } = Typography;
@@ -42,32 +43,44 @@ const FOR_DEVELOPERS_TOOLKITS = [
     imageFilename: 'smart-managed-pools.png',
     title: 'Smart Managed Pools',
     description: 'Build autonomous asset management products',
-    primaryBtnText: 'See Demo',
+    primaryBtnText: 'See Demo (coming soon)',
     primaryLink: '',
     secondaryLink: 'https://autonolas.network/products/smart-managed-pools',
     color: COLOR.PURPLE,
     isExternal: false,
   },
+  // TODO: this will be removed later once the image for other 2 is ready
   {
-    id: 'ml-apy-prediction-oracle',
-    imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
-    title: 'ML APY Prediction Oracle',
-    description: 'Advanced prediction of Uniswap v2 LP yield',
-    primaryBtnText: 'See demo',
-    primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
-    secondaryLink: 'https://autonolas.network/products/ml-apy-prediction-oracle',
+    id: 'custom-oracle-infra',
+    imageFilename: 'custom-oracle.png',
+    title: 'Custom Oracle Infra',
+    description: 'Build any oracle you can imagine',
+    primaryBtnText: 'See Demo',
+    primaryLink: 'https://oracle.autonolas.network/',
+    secondaryLink: '',
     color: COLOR.PURPLE,
   },
-  {
-    id: 'price-oracle',
-    imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
-    title: 'Price Oracle',
-    description: 'Robust aggregation of CEX pricing data for cryptoassets',
-    primaryBtnText: 'See demo',
-    primaryLink: 'https://oracle.autonolas.network/price',
-    secondaryLink: 'https://autonolas.network/products/price-oracle',
-    color: COLOR.PURPLE,
-  },
+  // TODO: fix later
+  // {
+  //   id: 'ml-apy-prediction-oracle',
+  //   imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
+  //   title: 'ML APY Prediction Oracle',
+  //   description: 'Advanced prediction of Uniswap v2 LP yield',
+  //   primaryBtnText: 'See demo',
+  //   primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
+  //   secondaryLink: 'https://autonolas.network/products/ml-apy-prediction-oracle',
+  //   color: COLOR.PURPLE,
+  // },
+  // {
+  //   id: 'price-oracle',
+  //   imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
+  //   title: 'Price Oracle',
+  //   description: 'Robust aggregation of CEX pricing data for cryptoassets',
+  //   primaryBtnText: 'See demo',
+  //   primaryLink: 'https://oracle.autonolas.network/price',
+  //   secondaryLink: 'https://autonolas.network/products/price-oracle',
+  //   color: COLOR.PURPLE,
+  // },
 ];
 
 const FOR_USERS = [
@@ -104,7 +117,7 @@ const getProductList = (list, type) => list.map(eachProduct => {
     description,
     primaryLink,
     primaryBtnText,
-    secondaryLink,
+    // secondaryLink,
   } = eachProduct;
 
   return (
@@ -119,20 +132,21 @@ const getProductList = (list, type) => list.map(eachProduct => {
         <h3 className="product-title">{title}</h3>
         <Text className="product-description">{description}</Text>
         <Button
-          hasArrowSuffix
           type="purple"
           title={primaryBtnText}
           disabled={!primaryLink}
           className="mini mb-1"
-          onClick={() => window.open(primaryLink)}
+          onClick={() => openUrl(primaryLink)}
+          style={{ minWidth: '200px' }}
         />
         <Button
-          hasArrowSuffix
           title="LEARN MORE"
           type="black"
           className="mini"
-          disabled={!secondaryLink}
-          onClick={() => window.open(secondaryLink)}
+          disabled
+          // TODO: disabled util the product pages are ready
+          // disabled={!secondaryLink}
+          // onClick={() => openUrl(secondaryLink)}
         />
       </ProductCard>
     </Col>

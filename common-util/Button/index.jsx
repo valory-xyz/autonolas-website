@@ -84,6 +84,19 @@ export const Btn = styled.button`
         `;
     }
   }}
+
+  /* if disabled reset the color to gray */
+  ${({ disabled }) => disabled && `
+    cursor: not-allowed !important;
+    background-color: ${COLOR.GREY_1};
+    border: 1px solid ${COLOR.GREY_1};
+    color: ${COLOR.BLACK};
+    &:hover, &:active {
+      background-color: ${COLOR.GREY_1};
+      color: ${COLOR.BLACK};
+      border : 1px solid ${COLOR.GREY_1};
+    }
+  `}
 `;
 
 const CustomButton = ({

@@ -122,8 +122,7 @@ const getProductList = (list, type) => list.map(eachProduct => {
           hasArrowSuffix
           type="purple"
           title={primaryBtnText}
-          // TODO: button disabled to be fixed
-          disabled={!primaryBtnText}
+          disabled={!primaryLink}
           className="mini mb-1"
           onClick={() => window.open(primaryLink)}
         />

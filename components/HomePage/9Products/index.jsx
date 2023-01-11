@@ -139,7 +139,7 @@ const getProductList = (list, type) => list.map(eachProduct => {
           onClick={() => openUrl(primaryLink)}
           style={{ minWidth: '200px' }}
         />
-        <Button
+        {/* <Button
           title="LEARN MORE"
           type="black"
           className="mini"
@@ -147,7 +147,7 @@ const getProductList = (list, type) => list.map(eachProduct => {
           // TODO: disabled util the product pages are ready
           // disabled={!secondaryLink}
           // onClick={() => openUrl(secondaryLink)}
-        />
+        /> */}
       </ProductCard>
     </Col>
   );

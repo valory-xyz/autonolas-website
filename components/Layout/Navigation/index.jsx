@@ -26,7 +26,6 @@ const { useBreakpoint } = Grid;
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
   const mapKey = `navigation-id-${eachNav.id}-${suffix}`;
-  const externalLink = !!eachNav.url;
   const isIcon = eachNav.type === 'icon';
   const title = isIcon ? (
     <Image
@@ -46,10 +45,10 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
 
   return (
     <li className="nav-item" key={mapKey}>
-      <Link href={externalLink ? eachNav.url : `/#${eachNav.id}`} passHref>
+      <Link href={eachNav.url ? eachNav.url : `/#${eachNav.id}`} passHref>
         <a
           className="nav-link"
-          target={externalLink ? '_blank' : '_self'}
+          target={eachNav.isExternal ? '_blank' : '_self'}
           rel="noopener noreferrer"
           role="button"
           tabIndex={0}

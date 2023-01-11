@@ -3,6 +3,7 @@ import {
 } from 'antd';
 import Image from 'next/image';
 import { COLOR } from 'util/theme';
+import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { ProductsSection, HeadersRow, ProductCard } from './styles';
 
@@ -17,7 +18,10 @@ const FOR_DEVELOPERS_CORE = [
     imageFilename: 'open-autonomy-framework.png',
     title: 'Open Autonomy',
     description: 'Framework for building any autonomous service',
-    link: 'https://docs.autonolas.network/',
+    primaryBtnText: 'Get Started',
+    primaryLink:
+      'https://docs.autonolas.network/get_started/what_is_the_open_autonomy_framework',
+    secondaryLink: 'https://autonolas.network/open-autonomy',
     color: COLOR.PURPLE,
   },
   {
@@ -25,7 +29,9 @@ const FOR_DEVELOPERS_CORE = [
     imageFilename: 'protocol.png',
     title: 'Protocol',
     description: 'Register and manage autonomous services',
-    link: 'https://protocol.autonolas.network/',
+    primaryBtnText: 'Explore the Protocol',
+    primaryLink: 'https://protocol.autonolas.network/',
+    secondaryLink: 'https://autonolas.network/products/protocol',
     color: COLOR.PURPLE,
   },
 ];
@@ -36,16 +42,30 @@ const FOR_DEVELOPERS_TOOLKITS = [
     imageFilename: 'smart-managed-pools.png',
     title: 'Smart Managed Pools',
     description: 'Build autonomous asset management products',
-    link: 'https://www.autonolas.network/autonomous-asset-management-infra',
+    primaryBtnText: 'See Demo',
+    primaryLink: '',
+    secondaryLink: 'https://autonolas.network/products/smart-managed-pools',
     color: COLOR.PURPLE,
     isExternal: false,
   },
   {
-    id: 'custom-oracle-infra',
-    imageFilename: 'custom-oracle.png',
-    title: 'Custom Oracle Infra',
-    description: 'Build any oracle you can imagine',
-    link: 'https://oracle.autonolas.network/',
+    id: 'ml-apy-prediction-oracle',
+    imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
+    title: 'ML APY Prediction Oracle',
+    description: 'Advanced prediction of Uniswap v2 LP yield',
+    primaryBtnText: 'See demo',
+    primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
+    secondaryLink: 'https://autonolas.network/products/ml-apy-prediction-oracle',
+    color: COLOR.PURPLE,
+  },
+  {
+    id: 'price-oracle',
+    imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
+    title: 'Price Oracle',
+    description: 'Robust aggregation of CEX pricing data for cryptoassets',
+    primaryBtnText: 'See demo',
+    primaryLink: 'https://oracle.autonolas.network/price',
+    secondaryLink: 'https://autonolas.network/products/price-oracle',
     color: COLOR.PURPLE,
   },
 ];
@@ -56,7 +76,9 @@ const FOR_USERS = [
     imageFilename: 'el-col.png',
     title: 'El Collectooorr',
     description: 'Get passive exposure to new generative art collections',
-    link: 'https://elcollectooorr.art/',
+    primaryBtnText: 'Start Collecting',
+    primaryLink: 'https://elcollectooorr.art/vaults/latest',
+    secondaryLink: 'https://elcollectooorr.art',
     color: COLOR.GREEN_2,
   },
   {
@@ -66,7 +88,9 @@ const FOR_USERS = [
     title: 'Autonolas Contribute',
     description:
       'Make guided contributions and get recognized for your efforts',
-    link: 'https://contribute.autonolas.network',
+    primaryBtnText: 'Get Started',
+    primaryLink: 'https://contribute.autonolas.network',
+    secondaryLink: 'https://autonolas.network/products/autonolas-contribute',
     color: COLOR.GREEN_2,
     isExternal: true,
   },
@@ -78,18 +102,14 @@ const getProductList = (list, type) => list.map(eachProduct => {
     imageFilename,
     title,
     description,
-    link,
-    isExternal = true,
+    primaryLink,
+    primaryBtnText,
+    secondaryLink,
   } = eachProduct;
 
   return (
     <Col lg={12} sm={12} xs={24} key={id} className="product">
-      <ProductCard
-        target={isExternal ? '_blank' : '_self'}
-        rel="noopener noreferrer"
-        href={link}
-        className={type}
-      >
+      <ProductCard className={type}>
         <Image
           src={BASE_IMAGES_PATH + imageFilename}
           className="product-image"
@@ -98,6 +118,23 @@ const getProductList = (list, type) => list.map(eachProduct => {
         />
         <h3 className="product-title">{title}</h3>
         <Text className="product-description">{description}</Text>
+        <Button
+          hasArrowSuffix
+          type="purple"
+          title={primaryBtnText}
+          // TODO: button disabled to be fixed
+          disabled={!primaryBtnText}
+          className="mini mb-1"
+          onClick={() => window.open(primaryLink)}
+        />
+        <Button
+          hasArrowSuffix
+          title="LEARN MORE"
+          type="black"
+          className="mini"
+          disabled={!secondaryLink}
+          onClick={() => window.open(secondaryLink)}
+        />
       </ProductCard>
     </Col>
   );

@@ -7,6 +7,7 @@ const H2 = styled.h2`
   margin: 0;
   font-size: 116px;
   line-height: 1;
+  letter-spacing: -0.045em;
   overflow-wrap: break-word;
   font-family: "manrope__semibold", sans-serif;
   &.center {

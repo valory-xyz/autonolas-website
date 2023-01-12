@@ -53,6 +53,8 @@ const Products = ({ details }) => {
                 <img
                   src={`/images/9Products/${icon}`}
                   alt=" "
+                  width="200px"
+                  height="200px"
                 />
                 <br />
 

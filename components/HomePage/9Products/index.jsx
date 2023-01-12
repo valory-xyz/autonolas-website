@@ -92,7 +92,7 @@ const FOR_USERS = [
       'Make guided contributions and get recognized for your efforts',
     primaryBtnText: 'Get Started',
     primaryLink: 'https://contribute.autonolas.network',
-    // secondaryLink: 'products/autonolas-contribute',
+    secondaryLink: 'products/autonolas-contribute',
     color: COLOR.GREEN_2,
     isExternal: true,
   },

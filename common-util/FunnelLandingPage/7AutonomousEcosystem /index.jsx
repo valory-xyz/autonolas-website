@@ -38,7 +38,7 @@ const AutonomousEcosystem = ({ educationArticles, funnel }) => {
             <Col key={id} xs={24} md={6} lg={8} className="each-benefit">
               <div className="img-container">
                 <FullImage
-                  src={`images/funnels/7AutonomousEcosystem/Benefits/${imageUrl}`}
+                  src={`/images/funnels/7AutonomousEcosystem/Benefits/${imageUrl}`}
                   alt=" "
                 />
               </div>
@@ -67,7 +67,7 @@ const AutonomousEcosystem = ({ educationArticles, funnel }) => {
             >
               <div className="img-container" style={imgStyle}>
                 <img
-                  src={`images/funnels/7AutonomousEcosystem/WhatItInvolves/${imageUrl}`}
+                  src={`/images/funnels/7AutonomousEcosystem/WhatItInvolves/${imageUrl}`}
                   alt=" "
                 />
               </div>
@@ -99,7 +99,7 @@ const AutonomousEcosystem = ({ educationArticles, funnel }) => {
             >
               <div className="img-container" style={imgStyle}>
                 <img
-                  src={`images/funnels/7AutonomousEcosystem/ExistingServices/${imageUrl}`}
+                  src={`/images/funnels/7AutonomousEcosystem/ExistingServices/${imageUrl}`}
                   alt=" "
                 />
               </div>

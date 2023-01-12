@@ -1,14 +1,12 @@
 import { useRouter } from 'next/router';
-// import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import { SITE_URL } from 'util/constants/site';
-import Hero from 'common-util/FunnelLandingPage/Hero';
+import Button from 'common-util/Button';
 import Meta from 'common-util/meta';
-// import Description from 'common-util/Description';
-// import Header from 'common-util/Header';
-// import CallToActionButton from 'common-util/Products/Hero/CallToActionButton';
-// import { HeroSection, DescActionButtons } from 'common-util/Products/Hero/styles';
-import { getHostName } from 'common-util/functions';
+import Header from 'common-util/Header';
+import CallToActionButton from 'common-util/FunnelLandingPage/Hero/CallToActionButton';
+import { getHostName, openUrl } from 'common-util/functions';
+import { ProductContainer } from './styles';
 
 const Products = ({ details }) => {
   const router = useRouter();
@@ -21,7 +19,7 @@ const Products = ({ details }) => {
     primaryBtnText,
     primaryLink,
     runTheCodeLink,
-    buildYourOwnLink,
+    buildYourOwnLink: P,
   } = details || {};
 
   return (
@@ -34,35 +32,42 @@ const Products = ({ details }) => {
           image: `${getHostName()}/images/Products/metadata/${image}`,
         }}
       />
-      <Hero
-        title={name}
-        subtitle={description}
-        href={primaryLink}
-        btnText={primaryBtnText}
-        imgUrl={`/images/Products/${image}`}
-      />
 
-      <br />
-      <p>{icon}</p>
-      <p>{runTheCodeLink}</p>
-      <p>{buildYourOwnLink}</p>
+      <ProductContainer>
+        <div
+          className="each-content-header-image"
+          style={{
+            backgroundImage: `url(/images/Products/${image})`,
+          }}
+        />
 
-      {/*  <HeroSection
-        className="section section-1"
-        id="banner"
-        // isNavigationOpen={isNavigationOpen}
-        // style={getStyle(imgUrl)}
-      >
-        <Header className="header" title={title} />
+        <div className="each-content-body">
+          <Header className="header" title={name} />
 
-        <DescActionButtons>
-          <Description type={2} title={subtitle || ''} />
+          <div className="each-content-details">
+            <div className="each-content-details-1">
+              <div className="subtitle">{description}</div>
 
-          <div className="action-btn">
-            <CallToActionButton href={href} btnText={btnText} />
+              <div className="body">
+
+                <img
+                  src={`/images/9Products/${icon}`}
+                  alt=" "
+                />
+                <br />
+
+                <P />
+              </div>
+
+              <div className="action-btn">
+                <CallToActionButton href={primaryLink} btnText={primaryBtnText} />
+                <br />
+                <Button type="black" className="mini" onClick={() => openUrl(runTheCodeLink)} title="Run the code" />
+              </div>
+            </div>
           </div>
-        </DescActionButtons>
-      </HeroSection> */}
+        </div>
+      </ProductContainer>
     </>
   );
 };

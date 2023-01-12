@@ -115,6 +115,9 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   };
 
   const getNavStyle = () => {
+    const relativeStyle = { backgroundColor: COLOR.WHITE, position: 'relative' };
+    if (pathname.includes('products/')) return relativeStyle;
+
     // show tranparent navbar if inner page
     if (!get(query, 'id')) {
       return {
@@ -123,7 +126,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
       };
     }
 
-    return { backgroundColor: COLOR.WHITE, position: 'relative' };
+    return relativeStyle;
   };
 
   const getNavHeight = () => {

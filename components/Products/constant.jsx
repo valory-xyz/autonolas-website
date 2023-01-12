@@ -18,6 +18,8 @@ const Propel = () => (
   </>
 );
 
+// const PRODUCT_DOC_LINK = 'https://docs.autonolas.network/product';
+
 /**
  * details for each product
  */
@@ -45,6 +47,7 @@ export const PRICE_ORACLE_DETAILS = {
   primaryBtnText: 'See demo',
   primaryLink: 'https://oracle.autonolas.network/price',
   runTheCodeLink: '', // TODO
+  // buildYourOwnLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction-oracle}`,
   buildYourOwnLink: Propel,
 };
 

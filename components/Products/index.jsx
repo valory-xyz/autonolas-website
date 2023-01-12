@@ -29,7 +29,7 @@ const Products = ({ details }) => {
           siteUrl: `${SITE_URL}${pathname}`,
           title: name,
           description,
-          image: `${getHostName()}/images/Products/metadata/${image}`,
+          image: `${getHostName()}/images/Products/${image}`,
         }}
       />
 

@@ -49,38 +49,26 @@ const FOR_DEVELOPERS_TOOLKITS = [
     color: COLOR.PURPLE,
     isExternal: false,
   },
-  // TODO: this will be removed later once the image for other 2 is ready
   {
-    id: 'custom-oracle-infra',
+    id: 'ml-apy-prediction-oracle',
     imageFilename: 'custom-oracle.png',
-    title: 'Custom Oracle Infra',
-    description: 'Build any oracle you can imagine',
-    primaryBtnText: 'See Demo',
-    primaryLink: 'https://oracle.autonolas.network/',
-    secondaryLink: '',
+    title: 'ML APY Prediction Oracle',
+    description: 'Advanced prediction of Uniswap v2 LP yield',
+    primaryBtnText: 'See demo',
+    primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
+    secondaryLink: 'https://autonolas.network/products/ml-apy-prediction-oracle',
     color: COLOR.PURPLE,
   },
-  // TODO: fix later
-  // {
-  //   id: 'ml-apy-prediction-oracle',
-  //   imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
-  //   title: 'ML APY Prediction Oracle',
-  //   description: 'Advanced prediction of Uniswap v2 LP yield',
-  //   primaryBtnText: 'See demo',
-  //   primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
-  //   secondaryLink: 'https://autonolas.network/products/ml-apy-prediction-oracle',
-  //   color: COLOR.PURPLE,
-  // },
-  // {
-  //   id: 'price-oracle',
-  //   imageFilename: 'custom-oracle.png', // TODO: ask Oak about the image
-  //   title: 'Price Oracle',
-  //   description: 'Robust aggregation of CEX pricing data for cryptoassets',
-  //   primaryBtnText: 'See demo',
-  //   primaryLink: 'https://oracle.autonolas.network/price',
-  //   secondaryLink: 'https://autonolas.network/products/price-oracle',
-  //   color: COLOR.PURPLE,
-  // },
+  {
+    id: 'price-oracle',
+    imageFilename: 'price-oracle.png',
+    title: 'Price Oracle',
+    description: 'Robust aggregation of CEX pricing data for cryptoassets',
+    primaryBtnText: 'See demo',
+    primaryLink: 'https://oracle.autonolas.network/price',
+    secondaryLink: 'https://autonolas.network/products/price-oracle',
+    color: COLOR.PURPLE,
+  },
 ];
 
 const FOR_USERS = [

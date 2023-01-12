@@ -22,7 +22,7 @@ const FOR_DEVELOPERS_CORE = [
     primaryBtnText: 'Get Started',
     primaryLink:
       'https://docs.autonolas.network/get_started/what_is_the_open_autonomy_framework',
-    secondaryLink: 'https://autonolas.network/open-autonomy',
+    // secondaryLink: 'open-autonomy',
     color: COLOR.PURPLE,
   },
   {
@@ -32,7 +32,7 @@ const FOR_DEVELOPERS_CORE = [
     description: 'Register and manage autonomous services',
     primaryBtnText: 'Explore the Protocol',
     primaryLink: 'https://protocol.autonolas.network/',
-    secondaryLink: 'https://autonolas.network/products/protocol',
+    // secondaryLink: 'products/protocol',
     color: COLOR.PURPLE,
   },
 ];
@@ -45,7 +45,7 @@ const FOR_DEVELOPERS_TOOLKITS = [
     description: 'Build autonomous asset management products',
     primaryBtnText: 'See Demo (coming soon)',
     primaryLink: '',
-    secondaryLink: 'https://autonolas.network/products/smart-managed-pools',
+    secondaryLink: 'products/smart-managed-pools',
     color: COLOR.PURPLE,
     isExternal: false,
   },
@@ -56,7 +56,7 @@ const FOR_DEVELOPERS_TOOLKITS = [
     description: 'Advanced prediction of Uniswap v2 LP yield',
     primaryBtnText: 'See demo',
     primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
-    secondaryLink: 'https://autonolas.network/products/ml-apy-prediction-oracle',
+    secondaryLink: 'products/ml-apy-prediction-oracle',
     color: COLOR.PURPLE,
   },
   {
@@ -66,7 +66,7 @@ const FOR_DEVELOPERS_TOOLKITS = [
     description: 'Robust aggregation of CEX pricing data for cryptoassets',
     primaryBtnText: 'See demo',
     primaryLink: 'https://oracle.autonolas.network/price',
-    secondaryLink: 'https://autonolas.network/products/price-oracle',
+    secondaryLink: 'products/price',
     color: COLOR.PURPLE,
   },
 ];
@@ -80,6 +80,7 @@ const FOR_USERS = [
     primaryBtnText: 'Start Collecting',
     primaryLink: 'https://elcollectooorr.art/vaults/latest',
     secondaryLink: 'https://elcollectooorr.art',
+    isSecondaryLinkExternal: true,
     color: COLOR.GREEN_2,
   },
   {
@@ -91,7 +92,7 @@ const FOR_USERS = [
       'Make guided contributions and get recognized for your efforts',
     primaryBtnText: 'Get Started',
     primaryLink: 'https://contribute.autonolas.network',
-    secondaryLink: 'https://autonolas.network/products/autonolas-contribute',
+    // secondaryLink: 'products/autonolas-contribute',
     color: COLOR.GREEN_2,
     isExternal: true,
   },
@@ -105,7 +106,8 @@ const getProductList = (list, type) => list.map(eachProduct => {
     description,
     primaryLink,
     primaryBtnText,
-    // secondaryLink,
+    secondaryLink,
+    isSecondaryLinkExternal = false,
   } = eachProduct;
 
   return (
@@ -127,15 +129,24 @@ const getProductList = (list, type) => list.map(eachProduct => {
           onClick={() => openUrl(primaryLink)}
           style={{ minWidth: '200px' }}
         />
-        {/* <Button
-          title="LEARN MORE"
-          type="black"
-          className="mini"
-          disabled
-          // TODO: disabled util the product pages are ready
-          // disabled={!secondaryLink}
-          // onClick={() => openUrl(secondaryLink)}
-        /> */}
+        {!isSecondaryLinkExternal ? (
+          <a href={`/${secondaryLink}`}>
+            <Button
+              title="LEARN MORE"
+              type="black"
+              className="mini"
+              disabled={!secondaryLink}
+            />
+          </a>
+        ) : (
+          <Button
+            title="LEARN MORE"
+            type="black"
+            className="mini"
+            disabled={!secondaryLink}
+            onClick={() => openUrl(secondaryLink)}
+          />
+        )}
       </ProductCard>
     </Col>
   );

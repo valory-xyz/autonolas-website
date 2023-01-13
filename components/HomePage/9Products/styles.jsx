@@ -78,7 +78,7 @@ export const HeadersRow = styled(Row)`
   }
 `;
 
-export const ProductCard = styled.a`
+export const ProductCard = styled.div`
   display: block;
   max-width: 260px;
   padding: 1rem;
@@ -88,20 +88,9 @@ export const ProductCard = styled.a`
   border-radius: 1rem;
   background-color: ${COLOR.WHITE};
   transition: box-shadow 0.3s;
-  &:hover,
-  &:active {
-    box-shadow: 0px 3px 3px -2px rgb(114 0 214 / 15%),
-      0px 3px 4px 0px rgb(114 0 214 / 15%), 0px 1px 8px 0px rgb(114 0 214 / 15%);
-  }
   &.users {
     border-right-color: ${COLOR.GREEN_1};
     border-bottom-color: ${COLOR.GREEN_1};
-    &:hover,
-    &:active {
-      box-shadow: 0px 3px 3px -2px rgb(0 252 130 / 15%),
-        0px 3px 4px 0px rgb(0 252 130 / 15%),
-        0px 1px 8px 0px rgb(0 252 130 / 15%);
-    }
   }
 
   ${MEDIA_QUERY.laptop} {

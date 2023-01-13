@@ -1,6 +1,5 @@
 import { Row } from 'antd';
 import styled from 'styled-components';
-import { MEDIA_QUERY } from 'util/theme';
 
 export const ProductContainer = styled.div`
   margin-top: 10rem;

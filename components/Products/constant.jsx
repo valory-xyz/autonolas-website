@@ -1,23 +1,5 @@
 /* eslint-disable react/prop-types */
 
-const LinkTo = ({ url, children }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
-    {children}
-  </a>
-);
-
-const Propel = () => (
-  <>
-    “Fork&nbsp;
-    <LinkTo url="https://github.com/valory-xyz/apy-oracle">the code</LinkTo>
-    ,
-    make adjustments and run your service. For help with any of these steps,
-    refer to onboarding services such as&nbsp;
-    <LinkTo url="https://propel.valory.xyz">Valory Propel</LinkTo>
-    .
-  </>
-);
-
 const PRODUCT_DOC_LINK = 'https://docs.autonolas.network/product';
 
 /**
@@ -33,8 +15,8 @@ export const ML_APY_PREDICTION_ORACLE_DETAILS = {
     'The ML APY Prediction Oracle uses an Autonolas-powered off-chain service to make predictions about the APY of LP pools on various DEXes built with Uniswap v2 contracts.',
   primaryBtnText: 'See demo',
   primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
-  runTheCodeLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction#run-the-code`,
-  buildYourOwnLink: Propel,
+  runTheCodeLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction-oracle#run-the-code`,
+  buildYourOwnLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction-oracle#build-your-own`,
 };
 
 export const PRICE_ORACLE_DETAILS = {
@@ -46,9 +28,8 @@ export const PRICE_ORACLE_DETAILS = {
     'The Price Oracle uses an Autonolas-powered off-chain service to pull data from multiple centralized sources, aggregate it and write the aggregate to the Polygon blockchain. It uses the BTC/USD price feed as a demonstration, sourced from Kraken, CoinGecko, Binance and Coinbase..',
   primaryBtnText: 'See demo',
   primaryLink: 'https://oracle.autonolas.network/price',
-  runTheCodeLink: `${PRODUCT_DOC_LINK}/price#run-the-code`,
-  // buildYourOwnLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction-oracle}`,
-  buildYourOwnLink: Propel,
+  runTheCodeLink: `${PRODUCT_DOC_LINK}/price-oracle#run-the-code`,
+  buildYourOwnLink: `${PRODUCT_DOC_LINK}/price-oracle#build-your-own`,
 };
 
 export const AUTONOLAS_CONTRIBUTE_DETAILS = {
@@ -61,7 +42,7 @@ export const AUTONOLAS_CONTRIBUTE_DETAILS = {
   primaryBtnText: 'Get Started',
   primaryLink: 'https://contribute.autonolas.network',
   runTheCodeLink: `${PRODUCT_DOC_LINK}/autonolas-contribute#run-the-code`,
-  buildYourOwnLink: Propel,
+  buildYourOwnLink: `${PRODUCT_DOC_LINK}/autonolas-contribute#build-your-own`,
 };
 
 // TODO
@@ -74,7 +55,7 @@ export const OPEN_AUTONOMY_DETAILS = {
   primaryBtnText: '',
   primaryLink: '',
   runTheCodeLink: '',
-  buildYourOwnLink: Propel,
+  buildYourOwnLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction#build-your-own`,
 };
 
 export const PROTOCOL_DETAILS = {
@@ -86,7 +67,7 @@ export const PROTOCOL_DETAILS = {
   primaryBtnText: '',
   primaryLink: '',
   runTheCodeLink: '',
-  buildYourOwnLink: Propel,
+  buildYourOwnLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction#build-your-own`,
 };
 
 export const SMART_MANAGED_POOLS_DETAILS = {
@@ -98,5 +79,5 @@ export const SMART_MANAGED_POOLS_DETAILS = {
   primaryBtnText: '',
   primaryLink: '',
   runTheCodeLink: '',
-  buildYourOwnLink: Propel,
+  buildYourOwnLink: `${PRODUCT_DOC_LINK}/ml-apy-prediction#build-your-own`,
 };

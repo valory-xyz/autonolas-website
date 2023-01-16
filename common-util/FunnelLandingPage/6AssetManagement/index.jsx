@@ -50,7 +50,7 @@ const getFeatures = list => (
       >
         <div className="img-container">
           <FullImage
-            src={`images/funnels/6AssetManagement/features/${imageUrl}`}
+            src={`/images/funnels/6AssetManagement/features/${imageUrl}`}
             alt=" "
           />
         </div>
@@ -76,7 +76,7 @@ const AssetManagement = ({ educationArticles, funnel }) => {
             <Col key={id} xs={12} md={6} lg={6} className="each-benefit">
               <div className="img-container">
                 <FullImage
-                  src={`images/funnels/6AssetManagement/benefits/${imageUrl}`}
+                  src={`/images/funnels/6AssetManagement/benefits/${imageUrl}`}
                   alt=" "
                 />
               </div>
@@ -101,7 +101,7 @@ const AssetManagement = ({ educationArticles, funnel }) => {
               >
                 <div className="img-container" style={imgStyle}>
                   <img
-                    src={`images/funnels/6AssetManagement/HowItWorks/${imageUrl}`}
+                    src={`/images/funnels/6AssetManagement/HowItWorks/${imageUrl}`}
                     alt=" "
                   />
                 </div>
@@ -129,7 +129,7 @@ const AssetManagement = ({ educationArticles, funnel }) => {
                 >
                   <div className="img-container" style={imgStyle}>
                     <img
-                      src={`images/funnels/6AssetManagement/HowToBuildOne/${imageUrl}`}
+                      src={`/images/funnels/6AssetManagement/HowToBuildOne/${imageUrl}`}
                       alt=" "
                     />
                   </div>

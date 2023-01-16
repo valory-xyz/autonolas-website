@@ -87,3 +87,18 @@ export const getAnchor = (title, href, otherProps) => {
     </a>
   );
 };
+
+/**
+ * if autonolas.network is present in the URL, open in the same tab
+ *
+ * URLs that will be opened in the SAME tab
+ *  - docs.autonolas.network
+ *  - protocol.autonolas.network
+ *  - autonolas.network/blog
+ *
+ * URLs that will be opened in the different tab
+ * - elcollectooorr.art
+ */
+export const openUrl = url => {
+  window.open(url, (url || '').includes('autonolas.network') ? '_self' : '_blank');
+};

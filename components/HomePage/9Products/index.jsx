@@ -3,7 +3,9 @@ import {
 } from 'antd';
 import Image from 'next/image';
 import { COLOR } from 'util/theme';
+import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+import { openUrl } from 'common-util/functions';
 import { ProductsSection, HeadersRow, ProductCard } from './styles';
 
 const { Text } = Typography;
@@ -17,7 +19,10 @@ const FOR_DEVELOPERS_CORE = [
     imageFilename: 'open-autonomy-framework.png',
     title: 'Open Autonomy',
     description: 'Framework for building any autonomous service',
-    link: 'https://docs.autonolas.network/',
+    primaryBtnText: 'Get Started',
+    primaryLink:
+      'https://docs.autonolas.network/get_started/what_is_the_open_autonomy_framework',
+    // secondaryLink: 'open-autonomy',
     color: COLOR.PURPLE,
   },
   {
@@ -25,7 +30,9 @@ const FOR_DEVELOPERS_CORE = [
     imageFilename: 'protocol.png',
     title: 'Protocol',
     description: 'Register and manage autonomous services',
-    link: 'https://protocol.autonolas.network/',
+    primaryBtnText: 'Explore the Protocol',
+    primaryLink: 'https://protocol.autonolas.network/',
+    // secondaryLink: 'product/protocol',
     color: COLOR.PURPLE,
   },
 ];
@@ -36,16 +43,30 @@ const FOR_DEVELOPERS_TOOLKITS = [
     imageFilename: 'smart-managed-pools.png',
     title: 'Smart Managed Pools',
     description: 'Build autonomous asset management products',
-    link: 'https://www.autonolas.network/autonomous-asset-management-infra',
+    primaryBtnText: 'See Demo (coming soon)',
+    primaryLink: '',
+    secondaryLink: 'product/smart-managed-pools',
     color: COLOR.PURPLE,
     isExternal: false,
   },
   {
-    id: 'custom-oracle-infra',
+    id: 'ml-apy-prediction-oracle',
     imageFilename: 'custom-oracle.png',
-    title: 'Custom Oracle Infra',
-    description: 'Build any oracle you can imagine',
-    link: 'https://oracle.autonolas.network/',
+    title: 'ML APY Prediction Oracle',
+    description: 'Advanced prediction of Uniswap v2 LP yield',
+    primaryBtnText: 'See demo',
+    primaryLink: 'https://oracle.autonolas.network/ml-apy-prediction',
+    secondaryLink: 'product/ml-apy-prediction-oracle',
+    color: COLOR.PURPLE,
+  },
+  {
+    id: 'price-oracle',
+    imageFilename: 'price-oracle.png',
+    title: 'Price Oracle',
+    description: 'Robust aggregation of CEX pricing data for cryptoassets',
+    primaryBtnText: 'See demo',
+    primaryLink: 'https://oracle.autonolas.network/price',
+    secondaryLink: 'product/price-oracle',
     color: COLOR.PURPLE,
   },
 ];
@@ -56,7 +77,10 @@ const FOR_USERS = [
     imageFilename: 'el-col.png',
     title: 'El Collectooorr',
     description: 'Get passive exposure to new generative art collections',
-    link: 'https://elcollectooorr.art/',
+    primaryBtnText: 'Start Collecting',
+    primaryLink: 'https://elcollectooorr.art/vaults/latest',
+    secondaryLink: 'https://elcollectooorr.art',
+    isSecondaryLinkExternal: true,
     color: COLOR.GREEN_2,
   },
   {
@@ -66,7 +90,9 @@ const FOR_USERS = [
     title: 'Autonolas Contribute',
     description:
       'Make guided contributions and get recognized for your efforts',
-    link: 'https://contribute.autonolas.network',
+    primaryBtnText: 'Get Started',
+    primaryLink: 'https://contribute.autonolas.network',
+    secondaryLink: 'product/autonolas-contribute',
     color: COLOR.GREEN_2,
     isExternal: true,
   },
@@ -78,18 +104,15 @@ const getProductList = (list, type) => list.map(eachProduct => {
     imageFilename,
     title,
     description,
-    link,
-    isExternal = true,
+    primaryLink,
+    primaryBtnText,
+    secondaryLink,
+    isSecondaryLinkExternal = false,
   } = eachProduct;
 
   return (
     <Col lg={12} sm={12} xs={24} key={id} className="product">
-      <ProductCard
-        target={isExternal ? '_blank' : '_self'}
-        rel="noopener noreferrer"
-        href={link}
-        className={type}
-      >
+      <ProductCard className={type}>
         <Image
           src={BASE_IMAGES_PATH + imageFilename}
           className="product-image"
@@ -98,6 +121,32 @@ const getProductList = (list, type) => list.map(eachProduct => {
         />
         <h3 className="product-title">{title}</h3>
         <Text className="product-description">{description}</Text>
+        <Button
+          type="purple"
+          title={primaryBtnText}
+          disabled={!primaryLink}
+          className="mini mb-1"
+          onClick={() => openUrl(primaryLink)}
+          style={{ minWidth: '200px' }}
+        />
+        {!isSecondaryLinkExternal ? (
+          <a href={`/${secondaryLink}`}>
+            <Button
+              title="LEARN MORE"
+              type="black"
+              className="mini"
+              disabled={!secondaryLink}
+            />
+          </a>
+        ) : (
+          <Button
+            title="LEARN MORE"
+            type="black"
+            className="mini"
+            disabled={!secondaryLink}
+            onClick={() => openUrl(secondaryLink)}
+          />
+        )}
       </ProductCard>
     </Col>
   );

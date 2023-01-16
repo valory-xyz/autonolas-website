@@ -21,7 +21,7 @@ const FOR_DEVELOPERS_CORE = [
     description: 'Framework for building any autonomous service',
     primaryBtnText: 'Get Started',
     primaryLink:
-      'https://docs.autonolas.network/get_started/what_is_the_open_autonomy_framework',
+      'https://docs.autonolas.network/open-autonomy/get_started/what_is_the_open_autonomy_framework/',
     // secondaryLink: 'open-autonomy',
     color: COLOR.PURPLE,
   },

@@ -20,7 +20,7 @@ module.exports = withAntdLess({
     return [
       {
         source: '/autonomous-asset-management-infra',
-        destination: 'products/smart-managed-pools',
+        destination: 'product/smart-managed-pools',
         permanent: true,
       },
     ];

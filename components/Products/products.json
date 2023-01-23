@@ -1,0 +1,72 @@
+[
+  {
+    "id": "open-autonomy",
+    "category": "core",
+    "title": "Open Autonomy",
+    "description": "Framework for building autonomous services",
+    "liveUrl": "https://docs.autonolas.network/open-autonomy/"
+  },
+  {
+    "id": "autonolas-protocol",
+    "category": "core",
+    "title": "Autonolas Protocol",
+    "description": "Register and manage agents, components and autonomous services",
+    "liveUrl": "https://protocol.autonolas.network"
+  },
+  {
+    "id": "smpkit",
+    "category": "toolkit",
+    "title": "SMPKit",
+    "description": "Build autonomous asset management products",
+    "liveUrl": ""
+  },
+  {
+    "id": "mintkit",
+    "category": "toolkit",
+    "title": "MintKit",
+    "description": "Build autonomous NFT collector funds",
+    "liveUrl": "https://elcollectooorr.art"
+  },
+  {
+    "id": "coordinationkit",
+    "category": "toolkit",
+    "title": "CoordinationKit",
+    "description": "Coordinate DAO contributors autonomously",
+    "liveUrl": "https://contribute.autonolas.network"
+  },
+  {
+    "id": "mlkit",
+    "category": "toolkit",
+    "title": "MLKit",
+    "description": "Build decentralized, ML-powered software services",
+    "liveUrl": "https://oracle.autonolas.network/ml-apy-prediction"
+  },
+  {
+    "id": "oraclekit",
+    "category": "toolkit",
+    "title": "OracleKit",
+    "description": "Robust aggregation of CEX pricing data for cryptoassets",
+    "liveUrl": "https://oracle.autonolas.network/price"
+  },
+  {
+    "id": "autonomous-fund",
+    "category": "user",
+    "title": "Autonomous Fund",
+    "description": "Deploy your funds to a crypto fear and greed strategy",
+    "liveUrl": ""
+  },
+  {
+    "id": "elcollectooorr",
+    "category": "user",
+    "title": "El Collectooorr",
+    "description": "Get passive exposure to new generative art collections",
+    "liveUrl": "https://elcollectooorr.art"
+  },
+  {
+    "id": "autonolas-contribute",
+    "category": "user",
+    "title": "Autonolas Contribute",
+    "description": "Make guided contributions and get recognized for your efforts",
+    "liveUrl": "https://contribute.autonolas.network"
+  }
+]

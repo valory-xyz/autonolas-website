@@ -10,18 +10,13 @@ import CallToActionButton from 'common-util/FunnelLandingPage/Hero/CallToActionB
 import { BUILDER_HELP_URL, PRODUCT_DOCS_PATH } from 'util/paths';
 import { ProductHero } from './styles';
 
-
 const { Title } = Typography;
 
 const Products = ({ product }) => {
   const router = useRouter();
   const { pathname } = router;
 
-  const {
-    category,
-    title,
-    description,
-  } = product || {};
+  const { category, title, description } = product || {};
 
   return (
     <>
@@ -34,21 +29,18 @@ const Products = ({ product }) => {
         }}
       />
 
-      {
-        category === 'toolkit'
-          ? <ToolkitPage product={product} />
-          : <ProductPage product={product} />
-      }
+      {category === 'toolkit' ? (
+        <ToolkitPage product={product} />
+      ) : (
+        <ProductPage product={product} />
+      )}
     </>
   );
 };
 
 const ProductPage = ({ product }) => {
   const {
-    description,
-    id,
-    liveUrl,
-    title,
+    description, id, liveUrl, title,
   } = product || {};
 
   return (
@@ -80,17 +72,13 @@ const ProductPage = ({ product }) => {
         className="product-screen"
         alt={`${title} product screen`}
       />
-
     </ProductHero>
   );
 };
 
 const ToolkitPage = ({ product }) => {
   const {
-    id,
-    title,
-    description,
-    liveUrl,
+    id, title, description, liveUrl,
   } = product || {};
   return (
     <>
@@ -136,12 +124,10 @@ const ToolkitPage = ({ product }) => {
             />
           </a>
         </Link>
-
       </ProductHero>
     </>
   );
 };
-
 
 Products.propTypes = {
   product: PropTypes.instanceOf(Object).isRequired,

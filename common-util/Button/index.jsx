@@ -43,7 +43,6 @@ export const Btn = styled.button`
           border: 1px solid ${COLOR.BLACK};
           background-color: ${COLOR.BLACK};
           color: ${COLOR.WHITE};
-          font-size: 20px;
           &:hover, &:active {
             background-color: ${COLOR.GREEN_2};
             color: ${COLOR.BLACK};

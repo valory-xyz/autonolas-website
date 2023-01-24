@@ -3,7 +3,6 @@ import { Typography } from 'antd';
 import Link from 'next/link';
 import { META_TAGS_INFO, SITE_URL } from 'util/constants/site';
 import PropTypes from 'prop-types';
-
 import Meta from 'common-util/meta';
 import Button from 'common-util/Button';
 import CallToActionButton from 'common-util/FunnelLandingPage/Hero/CallToActionButton';
@@ -40,7 +39,7 @@ const Products = ({ product }) => {
 
 const ProductPage = ({ product }) => {
   const {
-    description, id, liveUrl, title,
+    description, id, liveLink, title,
   } = product || {};
 
   return (
@@ -60,7 +59,8 @@ const ProductPage = ({ product }) => {
       <p className="product-description">{description}</p>
 
       <CallToActionButton
-        href={liveUrl}
+        href={liveLink.url}
+        external={liveLink.external}
         btnText="Get started"
         className="product-cta-btn"
       />
@@ -80,7 +80,7 @@ const ProductPage = ({ product }) => {
 
 const ToolkitPage = ({ product }) => {
   const {
-    id, title, description, liveUrl,
+    id, title, description, liveLink,
   } = product || {};
   return (
     <>
@@ -100,7 +100,8 @@ const ToolkitPage = ({ product }) => {
         <br />
 
         <CallToActionButton
-          href={liveUrl}
+          href={liveLink.url}
+          external={liveLink.external}
           btnText="View demo"
           className="product-cta-btn"
         />
@@ -118,7 +119,7 @@ const ToolkitPage = ({ product }) => {
         <br />
         <br />
         <Link href={BUILDER_HELP_URL}>
-          <a>
+          <a target="_blank" rel="noopener">
             <Button
               className="product-cta-btn"
               title="Get help building"

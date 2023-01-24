@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import { SITE_URL } from 'util/constants/site';
-import { getProduct, getHostName } from 'common-util/functions';
+import { META_TAGS_INFO, SITE_URL } from 'util/constants/site';
+import { getProduct } from 'common-util/functions';
 import Meta from 'common-util/meta';
 import Products from 'components/Products';
 import allProducts from 'components/Products/products.json';
@@ -16,7 +16,7 @@ const Product = () => {
     siteUrl: `${SITE_URL}/product/${id}`,
     title: product.title,
     description: product.description,
-    image: `${getHostName()}/images/products/screens/${product.id}.jpg`,
+    image: META_TAGS_INFO.image,
   };
 
   return (

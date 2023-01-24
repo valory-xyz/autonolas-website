@@ -20,11 +20,16 @@ export const ProductHero = styled.div`
     max-width: 60ch;
   }
 
+  .product-screen-container {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
   .product-screen {
     border: 1px solid ${COLOR.GREY_2};
     border-radius: ${BORDER_RADIUS};
     box-shadow: ${BOX_SHADOW};
     margin-top: 2rem;
-    max-width: 900px;
+    width: 100%;
   }
 `;

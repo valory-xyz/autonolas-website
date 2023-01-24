@@ -56,7 +56,7 @@ const ProductsCategory = ({ products, category }) => {
             const imageFilename = category === 'toolkit' ? `${id}.svg` : `${id}.png`;
 
             return (
-              <Col key={id} lg={8} md={12} xs={24}>
+              <Col key={id} lg={6} md={12} sm={12} xs={24}>
                 <Link href={`${PRODUCT_PATH}${id}`} legacyBehavior>
                   <a>
                     <LinkCard className={category}>

@@ -67,11 +67,13 @@ const ProductPage = ({ product }) => {
 
       <br />
 
-      <img
-        src={`/images/products/screens/${id}.jpg`}
-        className="product-screen"
-        alt={`${title} product screen`}
-      />
+      <div className="product-screen-container">
+        <img
+          src={`/images/products/screens/${id}.jpg`}
+          className="product-screen"
+          alt={`${title} product screen`}
+        />
+      </div>
     </ProductHero>
   );
 };

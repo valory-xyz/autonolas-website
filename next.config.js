@@ -16,13 +16,4 @@ module.exports = withAntdLess({
     });
     return config;
   },
-  async redirects() {
-    return [
-      {
-        source: '/autonomous-asset-management-infra',
-        destination: '/product/smpkit',
-        permanent: true,
-      },
-    ];
-  },
 });

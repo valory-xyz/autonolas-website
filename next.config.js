@@ -20,7 +20,7 @@ module.exports = withAntdLess({
     return [
       {
         source: '/autonomous-asset-management-infra',
-        destination: 'product/smart-managed-pools',
+        destination: 'product/smpkit',
         permanent: true,
       },
     ];

@@ -1,50 +1,35 @@
-import { Row } from 'antd';
 import styled from 'styled-components';
+import { BORDER_RADIUS, BOX_SHADOW, COLOR } from 'util/theme';
 
-export const ProductContainer = styled.div`
-  margin-top: 10rem;
+export const ProductHero = styled.div`
+  margin: 10rem 0;
   padding: 0 1rem;
   text-align: center;
 
   .product-icon {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .product-title {
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .product-description {
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 2rem auto;
     max-width: 60ch;
   }
 
-  .product-cta-btn {
-    display: block;
-    margin-bottom: 2rem;
+  .product-screen-container {
+    margin: 0 auto;
+    max-width: 900px;
   }
-
-  .each-content-header-image {
+  
+  .product-screen {
+    border: 1px solid ${COLOR.GREY_2};
+    border-radius: ${BORDER_RADIUS};
+    box-shadow: ${BOX_SHADOW};
     margin-top: 2rem;
-  }
-
-  .body {
-    margin-top: 5rem;
-  }
-`;
-
-export const LinksSection = styled(Row)`
-  text-align: center;
-  padding: 5rem 1rem 0 1rem;
-
-  .links-column {
-    margin-bottom: 4rem;
-    
-    .links-column-description {
-      display: inline-block;
-      margin-bottom: 2rem;
-      width: 300px;
-    }
+    width: 100%;
   }
 `;

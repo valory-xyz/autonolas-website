@@ -102,3 +102,8 @@ export const getAnchor = (title, href, otherProps) => {
 export const openUrl = url => {
   window.open(url, (url || '').includes('autonolas.network') ? '_self' : '_blank');
 };
+
+export const getProducts = (products, category) => products
+  .filter(product => product.category === category);
+
+export const getProduct = (products, id) => products.find(product => product.id === id);

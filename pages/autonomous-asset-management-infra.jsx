@@ -1,4 +1,3 @@
-// TODO: replace it
 import FunnelLandingPage from 'common-util/FunnelLandingPage';
 import AssetManagement from 'common-util/FunnelLandingPage/6AssetManagement';
 import { getEducationArticles, getFunnel } from 'common-util/api';
@@ -21,11 +20,11 @@ export async function getServerSideProps() {
   };
 }
 
-const SmartManagedPools = props => (
+const AssetManagementInfra = props => (
   <>
     <FunnelLandingPage {...props} />
     <AssetManagement {...props} />
   </>
 );
 
-export default SmartManagedPools;
+export default AssetManagementInfra;

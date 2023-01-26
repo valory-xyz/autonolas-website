@@ -2,6 +2,7 @@ export const COLOR = {
   GREEN_1: '#00FC82',
   GREEN_2: '#00F422',
   GREY_1: '#C4C4C4',
+  GREY_2: '#F0F0F0',
   WHITE: '#FFFFFF',
   BLACK: '#000000',
 
@@ -9,7 +10,9 @@ export const COLOR = {
   LIGHT_BLUE: '#E9FDFF',
 };
 
-export const BOX_SHADOW = {};
+export const BOX_SHADOW = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+
+export const BORDER_RADIUS = '5px';
 
 export const FONT_SIZE = {
   12: '12px',

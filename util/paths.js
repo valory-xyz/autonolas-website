@@ -8,4 +8,10 @@ export const PATHS = {
   COOKIES_POLICY: 'cookies-policy',
 };
 
+const DOCS_URL = 'https://docs.autonolas.network';
+export const BUILDER_HELP_URL = 'https://propel.valory.xyz';
+
+export const PRODUCT_PATH = '/product/';
+export const PRODUCT_DOCS_PATH = `${DOCS_URL}/product/`;
+
 export default PATHS;

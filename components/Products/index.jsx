@@ -1,51 +1,98 @@
 import { useRouter } from 'next/router';
-import { Typography, Col } from 'antd';
-import Button from 'common-util/Button';
+import { Typography } from 'antd';
+import Link from 'next/link';
+import { META_TAGS_INFO, SITE_URL } from 'util/constants/site';
 import PropTypes from 'prop-types';
-import { SITE_URL } from 'util/constants/site';
 import Meta from 'common-util/meta';
+import Button from 'common-util/Button';
 import CallToActionButton from 'common-util/FunnelLandingPage/Hero/CallToActionButton';
-import { getHostName } from 'common-util/functions';
-import { ProductContainer, LinksSection } from './styles';
+import { BUILDER_HELP_URL, PRODUCT_DOCS_PATH } from 'util/paths';
+import { ProductHero } from './styles';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
-const Products = ({ details }) => {
+const Products = ({ product }) => {
   const router = useRouter();
   const { pathname } = router;
-  const {
-    icon,
-    image,
-    name,
-    description,
-    primaryBtnText,
-    primaryLink,
-    runTheCodeLink,
-    buildYourOwnLink,
-  } = details || {};
+
+  const { category, title, description } = product || {};
 
   return (
     <>
       <Meta
         meta={{
           siteUrl: `${SITE_URL}${pathname}`,
-          title: name,
+          title: `${title} | Autonolas`,
           description,
-          image: `${getHostName()}/images/Products/${image}`,
+          image: META_TAGS_INFO.image,
         }}
       />
 
-      <ProductContainer>
+      {category === 'toolkit' ? (
+        <ToolkitPage product={product} />
+      ) : (
+        <ProductPage product={product} />
+      )}
+    </>
+  );
+};
+
+const ProductPage = ({ product }) => {
+  const {
+    description, id, liveLink, title,
+  } = product || {};
+
+  return (
+    <ProductHero>
+      <img
+        src={`/images/products/icons/${id}.png`}
+        alt=" "
+        width="130px"
+        height="130px"
+        className="product-icon"
+      />
+
+      <Title level={1} className="product-title">
+        {title}
+      </Title>
+
+      <p className="product-description">{description}</p>
+
+      <CallToActionButton
+        href={liveLink.url}
+        external={liveLink.external}
+        btnText="Get started"
+        className="product-cta-btn"
+      />
+
+      <br />
+
+      <div className="product-screen-container">
         <img
-          src={`/images/9Products/${icon}`}
+          src={`/images/products/screens/${id}.jpg`}
+          className="product-screen"
+          alt={`${title} product screen`}
+        />
+      </div>
+    </ProductHero>
+  );
+};
+
+const ToolkitPage = ({ product }) => {
+  const {
+    id, title, description, liveLink,
+  } = product || {};
+  return (
+    <>
+      <ProductHero>
+        <img
+          src={`/images/products/icons/${id}.svg`}
           alt=" "
-          width="130px"
-          height="130px"
           className="product-icon"
         />
 
         <Title level={1} className="product-title">
-          {name}
+          {title}
         </Title>
 
         <p className="product-description">{description}</p>
@@ -53,57 +100,48 @@ const Products = ({ details }) => {
         <br />
 
         <CallToActionButton
-          href={primaryLink}
-          btnText={primaryBtnText}
+          href={liveLink.url}
+          external={liveLink.external}
+          btnText="View demo"
           className="product-cta-btn"
         />
-
         <br />
-
-        <div
-          className="each-content-header-image"
-          style={{
-            backgroundImage: `url(/images/Products/${image})`,
-          }}
-        />
-      </ProductContainer>
-
-      <LinksSection>
-        <Col
-          className="links-column"
-          xs={{ span: 24 }}
-          lg={{ span: 8, offset: 4 }}
-        >
-          <Title level={2}>Run the code</Title>
-          <Text className="links-column-description">
-            Interested to pull down the code for this service and run it
-            yourself?
-          </Text>
-          <br />
-          <Button
-            title="See instructions"
-            onClick={() => window.open(runTheCodeLink)}
-          />
-        </Col>
-        <Col className="links-column" xs={{ span: 24 }} lg={{ span: 8 }}>
-          <Title level={2}>Build your own</Title>
-          <Text className="links-column-description">
-            Check out the relevant documentation section for help about how to
-            fork and build your own custom implementation of this product.
-          </Text>
-          <br />
-          <Button
-            title="Learn more"
-            onClick={() => window.open(buildYourOwnLink)}
-          />
-        </Col>
-      </LinksSection>
+        <br />
+        <Link href={`${PRODUCT_DOCS_PATH}${id}`}>
+          <a>
+            <Button
+              className="product-cta-btn"
+              title="View docs"
+              type="black"
+            />
+          </a>
+        </Link>
+        <br />
+        <br />
+        <Link href={BUILDER_HELP_URL}>
+          <a target="_blank" rel="noopener">
+            <Button
+              className="product-cta-btn"
+              title="Get help building"
+              type="black"
+            />
+          </a>
+        </Link>
+      </ProductHero>
     </>
   );
 };
 
 Products.propTypes = {
-  details: PropTypes.instanceOf(Object).isRequired,
+  product: PropTypes.instanceOf(Object).isRequired,
+};
+
+ProductPage.propTypes = {
+  product: PropTypes.instanceOf(Object).isRequired,
+};
+
+ToolkitPage.propTypes = {
+  product: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Products;

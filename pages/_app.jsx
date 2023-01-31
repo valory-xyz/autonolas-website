@@ -31,6 +31,7 @@ const MyApp = ({ Component, pageProps, router }) => {
             -moz-osx-font-smoothing: grayscale;
             font-size: 18px !important;
           }
+          
           @media only screen and (max-width: ${BREAK_POINT.sm}) {
             body {
               font-size: 16px !important;

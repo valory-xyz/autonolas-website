@@ -280,6 +280,7 @@ export const LinkCard = styled.div`
   text-align: center;
   border-right: 5px solid ${COLOR.PURPLE};
   border-bottom: 5px solid ${COLOR.PURPLE};
+
   border-radius: 1rem;
   background-color: ${COLOR.WHITE};
   transition: box-shadow 0.3s;

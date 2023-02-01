@@ -14,6 +14,15 @@ export const LayoutGlobalStyle = createGlobalStyle`
   body {
     overflow: ${({ isNavigationOpen }) => (isNavigationOpen ? 'hidden' : 'auto')};
   }
+
+  /* targeting only firefox browser */
+  @supports (-moz-appearance:none) {
+  /* https://github.com/vercel/next.js/issues/12105 
+  nextJS scrolls to bottom on Link, hence keep it auto for firefox*/
+  html {
+    scroll-behavior: auto;
+  }
+}
 `;
 
 export default LayoutGlobalStyle;

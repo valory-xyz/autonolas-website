@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col, Row, Typography } from 'antd';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
@@ -6,13 +7,11 @@ import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import {
   HeaderAndAction,
-  TwoColumnContents,
-  ThreeColumnContents,
 } from 'components/GlobalStyles';
-import { Col, Row } from 'antd';
-import Title from 'antd/lib/typography/Title';
 import { ROW_GUTTER } from 'util/theme';
 import { SectionBlog } from './styles';
+
+const { Title } = Typography;
 
 const Blog = ({ blog }) => {
   const { id, attributes } = blog || {};

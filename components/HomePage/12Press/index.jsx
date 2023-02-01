@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row } from 'antd';
 import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import {
   HeaderAndAction,
-  TwoColumnContents,
   ThreeColumnContents,
 } from 'components/GlobalStyles';
-import { SectionPress } from './styles';
-import EachPress from './EachPress';
-import { Row } from 'antd';
 import { ROW_GUTTER } from 'util/theme';
+import EachPress from './EachPress';
+import { SectionPress } from './styles';
 
 const PressAndBlogs = ({ press }) => {
   const firstTwoPress = (press || []).slice(0, 2);

@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Col, Row, Typography } from 'antd';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
 import Button from 'common-util/Button';
 import Header from 'common-util/Header';
 import { getFormattedDate } from 'common-util/functions';
-import { TwoColumnContents } from 'components/GlobalStyles';
-import { Col, Row } from 'antd';
 import { ROW_GUTTER } from 'util/theme';
-import Title from 'antd/lib/typography/Title';
 import { BlogHero, BlogIndexContainer } from './styles';
+
+const { Title } = Typography;
 
 const Blog = ({ blogs }) => (
   <>

@@ -1,5 +1,6 @@
 import { Col, Row } from "antd";
-import Title from "antd/lib/typography/Title";
+import { Col, Row, Typography } from "antd";
+const { Title } = Typography;
 import { Hero } from "./styles";
 import {LinkCard} from 'components/GlobalStyles'
 import Meta from "common-util/meta";

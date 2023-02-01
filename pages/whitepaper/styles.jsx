@@ -1,5 +1,5 @@
-import { LinkCard } from 'components/GlobalStyles';
 import styled from 'styled-components';
+import { LinkCard } from 'components/GlobalStyles';
 import { COLOR } from 'util/theme';
 
 export const Hero = styled.div`

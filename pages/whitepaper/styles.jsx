@@ -19,6 +19,10 @@ export const Hero = styled.div`
 
   ${LinkCard} {
     margin-bottom: 2rem;
-    padding-top: 15rem;
+
+    img {
+      width: 45%;
+      margin-bottom: 1rem;
+    }
   }
 `;

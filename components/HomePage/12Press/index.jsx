@@ -10,6 +10,8 @@ import {
 } from 'components/GlobalStyles';
 import { SectionPress } from './styles';
 import EachPress from './EachPress';
+import { Row } from 'antd';
+import { ROW_GUTTER } from 'util/theme';
 
 const PressAndBlogs = ({ press }) => {
   const firstTwoPress = (press || []).slice(0, 2);
@@ -27,11 +29,11 @@ const PressAndBlogs = ({ press }) => {
         </a>
       </HeaderAndAction>
 
-      <TwoColumnContents className="two-column-contents">
+      <Row gutter={ROW_GUTTER}>
         {firstTwoPress.map(item => (
           <EachPress press={item} key={`press-${item.id}`} />
         ))}
-      </TwoColumnContents>
+      </Row>
 
       <ThreeColumnContents>
         {restOfThePress.map(item => (

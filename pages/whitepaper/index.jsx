@@ -11,6 +11,7 @@ const Whitepaper = () =>
       <Col lg={{span: 6, offset: 6}} md={{span: 8, offset: 4}} xs={24}>
         <a href="/documents/whitepaper/autonolas-whitepaper-summary.pdf">
           <LinkCard>
+            <img src="/images/whitepaper/autonolas-whitepaper-summary.svg" />
             <Title level={2}>Summary</Title>
           </LinkCard>
         </a>
@@ -18,6 +19,7 @@ const Whitepaper = () =>
       <Col lg={6} md={8} xs={24}>
         <a href="/documents/whitepaper/autonolas-whitepaper.pdf">
         <LinkCard>
+          <img src="/images/whitepaper/autonolas-whitepaper.svg" />
           <Title level={2}>Whitepaper</Title>
         </LinkCard>
         </a>

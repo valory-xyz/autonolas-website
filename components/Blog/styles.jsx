@@ -2,16 +2,30 @@ import styled from 'styled-components';
 import { COLOR, MEDIA_QUERY } from 'util/theme';
 import { backgroundImage } from 'components/GlobalStyles';
 
-export const BlogContainer = styled.div`
+export const BlogHero = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-height: 80vh;
   ${backgroundImage('/images/1TheNewWay/background.webp')}
   .header {
     text-align: center;
   }
   ${MEDIA_QUERY.laptop} {
+  }
+`;
+
+export const BlogIndexContainer = styled.div`
+  margin: 4rem;
+  
+  .blog-item {
+    margin-bottom: 4rem;
+  }
+  
+  .blog-item-image {
+    margin-bottom: 1rem;
+    width: 100%;
   }
 `;
 
@@ -72,6 +86,16 @@ export const SiderCard = styled.div`
 `;
 
 export const EachBlogContainer = styled.div`
+  .blog-page-header {
+    &-title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .blog-page-header-image {
+    margin-bottom: 2rem;
+  }
+
   .each-content-details {
     max-width: 100%;
     display: flex;
@@ -84,6 +108,10 @@ export const EachBlogContainer = styled.div`
     }
   }
   .each-content-sider {
+  }
+
+  .body {
+    max-width: 72ch;
   }
 
   ${MEDIA_QUERY.tablet} {

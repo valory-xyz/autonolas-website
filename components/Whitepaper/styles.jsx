@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { LinkCard } from 'components/GlobalStyles';
 import { COLOR } from 'util/theme';
+import { LinkCard } from 'components/GlobalStyles';
 
 export const Hero = styled.div`
   background: ${COLOR.LIGHT_BLUE};

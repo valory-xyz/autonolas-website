@@ -250,9 +250,9 @@ export const Banner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${COLOR.PURPLE};
+  background-color: ${COLOR.GREEN_1};
   padding: 8px;
-  color: ${COLOR.WHITE};
+  color: ${COLOR.BLACK};
   width: 100%;
 
   ${MEDIA_QUERY.mobileL} {

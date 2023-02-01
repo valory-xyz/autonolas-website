@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import Button from 'common-util/Button';
 import Tag from 'common-util/Tag';
+import { Col } from 'antd';
+import Title from 'antd/lib/typography/Title';
 
 const EachPress = ({ press }) => {
   const { attributes } = press || {};
@@ -12,25 +14,20 @@ const EachPress = ({ press }) => {
   const imageUrl = get(thumbnail, 'data.attributes.url') || '';
 
   return (
-    <div className="column">
-      <div
-        className="img-container"
-        style={{
-          // backgroundImage: 'url("/images/11Team/background.webp")',
-          backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}${imageUrl})`,
-        }}
-      />
+    <Col lg={8} className="press-item">
+      <a href={link}>
+        <img src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`} alt={title} className="press-item-image" />
+      </a>
       <Tag>{type}</Tag>
-      <div className="header-text">{title}</div>
-      <div className="subtitle">{publisher}</div>
-
+      <br />
+      <Title level={3} className="press-item-title">{title}</Title>
+      <p>{publisher}</p>
       <Button
         title="LEARN MORE"
         type="black"
-        className="mini"
         onClick={() => window.open(link)}
       />
-    </div>
+    </Col>
   );
 };
 

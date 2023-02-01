@@ -2,9 +2,27 @@ import { Col, Row } from "antd";
 import Title from "antd/lib/typography/Title";
 import { Hero } from "./styles";
 import {LinkCard} from 'components/GlobalStyles'
+import Meta from "common-util/meta";
+import { getHostName } from "common-util/functions";
+import { SITE_URL } from "util/constants/site";
+
+const pageSettings = {
+  pathname: '/whitepaper',
+  title: "Whitepaper",
+  description: "Do a deep-dive into Autonolas' vision for autonomy, technical architecture, tokenomics, use cases and governance.",
+  imagePath: `${getHostName()}/images/whitepaper/autonolas-whitepaper-meta.png`
+}
 
 const Whitepaper = () =>
 <>
+  <Meta
+    meta={{
+      siteUrl: `${SITE_URL}${pageSettings.pathname}`,
+      title: `${pageSettings.title} | Autonolas`,
+      description: pageSettings.description,
+      image: pageSettings.imagePath,
+    }}
+  />
   <Hero>
     <Title className="title">Whitepaper</Title>
     <Row gutter={24}>

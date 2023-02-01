@@ -13,6 +13,9 @@ export const COLOR = {
 export const BOX_SHADOW = '0px 4px 4px rgba(0, 0, 0, 0.25)';
 
 export const BORDER_RADIUS = '5px';
+export const BORDER = `1px solid ${COLOR.GREY_2}`;
+
+export const ROW_GUTTER = 48;
 
 export const FONT_SIZE = {
   12: '12px',

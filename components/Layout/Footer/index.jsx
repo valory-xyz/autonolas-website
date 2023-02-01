@@ -67,6 +67,9 @@ const Footer = () => (
                 {getAnchor('EDUCATION', '/education-articles', {
                   isExternal: false,
                 })}
+                {getAnchor('WHITEPAPER', '/whitepaper', {
+                  isExternal: false,
+                })}
               </div>
             </td>
 

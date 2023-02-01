@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row } from 'antd';
 import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import {
   HeaderAndAction,
-  TwoColumnContents,
   ThreeColumnContents,
 } from 'components/GlobalStyles';
-import { SectionPress } from './styles';
+import { ROW_GUTTER } from 'util/theme';
 import EachPress from './EachPress';
+import { SectionPress } from './styles';
 
 const PressAndBlogs = ({ press }) => {
   const firstTwoPress = (press || []).slice(0, 2);
@@ -27,11 +28,11 @@ const PressAndBlogs = ({ press }) => {
         </a>
       </HeaderAndAction>
 
-      <TwoColumnContents className="two-column-contents">
+      <Row gutter={ROW_GUTTER}>
         {firstTwoPress.map(item => (
           <EachPress press={item} key={`press-${item.id}`} />
         ))}
-      </TwoColumnContents>
+      </Row>
 
       <ThreeColumnContents>
         {restOfThePress.map(item => (

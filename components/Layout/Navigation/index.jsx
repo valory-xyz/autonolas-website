@@ -147,21 +147,22 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
               <span role="img" aria-label="Star">
                 ✨
               </span>
-              &nbsp;Show off your contributions to Autonolas!&nbsp;
+              &nbsp;The Autonolas Whitepaper is out!&nbsp;
               {!isSmallScreen && (
                 <>
-                  &nbsp; Mint a badge which evolves as you earn contribution
-                  points. &nbsp;
+                  Deep dive into the future of off-chain services.
+                  &nbsp;
                 </>
               )}
               &nbsp;
             </div>
-            <Button
-              type="black"
-              className="mini"
-              title="Mint badge"
-              onClick={() => window.open('https://contribute.autonolas.network')}
-            />
+            <Link href="/whitepaper">
+              <Button
+                type="black"
+                className="mini"
+                title="Read now"
+              />
+            </Link>
           </Banner>
         )}
 

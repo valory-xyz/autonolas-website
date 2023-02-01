@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MEDIA_QUERY } from 'util/theme';
+import { BORDER, MEDIA_QUERY } from 'util/theme';
 
 export const SectionPress = styled.div`
   .header {
@@ -8,5 +8,19 @@ export const SectionPress = styled.div`
     max-width: 42ch;
   }
   ${MEDIA_QUERY.tablet} {
+  }
+
+  .press-item {
+    margin-bottom: 4rem;
+
+    &-image {
+      border: ${BORDER};
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    &-title {
+      margin-top: 1rem;
+    }
   }
 `;

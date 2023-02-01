@@ -9,7 +9,7 @@ const Whitepaper = () => (
     <Title className="title">Whitepaper</Title>
     <Row gutter={24}>
       <Col lg={{ span: 6, offset: 6 }} md={{ span: 8, offset: 4 }} xs={24}>
-        <a href="/documents/whitepaper/autonolas-whitepaper-summary.pdf">
+        <a href="/documents/whitepaper/Whitepaper Summary v1.0.pdf">
           <LinkCard>
             <img
               src="/images/whitepaper/autonolas-whitepaper-summary.svg"
@@ -20,7 +20,7 @@ const Whitepaper = () => (
         </a>
       </Col>
       <Col lg={6} md={8} xs={24}>
-        <a href="/documents/whitepaper/autonolas-whitepaper.pdf">
+        <a href="/documents/whitepaper/Whitepaper v1.0.pdf">
           <LinkCard>
             <img
               src="/images/whitepaper/autonolas-whitepaper.svg"

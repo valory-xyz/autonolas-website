@@ -38,7 +38,7 @@ const BUILD_LIST = [
 const getContent = list => list.map(({
   heading, subHeading, imageUrl, redirectTo,
 }, index) => (
-  <Col lg={8} sm={24} xs={24}>
+  <Col lg={8} sm={24} xs={24} key={`start-building-${imageUrl}`}>
     <div key={imageUrl} className={`column column-${index + 1}`}>
       <div className="img-container-custom">
         <img

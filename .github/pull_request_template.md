@@ -1,11 +1,28 @@
-# Description
+## Proposed changes
 
-Please include a summary of the change and which issue is fixed. 
+Describe the big picture of your changes here to communicate to the maintainers why we should accept this pull request.
 
-## Make sure these are tested
+## Types of changes
 
-Please delete options that are not relevant.
+What types of changes does your code introduce to `autonolas-website`?
+_Put an `x` in the boxes that apply_
+
+- [ ] Bugfix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Feature enhancement (update to current feature)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+
+## Checklist
+
+_Put an `x` in the boxes that apply._
 
 - [ ] Links are working as expexted (internal and external links)
-- [ ] Responsiveness maintained
+- [ ] Responsiveness maintained (mobile, Ipad & desktop)
 - [ ] Sitemap update for the new page (if new page is created)
+- [ ] Lint and unit tests pass locally with my changes
+- [ ] I have added necessary documentation (if appropriate)
+- [ ] I am making a pull request against the `staging` branch (left side). Also you should start your branch off our `staging`.
+
+## Further comments
+
+Write here any other comment about the release, if any.

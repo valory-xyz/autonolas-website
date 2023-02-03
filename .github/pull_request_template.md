@@ -18,7 +18,8 @@ _Put an `x` in the boxes that apply._
 
 - [ ] Links are working as expexted (internal and external links)
 - [ ] Responsiveness maintained (mobile, Ipad & desktop)
-- [ ] Sitemap update for the new page (if new page is created)
+- [ ] Sitemap updated for the new page (if a new page is created)
+- [ ] Meta tag added/updated
 - [ ] Lint and unit tests pass locally with my changes
 - [ ] I have added necessary documentation (if appropriate)
 - [ ] I am making a pull request against the `staging` branch (left side). Also you should start your branch off our `staging`.

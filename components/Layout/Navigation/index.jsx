@@ -114,13 +114,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   };
 
   const getNavStyle = () => {
-    // if not homepage, disable scroll bar on firefox
-    if (router?.pathname !== '/' && navigator.userAgent.includes('Firefox')) {
-      document.querySelector('html').style.scrollBehavior = 'auto';
-    } else {
-      document.querySelector('html').style.scrollBehavior = 'smooth';
-    }
-
     const relativeStyle = { backgroundColor: COLOR.WHITE, position: 'relative' };
     // show tranparent navbar if inner page
     if (!get(query, 'id')) {

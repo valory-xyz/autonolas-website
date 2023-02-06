@@ -7,6 +7,7 @@ export const BlogContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-height: 80vh;
   ${backgroundImage('/images/1TheNewWay/background.webp')}
   .header {
     text-align: center;

@@ -36,7 +36,7 @@ const Blog = ({ blogs }) => (
             </div>
 
             <a href={`/${PATHS.BLOG}/${slug}`}>
-              <Button title="LEARN MORE" type="black" className="mini" />
+              <Button title="LEARN MORE" type="black" />
             </a>
           </div>
         );

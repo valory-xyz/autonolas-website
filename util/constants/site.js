@@ -16,6 +16,7 @@ export const CUSTOM_META_PAGES = [
   '/education-articles',
   '/product',
   'academy',
+  '/whitepaper',
 
   // funnels landing pages
   'autonomous-contributors',

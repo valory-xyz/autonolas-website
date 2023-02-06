@@ -25,12 +25,13 @@ const MyApp = ({ Component, pageProps, router }) => {
           body {
             margin: 0;
             font-family: "manrope__regular", sans-serif !important;
-            line-height: 1.35 !important;
+            line-height: 1.4 !important;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             font-size: 18px !important;
           }
+
           @media only screen and (max-width: ${BREAK_POINT.sm}) {
             body {
               font-size: 16px !important;

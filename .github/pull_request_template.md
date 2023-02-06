@@ -16,7 +16,7 @@ _Put an `x` in the boxes that apply_
 
 _Put an `x` in the boxes that apply._
 
-- [ ] Links are working as expexted (internal and external links)
+- [ ] Links are working as expected (internal and external links)
 - [ ] Responsiveness maintained (mobile, Ipad & desktop)
 - [ ] Sitemap updated for the new page (if a new page is created)
 - [ ] Meta tag added/updated

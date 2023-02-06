@@ -9,7 +9,6 @@ export const widths = {
 
 export const LayoutGlobalStyle = createGlobalStyle`
   html {
-    scroll-behavior: smooth;
   }
   body {
     overflow: ${({ isNavigationOpen }) => (isNavigationOpen ? 'hidden' : 'auto')};

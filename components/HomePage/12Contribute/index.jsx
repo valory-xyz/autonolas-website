@@ -28,7 +28,11 @@ const SectionContribute = ({ isNavigationOpen }) => (
 );
 
 SectionContribute.propTypes = {
-  isNavigationOpen: PropTypes.bool.isRequired,
+  isNavigationOpen: PropTypes.bool,
+};
+
+SectionContribute.defaultProps = {
+  isNavigationOpen: false,
 };
 
 export default SectionContribute;

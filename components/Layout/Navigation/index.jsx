@@ -115,7 +115,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
 
   const getNavStyle = () => {
     const relativeStyle = { backgroundColor: COLOR.WHITE, position: 'relative' };
-
     // show tranparent navbar if inner page
     if (!get(query, 'id')) {
       return {

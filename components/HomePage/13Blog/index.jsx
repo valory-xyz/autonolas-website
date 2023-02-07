@@ -5,9 +5,7 @@ import get from 'lodash/get';
 import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
-import {
-  HeaderAndAction,
-} from 'components/GlobalStyles';
+import { HeaderAndAction } from 'components/GlobalStyles';
 import { ROW_GUTTER } from 'util/theme';
 import { SectionBlog } from './styles';
 
@@ -23,7 +21,11 @@ const Blog = ({ blog }) => {
   return (
     <div key={`blog-${id}`} className="blog-item">
       <a href={`/${PATHS.BLOG}/${slug}`}>
-        <img src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`} alt={title} className="blog-item-image" />
+        <img
+          src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
+          alt={title}
+          className="blog-item-image"
+        />
       </a>
       <Title level={2}>{title}</Title>
       <p>{subtitle}</p>

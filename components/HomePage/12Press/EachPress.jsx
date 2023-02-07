@@ -16,11 +16,17 @@ const EachPress = ({ press }) => {
   return (
     <Col lg={8} className="press-item">
       <a href={link}>
-        <img src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`} alt={title} className="press-item-image" />
+        <img
+          src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
+          alt={title}
+          className="press-item-image"
+        />
       </a>
       <Tag>{type}</Tag>
       <br />
-      <Title level={3} className="press-item-title">{title}</Title>
+      <Title level={3} className="press-item-title">
+        {title}
+      </Title>
       <p>{publisher}</p>
       <Button
         title="LEARN MORE"

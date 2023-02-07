@@ -45,7 +45,7 @@ export const getSocials = (socials, renderFormat = 'img') => (
                 />
               ) : (
                 <>
-                  <img src={src} alt="" />
+                  <img src={src} alt=" " />
                 </>
               )}
             </>

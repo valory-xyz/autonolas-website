@@ -35,7 +35,7 @@ const Why = () => (
         <img
           src="/images/Academy/LandingPage/arrow.svg"
           className="arrow-image"
-          alt=""
+          alt=" "
         />
       </Col>
       <Col xs={24} lg={10}>

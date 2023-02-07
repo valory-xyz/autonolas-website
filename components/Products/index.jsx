@@ -78,6 +78,14 @@ const ProductPage = ({ product }) => {
   );
 };
 
+Products.propTypes = {
+  product: PropTypes.instanceOf(Object).isRequired,
+};
+
+ProductPage.propTypes = {
+  product: PropTypes.instanceOf(Object).isRequired,
+};
+
 const ToolkitPage = ({ product }) => {
   const {
     id, title, description, liveLink,
@@ -130,14 +138,6 @@ const ToolkitPage = ({ product }) => {
       </ProductHero>
     </>
   );
-};
-
-Products.propTypes = {
-  product: PropTypes.instanceOf(Object).isRequired,
-};
-
-ProductPage.propTypes = {
-  product: PropTypes.instanceOf(Object).isRequired,
 };
 
 ToolkitPage.propTypes = {

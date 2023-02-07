@@ -19,7 +19,7 @@ const Sider = ({ funnel }) => {
         <div className="img-container">
           <img
             src="/images/2WhatIsAutonolas/ecosystem.png"
-            alt=""
+            alt=" "
             style={{ width: '50%', marginBottom: '1rem' }}
           />
         </div>

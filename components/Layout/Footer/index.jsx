@@ -14,7 +14,7 @@ import {
 const footerLogo = (
   <img
     src="/images/common/autonolas-logo.png"
-    alt=" "
+    alt="Autonolas logo"
     loading="lazy"
     className="footer-logo"
   />
@@ -81,9 +81,13 @@ const Footer = () => (
                 })}
                 {getAnchor('ACADEMY', '/academy', { isExternal: false })}
                 {getAnchor('COMMISSION US', 'mailto:bd@valory.xyz')}
-                {getAnchor('PROTOCOL REGISTRY', 'https://protocol.autonolas.network/', {
-                  isExternal: true,
-                })}
+                {getAnchor(
+                  'PROTOCOL REGISTRY',
+                  'https://protocol.autonolas.network/',
+                  {
+                    isExternal: true,
+                  },
+                )}
                 {/* {getAnchor('IDEAS', '/ideas')} */}
               </div>
             </td>
@@ -96,8 +100,12 @@ const Footer = () => (
                 {getAnchor('TWITTER', 'https://twitter.com/autonolas')}
                 {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ')}
                 {getAnchor('GITHUB', 'https://github.com/valory-xyz')}
-                {getAnchor('PRIVACY POLICY', `/${PATHS.PRIVACY_POLICY}`, { isExternal: false })}
-                {getAnchor('COOKIES POLICY', `/${PATHS.COOKIES_POLICY}`, { isExternal: false })}
+                {getAnchor('PRIVACY POLICY', `/${PATHS.PRIVACY_POLICY}`, {
+                  isExternal: false,
+                })}
+                {getAnchor('COOKIES POLICY', `/${PATHS.COOKIES_POLICY}`, {
+                  isExternal: false,
+                })}
               </div>
             </td>
           </tr>

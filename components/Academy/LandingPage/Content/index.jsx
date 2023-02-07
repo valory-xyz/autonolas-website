@@ -28,6 +28,7 @@ const Content = () => (
           className="agent-service-image"
           width={648}
           height={392}
+          alt=" "
         />
       </Col>
     </Row>

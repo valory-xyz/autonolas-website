@@ -41,6 +41,7 @@ const ScaleYourDao = () => {
           height="190px"
           layout="responsive"
           objectFit="contain"
+          alt="Scale your DAO background"
         />
       ) : (
         <Image
@@ -49,6 +50,7 @@ const ScaleYourDao = () => {
           height="40px"
           layout="responsive"
           objectFit="contain"
+          alt="Scale your DAO background"
         />
       )}
 

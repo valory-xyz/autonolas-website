@@ -29,6 +29,7 @@ const Why = () => (
           src="/images/Academy/LandingPage/pre-autonolas.svg"
           width={540}
           height={422}
+          alt=" "
         />
       </Col>
       <Col xs={24} lg={4} className="arrow-image-container">
@@ -43,6 +44,7 @@ const Why = () => (
           src="/images/Academy/LandingPage/post-autonolas.svg"
           width={540}
           height={422}
+          alt=" "
         />
       </Col>
     </Row>

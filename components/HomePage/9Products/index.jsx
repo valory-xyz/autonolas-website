@@ -65,6 +65,7 @@ const ProductsCategory = ({ products, category }) => {
                         className="product-image"
                         width="100px"
                         height="100px"
+                        alt={`${title} product`}
                       />
 
                       <h3 className="product-title">{title}</h3>

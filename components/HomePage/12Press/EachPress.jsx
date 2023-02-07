@@ -22,12 +22,16 @@ const EachPress = ({ press }) => {
           className="press-item-image"
         />
       </a>
+
       <Tag>{type}</Tag>
       <br />
+
       <Title level={3} className="press-item-title">
         {title}
       </Title>
+
       <p>{publisher}</p>
+
       <Button
         title="LEARN MORE"
         type="black"

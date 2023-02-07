@@ -30,9 +30,11 @@ const Blog = ({ blog }) => {
       <Title level={2}>{title}</Title>
       <p>{subtitle}</p>
 
-      <a href={`/${PATHS.BLOG}/${slug}`}>
-        <Button title="LEARN MORE" type="black" />
-      </a>
+      <Button
+        title="LEARN MORE"
+        type="black"
+        onClick={() => window.open(`/${PATHS.BLOG}/${slug}`, '_self')}
+      />
     </div>
   );
 };

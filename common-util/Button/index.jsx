@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
+import Image from 'next/image';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { COLOR, FONT_SIZE, MEDIA_QUERY } from 'util/theme';
 
 export const Btn = styled.button`
@@ -109,13 +110,12 @@ const CustomButton = forwardRef(
       <Btn type={type} className={clsName} {...rest} hasArrowSuffix ref={ref}>
         {title}
         {type === 'link-arrow' && (
-          <>
-            <img
-              src="/images/common/arrow.png"
-              alt="Button arrow"
-              loading="lazy"
-            />
-          </>
+          <Image
+            src="/images/common/arrow.png"
+            alt="Button arrow"
+            width={40}
+            height={35}
+          />
         )}
         {hasArrowSuffix && ' →'}
       </Btn>

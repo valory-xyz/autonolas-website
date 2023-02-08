@@ -35,7 +35,7 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
   >
     <Header className="header" title={SITE_TAGLINE} as="h1" />
     <DescActionButtons>
-      <Typography.Title level={4} className="lead">
+      <Typography.Title level={2} className="lead">
         Our open-source software stack enables you to run your&nbsp;
         <div className="text-rotator-container">
           <ReactTextRotator

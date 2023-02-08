@@ -30,4 +30,15 @@ module.exports = withAntdLess({
       },
     ];
   },
+  images: {
+    // domains: [process.env.NEXT_PUBLIC_API_HOSTNAME],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cms-backend.autonolas.tech',
+        port: '',
+        pathname: '/uploads/**',
+      },
+    ],
+  },
 });

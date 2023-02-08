@@ -31,11 +31,14 @@ module.exports = withAntdLess({
     ];
   },
   images: {
-    // domains: [process.env.NEXT_PUBLIC_API_HOSTNAME],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cms-backend.autonolas.tech',
+        /**
+         * fetch the hostname from the url
+         * example: https://api.autonolas.com => api.autonolas.com
+         */
+        hostname: process.env.NEXT_PUBLIC_API_URL.match(/([^//]+$)/)[0],
         port: '',
         pathname: '/uploads/**',
       },

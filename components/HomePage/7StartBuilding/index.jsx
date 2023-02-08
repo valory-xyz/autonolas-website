@@ -1,5 +1,6 @@
 import { Col, Row, Grid } from 'antd';
 import Header from 'common-util/Header';
+import Image from 'next/image';
 import Button from 'common-util/Button';
 import Link from 'next/link';
 import {
@@ -8,61 +9,79 @@ import {
 
 const { useBreakpoint } = Grid;
 
-const LEARN_LIST = [
-  {
-    imageUrl: 'learn',
-    heading: '',
-    subHeading:
-      'Understand the concepts that power Autonolas’ technology and ecosystem.',
-    redirectTo: '/learn',
-  },
-];
-
-const BUILD_LIST = [
-  {
-    imageUrl: 'docs',
-    heading: 'DOCS',
-    subHeading:
-      'Work your way through our written documentation at your own pace.',
-    redirectTo: ' https://docs.autonolas.network/',
-  },
-  {
-    imageUrl: 'dev-academy',
-    heading: 'ACADEMY',
-    subHeading:
-      'Follow videos and complete projects in our Education Track. Then, apply to the Builder Track for expert guidance in developing high-impact services.',
-    redirectTo: '/academy',
-  },
-];
-
-const getContent = list => list.map(({
-  heading, subHeading, imageUrl, redirectTo,
-}, index) => (
-  <Col lg={8} sm={24} xs={24} key={`start-building-${imageUrl}`}>
-    <div key={imageUrl} className={`column column-${index + 1}`}>
-      <div className="img-container-custom">
-        <img
-          src={`/images/7StartBuilding/${imageUrl}.png`}
-          alt={`${heading} Icon`}
-        />
-      </div>
-      <div className="text-content">
-        <div className="header-text">{heading}</div>
-        <div className="sub-text">{subHeading}</div>
-        <div className="action-btn">
-          <Link href={redirectTo} passHref>
-            <Button title="GET STARTED" type="black" />
-          </Link>
+const getContent = list => list.map(
+  ({
+    heading, subHeading, imageUrl, redirectTo, imageStyle,
+  }, index) => (
+    <Col lg={8} sm={24} xs={24} key={`start-building-${imageUrl}`}>
+      <div key={imageUrl} className={`column column-${index + 1}`}>
+        <div className="img-container-custom">
+          <Image
+            src={`/images/7StartBuilding/${imageUrl}.png`}
+            alt={`${heading} Icon`}
+            width={imageStyle.width}
+            height={imageStyle.height || 150}
+          />
+        </div>
+        <div className="text-content">
+          <div className="header-text">{heading}</div>
+          <div className="sub-text">{subHeading}</div>
+          <div className="action-btn">
+            <Link href={redirectTo} passHref>
+              <Button title="GET STARTED" type="black" />
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
-  </Col>
-));
+    </Col>
+  ),
+);
 
 const LearnAndBuild = () => {
   const screens = useBreakpoint();
   const isIpadAndLess = (screens.xs || screens.sm) && !screens.lg;
   const forUserHeader = <h3 className="product-title main-title">Build</h3>;
+
+  const LEARN_LIST = [
+    {
+      imageUrl: 'learn',
+      heading: '',
+      subHeading:
+        'Understand the concepts that power Autonolas’ technology and ecosystem.',
+      redirectTo: '/learn',
+      imageStyle: {
+        width: screens.xs ? 95 : 180,
+        height: screens.xs ? 95 : 180,
+      },
+    },
+  ];
+
+
+  const BUILD_LIST = [
+    {
+      imageUrl: 'docs',
+      heading: 'DOCS',
+      subHeading:
+      'Work your way through our written documentation at your own pace.',
+      redirectTo: ' https://docs.autonolas.network/',
+      imageStyle: {
+        width: screens.xs ? 95 : 140,
+        height: screens.xs ? 82 : 120,
+      },
+    },
+    {
+      imageUrl: 'dev-academy',
+      heading: 'ACADEMY',
+      subHeading:
+      'Follow videos and complete projects in our Education Track. Then, apply to the Builder Track for expert guidance in developing high-impact services.',
+      redirectTo: '/academy',
+      imageStyle: {
+        width: screens.xs ? 95 : 120,
+        height: screens.xs ? 95 : 120,
+      },
+    },
+  ];
+
 
   return (
     <SectionSeven className="section" id="learn-and-build">
@@ -102,7 +121,11 @@ const LearnAndBuild = () => {
             <p>Don’t have time to build right now?</p>
             <Link href="/#ecosystem-builders" passHref>
               <a>
-                <Button hasArrowSuffix type="purple" title="Get support with your project" />
+                <Button
+                  hasArrowSuffix
+                  type="purple"
+                  title="Get support with your project"
+                />
               </a>
             </Link>
           </CommissionUs>

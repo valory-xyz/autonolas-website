@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
 import ScaleYourDao from './1ScaleYourDao';
-// import StartBuilding from './7StartBuilding';
+import StartBuilding from './7StartBuilding';
 import Products from './9Products';
 // import EcosystemBuilders from './11EcosystemBuilders';
 // import Contribute from './12Contribute';
@@ -20,8 +20,8 @@ const HomePage = ({
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <ScaleYourDao />
     <Products />
-    {/*     <StartBuilding />
-    <EcosystemBuilders />
+    <StartBuilding />
+    {/*      <EcosystemBuilders />
     <Contribute />
     <Press press={press} />
     <Blog blogs={blogs} />

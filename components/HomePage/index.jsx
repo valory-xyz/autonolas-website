@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
 import ScaleYourDao from './1ScaleYourDao';
 // import StartBuilding from './7StartBuilding';
-// import Products from './9Products';
+import Products from './9Products';
 // import EcosystemBuilders from './11EcosystemBuilders';
 // import Contribute from './12Contribute';
 // import Press from './12Press';
@@ -19,8 +19,8 @@ const HomePage = ({
   <>
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <ScaleYourDao />
-    {/*   <Products />
-    <StartBuilding />
+    <Products />
+    {/*     <StartBuilding />
     <EcosystemBuilders />
     <Contribute />
     <Press press={press} />

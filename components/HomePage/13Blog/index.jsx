@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row, Typography } from 'antd';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
@@ -21,13 +22,17 @@ const Blog = ({ blog }) => {
   return (
     <div key={`blog-${id}`} className="blog-item">
       <a href={`/${PATHS.BLOG}/${slug}`}>
-        <img
+        <Image
           src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
           alt={title}
           className="blog-item-image"
+          layout="fill"
+          objectFit="contain"
         />
       </a>
+
       <Title level={2}>{title}</Title>
+
       <p>{subtitle}</p>
 
       <Button
@@ -60,7 +65,10 @@ const PressAndBlogs = ({ blogs }) => {
         </a>
       </HeaderAndAction>
 
-      <Row gutter={ROW_GUTTER} className="blog-collection-row">
+      <Row
+        gutter={ROW_GUTTER}
+        className="blog-collection-row blog-collection-row-1"
+      >
         {firstTwoBlogs.map(item => (
           <Col lg={12} sm={24} key={`blogs-${item.id}`}>
             <Blog blog={item} />

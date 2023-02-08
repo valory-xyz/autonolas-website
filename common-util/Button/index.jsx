@@ -110,12 +110,15 @@ const CustomButton = forwardRef(
       <Btn type={type} className={clsName} {...rest} hasArrowSuffix ref={ref}>
         {title}
         {type === 'link-arrow' && (
-          <Image
-            src="/images/common/arrow.png"
-            alt="Button arrow"
-            width={40}
-            height={35}
-          />
+          <>
+            &nbsp;&nbsp;
+            <Image
+              src="/images/common/arrow.png"
+              alt="Button arrow"
+              width={40}
+              height={35}
+            />
+          </>
         )}
         {hasArrowSuffix && ' →'}
       </Btn>

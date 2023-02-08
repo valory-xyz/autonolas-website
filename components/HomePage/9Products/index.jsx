@@ -57,7 +57,7 @@ const ProductsCategory = ({ products, category }) => {
 
             return (
               <Col key={id} lg={6} md={12} sm={12} xs={24}>
-                <Link href={`${PRODUCT_PATH}${id}`} legacyBehavior>
+                <Link href={`${PRODUCT_PATH}${id}`} legacyBehavior passHref>
                   <a>
                     <LinkCard className={category}>
                       <Image

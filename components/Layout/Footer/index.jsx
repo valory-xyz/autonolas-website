@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Header from 'common-util/Header';
 import { getAnchor } from 'common-util/functions';
 import PATHS from 'util/paths';
@@ -12,11 +13,11 @@ import {
 } from './styles';
 
 const footerLogo = (
-  <img
+  <Image
     src="/images/common/autonolas-logo.png"
     alt="Autonolas logo"
-    loading="lazy"
-    className="footer-logo"
+    width={92}
+    height={100}
   />
 );
 

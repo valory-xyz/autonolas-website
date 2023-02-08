@@ -128,9 +128,6 @@ export const FooterBottom = styled.div`
       }
     }
   }
-  img.footer-logo {
-    width: 92px;
-  }
   .copyright {
     vertical-align: bottom;
     span {

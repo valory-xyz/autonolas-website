@@ -155,7 +155,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
               )}
               &nbsp;
             </div>
-            <Link href="/whitepaper">
+            <Link href="/whitepaper" passHref>
               <Button
                 type="black"
                 className="mini"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { COLOR, FONT_SIZE, MEDIA_QUERY } from 'util/theme';
@@ -85,7 +85,8 @@ export const Btn = styled.button`
   }}
 
   /* if disabled reset the color to gray */
-  ${({ disabled }) => disabled && `
+  ${({ disabled }) => disabled
+    && `
     cursor: not-allowed !important;
     background-color: ${COLOR.GREY_1};
     border: 1px solid ${COLOR.GREY_1};
@@ -98,23 +99,29 @@ export const Btn = styled.button`
   `}
 `;
 
-const CustomButton = ({
-  title, type, className, hasArrowSuffix, ...rest
-}) => {
-  const clsName = `btn ${className || ''}`.trim();
+const CustomButton = forwardRef(
+  ({
+    title, type, className, hasArrowSuffix, ...rest
+  }, ref) => {
+    const clsName = `btn ${className || ''}`.trim();
 
-  return (
-    <Btn type={type} className={clsName} {...rest} hasArrowSuffix>
-      {title}
-      {type === 'link-arrow' && (
-        <>
-          <img src="/images/common/arrow.png" alt="Button arrow" loading="lazy" />
-        </>
-      )}
-      {hasArrowSuffix && ' →'}
-    </Btn>
-  );
-};
+    return (
+      <Btn type={type} className={clsName} {...rest} hasArrowSuffix ref={ref}>
+        {title}
+        {type === 'link-arrow' && (
+          <>
+            <img
+              src="/images/common/arrow.png"
+              alt="Button arrow"
+              loading="lazy"
+            />
+          </>
+        )}
+        {hasArrowSuffix && ' →'}
+      </Btn>
+    );
+  },
+);
 
 CustomButton.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,

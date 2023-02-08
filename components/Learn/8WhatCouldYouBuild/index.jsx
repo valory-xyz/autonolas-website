@@ -5,7 +5,7 @@ import Description from 'common-util/Description';
 import Title from 'antd/lib/typography/Title';
 import Link from 'next/link';
 import Text from 'antd/lib/typography/Text';
-import CustomButton from 'common-util/Button';
+import Button from 'common-util/Button';
 import { SectionWhatCouldYouBuild, IdeaGroup } from './styles';
 
 const ideaGroups = [
@@ -128,7 +128,7 @@ const WhatCouldYouBuild = () => (
       </Text>
       <br />
       <Link href="/oracles" passHref>
-        <CustomButton title="Learn more" />
+        <Button title="Learn more" />
       </Link>
     </div>
 

@@ -15,7 +15,7 @@ const CookieConsentBanner = () => (
       to serve personalised ads or content, and to analyze our traffic. By clicking
       “Accept All”, you consent to our use of cookies.
       {' '}
-      <Link href="/cookies-policy">Read more</Link>
+      <Link href="/cookies-policy">Read more about cookies</Link>
       . To browse without cookies,
       {' '}
       <a href="https://www.hotjar.com/policies/do-not-track/">follow instructions</a>

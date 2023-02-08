@@ -9,7 +9,7 @@ import EcosystemBuilders from './11EcosystemBuilders';
 import Contribute from './12Contribute';
 // import Press from './12Press';
 // import Blog from './13Blog';
-// import Experience from './14Experience';
+import Experience from './14Experience';
 
 const HomePage = ({
   isNavigationOpen,
@@ -24,8 +24,8 @@ const HomePage = ({
     <EcosystemBuilders />
     <Contribute />
     {/*        <Press press={press} />
-    <Blog blogs={blogs} />
-    <Experience /> */}
+    <Blog blogs={blogs} /> */}
+    <Experience />
   </>
 );
 

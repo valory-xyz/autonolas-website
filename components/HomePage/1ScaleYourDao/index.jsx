@@ -69,9 +69,11 @@ const ScaleYourDao = () => {
               className={`column column-${index + 1}`}
             >
               <div className="img-container">
-                <img
+                <Image
                   src={`/images/1ScaleYourDao/${imageUrl}.png`}
                   alt={`${heading} Icon`}
+                  width="190px"
+                  height="190px"
                 />
               </div>
               <div className="text-content">

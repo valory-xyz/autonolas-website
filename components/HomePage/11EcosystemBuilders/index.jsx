@@ -1,5 +1,6 @@
 import { Col } from 'antd/lib';
 import Header from 'common-util/Header';
+import Image from 'next/image';
 import Button from 'common-util/Button';
 import Description from 'common-util/Description';
 import { HeaderText } from 'common-util/styles';
@@ -24,7 +25,11 @@ const LIST = [
 
         <div className="action-btn">
           <a href="mailto:bd@valory.xyz">
-            <Button className="btn-get-support" title="Get support with your project" type="black" />
+            <Button
+              className="btn-get-support"
+              title="Get support with your project"
+              type="black"
+            />
           </a>
           <br />
           Button not working? Email bd@valory.xyz
@@ -68,19 +73,17 @@ const WhyBuildOnAutonolas = () => (
         }, index) => (
           <Col key={imageUrl} lg={12} xs={24}>
             <div className={`column column-${index + 1}`}>
-
               <div className="img-container-custom">
-                <img
+                <Image
                   src={`/images/11EcosystemBuilders/${imageUrl}.png`}
                   alt={`${heading} Icon`}
+                  width={140}
+                  height={140}
                 />
               </div>
               <div className="text-content">
                 <HeaderText>{heading}</HeaderText>
-                {subHeading && (
-
-                <div className="sub-text">{subHeading}</div>
-                )}
+                {subHeading && <div className="sub-text">{subHeading}</div>}
                 {component}
               </div>
             </div>

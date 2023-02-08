@@ -5,7 +5,7 @@ import TheNewWay from './1TheNewWay';
 import ScaleYourDao from './1ScaleYourDao';
 import StartBuilding from './7StartBuilding';
 import Products from './9Products';
-// import EcosystemBuilders from './11EcosystemBuilders';
+import EcosystemBuilders from './11EcosystemBuilders';
 // import Contribute from './12Contribute';
 // import Press from './12Press';
 // import Blog from './13Blog';
@@ -21,8 +21,8 @@ const HomePage = ({
     <ScaleYourDao />
     <Products />
     <StartBuilding />
-    {/*      <EcosystemBuilders />
-    <Contribute />
+    <EcosystemBuilders />
+    {/*       <Contribute />
     <Press press={press} />
     <Blog blogs={blogs} />
     <Experience /> */}

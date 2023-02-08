@@ -6,7 +6,7 @@ import ScaleYourDao from './1ScaleYourDao';
 import StartBuilding from './7StartBuilding';
 import Products from './9Products';
 import EcosystemBuilders from './11EcosystemBuilders';
-// import Contribute from './12Contribute';
+import Contribute from './12Contribute';
 // import Press from './12Press';
 // import Blog from './13Blog';
 // import Experience from './14Experience';
@@ -22,8 +22,8 @@ const HomePage = ({
     <Products />
     <StartBuilding />
     <EcosystemBuilders />
-    {/*       <Contribute />
-    <Press press={press} />
+    <Contribute />
+    {/*        <Press press={press} />
     <Blog blogs={blogs} />
     <Experience /> */}
   </>

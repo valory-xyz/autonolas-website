@@ -8,7 +8,7 @@ const Balancer = () => (
     <Description type={2} title="POWERED BY BALANCED MANAGED POOLS" />
 
     <div className="x-balancer">
-      <img src="/images/funnels/6AssetManagement/balancer.png" alt=" " />
+      <img src="/images/funnels/6AssetManagement/balancer.png" alt="Balancer" />
     </div>
 
     <Row>

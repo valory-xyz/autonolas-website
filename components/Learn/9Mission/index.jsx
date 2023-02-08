@@ -30,7 +30,7 @@ const Mission = () => {
           className="sub-content"
         />
         <div className="glass-container">
-          <img src="/images/9Mission/glass.png" alt=" " />
+          <img src="/images/9Mission/glass.png" alt="Mission background" />
         </div>
       </Row>
     </SectionNine>

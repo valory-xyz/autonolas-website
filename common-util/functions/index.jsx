@@ -44,7 +44,7 @@ export const getSocials = (socials, renderFormat = 'img') => (
                   height={size.height}
                 />
               ) : (
-                <img src={src} alt=" " />
+                <img src={src} alt="Arrow icon" />
               )}
             </>
           )}

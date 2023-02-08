@@ -20,7 +20,7 @@ const EachPress = ({ press }) => {
       <a href={link} target="_blank" rel="noopener noreferrer">
         <Image
           src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
-          alt={title}
+          alt={`${title} background image`}
           className="press-item-image"
           layout="fill"
           objectFit="contain"

@@ -24,7 +24,7 @@ const Blog = ({ blog }) => {
       <a href={`/${PATHS.BLOG}/${slug}`}>
         <Image
           src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
-          alt={title}
+          alt={`${title} background image`}
           className="blog-item-image"
           layout="fill"
           objectFit="contain"

@@ -29,6 +29,11 @@ const LIST = [
 
 const ScaleYourDao = () => {
   const screens = useBreakpoint();
+  const otherImgProps = {
+    layout: 'responsive',
+    objectFit: 'contain',
+    alt: 'Scale your DAO background',
+  };
 
   return (
     <SectionScaleYourDao className="section" id="why-autonolas">
@@ -39,18 +44,14 @@ const ScaleYourDao = () => {
           src="/images/1ScaleYourDao/header-mobile.png"
           width="100%"
           height="190px"
-          layout="responsive"
-          objectFit="contain"
-          alt="Scale your DAO background"
+          {...otherImgProps}
         />
       ) : (
         <Image
           src="/images/1ScaleYourDao/header-desktop.svg"
           width="90%"
           height="40px"
-          layout="responsive"
-          objectFit="contain"
-          alt="Scale your DAO background"
+          {...otherImgProps}
         />
       )}
 

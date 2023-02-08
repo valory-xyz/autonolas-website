@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
-// import ScaleYourDao from './1ScaleYourDao';
+import ScaleYourDao from './1ScaleYourDao';
 // import StartBuilding from './7StartBuilding';
 // import Products from './9Products';
 // import EcosystemBuilders from './11EcosystemBuilders';
@@ -18,8 +18,8 @@ const HomePage = ({
 }) => (
   <>
     <TheNewWay isNavigationOpen={isNavigationOpen} />
-    {/* <ScaleYourDao />
-    <Products />
+    <ScaleYourDao />
+    {/*   <Products />
     <StartBuilding />
     <EcosystemBuilders />
     <Contribute />

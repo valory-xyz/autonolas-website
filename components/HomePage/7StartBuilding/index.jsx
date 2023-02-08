@@ -10,9 +10,17 @@ import {
 const { useBreakpoint } = Grid;
 
 const getContent = list => list.map(
-  ({
-    heading, subHeading, imageUrl, redirectTo, imageStyle,
-  }, index) => (
+  (
+    {
+      heading,
+      subHeading,
+      imageUrl,
+      redirectTo,
+      imageStyle,
+      isSameSubdomain = true,
+    },
+    index,
+  ) => (
     <Col lg={8} sm={24} xs={24} key={`start-building-${imageUrl}`}>
       <div key={imageUrl} className={`column column-${index + 1}`}>
         <div className="img-container-custom">
@@ -27,9 +35,17 @@ const getContent = list => list.map(
           <div className="header-text">{heading}</div>
           <div className="sub-text">{subHeading}</div>
           <div className="action-btn">
-            <Link href={redirectTo} passHref>
-              <Button title="GET STARTED" type="black" />
-            </Link>
+            {isSameSubdomain ? (
+              <Link href={redirectTo} passHref>
+                <Button title="GET STARTED" type="black" />
+              </Link>
+            ) : (
+              <Button
+                title="GET STARTED"
+                type="black"
+                onClick={() => window.open(redirectTo, '_self')}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -56,14 +72,14 @@ const LearnAndBuild = () => {
     },
   ];
 
-
   const BUILD_LIST = [
     {
       imageUrl: 'docs',
       heading: 'DOCS',
       subHeading:
-      'Work your way through our written documentation at your own pace.',
+        'Work your way through our written documentation at your own pace.',
       redirectTo: ' https://docs.autonolas.network/',
+      isSameSubdomain: false,
       imageStyle: {
         width: screens.xs ? 95 : 140,
         height: screens.xs ? 82 : 120,
@@ -73,7 +89,7 @@ const LearnAndBuild = () => {
       imageUrl: 'dev-academy',
       heading: 'ACADEMY',
       subHeading:
-      'Follow videos and complete projects in our Education Track. Then, apply to the Builder Track for expert guidance in developing high-impact services.',
+        'Follow videos and complete projects in our Education Track. Then, apply to the Builder Track for expert guidance in developing high-impact services.',
       redirectTo: '/academy',
       imageStyle: {
         width: screens.xs ? 95 : 120,
@@ -81,7 +97,6 @@ const LearnAndBuild = () => {
       },
     },
   ];
-
 
   return (
     <SectionSeven className="section" id="learn-and-build">

@@ -1,5 +1,3 @@
-import glob from 'glob';
-// import { chain } from 'lodash';
 import { SITE_URL } from 'util/constants/site';
 import {
   getBlogs,
@@ -8,37 +6,6 @@ import {
   // getPress,
   getProducts,
 } from 'common-util/api';
-
-const checkIfPathExists = async generatedDynamicPaths => {
-  const pagesDir = 'pages/**/*.jsx';
-  const pagesPaths = await glob.sync(pagesDir);
-
-  const filteredPaths = pagesPaths.filter(
-    path => path.includes('/[') && !path.includes('/_'),
-  );
-
-  /**
-   * getOnlyNames is an array of all the paths in the pages directory
-   * eg: ['/blog', '/education-articles', '/ideas', '/press', '/product'].
-   */
-  const getOnlyNames = filteredPaths.map(path => path.replace('pages', '').replace('/[id].jsx', ''));
-
-  // filter press and ideas as they are not present in the generatedDynamicPaths
-  const filteredPathsNames = getOnlyNames.filter(
-    path => path !== '/ideas' && path !== '/press',
-  );
-
-  // const filteredPathsNames = getOnlyNames.filter(
-
-  // generatedDynamicPaths
-
-  console.log(filteredPathsNames);
-
-
-  // console.warning(
-  //   'Some of the dynamic paths are missing, please add the appropriate APIs',
-  // );
-};
 
 export const getDynamicPaths = async () => {
   const paths = [];
@@ -80,9 +47,6 @@ export const getDynamicPaths = async () => {
     product => `${SITE_URL}/product/${product.id}`,
   );
   paths.push(...productsPaths);
-
-  // check if all the paths are present
-  await checkIfPathExists(paths);
 
   return paths;
 };

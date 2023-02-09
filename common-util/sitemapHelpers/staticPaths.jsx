@@ -34,6 +34,5 @@ export const getStaticPaths = async () => {
     staticPagePath => `${SITE_URL}${staticPagePath}`,
   );
 
-  // TODO: fix it
-  return ['https://autonolas.network'] || paths;
+  return paths;
 };

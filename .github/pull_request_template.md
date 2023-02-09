@@ -18,10 +18,10 @@ _Put an `x` in the boxes that apply._
 
 - [ ] Links are working as expected (internal and external links)
 - [ ] Responsiveness maintained (mobile, Ipad & desktop)
-- [ ] Sitemap updated for the new page (if a new page is created)
+- [ ] Sitemap: for dynamic pages, API is added to `/sitemapHelpers/dynamicPages.jsx`
 - [ ] Meta tag added/updated
 - [ ] Lint and unit tests pass locally with my changes
-- [ ] I have added necessary documentation (if appropriate)
+- [ ] I have added the necessary documentation (if appropriate)
 - [ ] I am making a pull request against the `staging` branch (left side). Also you should start your branch off our `staging`.
 
 ## Further comments

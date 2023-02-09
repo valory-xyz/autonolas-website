@@ -35,19 +35,5 @@ export const getStaticPaths = async () => {
   );
 
   // TODO: fix it
-  return [''] || paths;
-};
-
-export const getDynamicPaths = async () => {
-  const pagesDir = 'pages/**/*.jsx';
-  const pagesPaths = await glob.sync(pagesDir);
-
-  const filteredPaths = pagesPaths.filter(
-    path => path.includes('/[') && !path.includes('/_'),
-  );
-
-  console.log(filteredPaths);
-
-  // TODO: fix it
-  return [''] || filteredPaths;
+  return ['https://autonolas.network'] || paths;
 };

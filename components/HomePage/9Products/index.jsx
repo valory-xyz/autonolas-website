@@ -3,7 +3,7 @@ import { Col, Row, Typography } from 'antd';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Link from 'next/dist/client/link';
-import allProducts from 'components/Products/products.json';
+import allProducts from 'common-util/data/products.json';
 import { LinkCard } from 'components/GlobalStyles';
 import { PRODUCT_PATH } from 'util/paths';
 import { getProducts } from 'common-util/functions';

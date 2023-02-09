@@ -1,4 +1,5 @@
-import { getStaticPaths, getDynamicPaths } from './readingfile';
+import { getStaticPaths } from 'common-util/sitemapHelpers/staticPaths';
+import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
 
 export const getServerSideProps = async ({ res }) => {
   const staticPaths = await getStaticPaths();

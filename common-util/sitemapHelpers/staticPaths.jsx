@@ -3,7 +3,8 @@ import { chain } from 'lodash';
 import { SITE_URL } from 'util/constants/site';
 
 export const getStaticPaths = async () => {
-  const pagesDir = 'pages/**/*.jsx';
+  const BASE_DIR = process.env.NODE_ENV === 'production' ? './' : 'pages';
+  const pagesDir = `${BASE_DIR}pages/**/*.jsx`;
   const pagesPaths = await glob.sync(pagesDir);
 
   const filteredPaths = pagesPaths.filter(

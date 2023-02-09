@@ -25,8 +25,7 @@ export const getDynamicPaths = async () => {
   paths.push(...educationArticlesPaths);
 
   // ideas list
-  // TODO: Oak, there is nothing in the ideas page.
-  // Bit misleading, please suggest what to do here.
+  // TODO: There is nothing in the ideas page, confused.
   // const ideasPaths = await getIdeas();
   // const ideasArticlesPaths = ideasPaths.map(
   //   idea => `${SITE_URL}/ideas/${idea.id}`,

@@ -3,9 +3,11 @@ import { chain } from 'lodash';
 import { SITE_URL } from 'util/constants/site';
 
 export const getStaticPaths = async () => {
-  const BASE_DIR = process.env.NODE_ENV === 'production' ? './' : 'pages';
-  const pagesDir = `${BASE_DIR}pages/**/*.jsx`;
+  const BASE_DIR = process.env.NODE_ENV === 'production' ? './' : 'pages/';
+  const pagesDir = `${BASE_DIR}**/*.jsx`;
   const pagesPaths = await glob.sync(pagesDir);
+
+  console.log(pagesPaths);
 
   const filteredPaths = pagesPaths.filter(
     path => !path.includes('/_')
@@ -13,6 +15,8 @@ export const getStaticPaths = async () => {
       && !path.includes('api')
       && !path.includes('sitemap'),
   );
+
+  console.log(filteredPaths);
 
   /**
    * replacedPaths is an array of all the paths in the pages directory
@@ -22,6 +26,8 @@ export const getStaticPaths = async () => {
   const replacedPaths = chain(filteredPaths)
     .map(path => path.replace('pages', '').replace('/index.jsx', '').replace('.jsx', ''))
     .value();
+
+  console.log(replacedPaths);
 
   /**
    * paths is an array of all the paths in the pages directory
@@ -34,6 +40,8 @@ export const getStaticPaths = async () => {
   const paths = replacedPaths.map(
     staticPagePath => `${SITE_URL}${staticPagePath}`,
   );
+
+  console.log(paths);
 
   return paths;
 };

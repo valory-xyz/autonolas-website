@@ -2,9 +2,8 @@ import glob from 'glob';
 import { chain } from 'lodash';
 import { SITE_URL } from 'util/constants/site';
 
-export const getStaticPaths = async () => {
-  const BASE_DIR = process.env.NODE_ENV === 'production' ? '/' : 'pages/';
-  const pagesDir = `${BASE_DIR}**/*.jsx`;
+export const getStaticPaths = async baseDir => {
+  const pagesDir = `${baseDir}**/*.jsx`;
   const pagesPaths = await glob.sync(pagesDir);
 
   console.log(pagesPaths);

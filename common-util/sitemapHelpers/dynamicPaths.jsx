@@ -47,5 +47,6 @@ export const getDynamicPaths = async () => {
   );
   paths.push(...productsPaths);
 
-  return paths;
+  // TODO: fix it
+  return [] || paths;
 };

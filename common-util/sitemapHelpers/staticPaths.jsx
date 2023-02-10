@@ -7,12 +7,14 @@ export const getStaticPaths = async baseDir => {
 
   console.log(pagesPaths);
 
-  const filteredPaths = pagesPaths.filter(
-    path => !path.includes('/_')
-      && !path.includes('/[')
-      && !path.includes('api')
-      && !path.includes('sitemap'),
-  );
+  const filteredPaths = pagesPaths
+    .filter(e => e.includes('pages'))
+    .filter(
+      path => !path.includes('/_')
+        && !path.includes('/[')
+        && !path.includes('api')
+        && !path.includes('sitemap'),
+    );
 
   // console.log(filteredPaths);
 

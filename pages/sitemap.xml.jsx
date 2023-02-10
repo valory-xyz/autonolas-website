@@ -5,13 +5,12 @@ export const triedPathForConfig = [
   './**/*.jsx',
   './pages/**/*.jsx',
   '/**/*.jsx',
-
   '**/*.jsx',
 ];
 
 export const getServerSideProps = async ({ res }) => {
   const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
-    ? '/**/*.jsx'
+    ? '**/*.jsx'
     : 'pages/**/*.jsx';
 
   // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;

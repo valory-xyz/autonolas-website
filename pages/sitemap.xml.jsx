@@ -17,7 +17,7 @@ export const triedPathForConfig = [
 
 export const getServerSideProps = async ({ res }) => {
   const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
-    ? './.next/server/pages/**/*.jsx'
+    ? './.next/server/pages/**/*.js'
     : 'pages/**/*.jsx';
 
   // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;

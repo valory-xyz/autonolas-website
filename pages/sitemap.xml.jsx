@@ -3,7 +3,7 @@ import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
 
 export const getServerSideProps = async ({ res }) => {
   const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
-    ? '/**/*.jsx'
+    ? './'
     : 'pages/**/*.jsx';
 
   // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;

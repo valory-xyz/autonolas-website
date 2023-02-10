@@ -14,6 +14,14 @@ export const triedPathForConfig = [
   '**/*.jsx',
 ];
 
+// write a function getStaticSideProps to fetch all the file names inside "pages" folder
+// and return them as an array of strings
+export const getStaticSideProps = async () => {
+  // fetch files from vercel production
+
+};
+
+
 export const getServerSideProps = async ({ res }) => {
   // const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
   //   ? '**/*.jsx'
@@ -26,7 +34,7 @@ export const getServerSideProps = async ({ res }) => {
 
   // TRY
   const staticPaths = await staticPathsOther(
-    process.env.NODE_ENV.toLowerCase() === 'production' ? path.join(process.cwd(), '..') : 'pages',
+    process.env.NODE_ENV.toLowerCase() === 'production' ? path.join(process.cwd(), './') : 'pages',
   );
 
   const allPaths = [...staticPaths, ...dynamicPaths];

@@ -1,9 +1,9 @@
-// import {
-//   // getStaticPaths,
+import {
+  getStaticPaths,
 
-//   staticPathsOther,
-// } from 'common-util/sitemapHelpers/staticPaths';
-import * as fs from 'fs';
+  // staticPathsOther,
+} from 'common-util/sitemapHelpers/staticPaths';
+// import * as fs from 'fs';
 
 import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
 
@@ -22,26 +22,31 @@ export const getServerSideProps = async ({ res }) => {
 
   // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;
 
-  // const staticPaths = await getStaticPaths(BASE_DIR);
-  const dynamicPaths = await getDynamicPaths();
-
-  const baseUrl = {
-    development: 'http://localhost:5000',
-    production: 'https://mydomain.com',
-  }[process.env.NODE_ENV];
-
-  const staticPaths = fs
-    .readdirSync({
+  const staticPaths = await getStaticPaths(
+    {
       development: 'pages',
       production: './.next/server/pages',
-    }[process.env.NODE_ENV])
-    .filter(staticPage => ![
-      '_app.js',
-      '_document.js',
-      '_error.js',
-      'sitemap.xml.js',
-    ].includes(staticPage))
-    .map(staticPagePath => `${baseUrl}/${staticPagePath}`);
+    }[process.env.NODE_ENV],
+  );
+  const dynamicPaths = await getDynamicPaths();
+
+  // const baseUrl = {
+  //   development: 'http://localhost:5000',
+  //   production: 'https://mydomain.com',
+  // }[process.env.NODE_ENV];
+
+  // const staticPaths = fs
+  //   .readdirSync({
+  //     development: 'pages',
+  //     production: './.next/server/pages',
+  //   }[process.env.NODE_ENV])
+  //   .filter(staticPage => ![
+  //     '_app.jsx',
+  //     '_document.jsx',
+  //     '_error.jsx',
+  //     'sitemap.xml.jsx',
+  //   ].includes(staticPage))
+  //   .map(staticPagePath => `${baseUrl}/${staticPagePath}`);
 
   const allPaths = [...staticPaths, ...dynamicPaths];
 

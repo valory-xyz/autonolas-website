@@ -2,12 +2,8 @@ import glob from 'glob';
 import { chain } from 'lodash';
 import { SITE_URL } from 'util/constants/site';
 
-import * as fs from 'fs';
-
 export const getStaticPaths = async baseDir => {
   const pagesPaths = await glob.sync(baseDir);
-
-  console.log(pagesPaths);
 
   const filteredPaths = pagesPaths
     .filter(e => e.includes('pages'))
@@ -18,23 +14,21 @@ export const getStaticPaths = async baseDir => {
         && !path.includes('sitemap'),
     );
 
-  // console.log(filteredPaths);
-
   /**
    * replacedPaths is an array of all the paths in the pages directory
-   * eg: ['/pages/index.jsx', '/pages/academy/index.jsx'].
+   * eg: dev:  ['/pages/index.jsx', '/pages/academy/index.jsx']
+   * eg: prod: ['./.next/server/index.js', './.next/server/academy/index.js']
    * Hence we need to replace the `pages`, `/index.jsx` or `.jsx`
    */
   const replacedPaths = chain(filteredPaths)
     .map(path => path
       .replace('pages', '')
-      .replace('/index.jsx', '')
-      .replace('.jsx', '')
       .replace('./.next/server/', '')
+      .replace('/index.jsx', '')
+      .replace('/index.js', '')
+      .replace('.jsx', '')
       .replace('.js', ''))
     .value();
-
-  // console.log(replacedPaths);
 
   /**
    * paths is an array of all the paths in the pages directory
@@ -48,20 +42,5 @@ export const getStaticPaths = async baseDir => {
     staticPagePath => `${SITE_URL}${staticPagePath}`,
   );
 
-  // console.log(paths);
-
   return paths;
 };
-
-export const staticPathsOther = async baseDir => fs
-  .readdirSync(baseDir)
-  .filter(
-    staticPage => ![
-      'api',
-      '_app.js',
-      '_document.js',
-      '404.js',
-      'sitemap.xml.js',
-    ].includes(staticPage),
-  )
-  .map(staticPagePath => `${SITE_URL}/${staticPagePath}`);

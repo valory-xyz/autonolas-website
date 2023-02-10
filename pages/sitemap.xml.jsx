@@ -1,55 +1,18 @@
-import {
-  getStaticPaths,
-
-  // staticPathsOther,
-} from 'common-util/sitemapHelpers/staticPaths';
-// import * as fs from 'fs';
-
+import { getStaticPaths } from 'common-util/sitemapHelpers/staticPaths';
 import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
 
-
-export const triedPathForConfig = [
-  './**/*.jsx',
-  './pages/**/*.jsx',
-  '/**/*.jsx',
-  '**/*.jsx',
-];
-
 export const getServerSideProps = async ({ res }) => {
+  /**
+   * BASE_DIR is the directory where all the pages are located
+   * eg: dev:  'pages//* */ /* .jsx'
+   *eg: prod: './.next/server/pages/* */ /* .js'
+   */
   const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
     ? './.next/server/pages/**/*.js'
     : 'pages/**/*.jsx';
 
-  // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;
-  // {
-  //   development: 'pages',
-  //   production: './.next/server/pages',
-  // }[process.env.NODE_ENV],
-
-  const staticPaths = await getStaticPaths(
-    BASE_DIR,
-
-  );
-  console.log(process.env.NODE_ENV);
+  const staticPaths = await getStaticPaths(BASE_DIR);
   const dynamicPaths = await getDynamicPaths();
-
-  // const baseUrl = {
-  //   development: 'http://localhost:5000',
-  //   production: 'https://mydomain.com',
-  // }[process.env.NODE_ENV];
-
-  // const staticPaths = fs
-  //   .readdirSync({
-  //     development: 'pages',
-  //     production: './.next/server/pages',
-  //   }[process.env.NODE_ENV])
-  //   .filter(staticPage => ![
-  //     '_app.jsx',
-  //     '_document.jsx',
-  //     '_error.jsx',
-  //     'sitemap.xml.jsx',
-  //   ].includes(staticPage))
-  //   .map(staticPagePath => `${baseUrl}/${staticPagePath}`);
 
   const allPaths = [...staticPaths, ...dynamicPaths];
 

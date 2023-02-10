@@ -33,7 +33,7 @@ export const getServerSideProps = async ({ res }) => {
   const staticPaths = fs
     .readdirSync({
       development: 'pages',
-      production: './',
+      production: './.next/server/pages',
     }[process.env.NODE_ENV])
     .filter(staticPage => ![
       '_app.js',

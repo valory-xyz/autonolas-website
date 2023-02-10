@@ -4,6 +4,8 @@ import {
   staticPathsOther,
 } from 'common-util/sitemapHelpers/staticPaths';
 import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
+import path from 'path';
+
 
 export const triedPathForConfig = [
   './**/*.jsx',
@@ -24,7 +26,7 @@ export const getServerSideProps = async ({ res }) => {
 
   // TRY
   const staticPaths = await staticPathsOther(
-    process.env.NODE_ENV.toLowerCase() === 'production' ? process.cwd() : 'pages',
+    process.env.NODE_ENV.toLowerCase() === 'production' ? path.join(process.cwd(), '/.next') : 'pages',
   );
 
   const allPaths = [...staticPaths, ...dynamicPaths];

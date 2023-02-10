@@ -26,7 +26,12 @@ export const getStaticPaths = async baseDir => {
    * Hence we need to replace the `pages`, `/index.jsx` or `.jsx`
    */
   const replacedPaths = chain(filteredPaths)
-    .map(path => path.replace('pages', '').replace('/index.jsx', '').replace('.jsx', ''))
+    .map(path => path
+      .replace('pages', '')
+      .replace('/index.jsx', '')
+      .replace('.jsx', '')
+      .replace('./.next/server/', '')
+      .replace('.js', ''))
     .value();
 
   // console.log(replacedPaths);
@@ -51,8 +56,12 @@ export const getStaticPaths = async baseDir => {
 export const staticPathsOther = async baseDir => fs
   .readdirSync(baseDir)
   .filter(
-    staticPage => !['api', '_app.js', '_document.js', '404.js', 'sitemap.xml.js'].includes(
-      staticPage,
-    ),
+    staticPage => ![
+      'api',
+      '_app.js',
+      '_document.js',
+      '404.js',
+      'sitemap.xml.js',
+    ].includes(staticPage),
   )
   .map(staticPagePath => `${SITE_URL}/${staticPagePath}`);

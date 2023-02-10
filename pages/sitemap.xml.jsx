@@ -2,8 +2,8 @@ import { getStaticPaths } from 'common-util/sitemapHelpers/staticPaths';
 import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
 
 export const getServerSideProps = async ({ res }) => {
-  // const BASE_DIR = process.env.NODE_ENV === 'production' ? './pages/**/*.jsx' : 'pages/**/*.jsx';
-  const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;
+  const BASE_DIR = process.env.NODE_ENV === 'production' ? './' : 'pages/**/*.jsx';
+  // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;
 
   const staticPaths = await getStaticPaths(BASE_DIR);
   const dynamicPaths = await getDynamicPaths();

@@ -26,7 +26,7 @@ export const getServerSideProps = async ({ res }) => {
 
   // TRY
   const staticPaths = await staticPathsOther(
-    process.env.NODE_ENV.toLowerCase() === 'production' ? path.join(process.cwd(), '/.next') : 'pages',
+    process.env.NODE_ENV.toLowerCase() === 'production' ? path.join(process.cwd(), '..') : 'pages',
   );
 
   const allPaths = [...staticPaths, ...dynamicPaths];

@@ -2,6 +2,8 @@ import glob from 'glob';
 import { chain } from 'lodash';
 import { SITE_URL } from 'util/constants/site';
 
+import * as fs from 'fs';
+
 export const getStaticPaths = async baseDir => {
   const pagesPaths = await glob.sync(baseDir);
 
@@ -45,3 +47,12 @@ export const getStaticPaths = async baseDir => {
 
   return paths;
 };
+
+export const staticPathsOther = async baseDir => fs
+  .readdirSync(baseDir)
+  .filter(
+    staticPage => !['api', '_app.js', '_document.js', '404.js', 'sitemap.xml.js'].includes(
+      staticPage,
+    ),
+  )
+  .map(staticPagePath => `${SITE_URL}/${staticPagePath}`);

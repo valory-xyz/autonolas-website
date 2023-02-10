@@ -1,4 +1,8 @@
-import { getStaticPaths } from 'common-util/sitemapHelpers/staticPaths';
+import {
+  // getStaticPaths,
+
+  staticPathsOther,
+} from 'common-util/sitemapHelpers/staticPaths';
 import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
 
 export const triedPathForConfig = [
@@ -9,14 +13,19 @@ export const triedPathForConfig = [
 ];
 
 export const getServerSideProps = async ({ res }) => {
-  const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
-    ? '**/*.jsx'
-    : 'pages/**/*.jsx';
+  // const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
+  //   ? '**/*.jsx'
+  //   : 'pages/**/*.jsx';
 
   // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;
 
-  const staticPaths = await getStaticPaths(BASE_DIR);
+  // const staticPaths = await getStaticPaths(BASE_DIR);
   const dynamicPaths = await getDynamicPaths();
+
+  // TRY
+  const staticPaths = await staticPathsOther(
+    process.env.NODE_ENV.toLowerCase() === 'production' ? './' : 'pages',
+  );
 
   const allPaths = [...staticPaths, ...dynamicPaths];
 

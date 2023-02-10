@@ -3,7 +3,7 @@
 
 //   staticPathsOther,
 // } from 'common-util/sitemapHelpers/staticPaths';
-import globby from 'globby';
+import * as fs from 'fs';
 
 import { getDynamicPaths } from 'common-util/sitemapHelpers/dynamicPaths';
 
@@ -25,15 +25,23 @@ export const getServerSideProps = async ({ res }) => {
   // const staticPaths = await getStaticPaths(BASE_DIR);
   const dynamicPaths = await getDynamicPaths();
 
-  // TRY
-  const staticPaths = await globby([
-    'pages/*.(t|j)sx',
-    '!pages/_*.(t|j)sx', // for _app.tsx and _document.tsx
-    '!pages/[*.(t|j)sx', // for [...page].tsx and [[...page]].tsx
-    '!pages/api',
-    '!pages/404.(t|j)sx',
-    '!pages/500.(t|j)sx',
-  ]);
+  const baseUrl = {
+    development: 'http://localhost:5000',
+    production: 'https://mydomain.com',
+  }[process.env.NODE_ENV];
+
+  const staticPaths = fs
+    .readdirSync({
+      development: 'pages',
+      production: './',
+    }[process.env.NODE_ENV])
+    .filter(staticPage => ![
+      '_app.js',
+      '_document.js',
+      '_error.js',
+      'sitemap.xml.js',
+    ].includes(staticPage))
+    .map(staticPagePath => `${baseUrl}/${staticPagePath}`);
 
   const allPaths = [...staticPaths, ...dynamicPaths];
 

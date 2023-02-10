@@ -16,18 +16,21 @@ export const triedPathForConfig = [
 ];
 
 export const getServerSideProps = async ({ res }) => {
-  // const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
-  //   ? '**/*.jsx'
-  //   : 'pages/**/*.jsx';
+  const BASE_DIR = process.env.NODE_ENV.toLowerCase() === 'production'
+    ? './.next/server/pages/**/*.jsx'
+    : 'pages/**/*.jsx';
 
   // const BASE_DIR = `${process.cwd()}/pages/**/*.jsx`;
+  // {
+  //   development: 'pages',
+  //   production: './.next/server/pages',
+  // }[process.env.NODE_ENV],
 
   const staticPaths = await getStaticPaths(
-    {
-      development: 'pages',
-      production: './.next/server/pages',
-    }[process.env.NODE_ENV],
+    BASE_DIR,
+
   );
+  console.log(process.env.NODE_ENV);
   const dynamicPaths = await getDynamicPaths();
 
   // const baseUrl = {

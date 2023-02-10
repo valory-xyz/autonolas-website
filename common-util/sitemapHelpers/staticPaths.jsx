@@ -3,8 +3,7 @@ import { chain } from 'lodash';
 import { SITE_URL } from 'util/constants/site';
 
 export const getStaticPaths = async baseDir => {
-  const pagesDir = `${baseDir}**/*.jsx`;
-  const pagesPaths = await glob.sync(pagesDir);
+  const pagesPaths = await glob.sync(baseDir);
 
   console.log(pagesPaths);
 

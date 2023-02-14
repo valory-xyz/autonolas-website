@@ -4,7 +4,7 @@ import { META_TAGS_INFO } from 'util/constants/site';
 import Head from 'next/head';
 
 const Meta = ({ meta }) => {
-  const metaInfo = meta || META_TAGS_INFO;
+  const metaInfo = { ...META_TAGS_INFO, ...(meta || {}) };
 
   return (
     <Head>

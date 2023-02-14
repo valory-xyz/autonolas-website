@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import {
   Row, Col, Divider, Grid,
 } from 'antd';
@@ -7,15 +8,6 @@ import get from 'lodash/get';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';
 import { HeaderText } from 'common-util/styles';
-import {
-  BENEFITS_LIST,
-  HOW_TO_BUILD_ONE,
-  HOW_IT_WORKS,
-  FEATURES,
-} from './data';
-
-import Balancer from './Balancer';
-import CallToActionButton from '../Hero/CallToActionButton';
 
 // part of the homepage
 import WhatIsAutonolas from '../../../components/Learn/2WhatIsAutonolas';
@@ -24,10 +16,18 @@ import HowDoAutonolasWork from '../../../components/Learn/4HowDoAutonolasWork';
 import QuickIntroArticles from '../../../components/Learn/5QuickIntroArticles';
 import { LearnContainer } from '../../../components/HomePage/styles';
 
+import {
+  BENEFITS_LIST,
+  HOW_TO_BUILD_ONE,
+  HOW_IT_WORKS,
+  FEATURES,
+} from './data';
+import Balancer from './Balancer';
+import CallToActionButton from '../Hero/CallToActionButton';
+
 import { dividerCss } from '../styles';
 import {
   AssetManagementContainer,
-  FullImage,
   BenefitsContainer,
   HowItWorksAndBuildOneSection,
   HowItWorksContainer,
@@ -49,9 +49,11 @@ const getFeatures = list => (
         className="each-feature"
       >
         <div className="img-container">
-          <FullImage
+          <Image
             src={`/images/funnels/6AssetManagement/features/${imageUrl}`}
-            alt=" "
+            alt={`Features logo ${index + 1}`}
+            layout="fill"
+            objectFit="contain"
           />
         </div>
         <HeaderText>{name}</HeaderText>
@@ -75,9 +77,11 @@ const AssetManagement = ({ educationArticles, funnel }) => {
           }) => (
             <Col key={id} xs={12} md={6} lg={6} className="each-benefit">
               <div className="img-container">
-                <FullImage
+                <Image
                   src={`/images/funnels/6AssetManagement/benefits/${imageUrl}`}
-                  alt=" "
+                  alt={`Benefits ${name} logo`}
+                  layout="fill"
+                  objectFit="contain"
                 />
               </div>
               <HeaderText>{name}</HeaderText>
@@ -100,9 +104,11 @@ const AssetManagement = ({ educationArticles, funnel }) => {
                 className="each-how-it-works"
               >
                 <div className="img-container" style={imgStyle}>
-                  <img
+                  <Image
                     src={`/images/funnels/6AssetManagement/HowItWorks/${imageUrl}`}
-                    alt=" "
+                    alt={`'How it works logo ' ${index + 1}`}
+                    layout="fill"
+                    objectFit="contain"
                   />
                 </div>
                 <Description type={2} title={desc || ''} />
@@ -128,9 +134,11 @@ const AssetManagement = ({ educationArticles, funnel }) => {
                   className="each-how-to-build"
                 >
                   <div className="img-container" style={imgStyle}>
-                    <img
+                    <Image
                       src={`/images/funnels/6AssetManagement/HowToBuildOne/${imageUrl}`}
-                      alt=" "
+                      alt={`'How it build one logo ' ${index + 1}`}
+                      layout="fill"
+                      objectFit="contain"
                     />
                   </div>
                   <div>

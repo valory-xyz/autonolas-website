@@ -7,19 +7,19 @@ export const BENEFITS_LIST = [
     imageUrl: 'attract-more-liquidity.png',
   },
   {
-    id: 'b-1',
+    id: 'b-2',
     name: 'Stay Compliant',
     desc: 'Run automated funds without breaking any laws',
     imageUrl: 'stay-compliant.png',
   },
   {
-    id: 'b-1',
+    id: 'b-3',
     name: 'Take Control',
     desc: 'Plan for the future with total control and flexibility of your product infrastructure',
     imageUrl: 'take-control.png',
   },
   {
-    id: 'b-1',
+    id: 'b-4',
     name: 'Scale',
     desc: 'Deploy and manage more products, all with high-uptime',
     imageUrl: 'scale.png',

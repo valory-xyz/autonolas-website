@@ -13,9 +13,9 @@ export const META_TAGS_INFO = {
 
 export const CUSTOM_META_PAGES = [
   '/blog',
-  '/education-articles/',
+  '/education-articles',
   '/product',
-  'academy',
+  '/academy',
   '/whitepaper',
 
   // funnels landing pages

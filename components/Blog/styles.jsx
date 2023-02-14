@@ -28,8 +28,8 @@ export const SiderCard = styled.div`
   .sub-title {
     font-family: neuemachina__light;
     font-size: 19px;
-    text-transform: uppercase;
     margin-bottom: 0.25rem;
+    margin-top: 1rem;
   }
   .desc {
     font-size: 16px;

@@ -108,7 +108,6 @@ const Footer = () => (
             <td>
               <div className="footer-title">JOIN</div>
               <div className="links">
-                {getAnchor('TEAM', '/team', { isExternal: false })}
                 {getAnchor(
                   'CAREERS',
                   'https://angel.co/company/valory-3',

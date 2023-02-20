@@ -4,7 +4,7 @@
     "title": "Open Autonomy",
     "description": "Framework for building autonomous services",
     "liveLink": {
-      "url":"https://docs.autonolas.network/open-autonomy/",
+      "url": "https://docs.autonolas.network/open-autonomy/",
       "external": false
     }
   },
@@ -14,7 +14,7 @@
     "title": "Autonolas Protocol",
     "description": "Register and manage agents, components and autonomous services",
     "liveLink": {
-      "url":"https://protocol.autonolas.network",
+      "url": "https://protocol.autonolas.network",
       "external": false
     }
   },
@@ -24,7 +24,7 @@
     "title": "SMPKit",
     "description": "Build autonomous asset management products",
     "liveLink": {
-      "url":"",
+      "url": "",
       "external": false
     }
   },
@@ -34,7 +34,7 @@
     "title": "MintKit",
     "description": "Build autonomous NFT collector funds",
     "liveLink": {
-      "url":"https://elcollectooorr.art",
+      "url": "https://elcollectooorr.art",
       "external": false
     }
   },
@@ -44,7 +44,7 @@
     "title": "CoordinationKit",
     "description": "Coordinate DAO contributors autonomously",
     "liveLink": {
-      "url":"https://contribute.autonolas.network",
+      "url": "https://contribute.autonolas.network",
       "external": false
     }
   },
@@ -54,7 +54,7 @@
     "title": "MLKit",
     "description": "Build decentralized, ML-powered software services",
     "liveLink": {
-      "url":"https://oracle.autonolas.network/ml-apy-prediction",
+      "url": "https://oracle.autonolas.network/ml-apy-prediction",
       "external": false
     }
   },
@@ -64,7 +64,7 @@
     "title": "OracleKit",
     "description": "Robust aggregation of CEX pricing data for cryptoassets",
     "liveLink": {
-      "url":"https://oracle.autonolas.network/price",
+      "url": "https://oracle.autonolas.network/price",
       "external": false
     }
   },
@@ -74,7 +74,7 @@
     "title": "Autonomous Fund",
     "description": "Deploy your funds to a crypto fear and greed strategy",
     "liveLink": {
-      "url":"",
+      "url": "",
       "external": false
     }
   },
@@ -84,7 +84,7 @@
     "title": "El Collectooorr",
     "description": "Get passive exposure to new generative art collections",
     "liveLink": {
-      "url":"https://elcollectooorr.art",
+      "url": "https://elcollectooorr.art",
       "external": true
     }
   },
@@ -94,7 +94,7 @@
     "title": "Autonolas Contribute",
     "description": "Make guided contributions and get recognized for your efforts",
     "liveLink": {
-      "url":"https://contribute.autonolas.network",
+      "url": "https://contribute.autonolas.network",
       "external": false
     }
   }

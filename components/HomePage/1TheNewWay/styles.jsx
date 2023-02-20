@@ -31,6 +31,9 @@ export const SectionOne = styled.div`
   .description {
     line-height: normal;
   }
+  .lead {
+    font-size: 20px;
+  }
   .action-btns {
     display: flex;
     align-items: flex-end;

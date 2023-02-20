@@ -22,10 +22,8 @@ export const Container = styled(C)`
     max-width: 340px;
     .img-container-custom {
       margin: 0 auto;
+      text-align: center;
       height: 150px;
-      img {
-        width: 100%;
-      }
     }
     .header-text {
       margin-top: 0rem;
@@ -37,20 +35,11 @@ export const Container = styled(C)`
     &.column-1 {
       margin-right: 12rem;
       max-width: 340px;
-      .img-container-custom {
-        width: 180px;
-      }
     }
     &.column-2 {
-      .img-container-custom {
-        width: 140px;
-      }
     }
     &.column-3 {
       max-width: 360px;
-      .img-container-custom {
-        width: 120px;
-      }
     }
   }
   &::after {
@@ -92,9 +81,6 @@ export const Container = styled(C)`
       .img-container-custom {
         width: 140px !important;
         margin-top: 0.25rem;
-        img {
-          width: 70% !important;
-        }
       }
       .text-content {
         width: 64%;

@@ -1,13 +1,12 @@
 import React from 'react';
 import { Col, Row, Typography } from 'antd';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
-import {
-  HeaderAndAction,
-} from 'components/GlobalStyles';
+import { HeaderAndAction } from 'components/GlobalStyles';
 import { ROW_GUTTER } from 'util/theme';
 import { SectionBlog } from './styles';
 
@@ -23,14 +22,24 @@ const Blog = ({ blog }) => {
   return (
     <div key={`blog-${id}`} className="blog-item">
       <a href={`/${PATHS.BLOG}/${slug}`}>
-        <img src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`} alt={title} className="blog-item-image" />
+        <Image
+          src={`${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`}
+          alt={`${title} background image`}
+          className="blog-item-image"
+          layout="fill"
+          objectFit="contain"
+        />
       </a>
+
       <Title level={2}>{title}</Title>
+
       <p>{subtitle}</p>
 
-      <a href={`/${PATHS.BLOG}/${slug}`}>
-        <Button title="LEARN MORE" type="black" />
-      </a>
+      <Button
+        title="LEARN MORE"
+        type="black"
+        onClick={() => window.open(`/${PATHS.BLOG}/${slug}`, '_self')}
+      />
     </div>
   );
 };
@@ -56,7 +65,10 @@ const PressAndBlogs = ({ blogs }) => {
         </a>
       </HeaderAndAction>
 
-      <Row gutter={ROW_GUTTER} className="blog-collection-row">
+      <Row
+        gutter={ROW_GUTTER}
+        className="blog-collection-row blog-collection-row-1"
+      >
         {firstTwoBlogs.map(item => (
           <Col lg={12} sm={24} key={`blogs-${item.id}`}>
             <Blog blog={item} />

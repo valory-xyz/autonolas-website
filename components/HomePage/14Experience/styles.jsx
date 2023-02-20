@@ -14,9 +14,6 @@ export const SectionExperience = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
-      height: 110px;
-    }
     .desc-1 {
       position: absolute;
       left: 50%;
@@ -45,27 +42,9 @@ export const SectionExperience = styled.div`
     }
   }
 
-
-  ${MEDIA_QUERY.laptop} {
-    .header-row {
-      .img-2 {
-        height: 80px;
-      }
-    }
-  }
-
-
   ${MEDIA_QUERY.tablet} {
     padding-top: 4rem !important;
     padding-bottom: 0rem !important;
-    .header-row {
-      .img-1 {
-        height: 120px;
-      }
-      .img-2 {
-        height: 70px;
-      }
-    }
     .header {
       margin-top: 1rem;
       margin-bottom: 1rem !important;
@@ -79,14 +58,6 @@ export const SectionExperience = styled.div`
   ${MEDIA_QUERY.mobileL} {
     padding-top: 3rem !important;
     text-align: center;
-    .header-row {
-      .img-1 {
-        height: 72px;
-      }
-      .img-2 {
-        height: 30px;
-      }
-    }
     .description {
       max-width: 200px;
     }

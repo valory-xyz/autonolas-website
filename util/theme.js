@@ -28,8 +28,6 @@ export const FONT_SIZE = {
   18: '18px',
   16: '16px',
   14: '14px',
-
-  // TODO
 };
 
 export const BREAK_POINT = {

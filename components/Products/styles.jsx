@@ -6,12 +6,9 @@ export const ProductHero = styled.div`
   padding: 0 1rem;
   text-align: center;
 
-  .product-icon {
-    margin-bottom: 2rem;
-  }
-
   .product-title {
     display: block;
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
 

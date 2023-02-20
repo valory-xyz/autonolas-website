@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { Typography } from 'antd';
+import Image from 'next/image';
 import Link from 'next/link';
 import { META_TAGS_INFO, SITE_URL } from 'util/constants/site';
 import PropTypes from 'prop-types';
@@ -44,12 +45,11 @@ const ProductPage = ({ product }) => {
 
   return (
     <ProductHero>
-      <img
+      <Image
         src={`/images/products/icons/${id}.png`}
-        alt=" "
-        width="130px"
-        height="130px"
-        className="product-icon"
+        alt={`Product | ${title}`}
+        width={130}
+        height={130}
       />
 
       <Title level={1} className="product-title">
@@ -93,18 +93,17 @@ const ToolkitPage = ({ product }) => {
   return (
     <>
       <ProductHero>
-        <img
+        <Image
           src={`/images/products/icons/${id}.svg`}
-          alt=" "
-          className="product-icon"
+          alt={`Toolkit | ${title}`}
+          width={130}
+          height={130}
         />
 
         <Title level={1} className="product-title">
           {title}
         </Title>
-
         <p className="product-description">{description}</p>
-
         <br />
 
         <CallToActionButton
@@ -115,6 +114,7 @@ const ToolkitPage = ({ product }) => {
         />
         <br />
         <br />
+
         <Link href={`${PRODUCT_DOCS_PATH}${id}`} passHref>
           <a>
             <Button
@@ -126,6 +126,7 @@ const ToolkitPage = ({ product }) => {
         </Link>
         <br />
         <br />
+
         <Link href={BUILDER_HELP_URL} passHref>
           <a target="_blank" rel="noopener">
             <Button

@@ -36,7 +36,7 @@ const EducationArticle = ({ educationArticles }) => (
             </div>
 
             <a href={`/${PATHS.EDUCATION_ARTICLES}/${id}`}>
-              <Button title="LEARN MORE" type="black" className="mini" />
+              <Button title="LEARN MORE NOW" type="black" className="mini" />
             </a>
           </div>
         );

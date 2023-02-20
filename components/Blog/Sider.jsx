@@ -19,11 +19,12 @@ const Sider = ({ funnel }) => {
         <div className="img-container">
           <img
             src="/images/2WhatIsAutonolas/ecosystem.png"
-            alt=" "
-            style={{ width: '50%', marginBottom: '1rem' }}
+            alt="Sign up for updates logo"
+            width={148}
+            height={144}
           />
         </div>
-        <p className="sub-title">Sign up for updates</p>
+        <p className="sub-title">SIGN UP FOR UPDATES</p>
         <Title level={2}>Stay at the autonomous edge</Title>
         <div className="desc">
           Be the first to hear about everything new in the world of Autonolas,

@@ -29,7 +29,9 @@ export const BenefitsContainer = styled.div`
   .each-benefit {
     border-top: 1px solid ${COLOR.BLACK};
     .img-container {
+      position: relative;
       width: 160px;
+      height: 224px;
       padding: 2rem 0;
     }
     &:nth-child(2) {
@@ -55,6 +57,7 @@ export const BenefitsContainer = styled.div`
       border: none;
       .img-container {
         width: 120px;
+        height: 184px;
       }
       &:nth-child(2) {
         &:before,
@@ -79,6 +82,7 @@ export const HowItWorksContainer = styled.div`
   .each-how-it-works {
     text-align: center;
     .img-container {
+      position: relative;
       height: 240px;
       display: flex;
       align-items: center;

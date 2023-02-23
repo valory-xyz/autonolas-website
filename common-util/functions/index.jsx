@@ -39,14 +39,12 @@ export const getSocials = (socials, renderFormat = 'img') => (
               {size ? (
                 <Image
                   src={src}
-                  alt=""
+                  alt={`${type} icon`}
                   width={size.width}
                   height={size.height}
                 />
               ) : (
-                <>
-                  <img src={src} alt="" />
-                </>
+                <img src={src} alt="Arrow icon" />
               )}
             </>
           )}
@@ -100,10 +98,15 @@ export const getAnchor = (title, href, otherProps) => {
  * - elcollectooorr.art
  */
 export const openUrl = url => {
-  window.open(url, (url || '').includes('autonolas.network') ? '_self' : '_blank');
+  window.open(
+    url,
+    (url || '').includes('autonolas.network') ? '_self' : '_blank',
+  );
 };
 
-export const getProducts = (products, category) => products
-  .filter(product => product.category === category);
+/**
+ * filter products by category
+ */
+export const getProducts = (products, c) => products.filter(product => product.category === c);
 
 export const getProduct = (products, id) => products.find(product => product.id === id);

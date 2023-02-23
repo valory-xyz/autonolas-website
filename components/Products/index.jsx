@@ -78,6 +78,14 @@ const ProductPage = ({ product }) => {
   );
 };
 
+Products.propTypes = {
+  product: PropTypes.instanceOf(Object).isRequired,
+};
+
+ProductPage.propTypes = {
+  product: PropTypes.instanceOf(Object).isRequired,
+};
+
 const ToolkitPage = ({ product }) => {
   const {
     id, title, description, liveLink,
@@ -107,7 +115,7 @@ const ToolkitPage = ({ product }) => {
         />
         <br />
         <br />
-        <Link href={`${PRODUCT_DOCS_PATH}${id}`}>
+        <Link href={`${PRODUCT_DOCS_PATH}${id}`} passHref>
           <a>
             <Button
               className="product-cta-btn"
@@ -118,7 +126,7 @@ const ToolkitPage = ({ product }) => {
         </Link>
         <br />
         <br />
-        <Link href={BUILDER_HELP_URL}>
+        <Link href={BUILDER_HELP_URL} passHref>
           <a target="_blank" rel="noopener">
             <Button
               className="product-cta-btn"
@@ -130,14 +138,6 @@ const ToolkitPage = ({ product }) => {
       </ProductHero>
     </>
   );
-};
-
-Products.propTypes = {
-  product: PropTypes.instanceOf(Object).isRequired,
-};
-
-ProductPage.propTypes = {
-  product: PropTypes.instanceOf(Object).isRequired,
 };
 
 ToolkitPage.propTypes = {

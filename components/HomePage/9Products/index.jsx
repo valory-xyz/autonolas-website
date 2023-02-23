@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
-import {
-  Col, Row, Typography,
-} from 'antd';
+import { Col, Row, Typography } from 'antd';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Link from 'next/dist/client/link';
-import allProducts from 'components/Products/products.json';
+import allProducts from 'common-util/data/products.json';
 import { LinkCard } from 'components/GlobalStyles';
 import { PRODUCT_PATH } from 'util/paths';
 import { getProducts } from 'common-util/functions';
@@ -32,11 +30,12 @@ const Products = () => (
 
     <HeadersRow>
       <Col xs={24}>
-        <h3 className="product-title main-title">For Users — by Ecosystem Builders</h3>
+        <h3 className="product-title main-title">
+          For Users — by Ecosystem Builders
+        </h3>
       </Col>
     </HeadersRow>
     <ProductsCategory products={allProducts} category="user" />
-
   </ProductsSection>
 );
 
@@ -45,39 +44,32 @@ const ProductsCategory = ({ products, category }) => {
 
   return (
     <Row gutter={[16, 24]} className="products-category-row">
-      {
-        filteredProducts.map(
-          product => {
-            const {
-              description,
-              id,
-              title,
-            } = product;
-            const imageFilename = category === 'toolkit' ? `${id}.svg` : `${id}.png`;
+      {filteredProducts.map(product => {
+        const { description, id, title } = product;
+        const imageFilename = category === 'toolkit' ? `${id}.svg` : `${id}.png`;
 
-            return (
-              <Col key={id} lg={6} md={12} sm={12} xs={24}>
-                <Link href={`${PRODUCT_PATH}${id}`} legacyBehavior>
-                  <a>
-                    <LinkCard className={category}>
-                      <Image
-                        src={BASE_IMAGES_PATH + imageFilename}
-                        className="product-image"
-                        width="100px"
-                        height="100px"
-                      />
+        return (
+          <Col key={id} lg={6} md={12} sm={12} xs={24}>
+            <Link href={`${PRODUCT_PATH}${id}`} legacyBehavior passHref>
+              <a>
+                <LinkCard className={category}>
+                  <Image
+                    src={BASE_IMAGES_PATH + imageFilename}
+                    className="product-image"
+                    width="100px"
+                    height="100px"
+                    alt={`${title} product`}
+                  />
 
-                      <h3 className="product-title">{title}</h3>
+                  <h3 className="product-title">{title}</h3>
 
-                      <Text className="product-description">{description}</Text>
-                    </LinkCard>
-                  </a>
-                </Link>
-              </Col>
-            );
-          },
-        )
-      }
+                  <Text className="product-description">{description}</Text>
+                </LinkCard>
+              </a>
+            </Link>
+          </Col>
+        );
+      })}
     </Row>
   );
 };

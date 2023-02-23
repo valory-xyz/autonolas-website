@@ -27,7 +27,6 @@ const content = [
   },
 ];
 
-
 const SectionOneBirthPlace = ({ isNavigationOpen }) => (
   <SectionOne
     className="section section-1"
@@ -36,19 +35,27 @@ const SectionOneBirthPlace = ({ isNavigationOpen }) => (
   >
     <Header className="header" title={SITE_TAGLINE} as="h1" />
     <DescActionButtons>
-      <Typography.Title level={4} className="lead">
-        Our open-source software stack enables you to run your
-        {' '}
+      <Typography.Title level={2} className="lead">
+        Our open-source software stack enables you to run your&nbsp;
         <div className="text-rotator-container">
-          <ReactTextRotator content={content} time={2500} startDelay={250} transitionTime={500} />
+          <ReactTextRotator
+            content={content}
+            time={2500}
+            startDelay={250}
+            transitionTime={500}
+          />
         </div>
-        {' '}
-        as a unified, decentralized off-chain system.
+        &nbsp;as a unified, decentralized off-chain system.
       </Typography.Title>
+
       <div className="action-btns">
         <Link href="/#ecosystem-builders" passHref>
           <a>
-            <Button hasArrowSuffix type="purple" title="Get support with your project" />
+            <Button
+              hasArrowSuffix
+              type="purple"
+              title="Get support with your project"
+            />
           </a>
         </Link>
       </div>

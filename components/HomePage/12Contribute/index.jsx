@@ -21,7 +21,12 @@ const SectionContribute = ({ isNavigationOpen }) => (
       />
 
       <div className="action-btns">
-        <Button hasArrowSuffix type="purple" title="Start Contributing" onClick={() => window.open('https://contribute.autonolas.network')} />
+        <Button
+          hasArrowSuffix
+          type="purple"
+          title="Start Contributing"
+          onClick={() => window.open('https://contribute.autonolas.network')}
+        />
       </div>
     </DescActionButtons>
   </SectionContributeContainer>

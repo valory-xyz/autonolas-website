@@ -2,6 +2,7 @@
 import qs from 'qs';
 import get from 'lodash/get';
 import isFinite from 'lodash/isFinite';
+import products from '../data/products.json';
 
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/api`;
 
@@ -92,6 +93,8 @@ export const getBlogs = async () => {
   return data;
 };
 
+// ----------- PRODUCTS -----------
+export const getProducts = async () => products;
 
 /**
  * `Blog` should be able to return a response if queried with `id` or `slug`.

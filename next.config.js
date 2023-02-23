@@ -30,4 +30,18 @@ module.exports = withAntdLess({
       },
     ];
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        /**
+         * fetch the hostname from the url
+         * example: https://api.autonolas.com => api.autonolas.com
+         */
+        hostname: process.env.NEXT_PUBLIC_API_URL.match(/([^//]+$)/)[0],
+        port: '',
+        pathname: '/uploads/**',
+      },
+    ],
+  },
 });

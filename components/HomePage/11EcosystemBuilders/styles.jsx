@@ -21,12 +21,7 @@ export const Container = styled.div`
     max-width: 610px;
     padding: 2.5rem 1rem 0 0;
     .img-container-custom {
-      height: 120px;
       margin-right: 2rem;
-      img {
-        width: 100%;
-        height: 100%;
-      }
     }
     .text-content {
       flex: 1;

@@ -1,6 +1,6 @@
 ## 1. General information
 
-Autonolas is a product and brand of Valory AG, a limited company located at Gubelstrasse 12, 6300 Zug, Switzerland (Company Registration No.: CHE-355.652.627). Valory AG is the the operator of the website, [autonolas.network](http://autonolas.network/).
+Autonolas is a product and brand of Valory AG, a limited company located at Gubelstrasse 12, 6300 Zug, Switzerland (Company Registration No.: CHE-355.652.627). Valory AG is the operator of the website, [autonolas.network](http://autonolas.network/).
 
 We take the protection of your personal data very seriously. We collect, process and use your personal data in accordance with this privacy policy and in compliance with the Swiss Federal Act on Data Protection (&quot;FADP&quot;), the Swiss Ordinance to the Federal Act on Data Protection (&quot;OFADP&quot;), and the General European Data Protection Regulation (&quot;GDPR&quot;).
 

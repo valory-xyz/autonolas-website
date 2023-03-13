@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'antd';
+import { Grid } from 'antd/lib';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';

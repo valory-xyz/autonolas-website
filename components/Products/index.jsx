@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Typography } from 'antd';
+import { Typography } from 'antd/lib';
 import Link from 'next/link';
 import { META_TAGS_INFO, SITE_URL } from 'util/constants/site';
 import PropTypes from 'prop-types';

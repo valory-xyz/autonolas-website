@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from 'antd';
+import { Typography } from 'antd/lib';
 import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';
 import { handleJoinDiscord } from 'common-util/functions';

@@ -18,9 +18,6 @@ export const IEKitContainer = styled.div`
     max-width: 1024px;
     border: none;
   }
-  .section {
-    /* max-width: ${MAX_WIDTH}; */
-  }
   .ant-typography {
     max-width: ${MAX_WIDTH};
     margin-left: auto;
@@ -79,4 +76,10 @@ export const IEKitContainer = styled.div`
       margin-bottom: 1rem;
     }
   }
+`;
+
+export const TitleSubL1 = styled.h2`
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.23;
 `;

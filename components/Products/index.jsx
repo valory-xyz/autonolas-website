@@ -1,13 +1,11 @@
 import { useRouter } from 'next/router';
 import { Typography } from 'antd/lib';
-import Link from 'next/link';
 import { META_TAGS_INFO, SITE_URL } from 'util/constants/site';
 import PropTypes from 'prop-types';
 import Meta from 'common-util/meta';
-import Button from 'common-util/Button';
 import CallToActionButton from 'common-util/FunnelLandingPage/Hero/CallToActionButton';
-import { BUILDER_HELP_URL, PRODUCT_DOCS_PATH } from 'util/paths';
 import { IEKit } from './IEKit';
+import { ToolkitPage } from './Toolkit';
 import { ProductHero } from './styles';
 
 const { Title } = Typography;
@@ -15,8 +13,12 @@ const { Title } = Typography;
 const Products = ({ product }) => {
   const router = useRouter();
   const { pathname } = router;
-
   const { category, title, description } = product || {};
+
+  // IEKit has a different layout
+  if (category === 'toolkit' && title === 'IEKit') {
+    return <IEKit />;
+  }
 
   return (
     <>
@@ -34,9 +36,6 @@ const Products = ({ product }) => {
       ) : (
         <ProductPage product={product} />
       )}
-
-      {/* if the type is tookit and iekit show the component */}
-      <IEKit product={product} />
     </>
   );
 };
@@ -90,67 +89,6 @@ Products.propTypes = {
 };
 
 ProductPage.propTypes = {
-  product: PropTypes.instanceOf(Object).isRequired,
-};
-
-/**
- * Toolkit page component
- */
-const ToolkitPage = ({ product }) => {
-  const {
-    id, title, description, liveLink,
-  } = product || {};
-  return (
-    <>
-      <ProductHero>
-        <img
-          src={`/images/products/icons/${id}.svg`}
-          alt=" "
-          className="product-icon"
-        />
-
-        <Title level={1} className="product-title">
-          {title}
-        </Title>
-
-        <p className="product-description">{description}</p>
-
-        <br />
-
-        <CallToActionButton
-          href={liveLink.url}
-          external={liveLink.external}
-          btnText="View demo"
-          className="product-cta-btn"
-        />
-        <br />
-        <br />
-        <Link href={`${PRODUCT_DOCS_PATH}${id}`} passHref>
-          <a>
-            <Button
-              className="product-cta-btn"
-              title="View docs"
-              type="black"
-            />
-          </a>
-        </Link>
-        <br />
-        <br />
-        <Link href={BUILDER_HELP_URL} passHref>
-          <a target="_blank" rel="noopener">
-            <Button
-              className="product-cta-btn"
-              title="Get help building"
-              type="black"
-            />
-          </a>
-        </Link>
-      </ProductHero>
-    </>
-  );
-};
-
-ToolkitPage.propTypes = {
   product: PropTypes.instanceOf(Object).isRequired,
 };
 

@@ -67,7 +67,7 @@ export const FEATURES = [
 
 export const MORE_INFO = [
   {
-    id: 'oraclekit',
+    id: 'oraclekit', // TODO: fix logo
     title: 'About Ceramic',
     description:
       "Ceramic is a decentralized data storage network that provides a tamper-evident, immutable, and censorship-resistant foundation for building data-driven applications. It's the perfect substrate for Impact Evaluators built with IEKit.",
@@ -77,7 +77,7 @@ export const MORE_INFO = [
     },
   },
   {
-    id: 'oraclekit',
+    id: 'mlkit', // TODO: fix logo
     title: 'About Autonolas',
     description:
       "Autonolas is a suite of tools for building off-chain, decentralized servers which can be directly owned by your DAO. It's what powers the backend of Impact Evaluators built with IEKit.",

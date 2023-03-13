@@ -96,6 +96,12 @@ export const getBlogs = async () => {
 // ----------- PRODUCTS -----------
 export const getProducts = async () => products;
 
+export const getProduct = id => {
+  const product = products.find(p => p.id === id);
+  if (!product) { throw new Error(`Product with id ${id} not found`); }
+  return product;
+};
+
 /**
  * `Blog` should be able to return a response if queried with `id` or `slug`.
  * If `filters` query is used, the response will be an array hence return the 1st element fetched

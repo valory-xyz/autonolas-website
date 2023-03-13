@@ -7,6 +7,7 @@ import Meta from 'common-util/meta';
 import Button from 'common-util/Button';
 import CallToActionButton from 'common-util/FunnelLandingPage/Hero/CallToActionButton';
 import { BUILDER_HELP_URL, PRODUCT_DOCS_PATH } from 'util/paths';
+import { IEKit } from './IEKit';
 import { ProductHero } from './styles';
 
 const { Title } = Typography;
@@ -33,10 +34,16 @@ const Products = ({ product }) => {
       ) : (
         <ProductPage product={product} />
       )}
+
+      {/* if the type is tookit and iekit show the component */}
+      <IEKit product={product} />
     </>
   );
 };
 
+/**
+ * Product page component
+ */
 const ProductPage = ({ product }) => {
   const {
     description, id, liveLink, title,
@@ -86,6 +93,9 @@ ProductPage.propTypes = {
   product: PropTypes.instanceOf(Object).isRequired,
 };
 
+/**
+ * Toolkit page component
+ */
 const ToolkitPage = ({ product }) => {
   const {
     id, title, description, liveLink,

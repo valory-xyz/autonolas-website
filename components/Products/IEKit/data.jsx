@@ -1,3 +1,4 @@
+import { AutonolasLogo, CeramicLogo } from 'common-util/svg';
 
 export const IMPACT_EVALUATORS = [
   {
@@ -67,7 +68,8 @@ export const FEATURES = [
 
 export const MORE_INFO = [
   {
-    id: 'oraclekit', // TODO: fix logo
+    id: 'ceramic-more-info',
+    logoComponent: <CeramicLogo width={62} height={60} />,
     title: 'About Ceramic',
     description:
       "Ceramic is a decentralized data storage network that provides a tamper-evident, immutable, and censorship-resistant foundation for building data-driven applications. It's the perfect substrate for Impact Evaluators built with IEKit.",
@@ -77,7 +79,8 @@ export const MORE_INFO = [
     },
   },
   {
-    id: 'mlkit', // TODO: fix logo
+    id: 'autonolas-more-info',
+    logoComponent: <AutonolasLogo width={124} height={60} />,
     title: 'About Autonolas',
     description:
       "Autonolas is a suite of tools for building off-chain, decentralized servers which can be directly owned by your DAO. It's what powers the backend of Impact Evaluators built with IEKit.",

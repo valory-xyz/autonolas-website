@@ -48,7 +48,10 @@ export const IEKit = () => {
             <div>Make a difference.</div>
           </TitleSubL1>
           <div className="img-container">
-            <img src="/images/products/screens/iekit/dummy-image.png" alt=" " />
+            <img
+              src="/images/products/screens/iekit/LP-IEKit-image.png"
+              alt=" "
+            />
           </div>
 
           <div className="list-details">
@@ -103,11 +106,7 @@ export const IEKit = () => {
 
           {MORE_INFO.map(ie => (
             <div key={ie.id}>
-              <img
-                src={`/images/products/icons/${ie.id}.svg`}
-                alt=" "
-                className="product-icon"
-              />
+              <div className="more-info-logo">{ie.logoComponent}</div>
               <Title level={2} className="product-title">
                 {ie.title}
               </Title>

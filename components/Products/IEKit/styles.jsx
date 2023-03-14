@@ -31,6 +31,10 @@ export const IEKitContainer = styled.div`
     }
     .img-container {
       margin: 2rem auto 1rem auto;
+      img {
+        width: 100%;
+        max-width: ${MAX_WIDTH};
+      }
     }
     .list-details {
       max-width: ${MAX_WIDTH};
@@ -73,6 +77,7 @@ export const IEKitContainer = styled.div`
       margin-bottom: 1rem;
     }
     h2 {
+      margin-top: 1rem;
       margin-bottom: 1rem;
     }
   }

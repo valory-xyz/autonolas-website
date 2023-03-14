@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 export const AutonolasLogoWithoutWording = ({ width = 145, height = 158 }) => (
@@ -194,6 +193,8 @@ DiscordLogo.propTypes = {
 DiscordLogo.defaultProps = {
   fill: '#7200D6',
 };
+
+export { CeramicLogo } from './CeramicLogo';
 
 // TODO fix this
 // export default function Icon({ name, width, height }) {

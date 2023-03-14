@@ -1,5 +1,6 @@
 // import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { Typography, Row, Col } from 'antd/lib';
 import { kebabCase } from 'lodash';
 import { META_TAGS_INFO, SITE_URL } from 'util/constants/site';
@@ -11,6 +12,8 @@ import { IMPACT_EVALUATORS, FEATURES, MORE_INFO } from './data';
 import { IEKitContainer, TitleSubL1 } from './styles';
 
 const { Title, Paragraph } = Typography;
+
+const BASE_IMAGES_PATH = '/images/products/screens/iekit/icons/';
 
 export const IEKit = () => {
   const router = useRouter();
@@ -58,10 +61,13 @@ export const IEKit = () => {
             <Row justify="space-between" gutter={[32, 32]}>
               {IMPACT_EVALUATORS.map(ie => (
                 <Col xs={24} lg={12} key={kebabCase(ie.title)}>
-                  <h3>
-                    <span>{ie.emoji}</span>
-                    {ie.title}
-                  </h3>
+                  <Image
+                    src={`${BASE_IMAGES_PATH + ie.id}.png`}
+                    width="94px"
+                    height="94px"
+                    alt={`${ie.title}`}
+                  />
+                  <h3>{ie.title}</h3>
                   <p>{ie.description}</p>
                 </Col>
               ))}
@@ -76,7 +82,12 @@ export const IEKit = () => {
             <Row justify="space-between" gutter={[32, 32]}>
               {FEATURES.map(ie => (
                 <Col xs={24} lg={12} key={kebabCase(ie.title)}>
-                  <div>{ie.emoji}</div>
+                  <Image
+                    src={`${BASE_IMAGES_PATH + ie.id}.png`}
+                    width="108px"
+                    height="108px"
+                    alt={`${ie.title}`}
+                  />
                   <h3>{ie.title}</h3>
                   <p>{ie.description}</p>
                 </Col>

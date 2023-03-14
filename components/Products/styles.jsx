@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { BORDER_RADIUS, BOX_SHADOW, COLOR } from 'util/theme';
+import {
+  BORDER_RADIUS, BOX_SHADOW, COLOR, MEDIA_QUERY,
+} from 'util/theme';
 
 export const ProductHero = styled.div`
   padding: 10rem 1rem;
@@ -25,5 +27,9 @@ export const ProductHero = styled.div`
     box-shadow: ${BOX_SHADOW};
     margin-top: 2rem;
     width: 100%;
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    padding: 4rem 1rem;
   }
 `;

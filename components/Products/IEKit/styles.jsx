@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import { BORDER_RADIUS, BOX_SHADOW, COLOR } from 'util/theme';
+import { MEDIA_QUERY } from 'util/theme';
 
 const MAX_WIDTH = '1024px';
 
@@ -74,6 +74,20 @@ export const IEKitContainer = styled.div`
     }
     h2 {
       margin-bottom: 1rem;
+    }
+  }
+
+  ${MEDIA_QUERY.tablet} {
+    .iekit-section-1 {
+      .img-container img {
+        width: 100%;
+      }
+    }
+  }
+
+  ${MEDIA_QUERY.mobileL} {
+    .youtube-iframe {
+      height: 280px;
     }
   }
 `;

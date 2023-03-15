@@ -99,7 +99,7 @@ export const getProducts = async () => products;
 export const getProduct = id => {
   const product = products.find(p => p.id === id);
   if (!product) { throw new Error(`Product with id ${id} not found`); }
-  return product;
+  return { ...product };
 };
 
 /**

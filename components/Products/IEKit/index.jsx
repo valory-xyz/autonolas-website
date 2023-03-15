@@ -43,7 +43,7 @@ export const IEKit = () => {
             title="IEKit Demo"
             src="https://drive.google.com/file/d/1qupKJ4Nqm7VYlqrVhLnFVIZ2NSjYZ38b/preview"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen=""
+            allowFullScreen
             className="youtube-iframe"
           />
 
@@ -105,9 +105,9 @@ export const IEKit = () => {
           </Paragraph>
           <iframe
             title="Learn more about Impact Evaluators"
-            src="https://www.youtube.com/embed/95TzYSSZN9s"
+            src="https://www.youtube.com/embed/95TzYSSZN9s?start=1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen=""
+            allowFullScreen
             className="youtube-iframe"
           />
         </div>

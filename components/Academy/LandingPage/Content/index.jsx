@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Col, Row } from 'antd';
+import { Col, Row } from 'antd/lib';
 import Description from 'common-util/Description';
 import Header from 'common-util/Header';
 import CallToActionButton from '../CallToActionButton';

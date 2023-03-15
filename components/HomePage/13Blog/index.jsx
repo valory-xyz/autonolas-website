@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Typography } from 'antd';
+import { Col, Row, Typography } from 'antd/lib';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';

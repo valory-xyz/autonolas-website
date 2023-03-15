@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'antd';
+import { Row, Col } from 'antd/lib';
 import get from 'lodash/get';
 import Header from 'common-util/Header';
 import Description from 'common-util/Description';

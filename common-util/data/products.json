@@ -69,6 +69,16 @@
     }
   },
   {
+    "id": "iekit",
+    "category": "toolkit",
+    "title": "IEKit",
+    "description": "An open-source framework for creating and running Impact Evaluators with Ceramic and Autonolas.",
+    "liveLink": {
+      "url": "https://iekit.autonolas.network",
+      "external": false
+    }
+  },
+  {
     "id": "autonomous-fund",
     "category": "user",
     "title": "Autonomous Fund",

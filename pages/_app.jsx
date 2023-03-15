@@ -9,7 +9,9 @@ import GlobalStyle from 'components/GlobalStyles';
 import Layout from 'components/Layout';
 import CookieConsentBanner from 'components/CookieConsentBanner';
 import initStore from '../store';
-import './styles.less';
+
+require('./styles.less');
+
 
 const MyApp = ({ Component, pageProps, router }) => {
   useEffect(() => {

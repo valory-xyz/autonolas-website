@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import {
   Row, Col, Divider, Grid,
-} from 'antd';
+} from 'antd/lib';
 import Header from 'common-util/Header';
 import { SectionScaleYourDao, Content } from './styles';
 

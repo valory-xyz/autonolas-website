@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Divider } from 'antd';
+import { Divider } from 'antd/lib';
 import { connect } from 'react-redux';
 import Content from './Content';
 import Hero from './Hero';

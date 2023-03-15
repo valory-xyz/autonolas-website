@@ -1,4 +1,4 @@
-import { Col, Row, Grid } from 'antd';
+import { Col, Row, Grid } from 'antd/lib';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';

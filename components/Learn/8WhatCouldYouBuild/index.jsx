@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from 'common-util/Header';
-import { Col, Row } from 'antd';
+import { Col, Row } from 'antd/lib';
 import Description from 'common-util/Description';
 import Title from 'antd/lib/typography/Title';
 import Link from 'next/link';

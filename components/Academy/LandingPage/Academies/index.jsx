@@ -1,4 +1,4 @@
-import { Table } from 'antd';
+import { Table } from 'antd/lib';
 import Header from 'common-util/Header';
 import { getAnchor } from 'common-util/functions';
 import { AcademiesContainer } from './styles';

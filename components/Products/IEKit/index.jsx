@@ -38,13 +38,14 @@ export const IEKit = () => {
       <IEKitContainer>
         <div className="section iekit-section-1 grey-bg">
           <Title level={2}>See IEKit in action</Title>
-          <iframe
-            title="IEKit Demo"
-            src="https://www.youtube.com/embed/95TzYSSZN9s"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen=""
-            className="youtube-iframe"
-          />
+          <video width="400" controls className="youtube-iframe">
+            <source
+              src="/images/products/screens/iekit/iekit-demo.mp4"
+              type="video/mp4"
+            />
+            <track kind="captions" />
+            Your browser does not support HTML video.
+          </video>
 
           <TitleSubL1 className="h2-impact">
             <div>Experiment with Impact Evaluators.</div>

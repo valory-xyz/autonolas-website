@@ -14,7 +14,7 @@ export const IEKitContainer = styled.div`
   }
   .youtube-iframe {
     width: 100%;
-    height: 480px;
+    height: 580px;
     max-width: 1024px;
     border: none;
   }
@@ -79,6 +79,20 @@ export const IEKitContainer = styled.div`
     h2 {
       margin-top: 1rem;
       margin-bottom: 1rem;
+    }
+  }
+
+  ${MEDIA_QUERY.laptop} {
+    .youtube-iframe {
+      height: 520px;
+      max-width: 886px;
+    }
+  }
+
+  ${MEDIA_QUERY.tabletL} {
+    .youtube-iframe {
+      height: 426px;
+      max-width: 886px;
     }
   }
 

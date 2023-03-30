@@ -104,9 +104,6 @@ const Footer = () => (
                 {getAnchor('PRIVACY POLICY', `/${PATHS.PRIVACY_POLICY}`, {
                   isExternal: false,
                 })}
-                {getAnchor('COOKIES POLICY', `/${PATHS.COOKIES_POLICY}`, {
-                  isExternal: false,
-                })}
               </div>
             </td>
           </tr>

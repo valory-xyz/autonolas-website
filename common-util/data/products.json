@@ -108,5 +108,15 @@
       "url": "https://contribute.autonolas.network",
       "external": false
     }
+  },
+  {
+    "id": "autonomous-keeper-service",
+    "category": "user",
+    "title": "Autonomous Keeper Service",
+    "description": "Make guided contributions and get recognized for your efforts",
+    "liveLink": {
+      "url": "https://contribute.autonolas.network",
+      "external": false
+    }
   }
 ]

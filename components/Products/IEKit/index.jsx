@@ -37,16 +37,6 @@ export const IEKit = () => {
 
       <IEKitContainer>
         <div className="section iekit-section-1 grey-bg">
-          <Title level={2}>See IEKit in action</Title>
-
-          <iframe
-            title="IEKit Demo"
-            src="https://drive.google.com/file/d/1qupKJ4Nqm7VYlqrVhLnFVIZ2NSjYZ38b/preview"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="youtube-iframe"
-          />
-
           <TitleSubL1 className="h2-impact">
             <div>Experiment with Impact Evaluators.</div>
             <div>Make a difference.</div>

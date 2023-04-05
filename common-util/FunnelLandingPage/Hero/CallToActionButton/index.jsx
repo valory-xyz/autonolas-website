@@ -6,7 +6,7 @@ import Link from 'next/link';
 const CallToActionButton = ({
   href, btnText, type, external,
 }) => {
-  const externalAttr = external && { target: '_blank', rel: 'noopener' };
+  const externalAttr = external ? { target: '_blank', rel: 'noopener' } : {};
 
   return (
     <Link href={href} passHref>

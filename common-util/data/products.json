@@ -113,9 +113,9 @@
     "id": "autonomous-keeper-service",
     "category": "user",
     "title": "Autonomous Keeper Service",
-    "description": "Make guided contributions and get recognized for your efforts",
+    "description": "Elevate your smart contract operations with collaborative, consensus-driven keepers",
     "liveLink": {
-      "url": "https://contribute.autonolas.network",
+      "url": "https://etherscan.io/address/0x0a9a74274b1C30845aF98683Ca7F843795f6DFA6#writeContract",
       "external": false
     }
   }

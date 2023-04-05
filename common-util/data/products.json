@@ -116,7 +116,7 @@
     "description": "Elevate your smart contract operations with collaborative, consensus-driven keepers",
     "liveLink": {
       "url": "https://etherscan.io/address/0x0a9a74274b1C30845aF98683Ca7F843795f6DFA6#writeContract",
-      "external": false
+      "external": true
     }
   }
 ]

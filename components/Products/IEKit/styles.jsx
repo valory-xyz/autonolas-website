@@ -27,7 +27,7 @@ export const IEKitContainer = styled.div`
   /* each different sections */
   .iekit-section-1 {
     .h2-impact {
-      padding-top: 8rem;
+      padding-top: 3rem;
     }
     .img-container {
       margin: 2rem auto 1rem auto;

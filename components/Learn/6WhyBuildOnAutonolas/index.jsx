@@ -7,7 +7,7 @@ const LIST = [
     imageUrl: 'edge',
     heading: 'GET AN EDGE',
     subHeading:
-      'Overcome the constraints of current developer tools, and get traction in an ocean of new opportunity.',
+      'Overcome the constraints of current developer tools, and get traction in an ocean of new opportunities.',
   },
   {
     imageUrl: 'pioneer',

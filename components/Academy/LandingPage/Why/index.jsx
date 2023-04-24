@@ -11,7 +11,7 @@ const Why = () => (
     <div className="text-body">
       <Description
         type={3}
-        title="DeFi and on-chain development continues to grow and innovate at an impressive rate. Off-chain… not so much. The solutions available are often overly centralized, inflexible and siloed."
+        title="DeFi and on-chain development continue to grow and innovate at an impressive rate. Off-chain… not so much. The solutions available are often overly centralized, inflexible and siloed."
       />
       <Description
         type={3}

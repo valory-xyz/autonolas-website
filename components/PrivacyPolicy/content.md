@@ -1,199 +1,57 @@
-## 1. General information
+## What information do we collect?
 
-Autonolas is a product and brand of Valory AG, a limited company located at Gubelstrasse 12, 6300 Zug, Switzerland (Company Registration No.: CHE-355.652.627). Valory AG is the the operator of the website, [autonolas.network](http://autonolas.network/).
+We collect information from you when you register on our site and gather data when you participate in the forum by reading, writing, and evaluating the content shared here.
 
-We take the protection of your personal data very seriously. We collect, process and use your personal data in accordance with this privacy policy and in compliance with the Swiss Federal Act on Data Protection (&quot;FADP&quot;), the Swiss Ordinance to the Federal Act on Data Protection (&quot;OFADP&quot;), and the General European Data Protection Regulation (&quot;GDPR&quot;).
+When registering on our site, you may be asked to enter your name and e-mail address. You may, however, visit our site without registering. Your e-mail address will be verified by an email containing a unique link. If that link is visited, we know that you control the e-mail address.
 
-This privacy policy (&quot;Privacy Policy&quot;) will provide you with information about the collection, processing, and use of your personal data when using our website.
+When registered and posting, we record the IP address that the post originated from. We also may retain server logs which include the IP address of every request to our server.
 
-In case you provide us with the personal data of third persons (such as family members, work colleagues) you should make sure that these persons are familiar with this Privacy Policy and you should only share their personal data if you have permission to do so and ensure that his personal data is correct.
+## What do we use your information for?
 
-## 2. Responsible Person
+Any of the information we collect from you may be used in one of the following ways:
 
-For any matters, relating to data protection you may contact [info@valory.xyz](mailto:info@valory.xyz) in writing by e-mail or letter to the following address:
+- To personalize your experience — your information helps us to better respond to your individual needs.
+- To improve our site — we continually strive to improve our site offerings based on the information and feedback we receive from you.
+- To improve customer service — your information helps us to more effectively respond to your customer service requests and support needs.
+- To send periodic emails — The email address you provide may be used to send you information, notifications that you request about changes to topics or in response to your user name, respond to inquiries, and/or other requests or questions.
 
-Gubelstrasse 12, 6300 Zug, Switzerland
+## How do we protect your information?
 
-Email: [info@valory.xyz](mailto:info@valory.xyz)
+We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information.
 
-## 3. Data processing in connection with the site
 
+## What is your data retention policy?
 
-## 3.1 Visiting our website
+We will make a good faith effort to:
+- Retain server logs containing the IP address of all requests to this server no more than 90 days.
+- Retain the IP addresses associated with registered users and their posts no more than 5 years.
 
-When you visit our website, the hosting provider of our website, Ionos, automatically collects and stores various information in so-called server log files that your browser transmits to us. The information/data mentioned is neither assigned to specific persons nor linked to data from other sources.
 
-Furthermore, the IP addresses will be evaluated, together with other data, in case of attacks on the network infrastructure or other unauthorised use or misuse of the website, for the purpose of intelligence and protection, and if appropriate, used in criminal proceedings for identification and civil and criminal proceedings against the relevant users. This is our legitimate interest in the processing of data in the sense of Art. 6 Par. 1 lit. f GDPR.
+## Do we use cookies?
+Yes. Cookies are small files that a site or its service provider transfers to your computer’s hard drive through your Web browser (if you allow). These cookies enable the site to recognize your browser and, if you have a registered account, associate it with your registered account.
 
-As we built our website with Wix.com, Wix.com may also process site visitors&#39; data following Valory AG&#39;s instructions and on Valory AG&#39;s behalf. Wix.com will not process site visitors data for their own benefit. For more information about Wix&#39;s obligations as a data processor, see their [Data Processing Agreement](https://www.wix.com/about/privacy-dpa-users).
+We use cookies to understand and save your preferences for future visits and compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors. These service providers are not permitted to use the information collected on our behalf except to help us conduct and improve our business.
 
-## 3.2 Use of Website Cookies
+## Do we disclose any information to outside parties?
 
-The website uses cookies. Cookies are text files that are stored in a computer system via an Internet browser. More detailed information on cookies and how they work can be found at: http://www.allaboutcookies.org.
+We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our site, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.
 
-Many Internet sites and servers use cookies. Many cookies contain a so-called cookie ID. A cookie ID is a unique identifier of the cookie. It consists of a character string through which Internet pages and servers can be assigned to the specific Internet browser in which the cookie was stored. This allows visited Internet sites and servers to differentiate the individual browser of the data subject from other Internet browsers that contain other cookies. A specific Internet browser can be recognized and identified using the unique cookie ID.
+## Third party links
 
-Through the use of cookies, Valory AG can provide the users of this website with more user-friendly services that would not be possible without the cookie setting.
+Occasionally, at our discretion, we may include or offer third party products or services on our site. These third party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.
 
-Cookies allow us, as previously mentioned, to recognize our website users. The purpose of this recognition is to make it easier for users to utilize our website. The website user that uses cookies, e.g. does not have to enter access data each time the website is accessed, because this is taken over by the website, and the cookie is thus stored on the user&#39;s computer system.
+## Children’s Online Privacy Protection Act Compliance
 
-You may, at any time, prevent the setting of cookies through our website by means of a corresponding setting of the Internet browser used, and may thus permanently deny the setting of cookies. Furthermore, previously set cookies may be deleted at any time via an Internet browser or other software programs. This is possible in all popular Internet browsers. If the data subject deactivates the setting of cookies in the Internet browser used, it may not be possible to use all the functions of our website.
+Our site, products and services are all directed to people who are at least 13 years old or older. If this server is in the USA, and you are under the age of 13, per the requirements of COPPA ([Children’s Online Privacy Protection Act](https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act)), do not use this site.
 
-For detailed information on the cookies we use and the purposes for which we use them, see our Cookie Policy.
+## Online Privacy Policy Only
+This online privacy policy applies only to information collected through our site and not to information collected offline.
 
-## 3.3 Google Analytics
+## Your Consent
 
-This website also uses Google Analytics, a web analysis service provided by Google Inc. (&quot;Google&quot;). Google Inc. is an enterprise of the holding company Alphabet Inc., domiciled in the USA. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity, and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties if this is required by law or if third parties process this data on behalf of Google.
+By using our site, you consent to our web site privacy policy.
 
-Generally, before the data is transmitted to the provider, the IP address will be abbreviated by activating IP anonymization (anonymizeIP) on this website, within the member states of the European Union, or in other contracting states of the agreement on the European Economic Area. Only in exceptional cases will the full IP address be sent to a Google server in the USA and abbreviated there. In these cases, we provide contractual guarantees to ensure that Google Inc. maintains a sufficient level of data protection. According to Google Inc., under no circumstances will the IP address be associated with any other user-related data. More information about the web analytics service used is available at the website of Google Analytics: https://www.google.ch/policies/privacy/partners
+## Changes to our Privacy Policy
 
-In addition to the data listed in section 3.1, we may receive the following information of Google Analytics:
-
-Navigation path
-
-Length of stay on the website
-
-Returning or new user
-
-End device
-
-We do not use the information and personal data collected by Google Analytics to identify individuals unless we become aware of specific indications of illegal use.
-
-## 3.4 Contact possibility via the website
-
-You may contact us via our website contact page or by e-mail to the following e-mail address: [info@valory.xyz](mailto:info@valory.xyz). For this, we require the following information: Name, Subject, E-Mail address, message.
-
-We use this data, which you may give voluntarily, only in order to answer your contact question or to reply to your e-mail in the best possible manner. Therefore, the processing of this data is in our legitimate interest in accordance with Art. 6 Par.1 lit. f GDPR and you have provided consent in accordance with Art. 6 Par. 1 lit. a GDPR.
-
-## 3.5 Registration for our newsletter (if relevant)
-
-The registration for our newsletter requires registration. For this, you must provide your name and e-mail address. By registering, you give us your consent to process the given data in order to periodically send the newsletter to the address you have given. This consent constitutes the legal basis for our processing of your e-mail address in the sense of Art. 6 Par. 1 lit. a GDPR. All information gathered this way will never be passed on or sold to any third party.
-
-At the end of each newsletter, a link is provided through which you can unsubscribe at any time. After unsubscribing your personal data will be deleted.
-
-We use Mailchimp as our marketing platform for the newsletter linked from our website. By subscribing, you acknowledge that your information will be transferred to Mailchimp for processing as a &#39;Contact&#39;. Mailchimp is headquartered in and uses servers in the United States. This means data they process may be transferred to, stored, or processed in the United States. Learn more about Mailchimp&#39;s privacy practices [here](https://mailchimp.com/legal/privacy/#3._Privacy_for_Contacts).
-
-## 3.6 Social Media
-
-We use plug-ins from social networks such as Twitter and LinkedIn on our website. When you activate them (by clicking on them), the operators of the respective social networks may record that you are on our website and may use this information. This processing of your personal data lays in the responsibility of these individual social media platforms and occurs according to their privacy policy. Please check with these individual social media platforms regarding their privacy policies. Valory AG is not responsible for data collected by these individual social media platforms. We only use these platforms to inform our community of updates and answer user questions.
-
-## 4. Other parties who have access to information we collect
-
-Except for the providers of our website, we do not make your personal data available to third parties unless you have expressly consented to it, if we are legally obligated to, or if this is necessary to enforce our rights concerning a contractual relationship.
-
-The website service provider to whom the personal data collected via the website is passed on or who has or can have access to it is Ionos. The website is hosted on servers in the US and Europe. The transfer of data is for purpose of providing and maintaining the functionality of our website. This is our legitimate interest in the sense of Art. 6 Par. 1 lit f GDPR.
-
-We built our website using Wix.com, so Wix.com may also process site-visitors&#39; data following Valory AG&#39;s instructions and on Valory AG&#39;s behalf. Wix.com will not process site-visitors&#39; data for their own benefit. For more information about Wix&#39;s obligations as a data processor, see our [Data Processing Agreement](https://www.wix.com/about/privacy-dpa-users). They may store site-visitors&#39; personal information in data centers located in the United States of America, Ireland, South Korea, Taiwan and Israel, or may use other jurisdictions as necessary for the proper delivery of their services and/or as may be required by law.
-
-Wix is a global company that respects the laws of the jurisdictions it operates within. The processing of the User Customer Data may take place within the territory of the European Union, Israel or a third country, territory, or one or more specified sectors within that third country, of which, the European Commission has decided that it ensures an adequate level of protection (transfer on the basis of an adequacy decision).
-
-Important: Any transfer to a third country, outside the European Union, that does not ensure an adequate level of protection according to the European Commission, will be undertaken in accordance with the Standard Contractual Clauses (2010/87/EU) set out in Appendix 1 of the Wix [Data Processing Agreement (DPA)](https://www.wix.com/about/privacy-dpa-users). [See all the security certifications received by Wix.com](https://support.wix.com/en/article/security-of-wixs-billing-services-and-pci-compliance).
-
-## 5. International transfer of personal data
-
-We are entitled to transfer your personal data to third parties abroad for the purposes of the data processing described in this Privacy Policy. This concerns especially the following receiver(s):
-
-- our website service providers
-
-They are obliged to protect data privacy to the same extent as we ourselves. If the level of data protection in a given country does not correspond to the Swiss and European data protection level, we contractually ensure that the protection of your personal data corresponds to that in Switzerland and the EU at all times by concluding agreements using the standard contractual clauses and complying with the GDPR.
-
-## 6. Data security
-
-We use appropriate technical and organizational security measures to protect your stored personal data against manipulation, partial or complete loss, and unauthorized access by third parties. Our security measures are continuously being improved in line with technical developments.
-
-Please note that any data transmission on the Internet (e.g. communication by e-mail) is generally not secure and we accept no liability for data transmitted to us via the Internet. Unfortunately, absolute protection is not technically possible.
-
-This information does not apply to the website of third parties and the corresponding links given on our website. Valory AG assumes no responsibility and liability for these.
-
-## 7. Your Rights regarding your data
-
-  
-## 7.1 Right to confirmation
-
-You have the right to obtain confirmation from Valory AG as to whether or not personal data concerning you is being processed. If you wish to avail yourself of this right of confirmation, you may, at any time, contact the responsible person as stated in section 1 of this Privacy Policy.
-
-## 7.2 Right to access
-
-You have the right to obtain from Valory AG free information about your personal data stored at any time and a copy of this information. Furthermore, you will have access to the following information:
-
-- the purposes of the processing;
-- the categories of personal data concerned;
-- the recipients or categories of recipients to whom the personal data have been or will be disclosed, in particular recipients in third countries or international organizations;
-- where possible, the envisaged period for which the personal data will be stored, or, if not possible, the criteria used to determine that period;
-- the existence of the right to request from Valory AG rectification or erasure of personal data, or restriction of processing of personal data concerning you, or to object to such processing;
-- the existence of the right to lodge a complaint with a supervisory authority;
-- where the personal data are not collected directly from you, any available information as to their source; and
-- the existence of automated decision-making, including profiling, referred to in Article 22(1) and (4) of the GDPR and, at least in those cases, meaningful information about the logic involved, as well as the significance and envisaged consequences of such processing for you.
-
-If you wish to avail yourself of this right of access, you may at any time contact the responsible person as stated in section 1 of this Privacy Policy.
-
-## 7.3 Right to rectification
-
-You have the right to obtain from Valory AG, without undue delay, the rectification of inaccurate personal data concerning you. Taking into account the purposes of the processing, you shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement. If you wish to exercise this right to rectification, you may, at any time, contact the responsible person as stated in section 1 of this Privacy Policy.
-
-## 7.4 Right to erasure (right to be forgotten)
-
-You have the right to obtain from Valory AG the erasure of personal data concerning you as soon as possible, and Valory AG shall have the obligation to erase personal data without undue delay where one of the following grounds applies:
-
-- The personal data is no longer necessary in relation to the purposes for which they were collected or otherwise processed;
-- You withdraw consent to which the processing is based according to point (a) of Article 6(1) of the GDPR, or point (a) of Article 9(2) of the GDPR, and where there is no other legal ground for the processing;
-- The data subject objects to the processing pursuant to Article 21(1) of the GDPR and there are no overriding legitimate grounds for the processing, or the data subject objects to the processing pursuant to Article 21(2) of the GDPR;
-- The personal data has been unlawfully processed;
-- The personal data must be erased for compliance with a legal obligation in accordance with the applicable law to which Valory AG is subject; and/or
-- The personal data has been collected in relation to the offer of information society services referred to in Article 8(1) of the GDPR.
-- If any one of the aforementioned reasons applies, and you wish to request the erasure of personal data stored by Valory AG, you may at any time contact the responsible person as stated in section 1 of this Privacy Policy. The responsible person at Valory AG shall promptly ensure that the erasure request is complied with as soon as possible.
-
-## 7.5 Right to restriction of processing
-
-You have the right to obtain from Valory AG restriction of processing where one of the following applies:
-
-- the accuracy of the personal data is contested by you, for a period enabling Valory AG to verify the accuracy of the personal data;
-- the processing is unlawful and you oppose the erasure of the personal data and requests instead the restriction of their use instead;
-- Valory AG no longer needs the personal data for the purposes of the processing, but they are required by you for the establishment, exercise or defense of legal claims; and/or
-- the data subject has objected to processing pursuant to Article 21(1) of the GDPR pending the verification whether the legitimate grounds of Valory AG override those of the data subject.
-
-If any one of the aforementioned conditions is met, and you wish to request the restriction of the processing of personal data stored by Valory AG, you may at any time contact Valory AG&#39;s responsible person. The responsible person will arrange the restriction of the processing.
-
-## 7.6 Right to object
-
-You have the right to object, on grounds relating to your particular situation, at any time, to the processing of personal data concerning you, which is based on point (e) or (f) of Article 6(1) of the GDPR. This also applies to profiling based on these provisions.
-
-Valory AG shall no longer process the personal data in the event of the objection, unless Valory AG can demonstrate reasonable grounds for the processing, which override the interests, rights and freedoms of you, or for the establishment, exercise or defense of legal claims. In order to exercise the right to object, you may directly contact the responsible person.
-
-## 7.7 Automated individual decision-making, including profiling
-
-You have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning you, or similarly significantly affects you, as long as the decision (1) is not necessary for entering into, or the performance of, a contract between you and Valory AG, or (2) is not authorized by the applicable law and which also lays down suitable measures to safeguard your rights and freedoms and legitimate interests, or (3) is not based on your explicit consent.
-
-If the decision (1) is necessary for entering into, or the performance of, a contract between you and Valory AG, or (2) it is based on your explicit consent, Valory AG shall implement suitable measures to safeguard your rights and freedoms and legitimate interests, at least the right to obtain human intervention on the part of the controller, to express their point of view and contest the decision.
-
-Please note that Valory AG does not use automatic decision-making but we may use profiling according to these Privacy Policy rules.
-
-## 7.8 Right to withdraw data protection consent
-
-You have the right to withdraw your consent to the processing of your personal data at any time.
-
-If you wish to exercise the right to withdraw the consent, you may at any time directly contact the responsible person as stated in section 1.
-
-## 8. Duration of the storage
-
-Valory AG will process and store the personal data of the data subject only for the period necessary to achieve the purpose of storage, or as far as this is granted by the applicable laws or regulations. If the storage purpose is not applicable, or if a storage period prescribed by the applicable laws expires, the personal data is routinely erased in accordance with the legal requirements.
-
-## 9. Minors
-
-Valory AG does not knowingly collect or use any personal data from minors. A minor may be able to willingly share personal information with others, depending on the products and/or media channels used. If a minor provides us with their information without the consent of their parent or guardian, we will ask the parent or guardian to contact us for the purpose of deleting that information.
-
-## 10. Updates to our Privacy Policy
-
-Valory AG may update this Privacy Policy from time to time and inform you on the website that the policy has been amended. The current version of the Privacy Policy, as published on our website, is applicable. With each update to our policies, we will note which sections have been updated.
-
-## 11. More information about privacy regulations
-
-For more information on applicable privacy regulations, you may refer to:
-
-EU General Data Protection Regulation: [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L\_.2016.119.01.0001.01.ENG](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG)
-
-Swiss Federal Act on Data Protection: [https://www.admin.ch/opc/en/classified-compilation/19920153/index.html](https://www.admin.ch/opc/en/classified-compilation/19920153/index.html)
-
-Swiss Ordinance to the Federal Act on Data Protection: [https://www.admin.ch/opc/en/classified-compilation/19930159/index.html](https://www.admin.ch/opc/en/classified-compilation/19930159/index.html)
-
-Please do not hesitate to contact us if you have any questions regarding this Privacy Policy by contacting us at [info@valory.xyz](mailto:info@valory.xyz).
+If we decide to change our privacy policy, we will post those changes on this page.
+This document is CC-BY-SA. It was last updated May 31, 2013.

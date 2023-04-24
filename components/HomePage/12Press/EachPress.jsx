@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Col, Typography } from 'antd';
+import { Col, Typography } from 'antd/lib';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import Button from 'common-util/Button';

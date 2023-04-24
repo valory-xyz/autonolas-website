@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Col, Row, Typography } from 'antd';
+import { Col, Row, Typography } from 'antd/lib';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Link from 'next/dist/client/link';

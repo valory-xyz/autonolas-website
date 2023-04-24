@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": "open-autonomy",
     "category": "core",
     "title": "Open Autonomy",
@@ -44,7 +45,7 @@
     "title": "CoordinationKit",
     "description": "Coordinate DAO contributors autonomously",
     "liveLink": {
-      "url": "https://contribute.autonolas.network",
+      "url": "",
       "external": false
     }
   },
@@ -65,6 +66,16 @@
     "description": "Robust aggregation of CEX pricing data for cryptoassets",
     "liveLink": {
       "url": "https://oracle.autonolas.network/price",
+      "external": false
+    }
+  },
+  {
+    "id": "iekit",
+    "category": "toolkit",
+    "title": "IEKit",
+    "description": "An open-source framework for creating and running Impact Evaluators with Ceramic and Autonolas.",
+    "liveLink": {
+      "url": "https://contribute.autonolas.network",
       "external": false
     }
   },
@@ -96,6 +107,16 @@
     "liveLink": {
       "url": "https://contribute.autonolas.network",
       "external": false
+    }
+  },
+  {
+    "id": "autonomous-keeper-service",
+    "category": "user",
+    "title": "Autonomous Keeper Service",
+    "description": "Elevate your smart contract operations with collaborative, consensus-driven keepers",
+    "liveLink": {
+      "url": "https://etherscan.io/address/0x0a9a74274b1C30845aF98683Ca7F843795f6DFA6#writeContract",
+      "external": true
     }
   }
 ]

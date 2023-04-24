@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row } from 'antd';
+import { Row } from 'antd/lib';
 import PATHS from 'util/paths';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { get } from 'lodash';
-import { Grid } from 'antd';
+import { Grid } from 'antd/lib';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';

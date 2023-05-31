@@ -118,5 +118,35 @@
       "url": "https://etherscan.io/address/0x0a9a74274b1C30845aF98683Ca7F843795f6DFA6#writeContract",
       "external": true
     }
+  },
+  {
+    "id": "governatooorr",
+    "category": "user",
+    "title": "Governatooorr",
+    "description": "Simplify participation with the autonomous DAO delegate",
+    "liveLink": {
+      "url": "https://governatooorr.autonolas.network/",
+      "external": true
+    }
+  },
+  {
+    "id": "centaurs",
+    "category": "user",
+    "title": "Centaurs",
+    "description": "Launch products and services with other members of your community",
+    "liveLink": {
+      "url": "https://launchcentaurs.eth.limo/",
+      "external": true
+    }
+  },
+  {
+    "id": "ai-mechs",
+    "category": "user",
+    "title": "AI Mechs",
+    "description": "Unlock the power of on-chain AI task fulfilment",
+    "liveLink": {
+      "url": "https://aimechs.autonolas.network/",
+      "external": true
+    }
   }
 ]

@@ -5,6 +5,7 @@ export const PATHS = {
   BLOG: 'blog',
   PRIVACY_POLICY: 'privacy-policy',
   COOKIES_POLICY: 'cookies-policy',
+  DISCLAIMER: 'disclaimer',
 };
 
 const DOCS_URL = 'https://docs.autonolas.network';

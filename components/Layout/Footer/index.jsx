@@ -107,6 +107,9 @@ const Footer = () => (
                 {getAnchor('COOKIES POLICY', `/${PATHS.COOKIES_POLICY}`, {
                   isExternal: false,
                 })}
+                {getAnchor('DISCLAIMER', `/${PATHS.DISCLAIMER}`, {
+                  isExternal: false,
+                })}
               </div>
             </td>
           </tr>

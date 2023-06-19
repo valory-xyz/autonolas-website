@@ -1,5 +1,5 @@
 This website is owned and operated by Valory AG as part of its Offerings
-therefore is governed by its Terms (valory.xyz/terms). It does not
+therefore is governed by its <a href="https://www.valory.xyz/terms" target="_blank">Terms</a>. It does not
 represent the Autonolas DAO.
 
 The views expressed in this site written by Valory AG regarding the

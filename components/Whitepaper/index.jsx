@@ -8,7 +8,7 @@ const Whitepaper = () => (
   <Hero>
     <Title className="title">Whitepaper</Title>
     <Row gutter={24}>
-      <Col lg={{ span: 6, offset: 6 }} md={{ span: 8, offset: 4 }} xs={24}>
+      <Col lg={{ span: 6, offset: 3 }} md={{ span: 8 }} xs={24}>
         <a href="/documents/whitepaper/Whitepaper Summary v1.0.pdf">
           <LinkCard>
             <img
@@ -19,6 +19,7 @@ const Whitepaper = () => (
           </LinkCard>
         </a>
       </Col>
+
       <Col lg={6} md={8} xs={24}>
         <a href="/documents/whitepaper/Whitepaper v1.0.pdf">
           <LinkCard>
@@ -27,6 +28,18 @@ const Whitepaper = () => (
               alt="Autonolas whitepaper"
             />
             <Title level={2}>Whitepaper</Title>
+          </LinkCard>
+        </a>
+      </Col>
+
+      <Col lg={6} md={8} xs={24}>
+        <a href="/documents/whitepaper/Autonolas_Tokenomics_Core_Technical_Document.pdf">
+          <LinkCard>
+            <img
+              src="/images/whitepaper/autonolas-tokenomics.png"
+              alt="Autonolas Tokenomics"
+            />
+            <Title level={2}>Tokenomics</Title>
           </LinkCard>
         </a>
       </Col>

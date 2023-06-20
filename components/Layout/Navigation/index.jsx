@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { get } from 'lodash';
-import { Grid } from 'antd/lib';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
 import Button from 'common-util/Button';
@@ -21,8 +20,6 @@ import {
   Banner,
   MobileNavBox,
 } from './styles';
-
-const { useBreakpoint } = Grid;
 
 const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eachNav => {
   const mapKey = `navigation-id-${eachNav.id}-${suffix}`;
@@ -77,7 +74,6 @@ const logo = (
 );
 
 const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
-  const screens = useBreakpoint();
   const [isTransparent, setColorchange] = useState(true);
   const router = useRouter();
   const { pathname, query } = router;
@@ -114,7 +110,10 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   };
 
   const getNavStyle = () => {
-    const relativeStyle = { backgroundColor: COLOR.WHITE, position: 'relative' };
+    const relativeStyle = {
+      backgroundColor: COLOR.WHITE,
+      position: 'relative',
+    };
     // show tranparent navbar if inner page
     if (!get(query, 'id')) {
       return {
@@ -135,8 +134,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
     return isNavigationOpen && isTransparent ? 56 : 0;
   };
 
-  const isSmallScreen = screens.xs || (screens.sm && !screens.md);
-
   return (
     <Container style={getNavStyle()} navHeight={getNavHeight()}>
       <nav className={`navbar ${navbarClassName()}`}>
@@ -146,22 +143,26 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
               <span role="img" aria-label="Star">
                 ✨
               </span>
-              &nbsp;The Autonolas Whitepaper is out!&nbsp;
-              {!isSmallScreen && (
-                <>
-                  Deep dive into the future of off-chain services.
-                  &nbsp;
-                </>
-              )}
-              &nbsp;
+              &nbsp;This is a developer resource provided by&nbsp;
+              <a
+                href="https://valory.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Valory
+              </a>
+              &nbsp;to the Autonolas ecosystem. The views expressed herein do
+              not represent those of the Autonolas DAO. To visit the Autonolas
+              DAO go to&nbsp;
+              <a
+                href="https://olas.network"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Olas network
+              </a>
+              .
             </div>
-            <Link href="/whitepaper" passHref>
-              <Button
-                type="black"
-                className="mini"
-                title="Read now"
-              />
-            </Link>
           </Banner>
         )}
 

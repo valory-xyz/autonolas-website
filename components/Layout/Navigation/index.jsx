@@ -158,7 +158,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                 Valory
               </a>
               {!isSmallScreen && <>&nbsp;to the Autonolas ecosystem.</>}
-              The views expressed here-in do not represent those of the
+              The views expressed herein do not represent those of the
               Autonolas DAO. To visit the Autonolas DAO go to&nbsp;
               <a
                 href="https://olas.network"

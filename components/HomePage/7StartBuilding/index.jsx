@@ -36,9 +36,20 @@ const getContent = list => list.map(
           <div className="sub-text">{subHeading}</div>
           <div className="action-btn">
             {isSameSubdomain ? (
-              <Link href={redirectTo} passHref>
-                <Button title="GET STARTED" type="black" />
-              </Link>
+              <>
+                <Link href={redirectTo} passHref>
+                  <Button title="GET STARTED" type="black" />
+                </Link>
+                {imageUrl === 'learn' ? (
+                  <Link href="/whitepaper" passHref>
+                    <Button
+                      type="black"
+                      className="mt-1"
+                      title="Whitepaper"
+                    />
+                  </Link>
+                ) : null}
+              </>
             ) : (
               <Button
                 title="GET STARTED"

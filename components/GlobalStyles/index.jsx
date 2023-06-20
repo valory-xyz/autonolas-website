@@ -39,6 +39,9 @@ const GlobalStyle = createGlobalStyle`
   .ml-2 {
     margin-left: 2rem;
   }
+  .mt-1 {
+    margin-top: 1rem;
+  }
   .mb-1 {
     margin-bottom: 1rem;
   }

@@ -161,11 +161,8 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
               >
                 Olas network
               </a>
-              . &nbsp;
+              .
             </div>
-            <Link href="/whitepaper" passHref>
-              <Button type="black" className="mini" title="Read now" />
-            </Link>
           </Banner>
         )}
 

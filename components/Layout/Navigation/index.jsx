@@ -166,7 +166,7 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                 rel="noopener noreferrer"
               >
                 Olas network
-              </a>
+              </a>.
               &nbsp;
             </div>
             <Link href="/whitepaper" passHref>

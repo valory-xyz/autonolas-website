@@ -114,7 +114,10 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
   };
 
   const getNavStyle = () => {
-    const relativeStyle = { backgroundColor: COLOR.WHITE, position: 'relative' };
+    const relativeStyle = {
+      backgroundColor: COLOR.WHITE,
+      position: 'relative',
+    };
     // show tranparent navbar if inner page
     if (!get(query, 'id')) {
       return {
@@ -146,21 +149,28 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
               <span role="img" aria-label="Star">
                 ✨
               </span>
-              &nbsp;The Autonolas Whitepaper is out!&nbsp;
-              {!isSmallScreen && (
-                <>
-                  Deep dive into the future of off-chain services.
-                  &nbsp;
-                </>
-              )}
+              &nbsp;This is a developer resource provided by&nbsp;
+              <a
+                href="https://valory.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Valory
+              </a>
+              {!isSmallScreen && <>&nbsp;to the Autonolas ecosystem.</>}
+              The views expressed here-in do not represent those of the
+              Autonolas DAO. To visit the Autonolas DAO go to&nbsp;
+              <a
+                href="https://olas.network"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Olas network
+              </a>
               &nbsp;
             </div>
             <Link href="/whitepaper" passHref>
-              <Button
-                type="black"
-                className="mini"
-                title="Read now"
-              />
+              <Button type="black" className="mini" title="Read now" />
             </Link>
           </Banner>
         )}

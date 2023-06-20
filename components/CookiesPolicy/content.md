@@ -28,20 +28,16 @@ In order for Hotjar features and tools to function correctly, all the cookies li
 
 <table>
   <tr>
-   <td colspan="2" ><strong>Relating to the user</strong>
-   </td>
+   <td colspan="2"><strong>Relating to the user</strong></td>
   </tr>
   <tr>
-   <td>Cookie name
-   </td>
-   <td>Description
-   </td>
+   <td>Cookie name</td>
+   <td>Description</td>
   </tr>
   <tr>
-   <td>_hjSessionUser_{site_id}
-   </td>
-   <td>
-<ul>
+   <td>_hjSessionUser_{site_id}</td>
+  </tr>
+<table>
 
 <li>Set when a user first lands on a page.
 

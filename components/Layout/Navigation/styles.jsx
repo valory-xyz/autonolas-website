@@ -254,6 +254,10 @@ export const Banner = styled.div`
   padding: 8px;
   color: ${COLOR.BLACK};
   width: 100%;
+  > div {
+    text-align: center;
+    max-width: 75%;
+  }
 
   ${MEDIA_QUERY.mobileL} {
     display: inline-flex;

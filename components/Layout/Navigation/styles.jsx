@@ -259,6 +259,12 @@ export const Banner = styled.div`
     max-width: 75%;
   }
 
+  ${MEDIA_QUERY.tablet} {
+    > div {
+      max-width: 100%;
+    }
+  }
+
   ${MEDIA_QUERY.mobileL} {
     display: inline-flex;
     button {

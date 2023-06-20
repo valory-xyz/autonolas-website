@@ -64,10 +64,7 @@ export const SectionOne = styled.div`
 
   ${MEDIA_QUERY.tablet} {
     &.section {
-      padding: 10rem 1rem 6rem 1rem !important;
-    }
-    .header {
-      /* font-size: 74px; */
+      padding: 14rem 1rem 6rem 1rem !important;
     }
     .action-btns {
       align-items: flex-start;

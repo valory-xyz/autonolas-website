@@ -6,6 +6,7 @@ export const PATHS = {
   PRIVACY_POLICY: 'privacy-policy',
   COOKIES_POLICY: 'cookies-policy',
   DISCLAIMER: 'disclaimer',
+  PRESS_KIT: 'documents/press-kit-olas.pdf',
 };
 
 const DOCS_URL = 'https://docs.autonolas.network';

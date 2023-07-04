@@ -101,15 +101,10 @@ const Footer = () => (
                 {getAnchor('TWITTER', 'https://twitter.com/autonolas')}
                 {getAnchor('DISCORD', 'https://discord.com/invite/z2PT65jKqQ')}
                 {getAnchor('GITHUB', 'https://github.com/valory-xyz')}
-                {getAnchor('PRIVACY POLICY', `/${PATHS.PRIVACY_POLICY}`, {
-                  isExternal: false,
-                })}
-                {getAnchor('COOKIES POLICY', `/${PATHS.COOKIES_POLICY}`, {
-                  isExternal: false,
-                })}
-                {getAnchor('DISCLAIMER', `/${PATHS.DISCLAIMER}`, {
-                  isExternal: false,
-                })}
+                {getAnchor('PRIVACY POLICY', `/${PATHS.PRIVACY_POLICY}`, { isExternal: false })}
+                {getAnchor('COOKIES POLICY', `/${PATHS.COOKIES_POLICY}`, { isExternal: false })}
+                {getAnchor('DISCLAIMER', `/${PATHS.DISCLAIMER}`, { isExternal: false })}
+                {getAnchor('PRESS KIT', `/${PATHS.PRESS_KIT}`, { isExternal: false })}
               </div>
             </td>
           </tr>

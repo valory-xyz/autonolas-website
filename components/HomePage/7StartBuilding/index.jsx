@@ -21,7 +21,7 @@ const getContent = list => list.map(
     },
     index,
   ) => (
-    <Col lg={8} sm={24} xs={24} key={`start-building-${imageUrl}`}>
+    <Col lg={8} md={12} sm={24} xs={24} key={`start-building-${imageUrl}`}>
       <div key={imageUrl} className={`column column-${index + 1}`}>
         <div className="img-container-custom">
           <Image

@@ -63,6 +63,12 @@ export const Container = styled(C)`
     }
   }
 
+  ${MEDIA_QUERY.tabletL} {
+    &::after {
+      display: none;
+    }
+  }
+
   ${MEDIA_QUERY.tablet} {
     gap: 0 3rem;
     .column {
@@ -95,9 +101,6 @@ export const Container = styled(C)`
       .action-btn .btn {
         font-size: 16px;
       }
-    }
-    &::after {
-      display: none;
     }
   }
 `;

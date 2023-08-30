@@ -73,10 +73,40 @@
     "id": "iekit",
     "category": "toolkit",
     "title": "IEKit",
-    "description": "An open-source framework for creating and running Impact Evaluators with Ceramic and Autonolas.",
+    "description": "An open-source framework for creating and running Impact Evaluators with Ceramic and Autonolas",
     "liveLink": {
       "url": "https://contribute.autonolas.network",
       "external": false
+    }
+  },
+  {
+    "id": "govkit",
+    "category": "toolkit",
+    "title": "GovKit",
+    "description": "Build autonomous delegates for DAO governance",
+    "liveLink": {
+      "url": "https://governatooorr.autonolas.network/",
+      "external": false
+    }
+  },
+  {
+    "id": "mechkit",
+    "category": "toolkit",
+    "title": "MechKit",
+    "description": "Build services that offer web3 native access to AI models.",
+    "liveLink": {
+      "url": "https://aimechs.autonolas.network/",
+      "external": false
+    }
+  },
+  {
+    "id": "keeperkit",
+    "category": "toolkit",
+    "title": "KeeperKit",
+    "description": "Build autonomous keeper services for smart contract automation",
+    "liveLink": {
+      "url": "https://dune.com/adrian0x/aks",
+      "external": true
     }
   },
   {

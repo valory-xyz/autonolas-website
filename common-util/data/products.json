@@ -80,6 +80,16 @@
     }
   },
   {
+    "id": "govkit",
+    "category": "toolkit",
+    "title": "GovKit",
+    "description": "TODO",
+    "liveLink": {
+      "url": "https://governatooorr.autonolas.network/",
+      "external": false
+    }
+  },
+  {
     "id": "mechkit",
     "category": "toolkit",
     "title": "MechKit",

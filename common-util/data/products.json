@@ -115,7 +115,7 @@
     "title": "MessagingKit",
     "description": "Deploy a backend for wallet-based messaging using ACN",
     "liveLink": {
-      "url": "",
+      "url": "https://open-aea.docs.autonolas.tech/acn/",
       "external": true
     }
   },

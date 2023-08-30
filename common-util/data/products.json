@@ -80,6 +80,16 @@
     }
   },
   {
+    "id": "mechkit",
+    "category": "toolkit",
+    "title": "MechKit",
+    "description": "TODO",
+    "liveLink": {
+      "url": "https://aimechs.autonolas.network/",
+      "external": false
+    }
+  },
+  {
     "id": "keeperkit",
     "category": "toolkit",
     "title": "KeeperKit",

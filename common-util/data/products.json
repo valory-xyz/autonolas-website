@@ -111,7 +111,7 @@
   },
   {
     "id": "messagingkit",
-    "category": "messagingkit",
+    "category": "toolkit",
     "title": "MessagingKit",
     "description": "Deploy a backend for wallet-based messaging using ACN",
     "liveLink": {

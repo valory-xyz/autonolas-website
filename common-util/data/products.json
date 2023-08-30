@@ -110,6 +110,16 @@
     }
   },
   {
+    "id": "messagingkit",
+    "category": "toolkit",
+    "title": "MessagingKit",
+    "description": "Deploy a backend for wallet-based messaging using ACN",
+    "liveLink": {
+      "url": "https://open-aea.docs.autonolas.tech/acn/",
+      "external": true
+    }
+  },
+  {
     "id": "autonomous-fund",
     "category": "user",
     "title": "Autonomous Fund",

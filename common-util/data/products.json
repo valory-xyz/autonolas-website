@@ -80,6 +80,16 @@
     }
   },
   {
+    "id": "keeperkit",
+    "category": "toolkit",
+    "title": "KeeperKit",
+    "description": "TODO",
+    "liveLink": {
+      "url": "https://dune.com/adrian0x/aks",
+      "external": true
+    }
+  },
+  {
     "id": "autonomous-fund",
     "category": "user",
     "title": "Autonomous Fund",

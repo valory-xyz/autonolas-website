@@ -110,6 +110,16 @@
     }
   },
   {
+    "id": "messagingkit",
+    "category": "messagingkit",
+    "title": "MessagingKit",
+    "description": "Deploy a backend for wallet-based messaging using ACN",
+    "liveLink": {
+      "url": "",
+      "external": true
+    }
+  },
+  {
     "id": "autonomous-fund",
     "category": "user",
     "title": "Autonomous Fund",

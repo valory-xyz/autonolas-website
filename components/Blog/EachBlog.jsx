@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
+import { Row, Col } from 'antd';
+
 import PATHS from 'util/paths';
 import Markdown from 'common-util/Markdown';
-import Button from 'common-util/Button';
 import Header from 'common-util/Header';
+import Button from 'common-util/Button';
 import { getFormattedDate } from 'common-util/functions';
-import Sider from './Sider';
 import { EachBlogContainer } from './styles';
-import { Row, Col } from 'antd';
+import Sider from './Sider';
 
 const EachBlog = ({ blog }) => {
   const { attributes } = blog;

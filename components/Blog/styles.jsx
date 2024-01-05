@@ -91,7 +91,6 @@ export const EachBlogContainer = styled.div`
     .each-content-details {
       flex-direction: column;
       &-2 {
-        margin-top: 2rem;
         margin-left: 0rem;
       }
     }

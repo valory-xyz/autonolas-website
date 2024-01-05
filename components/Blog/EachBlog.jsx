@@ -8,6 +8,7 @@ import Header from 'common-util/Header';
 import { getFormattedDate } from 'common-util/functions';
 import Sider from './Sider';
 import { EachBlogContainer } from './styles';
+import { Row, Col } from 'antd';
 
 const EachBlog = ({ blog }) => {
   const { attributes } = blog;
@@ -41,16 +42,22 @@ const EachBlog = ({ blog }) => {
                 </>
               )}
             </div>
-            <div className="body">
-              <Markdown>{body}</Markdown>
-            </div>
+            <Row>
+              <Col>
+                <div className="body" style={{ maxWidth: 650 }}>
+                  <Markdown>{body}</Markdown>
+                </div>
+                <a href={`/${PATHS.BLOG}`}>
+                  <Button title="BACK TO BLOG" />
+                </a>
+              </Col>
+              <Col>
+                <div className="each-content-details-2">
+                  <Sider funnel={get(funnel, 'data.attributes')} />
+                </div>
+              </Col>
+            </Row>
 
-            <a href={`/${PATHS.BLOG}`}>
-              <Button title="BACK TO BLOG" />
-            </a>
-          </div>
-          <div className="each-content-details-2">
-            <Sider funnel={get(funnel, 'data.attributes')} />
           </div>
         </div>
       </div>

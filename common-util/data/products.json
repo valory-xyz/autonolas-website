@@ -96,7 +96,7 @@
     "description": "Build services that offer web3 native access to AI models.",
     "liveLink": {
       "url": "https://aimechs.autonolas.network/",
-      "external": false
+      "external": true
     }
   },
   {

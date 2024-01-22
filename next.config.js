@@ -1,5 +1,34 @@
-const redirects = require('common-util/redirects');
 const withAntdLess = require('next-plugin-antd-less');
+
+const OLAS_URL = 'https://olas.network';
+const WHITEPAPER_DOC_PATH = '/documents/whitepaper';
+const OLAS_WHITEPAPER_DOC_URL = `${OLAS_URL}${WHITEPAPER_DOC_PATH}`;
+const WHITEPAPER_FILE_PATH = '/Whitepaper v1.0.pdf';
+const WHITEPAPER_SUMMARY_FILE_PATH = '/Whitepaper Summary v1.0.pdf';
+const TOKENOMICS_PAPER_FILE_PATH = '/Autonolas_Tokenomics_Core_Technical_Document.pdf';
+
+const redirects = [
+  {
+    source: `${WHITEPAPER_DOC_PATH}${WHITEPAPER_FILE_PATH}`,
+    destination: `${OLAS_WHITEPAPER_DOC_URL}${WHITEPAPER_FILE_PATH}`,
+    permanent: true,
+  },
+  {
+    source: `${WHITEPAPER_DOC_PATH}${WHITEPAPER_SUMMARY_FILE_PATH}`,
+    destination: `${OLAS_WHITEPAPER_DOC_URL}${WHITEPAPER_SUMMARY_FILE_PATH}`,
+    permanent: true,
+  },
+  {
+    source: `${WHITEPAPER_DOC_PATH}${TOKENOMICS_PAPER_FILE_PATH}`,
+    destination: `${OLAS_WHITEPAPER_DOC_URL}${TOKENOMICS_PAPER_FILE_PATH}`,
+    permanent: true,
+  },
+  {
+    source: '/whitepaper',
+    destination: `${OLAS_URL}/whitepaper`,
+    permanent: true,
+  },
+];
 
 module.exports = withAntdLess({
   cssLoaderOptions: {

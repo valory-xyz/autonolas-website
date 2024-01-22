@@ -7,13 +7,11 @@ import StartBuilding from './7StartBuilding';
 import Products from './9Products';
 import EcosystemBuilders from './11EcosystemBuilders';
 import Contribute from './12Contribute';
-import Press from './12Press';
 import Blog from './13Blog';
 import Experience from './14Experience';
 
 const HomePage = ({
   isNavigationOpen,
-  press,
   blogs,
 }) => (
   <>
@@ -23,7 +21,6 @@ const HomePage = ({
     <StartBuilding />
     <EcosystemBuilders />
     <Contribute />
-    <Press press={press} />
     <Blog blogs={blogs} />
     <Experience />
   </>
@@ -31,12 +28,10 @@ const HomePage = ({
 
 HomePage.propTypes = {
   isNavigationOpen: PropTypes.bool.isRequired,
-  press: PropTypes.instanceOf(Array),
   blogs: PropTypes.instanceOf(Array),
 };
 
 HomePage.defaultProps = {
-  press: [],
   blogs: [],
 };
 

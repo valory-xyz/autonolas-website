@@ -2,8 +2,6 @@ import { SITE_URL } from 'util/constants/site';
 import {
   getBlogs,
   getEducationArticles,
-  // getIdeas,
-  // getPress,
   getProducts,
 } from 'common-util/api';
 
@@ -23,22 +21,6 @@ export const getDynamicPaths = async () => {
     article => `${SITE_URL}/education-articles/${article.id}`,
   );
   paths.push(...educationArticlesPaths);
-
-  // ideas list
-  // TODO: There is nothing in the ideas page, confused.
-  // const ideasPaths = await getIdeas();
-  // const ideasArticlesPaths = ideasPaths.map(
-  //   idea => `${SITE_URL}/ideas/${idea.id}`,
-  // );
-  // paths.push(...ideasArticlesPaths);
-
-  // press list
-  // TODO: we don't have a each press page.
-  // const pressPaths = await getPress();
-  // const pressArticlesPaths = pressPaths.map(
-  //   press => `${SITE_URL}/press/${press.id}`,
-  // );
-  // paths.push(...pressArticlesPaths);
 
   // products list
   const products = await getProducts();

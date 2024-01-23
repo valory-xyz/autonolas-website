@@ -1,6 +1,5 @@
 export const NAV_1 = [
   { name: 'Why Autonolas?', id: 'why-autonolas' },
-  { name: 'Products', id: 'products' },
   { name: 'Learn & Build', id: 'learn-and-build' },
   { name: 'Blog', id: 'blog' },
   {

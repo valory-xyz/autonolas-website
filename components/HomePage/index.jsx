@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
 import ScaleYourDao from './1ScaleYourDao';
 import StartBuilding from './7StartBuilding';
-import Products from './9Products';
-import EcosystemBuilders from './11EcosystemBuilders';
-import Contribute from './12Contribute';
 import Blog from './13Blog';
 import Experience from './14Experience';
 
@@ -17,10 +14,7 @@ const HomePage = ({
   <>
     <TheNewWay isNavigationOpen={isNavigationOpen} />
     <ScaleYourDao />
-    <Products />
     <StartBuilding />
-    <EcosystemBuilders />
-    <Contribute />
     <Blog blogs={blogs} />
     <Experience />
   </>

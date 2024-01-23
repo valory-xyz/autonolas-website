@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Meta from 'common-util/meta';
 import CallToActionButton from 'common-util/FunnelLandingPage/Hero/CallToActionButton';
 import { IEKit } from './IEKit';
-import { ToolkitPage } from './Toolkit';
 import { ProductHero } from './styles';
 
 const { Title } = Typography;
@@ -31,11 +30,7 @@ const Products = ({ product }) => {
         }}
       />
 
-      {category === 'toolkit' ? (
-        <ToolkitPage product={product} />
-      ) : (
-        <ProductPage product={product} />
-      )}
+      <ProductPage product={product} />
     </>
   );
 };

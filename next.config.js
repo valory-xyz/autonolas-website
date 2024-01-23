@@ -1,4 +1,6 @@
 const withAntdLess = require('next-plugin-antd-less');
+const products = require('./common-util/data/products.json');
+
 
 const OLAS_URL = 'https://olas.network';
 const WHITEPAPER_DOC_PATH = '/documents/whitepaper';
@@ -7,6 +9,15 @@ const WHITEPAPER_FILE_PATH = '/Whitepaper%20v1.0.pdf';
 const WHITEPAPER_SUMMARY_FILE_PATH = '/Whitepaper%20Summary%20v1.0.pdf';
 const TOKENOMICS_PAPER_FILE_PATH = '/Autonolas_Tokenomics_Core_Technical_Document.pdf';
 const WHITEPAPER_PATH = '/whitepaper';
+const PRODUCT_PATH = '/product';
+
+const generateKitRedirects = items => items
+  .filter(product => product.category === 'toolkit')
+  .map(product => ({
+    source: `${PRODUCT_PATH}/${product.id}`,
+    destination: `${OLAS_URL}/kits/${product.id}`,
+    permanent: true,
+  }));
 
 const redirects = [
   {
@@ -27,6 +38,17 @@ const redirects = [
   {
     source: `${WHITEPAPER_PATH}`,
     destination: `${OLAS_URL}${WHITEPAPER_PATH}`,
+    permanent: true,
+  },
+  ...generateKitRedirects(products),
+  {
+    source: `${PRODUCT_PATH}/open-autonomy`,
+    destination: `${OLAS_URL}/stack`,
+    permanent: true,
+  },
+  {
+    source: `${PRODUCT_PATH}/autonolas-protocol`,
+    destination: `${OLAS_URL}/protocol`,
     permanent: true,
   },
 ];

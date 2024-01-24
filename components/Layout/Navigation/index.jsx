@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
-import Button from 'common-util/Button';
 import { useCheckMobileScreen } from 'common-util/hooks/useCheckMobileScreen';
 import { getSocials } from 'common-util/functions';
 import { AutonolasLogo } from 'common-util/svg';
@@ -58,14 +57,6 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
     </li>
   );
 });
-
-const startBuildingBtn = (
-  <Link href="/#ecosystem-builders" passHref>
-    <a className="start-building-in-nav">
-      <Button type="purple" title="Get support" />
-    </a>
-  </Link>
-);
 
 const logo = (
   <a className="nav-link" href="/" aria-label="Autonolas Logo">
@@ -209,7 +200,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                   MENU
                 </Hamburger>
 
-                {startBuildingBtn}
               </MobileNavBox>
             )}
           </>
@@ -217,7 +207,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
           <DesktopNavBar>
             <div className="nav-item-logo">{logo}</div>
             <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
-            {startBuildingBtn}
           </DesktopNavBar>
         )}
       </nav>

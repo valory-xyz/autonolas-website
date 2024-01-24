@@ -1,10 +1,10 @@
-import { Col, Row, Grid } from 'antd/lib';
+import { Col, Grid } from 'antd/lib';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Link from 'next/link';
 import {
-  SectionSeven, Container, CommissionUs, HeadersRow,
+  SectionSeven, Container, HeadersRow,
 } from './styles';
 
 const { useBreakpoint } = Grid;
@@ -140,23 +140,6 @@ const LearnAndBuild = () => {
           <Container>{getContent(BUILD_LIST)}</Container>
         </>
       )}
-
-      <Row>
-        <Col lg={16} sm={24} xs={24} offset={isIpadAndLess ? 0 : 8}>
-          <CommissionUs>
-            <p>Don’t have time to build right now?</p>
-            <Link href="/#ecosystem-builders" passHref>
-              <a>
-                <Button
-                  hasArrowSuffix
-                  type="purple"
-                  title="Get support with your project"
-                />
-              </a>
-            </Link>
-          </CommissionUs>
-        </Col>
-      </Row>
     </SectionSeven>
   );
 };

@@ -60,26 +60,6 @@ export const getIdea = async id => {
   return data;
 };
 
-// ----------- PRESS -----------
-export const getPress = async () => {
-  const params = {
-    sort: ['datePublished:desc'],
-    populate: '*',
-  };
-  const json = await apiCall('media-appearances', params);
-  const data = get(json, 'data') || [];
-  return data;
-};
-
-export const getEachPress = async id => {
-  const params = {
-    populate: '*',
-  };
-  const json = await apiCall(`media-appearances/${id}`, params);
-  const data = get(json, 'data') || null;
-  return data;
-};
-
 // ----------- BLOGS -----------
 export const getBlogs = async () => {
   const params = {

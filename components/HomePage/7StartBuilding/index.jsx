@@ -140,23 +140,6 @@ const LearnAndBuild = () => {
           <Container>{getContent(BUILD_LIST)}</Container>
         </>
       )}
-
-      <Row>
-        <Col lg={16} sm={24} xs={24} offset={isIpadAndLess ? 0 : 8}>
-          <CommissionUs>
-            <p>Don’t have time to build right now?</p>
-            <Link href="/#ecosystem-builders" passHref>
-              <a>
-                <Button
-                  hasArrowSuffix
-                  type="purple"
-                  title="Get support with your project"
-                />
-              </a>
-            </Link>
-          </CommissionUs>
-        </Col>
-      </Row>
     </SectionSeven>
   );
 };

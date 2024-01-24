@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TheNewWay from './1TheNewWay';
-import ScaleYourDao from './1ScaleYourDao';
 import StartBuilding from './7StartBuilding';
 import Blog from './13Blog';
 import Experience from './14Experience';
@@ -13,7 +12,6 @@ const HomePage = ({
 }) => (
   <>
     <TheNewWay isNavigationOpen={isNavigationOpen} />
-    <ScaleYourDao />
     <StartBuilding />
     <Blog blogs={blogs} />
     <Experience />

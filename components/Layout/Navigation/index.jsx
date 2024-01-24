@@ -59,14 +59,6 @@ const getNavigationsMenu = (menuList, callback, suffix = '') => menuList.map(eac
   );
 });
 
-const startBuildingBtn = (
-  <Link href="/#ecosystem-builders" passHref>
-    <a className="start-building-in-nav">
-      <Button type="purple" title="Get support" />
-    </a>
-  </Link>
-);
-
 const logo = (
   <a className="nav-link" href="/" aria-label="Autonolas Logo">
     <AutonolasLogo width={124} height={60} />
@@ -209,7 +201,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
                   MENU
                 </Hamburger>
 
-                {startBuildingBtn}
               </MobileNavBox>
             )}
           </>
@@ -217,7 +208,6 @@ const Navigation = ({ isNavigationOpen, setNavigationToggle: navToggle }) => {
           <DesktopNavBar>
             <div className="nav-item-logo">{logo}</div>
             <NavMenu>{getNavigationsMenu(NAV_1, navToggle)}</NavMenu>
-            {startBuildingBtn}
           </DesktopNavBar>
         )}
       </nav>

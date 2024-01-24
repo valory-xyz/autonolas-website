@@ -1,10 +1,10 @@
-import { Col, Row, Grid } from 'antd/lib';
+import { Col, Grid } from 'antd/lib';
 import Image from 'next/image';
 import Header from 'common-util/Header';
 import Button from 'common-util/Button';
 import Link from 'next/link';
 import {
-  SectionSeven, Container, CommissionUs, HeadersRow,
+  SectionSeven, Container, HeadersRow,
 } from './styles';
 
 const { useBreakpoint } = Grid;

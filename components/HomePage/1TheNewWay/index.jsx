@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
-import Button from 'common-util/Button';
 import { Typography } from 'antd/lib';
 import Header from 'common-util/Header';
 import { SITE_TAGLINE } from 'util/constants/site';

@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { COLOR } from 'util/theme';
-import Button from 'common-util/Button';
 import { useCheckMobileScreen } from 'common-util/hooks/useCheckMobileScreen';
 import { getSocials } from 'common-util/functions';
 import { AutonolasLogo } from 'common-util/svg';

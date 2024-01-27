@@ -15,7 +15,7 @@ const generateKitRedirects = items => items
   .filter(product => product.category === 'toolkit')
   .map(product => ({
     source: `${PRODUCT_PATH}/${product.id}`,
-    destination: `${OLAS_URL}/${product.id.replace('kit', '')}`,
+    destination: `${OLAS_URL}/kits/${product.id.replace('kit', '')}`,
     permanent: true,
   }));
 

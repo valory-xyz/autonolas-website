@@ -21,6 +21,11 @@ const generateKitRedirects = items => items
 
 const redirects = [
   {
+    source: '/',
+    destination: `${OLAS_URL}`,
+    permanent: true,
+  },
+  {
     source: `${WHITEPAPER_DOC_PATH}${WHITEPAPER_FILE_PATH}`, // /documents/whitepaper/Whitepaper v1.0.pdf
     destination: `${OLAS_WHITEPAPER_DOC_URL}${WHITEPAPER_FILE_PATH}`, // https://olas.network/documents/whitepaper/Whitepaper v1.0.pdf
     permanent: true,

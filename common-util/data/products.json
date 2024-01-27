@@ -20,7 +20,7 @@
     }
   },
   {
-    "id": "smp",
+    "id": "smpkit",
     "category": "toolkit",
     "title": "SMPKit",
     "description": "Build autonomous asset management products",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "id": "mint",
+    "id": "mintkit",
     "category": "toolkit",
     "title": "MintKit",
     "description": "Build autonomous NFT collector funds",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "id": "coordination",
+    "id": "coordinationkit",
     "category": "toolkit",
     "title": "CoordinationKit",
     "description": "Coordinate DAO contributors autonomously",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "id": "ml",
+    "id": "mlkit",
     "category": "toolkit",
     "title": "MLKit",
     "description": "Build decentralized, ML-powered software services",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "id": "oracle",
+    "id": "oraclekit",
     "category": "toolkit",
     "title": "OracleKit",
     "description": "Robust aggregation of CEX pricing data for cryptoassets",
@@ -70,7 +70,7 @@
     }
   },
   {
-    "id": "ie",
+    "id": "iekit",
     "category": "toolkit",
     "title": "IEKit",
     "description": "An open-source framework for creating and running Impact Evaluators with Ceramic and Autonolas",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "id": "gov",
+    "id": "govkit",
     "category": "toolkit",
     "title": "GovKit",
     "description": "Build autonomous delegates for DAO governance",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "id": "mech",
+    "id": "mechkit",
     "category": "toolkit",
     "title": "MechKit",
     "description": "Build services that offer web3 native access to AI models.",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "id": "keeper",
+    "id": "keeperkit",
     "category": "toolkit",
     "title": "KeeperKit",
     "description": "Build autonomous keeper services for smart contract automation",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "id": "messaging",
+    "id": "messagingkit",
     "category": "toolkit",
     "title": "MessagingKit",
     "description": "Deploy a backend for wallet-based messaging using ACN",

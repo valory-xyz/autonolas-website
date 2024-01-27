@@ -92,7 +92,6 @@ export const getAnchor = (title, href, otherProps) => {
  * URLs that will be opened in the SAME tab
  *  - docs.autonolas.network
  *  - protocol.autonolas.network
- *  - autonolas.network/blog
  *
  * URLs that will be opened in the different tab
  * - elcollectooorr.art

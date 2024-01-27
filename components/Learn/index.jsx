@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Link from 'next/link';
 
 import Header from 'common-util/Header';
-import WhoDoesAutonolasHelp from './1WhoDoesAutonolasHelp';
 import WhatIsAutonolas from './2WhatIsAutonolas';
 import DecentralizedAndSophisticated from './3DecentralizedAndSophisticated';
 import HowDoAutonolasWork from './4HowDoAutonolasWork';
@@ -47,7 +46,6 @@ const Learn = ({ educationArticles }) => (
     </LearnNavigation>
 
     <LearnContainer>
-      <WhoDoesAutonolasHelp />
       <WhatIsAutonolas />
       <DecentralizedAndSophisticated />
       <HowDoAutonolasWork />

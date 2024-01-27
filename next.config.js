@@ -61,6 +61,11 @@ const redirects = [
     destination: `${OLAS_URL}/blog/:id`,
     permanent: false,
   },
+  {
+    source: '/learn',
+    destination: `${OLAS_URL}/learn`,
+    permanent: true,
+  },
 ];
 
 module.exports = withAntdLess({

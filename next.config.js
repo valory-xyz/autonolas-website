@@ -11,6 +11,14 @@ const TOKENOMICS_PAPER_FILE_PATH = '/Autonolas_Tokenomics_Core_Technical_Documen
 const WHITEPAPER_PATH = '/whitepaper';
 const PRODUCT_PATH = '/product';
 
+const generateServiceRedirects = items => items
+  .filter(product => product.category === 'user')
+  .map(product => ({
+    source: `${PRODUCT_PATH}/${product.id}`,
+    destination: `${OLAS_URL}/services/${product.id}`,
+    permanent: true,
+  }));
+
 const generateKitRedirects = items => items
   .filter(product => product.category === 'toolkit')
   .map(product => ({
@@ -46,6 +54,7 @@ const redirects = [
     permanent: true,
   },
   ...generateKitRedirects(products),
+  ...generateServiceRedirects(products),
   {
     source: `${PRODUCT_PATH}/open-autonomy`,
     destination: `${OLAS_URL}/stack`,
@@ -69,6 +78,11 @@ const redirects = [
   {
     source: '/learn',
     destination: `${OLAS_URL}/learn`,
+    permanent: true,
+  },
+  {
+    source: '/autonomous-asset-management-infra',
+    destination: `${OLAS_URL}/kits/smp`,
     permanent: true,
   },
 ];

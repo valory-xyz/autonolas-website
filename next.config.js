@@ -92,7 +92,7 @@ const redirects = [
     permanent: true,
   },
   {
-    source: '/academy/eduction-track',
+    source: '/academy/education-track',
     destination: `${VALORY_URL}/academy`,
     permanent: true,
   },

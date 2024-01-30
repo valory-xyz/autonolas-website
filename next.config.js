@@ -3,6 +3,7 @@ const products = require('./common-util/data/products.json');
 
 
 const OLAS_URL = 'https://olas.network';
+const VALORY_URL = 'https://valory.xyz';
 const WHITEPAPER_DOC_PATH = '/documents/whitepaper';
 const OLAS_WHITEPAPER_DOC_URL = `${OLAS_URL}${WHITEPAPER_DOC_PATH}`;
 const WHITEPAPER_FILE_PATH = '/Whitepaper%20v1.0.pdf';
@@ -83,6 +84,16 @@ const redirects = [
   {
     source: '/autonomous-asset-management-infra',
     destination: `${OLAS_URL}/kits/smp`,
+    permanent: true,
+  },
+  {
+    source: '/academy',
+    destination: `${VALORY_URL}/academy`,
+    permanent: true,
+  },
+  {
+    source: '/academy/eduction-track',
+    destination: `${VALORY_URL}/academy`,
     permanent: true,
   },
 ];
